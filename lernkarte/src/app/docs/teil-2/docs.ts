@@ -46,56 +46,6 @@ export function buildDocsTree(root = DOCS_ROOT): DocNode[] {
   return nodes;
 }
 
-// Build a docs tree for a specific top-level category and return nodes
-// with paths relative to the category root. This makes it easy for the
-// UI to construct hrefs like /docs/<category>/<relative-path>
-export function buildDocsTreeForCategory(category: string): DocNode[] {
-  const root = path.join(DOCS_ROOT, category);
-  if (!fs.existsSync(root)) return [];
-  const nodes = buildDocsTree(root);
-
-  function convert(n: DocNode): DocNode {
-    if (n.type === 'file') {
-      // relative path from the category root, without extension
-      const rel = path.relative(root, n.path).replace(/\\/g, '/').replace(/\.md$/, '');
-      return { type: 'file', name: n.name, path: rel };
-    }
-    return {
-      type: 'dir',
-      name: n.name,
-      path: path.relative(root, n.path).replace(/\\/g, '/'),
-      children: n.children.map(convert),
-    };
-  }
-
-  return nodes.map(convert);
-}
-
-// Return a flat list of markdown files under a category with paths
-// relative to the category root. Used as a fallback for older setups.
-export function listDocsRecursive(category: string): string[] {
-  const root = path.join(DOCS_ROOT, category);
-  if (!fs.existsSync(root)) return [];
-  const results: string[] = [];
-
-  function walk(dir: string, relBase = '') {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const e of entries) {
-      if (isDynamicName(e.name)) continue;
-      const full = path.join(dir, e.name);
-      const rel = relBase ? `${relBase}/${e.name}` : e.name;
-      if (e.isDirectory()) {
-        walk(full, rel);
-      } else if (e.isFile() && e.name.endsWith('.md')) {
-        results.push(rel.replace(/\.md$/, ''));
-      }
-    }
-  }
-
-  walk(root, '');
-  return results;
-}
-
 export type DocFile = { content: string; data?: Record<string, unknown> } | null;
 
 // Accept either a single slug string (legacy) or an array of path segments

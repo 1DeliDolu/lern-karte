@@ -1,5 +1,6 @@
-import { readDoc, listDocs, DocFile } from '@/lib/docs';
+import { readDoc, DocFile, DocNode, buildDocsTreeForCategory, listDocsRecursive } from '@/lib/docs';
 import React from 'react';
+import Link from 'next/link';
 
 type Props = { params: { slug: string[] } };
 
@@ -23,29 +24,67 @@ export default async function DocRenderer({ params }: Props) {
     );
   }
 
-  const slug = rest.join('-');
+  // if category present but no slug segments, list files under that category
+  if (rest.length === 0) {
+    // Show nested directories and files for the category
+    const tree = buildDocsTreeForCategory(category);
+    if (tree.length === 0) {
+      // fallback: list any markdown files recursively under the category
+      const flat = listDocsRecursive(category);
+      if (flat.length === 0) {
+        return (
+          <div style={{ padding: 20 }}>
+            <h2>{category}</h2>
+            <p>Keine Dokumente in dieser Kategorie.</p>
+          </div>
+        );
+      }
+      return (
+        <div style={{ padding: 20 }}>
+          <h2>{category}</h2>
+          <ul>
+            {flat.map((f: string) => (
+              <li key={f}><Link href={`/docs/${category}/${f}`}>{f.replace(/\//g, ' / ').replace(/-/g, ' ')}</Link></li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
 
-  // if category present but no slug, list files under that category
-  if (!slug) {
-    const docs = listDocs();
-    const files = docs[category] ?? [];
+    function renderNode(node: DocNode, parentPath = ''): React.ReactNode {
+      const hrefBase = `/docs/${category}` + (parentPath ? `/${parentPath}` : '');
+      if (node.type === 'file') {
+        const fileNode = node as { type: 'file'; name: string; path: string };
+        const href = `${hrefBase}/${fileNode.path}`;
+        return (
+          <li key={fileNode.path}><Link href={href} style={{ textDecoration: 'none' }}>{fileNode.name.replace(/-/g, ' ')}</Link></li>
+        );
+      }
+      // directory
+      const dirNode = node as { type: 'dir'; name: string; path: string; children: DocNode[] };
+      const newParent = parentPath ? `${parentPath}/${dirNode.name}` : dirNode.name;
+      return (
+        <li key={newParent}>
+          <strong>{dirNode.name.replace(/-/g, ' ')}</strong>
+          <ul>
+            {dirNode.children.map((c) => renderNode(c, newParent))}
+          </ul>
+        </li>
+      );
+    }
+
     return (
       <div style={{ padding: 20 }}>
         <h2>{category}</h2>
-        {files.length === 0 ? (
-          <p>Keine Dokumente in dieser Kategorie.</p>
-        ) : (
-          <ul>
-            {files.map(f => (
-              <li key={f}><a href={`/docs/${category}/${f}`}>{f.replace(/-/g, ' ')}</a></li>
-            ))}
-          </ul>
-        )}
+        <ul>
+          {tree.map(n => renderNode(n))}
+        </ul>
       </div>
     );
   }
 
-  const doc = readDoc(category, slug);
+  // pass the remaining path segments to readDoc so nested folders work
+  const doc = readDoc(category, rest);
 
   if (!doc) {
     return (
@@ -55,7 +94,8 @@ export default async function DocRenderer({ params }: Props) {
     );
   }
 
-  const title = titleFromDoc(doc) || `${category} / ${slug}`;
+  const fallback = rest.join('/');
+  const title = titleFromDoc(doc) || `${category} / ${fallback}`;
 
   return (
     <div style={{ padding: 20 }}>
