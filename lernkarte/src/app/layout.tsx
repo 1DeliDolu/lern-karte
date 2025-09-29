@@ -32,8 +32,8 @@ export default function RootLayout({
       >
         <ThemeRegistry>
           <Navigation />
-          <main>{children}</main>
-        <Footer />
+          <main className="max-w-5xl mx-auto px-4 my-8">{children}</main>
+          <Footer />
         </ThemeRegistry>
       </body>
 
