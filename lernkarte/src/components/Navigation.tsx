@@ -15,6 +15,7 @@ export default function Navigation() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Lernkarte', href: '/lern' },
+    { label: 'Dokumentation', href: '/docs' },
   ];
 
   return (

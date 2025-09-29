@@ -1,6 +1,6 @@
 import {fragen} from '@/constants/fragen';
 
-import type { Karte } from '@/types/types';
+import type { Karte } from '@/types/fargen';
 
 
 
