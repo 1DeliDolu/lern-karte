@@ -8,7 +8,7 @@ export default function LernLayout({ children }: { children: React.ReactNode }) 
     <div style={{ padding: 20 }}>
       
       <h1>Lernkarten</h1>
-      <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+      <nav style={{ display: 'flex', gap: 8, margin: '0 -20px 16px -20px', padding: '8px 20px' }}>
         {karteNR.map((n) => (
           <Link key={n} href={`/lern/${n}`} style={{ padding: '6px 10px', border: '1px solid #ccc', borderRadius: 4, textDecoration: 'none' }}>
             {n}
