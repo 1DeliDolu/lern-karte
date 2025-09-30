@@ -1,0 +1,3 @@
+# Weiterbildung (persönlich)
+
+Placeholder content.

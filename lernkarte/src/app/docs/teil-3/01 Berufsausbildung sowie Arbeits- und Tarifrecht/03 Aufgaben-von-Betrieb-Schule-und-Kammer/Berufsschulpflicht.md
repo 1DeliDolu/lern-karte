@@ -1,0 +1,3 @@
+# Berufsschulpflicht
+
+Placeholder content.

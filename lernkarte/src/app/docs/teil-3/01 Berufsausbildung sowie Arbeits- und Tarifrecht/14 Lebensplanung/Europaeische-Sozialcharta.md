@@ -1,0 +1,3 @@
+# Europäische Sozialcharta
+
+Placeholder content.

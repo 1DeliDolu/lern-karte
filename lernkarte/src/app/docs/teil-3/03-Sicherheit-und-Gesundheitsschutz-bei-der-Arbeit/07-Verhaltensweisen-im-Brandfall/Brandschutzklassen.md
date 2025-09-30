@@ -1,0 +1,3 @@
+# Brandschutzklassen
+
+Placeholder content.

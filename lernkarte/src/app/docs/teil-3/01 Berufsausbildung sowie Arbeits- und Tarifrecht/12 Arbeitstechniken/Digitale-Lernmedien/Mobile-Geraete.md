@@ -1,0 +1,3 @@
+# Mobile Geräte
+
+Placeholder content.

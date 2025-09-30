@@ -1,0 +1,3 @@
+# Sozialversicherung
+
+Placeholder content.

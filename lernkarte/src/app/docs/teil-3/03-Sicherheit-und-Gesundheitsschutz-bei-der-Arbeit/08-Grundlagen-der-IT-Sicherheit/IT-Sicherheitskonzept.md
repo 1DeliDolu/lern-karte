@@ -1,0 +1,3 @@
+# IT-Sicherheitskonzept
+
+Placeholder content.

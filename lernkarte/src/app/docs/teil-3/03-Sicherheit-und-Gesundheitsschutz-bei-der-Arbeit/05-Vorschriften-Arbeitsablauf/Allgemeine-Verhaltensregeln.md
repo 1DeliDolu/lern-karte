@@ -1,0 +1,3 @@
+# Allgemeine Verhaltensregeln
+
+Placeholder content.

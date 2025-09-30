@@ -1,0 +1,3 @@
+# Schlichtung
+
+Placeholder content.

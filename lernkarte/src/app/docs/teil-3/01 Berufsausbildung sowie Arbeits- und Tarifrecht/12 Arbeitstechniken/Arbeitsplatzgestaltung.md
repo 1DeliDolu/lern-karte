@@ -1,0 +1,3 @@
+# Arbeitsplatzgestaltung
+
+Placeholder content.

@@ -1,0 +1,3 @@
+# Rentabilität
+
+Placeholder content.

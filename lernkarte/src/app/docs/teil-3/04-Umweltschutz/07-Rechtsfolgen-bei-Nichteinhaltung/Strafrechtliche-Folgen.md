@@ -1,0 +1,3 @@
+# Strafrechtliche Folgen
+
+Placeholder content.

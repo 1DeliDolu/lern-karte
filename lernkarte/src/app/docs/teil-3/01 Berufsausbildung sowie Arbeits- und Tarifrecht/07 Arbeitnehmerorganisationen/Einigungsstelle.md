@@ -1,0 +1,3 @@
+# Einigungsstelle
+
+Placeholder content.

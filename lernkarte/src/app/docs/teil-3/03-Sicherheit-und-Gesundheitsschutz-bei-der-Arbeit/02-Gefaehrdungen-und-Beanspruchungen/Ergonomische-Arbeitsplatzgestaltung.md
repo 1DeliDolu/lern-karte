@@ -1,0 +1,3 @@
+# Ergonomische Arbeitsplatzgestaltung
+
+Placeholder content.

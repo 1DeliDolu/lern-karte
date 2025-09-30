@@ -1,1 +1,0 @@
-# 06 Betriebliche Arbeitsaufteilung

@@ -1,0 +1,3 @@
+# Lohnsteuer
+
+Placeholder content.

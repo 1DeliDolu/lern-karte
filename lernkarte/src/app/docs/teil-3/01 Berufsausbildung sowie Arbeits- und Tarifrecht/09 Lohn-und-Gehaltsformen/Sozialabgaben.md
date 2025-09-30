@@ -1,0 +1,3 @@
+# Sozialabgaben
+
+Placeholder content.

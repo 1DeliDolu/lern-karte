@@ -1,0 +1,3 @@
+# Allgemeines Gleichbehandlungsgesetz
+
+Placeholder content.

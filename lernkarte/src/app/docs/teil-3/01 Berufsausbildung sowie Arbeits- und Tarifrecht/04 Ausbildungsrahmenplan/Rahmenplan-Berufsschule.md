@@ -1,0 +1,3 @@
+# Rahmenplan Berufsschule
+
+Placeholder content.

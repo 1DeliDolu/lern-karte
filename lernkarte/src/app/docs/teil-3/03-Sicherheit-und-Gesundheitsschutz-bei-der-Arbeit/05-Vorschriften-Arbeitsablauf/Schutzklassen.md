@@ -1,0 +1,3 @@
+# Schutzklassen
+
+Placeholder content.

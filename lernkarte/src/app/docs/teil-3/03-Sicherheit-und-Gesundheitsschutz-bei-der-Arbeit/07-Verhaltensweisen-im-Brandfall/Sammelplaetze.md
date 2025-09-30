@@ -1,0 +1,3 @@
+# Sammelplätze
+
+Placeholder content.

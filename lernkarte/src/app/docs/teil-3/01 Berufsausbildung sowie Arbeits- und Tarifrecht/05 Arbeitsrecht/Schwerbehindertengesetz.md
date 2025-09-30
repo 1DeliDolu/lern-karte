@@ -1,0 +1,3 @@
+# Schwerbehindertengesetz
+
+Placeholder content.

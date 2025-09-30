@@ -1,0 +1,3 @@
+# Zivilrechtliche Folgen
+
+Placeholder content.

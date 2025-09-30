@@ -1,0 +1,3 @@
+# Bundesurlaubsgesetz
+
+Placeholder content.

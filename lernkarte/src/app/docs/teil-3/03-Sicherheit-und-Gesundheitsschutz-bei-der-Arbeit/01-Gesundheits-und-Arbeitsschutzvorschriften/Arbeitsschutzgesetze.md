@@ -1,0 +1,3 @@
+# Arbeitsschutzgesetze
+
+Placeholder content.

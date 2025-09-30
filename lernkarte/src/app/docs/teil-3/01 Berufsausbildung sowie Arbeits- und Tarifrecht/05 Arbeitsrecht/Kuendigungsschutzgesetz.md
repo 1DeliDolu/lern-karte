@@ -1,0 +1,3 @@
+# Kuendigungsschutzgesetz
+
+Placeholder content.

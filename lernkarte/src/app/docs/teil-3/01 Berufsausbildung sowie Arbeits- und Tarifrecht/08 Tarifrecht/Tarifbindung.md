@@ -1,0 +1,3 @@
+# Tarifbindung
+
+Placeholder content.

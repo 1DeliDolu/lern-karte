@@ -1,0 +1,3 @@
+# Betrieblicher Ausbildungsplan
+
+Placeholder content.

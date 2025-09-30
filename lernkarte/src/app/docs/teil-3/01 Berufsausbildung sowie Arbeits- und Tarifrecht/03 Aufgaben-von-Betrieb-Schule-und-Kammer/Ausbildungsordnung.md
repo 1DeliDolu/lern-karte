@@ -1,0 +1,3 @@
+# Ausbildungsordnung
+
+Placeholder content.

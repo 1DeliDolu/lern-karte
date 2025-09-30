@@ -1,0 +1,3 @@
+# Ausbildungsvertrag
+
+Placeholder content.

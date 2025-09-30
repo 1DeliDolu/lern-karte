@@ -1,0 +1,3 @@
+# Betriebsvereinbarungen
+
+Placeholder content.

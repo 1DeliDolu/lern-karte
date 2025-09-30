@@ -1,0 +1,3 @@
+# Innerbetriebliche Fortbildung
+
+Placeholder content.

@@ -1,1 +1,0 @@
-# 04 Externe Auswirkungen

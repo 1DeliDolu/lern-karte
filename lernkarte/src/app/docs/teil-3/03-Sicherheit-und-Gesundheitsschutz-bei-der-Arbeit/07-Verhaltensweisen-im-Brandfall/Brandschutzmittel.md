@@ -1,0 +1,3 @@
+# Brandschutzmittel
+
+Placeholder content.

@@ -1,0 +1,3 @@
+# Branchenspezifische Abfälle
+
+Placeholder content.

@@ -1,0 +1,3 @@
+# Wirtschaftsorganisationen
+
+Placeholder content.

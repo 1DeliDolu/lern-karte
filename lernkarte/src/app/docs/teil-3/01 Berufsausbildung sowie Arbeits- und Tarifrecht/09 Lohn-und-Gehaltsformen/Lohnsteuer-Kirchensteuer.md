@@ -1,0 +1,3 @@
+# Lohnsteuer & Kirchensteuer
+
+Placeholder content.

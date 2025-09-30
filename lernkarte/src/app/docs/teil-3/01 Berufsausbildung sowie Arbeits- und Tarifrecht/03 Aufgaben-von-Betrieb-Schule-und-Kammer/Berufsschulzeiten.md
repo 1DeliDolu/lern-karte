@@ -1,0 +1,3 @@
+# Berufsschulzeiten
+
+Placeholder content.

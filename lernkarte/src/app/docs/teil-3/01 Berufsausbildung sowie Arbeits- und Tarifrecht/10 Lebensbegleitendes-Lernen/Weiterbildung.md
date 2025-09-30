@@ -1,0 +1,3 @@
+# Weiterbildung
+
+Placeholder content.

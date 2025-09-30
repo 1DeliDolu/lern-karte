@@ -1,0 +1,3 @@
+# Unternehmenssanktionen
+
+Placeholder content.

@@ -1,0 +1,3 @@
+# Globalisierung
+
+Placeholder content.

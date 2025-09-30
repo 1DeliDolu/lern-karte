@@ -1,0 +1,3 @@
+# Arbeitsplatzergonomie
+
+Placeholder content.

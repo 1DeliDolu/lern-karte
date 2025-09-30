@@ -1,0 +1,3 @@
+# Kapitalgesellschaften
+
+Placeholder content.

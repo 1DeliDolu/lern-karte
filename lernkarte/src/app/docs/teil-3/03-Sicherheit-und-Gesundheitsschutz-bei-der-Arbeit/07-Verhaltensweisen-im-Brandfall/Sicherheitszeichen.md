@@ -1,0 +1,3 @@
+# Sicherheitszeichen
+
+Placeholder content.

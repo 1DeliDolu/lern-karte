@@ -1,0 +1,3 @@
+# Spartenorganisation
+
+Placeholder content.

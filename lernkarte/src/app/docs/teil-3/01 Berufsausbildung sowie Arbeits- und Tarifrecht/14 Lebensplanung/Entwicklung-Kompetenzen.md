@@ -1,0 +1,3 @@
+# Entwicklung Kompetenzen
+
+Placeholder content.

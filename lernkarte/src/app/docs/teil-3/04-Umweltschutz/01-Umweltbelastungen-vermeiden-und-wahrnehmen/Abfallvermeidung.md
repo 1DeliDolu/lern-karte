@@ -1,0 +1,3 @@
+# Abfallvermeidung
+
+Placeholder content.

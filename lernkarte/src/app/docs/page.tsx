@@ -11,7 +11,7 @@ export default function DocsIndexPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li><Link href="/docs/teil-1" style={{ textDecoration: 'none' }}>Teil 1 — Informieren und beraten</Link></li>
           <li><Link href="/docs/teil-2" style={{ textDecoration: 'none' }}>Teil 2 — IT-Lösungen</Link></li>
-          <li><Link href="/docs/teil-3" style={{ textDecoration: 'none' }}>Teil 3 — Qualitätssicherung</Link></li>
+          <li><Link href="/docs/teil-3" style={{ textDecoration: 'none' }}>Teil 3 — WISO</Link></li>
         </ul>
       </nav>
     </div>

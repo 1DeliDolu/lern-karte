@@ -1,0 +1,3 @@
+# Berufsständige Vertretungen
+
+Placeholder content.

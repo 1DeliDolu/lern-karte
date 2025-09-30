@@ -1,0 +1,3 @@
+# Soziale Marktwirtschaft
+
+Placeholder content.

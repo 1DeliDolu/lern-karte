@@ -1,0 +1,3 @@
+# Personengesellschaften
+
+Placeholder content.

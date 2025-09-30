@@ -1,0 +1,3 @@
+# Bildschirmarbeitsplatzverordnung
+
+Placeholder content.

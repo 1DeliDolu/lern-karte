@@ -1,0 +1,3 @@
+# Unnötige Geräteaufzeiten
+
+Placeholder content.

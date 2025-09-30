@@ -1,0 +1,3 @@
+# Wirtschaftlichkeit
+
+Placeholder content.

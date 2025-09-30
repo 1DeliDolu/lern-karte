@@ -1,0 +1,3 @@
+# Gesamtwirtschaft
+
+Placeholder content.
