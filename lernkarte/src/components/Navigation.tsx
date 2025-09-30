@@ -23,7 +23,7 @@ export default function Navigation() {
       <Toolbar>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexGrow: 1 }}>
           <Image src="/file.svg" alt="logo" width={36} height={36} />
-          <Typography variant="h6">Lern-App</Typography>
+          <Typography variant="h6">Lernkarte-App</Typography>
         </Box>
         <Box sx={{ display: 'flex', gap: 1 }}>
           {navItems.map((item) => (

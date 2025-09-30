@@ -29,6 +29,7 @@ import MuiAccordionSummary, {
   accordionSummaryClasses,
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Paper from '@mui/material/Paper';
 
 export type DocsNavNode =
   | { id: string; type: 'file'; name: string; href: string }
@@ -56,13 +57,15 @@ const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  marginLeft: `-${drawerWidth}px`,
+  // default: no negative margin so content is visible when drawer is closed
+  marginLeft: 0,
   ...(open && {
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    marginLeft: 0,
+    // when drawer is open, push the main content to the right
+    marginLeft: drawerWidth,
   }),
 }));
 
@@ -265,6 +268,7 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
     [nodes],
   );
 
+
   return (
     <Box sx={{ display: 'flex', width: '100%' }}>
       <CssBaseline />
@@ -283,7 +287,7 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div">
-            Dokumentation
+            Dokümantasyon
           </Typography>
         </Toolbar>
       </AppBar>
@@ -356,9 +360,10 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
         </Box>
       </Drawer>
       <Main open={open}>
-        <DrawerHeader />
-        <Box sx={{ maxWidth: 960, mx: 'auto', width: '100%' }}>
-          {children}
+        <Box sx={{ maxWidth: 1100, mx: 'auto', width: '100%' }}>
+          <Paper elevation={0} sx={{ mt: 0, p: { xs: 2, md: 3 }, bgcolor: 'background.paper', minHeight: '60vh' }}>
+            {children}
+          </Paper>
         </Box>
       </Main>
     </Box>

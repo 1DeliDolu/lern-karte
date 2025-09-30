@@ -1,6 +1,10 @@
 ﻿import React from 'react';
-import { buildDocsTree, type DocNode } from '@/lib/docs';
+import { unstable_noStore as noStore } from 'next/cache';
+import { buildDocsTree, buildDocsTreeForCategory, type DocNode } from '@/lib/docs-finder';
 import DocsPersistentDrawer, { type DocsNavNode } from '@/components/DocsPersistentDrawer';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 function toNavNodes(nodes: DocNode[], parentHref = '/docs'): DocsNavNode[] {
   return nodes.map(node => {
@@ -26,15 +30,32 @@ function toNavNodes(nodes: DocNode[], parentHref = '/docs'): DocsNavNode[] {
 }
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
-  let tree: DocNode[] = [];
+  noStore();
+
+  // Build a top-level list of categories, and for each category use
+  // buildDocsTreeForCategory to produce a category-relative tree. This
+  // ensures nested files and folders produce correct /docs/<cat>/... hrefs.
+  let navNodes: DocsNavNode[] = [];
 
   try {
-    tree = buildDocsTree();
+    const root = buildDocsTree();
+    navNodes = root
+      .filter(n => n.type === 'dir')
+      .map(cat => {
+        const name = cat.name;
+        const baseHref = `/docs/${name}`;
+        const children = buildDocsTreeForCategory(name);
+        return {
+          id: baseHref,
+          type: 'dir',
+          name,
+          href: baseHref,
+          children: toNavNodes(children, baseHref),
+        } as DocsNavNode;
+      });
   } catch {
-    tree = [];
+    navNodes = [];
   }
-
-  const navNodes = toNavNodes(tree);
 
   return <DocsPersistentDrawer nodes={navNodes}>{children}</DocsPersistentDrawer>;
 }
