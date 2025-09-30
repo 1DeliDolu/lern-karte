@@ -1,0 +1,3 @@
+# Validierungen
+
+- Eingabevalidierung, Datenformatprüfung

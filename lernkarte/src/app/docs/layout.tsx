@@ -7,19 +7,19 @@ function renderNode(node: DocNode, parentUrl = '/docs') {
   if (node.type === 'file') {
     const url = `${parentUrl}/${node.name}`;
     return (
-      <li key={node.path} style={{ margin: '4px 0' }}>
-        <Link href={url}>{node.name.replace(/-/g, ' ')}</Link>
+      <li key={node.path} style={{ margin: '4px 0', paddingLeft: 0, listStyle: 'none' }}>
+        <Link href={url} style={{ display: 'block', padding: '4px 0', textDecoration: 'none', color: 'inherit' }}>{node.name.replace(/-/g, ' ')}</Link>
       </li>
     );
   }
 
   const url = `${parentUrl}/${node.name}`;
   return (
-    <li key={node.path} style={{ marginBottom: 8 }}>
+    <li key={node.path} style={{ marginBottom: 8, paddingLeft: 0, listStyle: 'none' }}>
       <div>
-        <strong>{node.name}</strong>
+        <strong>{node.name.replace(/-/g, ' ')}</strong>
       </div>
-      <ul style={{ marginLeft: 12, marginTop: 6 }}>
+      <ul style={{ listStyle: 'none', padding: 0, margin: '6px 0 0 0' }}>
         {node.children.map(child => renderNode(child, url))}
       </ul>
     </li>
@@ -36,21 +36,21 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Dokumentation</h1>
+    <div className="docs-page">
+      <h1 className="docs-heading">Dokumentation</h1>
 
       <DocsSplitLayout
         left={(
-          <aside style={{ borderRight: '1px solid #eee', paddingRight: 12 }}>
-            <nav>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <aside className="docs-split-left">
+            <nav className="docs-nav">
+              <ul>
                 {tree.map(node => renderNode(node))}
               </ul>
             </nav>
           </aside>
         )}
         right={(
-          <main>{children}</main>
+          <main className="docs-main">{children}</main>
         )}
       />
     </div>

@@ -1,0 +1,4 @@
+# Schwellenwerte
+
+- Alarmschwellen definieren
+- Benachrichtigungsstrategien

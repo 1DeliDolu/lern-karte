@@ -1,0 +1,3 @@
+# Interpreter
+
+- Laufzeitinterpretation vs. Kompilierung

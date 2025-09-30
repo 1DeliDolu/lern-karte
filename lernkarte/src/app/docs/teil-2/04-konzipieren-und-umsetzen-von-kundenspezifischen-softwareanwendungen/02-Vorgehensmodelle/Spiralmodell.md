@@ -1,0 +1,3 @@
+# Spiralmodell
+
+- Iterative Risikobetonte Entwicklung

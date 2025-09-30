@@ -1,0 +1,3 @@
+# Fehlerbehandlung
+
+- Exceptions, Logging, Recovery

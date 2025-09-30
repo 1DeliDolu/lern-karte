@@ -1,0 +1,3 @@
+# Sequenzdiagramm
+
+- Nachrichtenfluss zwischen Objekten

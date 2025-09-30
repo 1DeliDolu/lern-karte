@@ -1,0 +1,4 @@
+# Strukturiert
+
+- Prozedurale Kontrollstrukturen
+- Modularisierung

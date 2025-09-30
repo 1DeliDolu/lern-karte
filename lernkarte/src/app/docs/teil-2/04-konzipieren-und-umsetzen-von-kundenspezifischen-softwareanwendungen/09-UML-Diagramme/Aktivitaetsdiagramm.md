@@ -1,0 +1,3 @@
+# Aktivitätsdiagramm
+
+- Fluss von Aktivitäten

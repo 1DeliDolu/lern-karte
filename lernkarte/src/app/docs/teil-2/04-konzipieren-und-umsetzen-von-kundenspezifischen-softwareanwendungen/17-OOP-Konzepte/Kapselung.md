@@ -1,0 +1,3 @@
+# Kapselung
+
+- Zugriffsbeschränkung auf Attribute

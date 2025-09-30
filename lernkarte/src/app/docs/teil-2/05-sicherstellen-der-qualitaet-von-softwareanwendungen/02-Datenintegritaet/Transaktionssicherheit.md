@@ -1,0 +1,4 @@
+# Transaktionssicherheit
+
+- ACID-Eigenschaften
+- Transaktionsprotokolle

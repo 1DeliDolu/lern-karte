@@ -51,23 +51,24 @@ export default async function DocRenderer({ params }: Props) {
       );
     }
 
-    function renderNode(node: DocNode, parentPath = ''): React.ReactNode {
-      const hrefBase = `/docs/${category}` + (parentPath ? `/${parentPath}` : '');
+  function renderNode(node: DocNode): React.ReactNode {
       if (node.type === 'file') {
         const fileNode = node as { type: 'file'; name: string; path: string };
-        const href = `${hrefBase}/${fileNode.path}`;
+        // fileNode.path is already relative to the category root
+        const href = `/docs/${category}/${fileNode.path}`;
         return (
           <li key={fileNode.path}><Link href={href} style={{ textDecoration: 'none' }}>{fileNode.name.replace(/-/g, ' ')}</Link></li>
         );
       }
+
       // directory
       const dirNode = node as { type: 'dir'; name: string; path: string; children: DocNode[] };
-      const newParent = parentPath ? `${parentPath}/${dirNode.name}` : dirNode.name;
+      const dirHref = `/docs/${category}/${dirNode.path}`;
       return (
-        <li key={newParent}>
-          <strong>{dirNode.name.replace(/-/g, ' ')}</strong>
+        <li key={dirNode.path}>
+          <div><strong><Link href={dirHref} style={{ textDecoration: 'none' }}>{dirNode.name.replace(/-/g, ' ')}</Link></strong></div>
           <ul>
-            {dirNode.children.map((c) => renderNode(c, newParent))}
+            {dirNode.children.map((c) => renderNode(c))}
           </ul>
         </li>
       );

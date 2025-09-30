@@ -24,3 +24,46 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+li {
+  list-style: none;
+
+}
+
+/* Docs-specific global styles */
+.docs-page {
+  padding: 20px;
+}
+.docs-heading {
+  margin: 0 0 12px 0;
+}
+.docs-split-left {
+  border-right: 1px solid #eee;
+  padding-right: 12px;
+}
+.docs-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.docs-nav ul ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+.docs-nav li {
+  margin: 4px 0;
+  padding-left: 0;
+}
+.docs-nav a {
+  display: block;
+  padding: 4px 0;
+  text-decoration: none;
+  color: inherit;
+}
+.docs-dir {
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+.docs-main {
+  /* main content styles can be added here */
+}

@@ -1,0 +1,3 @@
+# Tabellenstruktur
+
+- Spalten, Datentypen, Constraints

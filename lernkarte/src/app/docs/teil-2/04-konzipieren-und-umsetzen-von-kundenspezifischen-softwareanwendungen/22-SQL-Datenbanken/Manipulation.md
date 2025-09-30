@@ -1,0 +1,3 @@
+# Manipulation
+
+- INSERT, UPDATE, DELETE
