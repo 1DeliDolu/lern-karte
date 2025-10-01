@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import { naturalSort } from '@/utils/format';
 
 // Configure marked to avoid deprecation warnings about header IDs
 marked.setOptions({
@@ -57,6 +58,9 @@ function decodeSegment(seg: string) {
   }
 }
 
+// Re-export formatLabel for convenience
+export { formatLabel } from '@/utils/format';
+
 export function buildDocsTree(root = DOCS_ROOT): DocNode[] {
   const entries = fs.readdirSync(root, { withFileTypes: true });
   const nodes: DocNode[] = [];
@@ -69,9 +73,9 @@ export function buildDocsTree(root = DOCS_ROOT): DocNode[] {
       nodes.push({ type: 'file', name: e.name.replace(/\.md$/, ''), path: full });
     }
   }
-  // sort directories first, then files, alphabetically
+  // sort directories first, then files, using natural sort for alphanumeric strings
   nodes.sort((a, b) => {
-    if (a.type === b.type) return a.name.localeCompare(b.name);
+    if (a.type === b.type) return naturalSort(a.name, b.name);
     return a.type === 'dir' ? -1 : 1;
   });
   return nodes;

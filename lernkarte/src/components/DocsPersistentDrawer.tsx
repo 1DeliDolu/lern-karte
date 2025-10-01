@@ -28,6 +28,7 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Paper from '@mui/material/Paper';
+import { formatLabel } from '@/utils/format';
 
 export type DocsNavNode =
   | { id: string; type: 'file'; name: string; href: string }
@@ -113,10 +114,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(1.5),
   borderTop: '1px solid rgba(0, 0, 0, 0.12)',
 }));
-
-function formatLabel(name: string) {
-  return name.replace(/-/g, ' ');
-}
 
 function normalizePath(value: string) {
   return value.endsWith('/') && value.length > 1 ? value.slice(0, -1) : value;
@@ -325,12 +322,12 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
             <MenuIcon />
           </IconButton>
         )}
-        <Box sx={{ maxWidth: '100%', mx: 0, width: '100%', pl: { xs: 6, sm: 0 } }}>
+        <Box sx={{ maxWidth: '100%', mx: 0, width: '100%', px: 0 }}>
           <Paper
             id="docs-main"
             data-testid="docs-main"
             elevation={0}
-            sx={{ mt: 0, p: { xs: 1, md: 2 }, bgcolor: 'background.paper', minHeight: '60vh' }}
+            sx={{ mt: 0, p: { xs: 0.5, md: 1 }, bgcolor: 'background.paper', minHeight: '60vh' }}
           >
             {React.Children.toArray(children)}
           </Paper>
