@@ -28,6 +28,8 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Paper from '@mui/material/Paper';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import MuiLink from '@mui/material/Link';
 import { formatLabel } from '@/utils/format';
 
 export type DocsNavNode =
@@ -318,6 +320,40 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
           </IconButton>
         )}
         <Box sx={{ maxWidth: '100%', mx: 'auto', width: '100%' }}>
+          {pathname && pathname.startsWith('/docs/') && (
+            <Box sx={{ mb: 3, mt: 2, px: { xs: 0.5, md: 1 }, display: 'flex', justifyContent: 'center' }}>
+              <Breadcrumbs aria-label="breadcrumb">
+                <MuiLink
+                  component={Link}
+                  underline="hover"
+                  color="inherit"
+                  href="/docs"
+                >
+                  Dokumentation
+                </MuiLink>
+                {pathname.split('/').filter(Boolean).slice(1).map((segment, index, arr) => {
+                  const href = '/docs/' + arr.slice(0, index + 1).join('/');
+                  const isLast = index === arr.length - 1;
+                  
+                  return isLast ? (
+                    <Typography key={href} color="text.primary">
+                      {formatLabel(segment)}
+                    </Typography>
+                  ) : (
+                    <MuiLink
+                      key={href}
+                      component={Link}
+                      underline="hover"
+                      color="inherit"
+                      href={href}
+                    >
+                      {formatLabel(segment)}
+                    </MuiLink>
+                  );
+                })}
+              </Breadcrumbs>
+            </Box>
+          )}
           <Paper
             id="docs-main"
             data-testid="docs-main"
