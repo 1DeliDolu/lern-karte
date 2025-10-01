@@ -1,3 +1,87 @@
-# 01.3.6 Multimediale Inhalte erstellen
+<h1>Programm zum Erstellen multimedialer Inhalte</h1>
 
-Audio, Video und interaktive Inhalte erstellen und einbinden.
+<h2><span style="background-color:#37474f; color:white; padding:4px 8px; border-radius:12px;">Prüfungsbezug & Lernfelder</span></h2>
+<p>Im Prüfungsbereich AP2 sollen <em>Daten und Sachverhalte</em> situationsgerecht und <em>multimedial</em> präsentiert werden (z. B. Testergebnisse, Architekturen, Prozesse). Erwartet werden adressatengerechte Visualisierungen, medienkompetenter Einsatz digitaler Werkzeuge sowie die Beachtung betrieblicher Vorgaben/CI. <strong>Bezug:</strong> Prüfungskatalog FIAE (AP2-Aufbau, Visualisierung/Ergebnisse präsentieren) und LF 12a (Präsentationsaufbau). <em>Quelle:</em> Prüfungskatalog FIAE 2024; Lernfelder 12a. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}</p>
+<p>„Daten heterogener Quellen zusammenführen“ (XML/JSON/CSV) und diese mediengerecht aufzbereiten ist ausdrücklich genannt. <em>Quelle:</em> Prüfungskatalog. :contentReference[oaicite:2]{index=2}</p>
+
+<h2><span style="background-color:#1976d2; color:white; padding:4px 8px; border-radius:12px;">Tool-Kategorien & Auswahlkriterien</span></h2>
+<p>Die Toolwahl richtet sich nach Zielgruppe, CI-Vorgaben, Kollaboration und Plattform. Für die Ausbildung/LF6 werden ausdrücklich <em>geeignete Tools</em> und Kategorien (u. a. <strong>Video Editing</strong>, <strong>Whiteboard</strong>, <strong>Multimedia</strong>) genannt. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:3]{index=3}</p>
+<ul>
+  <li><strong>Bildbearbeitung (Raster):</strong> Retusche, Annotieren, Mockups (z. B. Screenshots mit Markierungen); Export: PNG/JPG, Transparenz: PNG.</li>
+  <li><strong>Vektorgrafik & Diagramme:</strong> Logos/Icons, UML/BPMN, Netzpläne; verlustfrei skalierbar (SVG/PDF).</li>
+  <li><strong>Screen-/Screencast & Demo:</strong> Aufzeichnung von Workflows (Fenster/Audio/Mikro), Kapitelmarker, Untertitel.</li>
+  <li><strong>Videobearbeitung & Motion:</strong> Schnitt, Titel, Callouts, Bild-in-Bild (Sprecher + Demo), Tonmischung.</li>
+  <li><strong>Audio-Produktion:</strong> Voice-Over, Rauschminderung, Lautheitsanpassung.</li>
+  <li><strong>Whiteboard/Collab:</strong> Remote-Erklärungen, Prozessskizzen, Brainstorming (z. B. für Schulungen LF6). :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Präsentationsprogramme:</strong> Masterfolie, CI-Farben, einheitliche Schriften; gemeinsame Version nutzen. <em>Quelle:</em> IT-Berufe – Wirtschafts- und Geschäftsprozesse. :contentReference[oaicite:5]{index=5}</li>
+  <li><strong>E-Learning/Interaktiv:</strong> Quiz/Hotspots für Schulungen (LF6), Export als SCORM/HTML5.</li>
+</ul>
+
+<h2><span style="background-color:#8e24aa; color:white; padding:4px 8px; border-radius:12px;">Formate & Qualitätsparameter</span></h2>
+<ul>
+  <li><strong>Video:</strong> Container <em>MP4</em> mit H.264/H.265; Auflösung 1080p/60 fps für Demos; Bitrate nach Bewegung; Farbraum sRGB.</li>
+  <li><strong>Audio:</strong> WAV (verlustfrei) für Produktion, MP3/AAC fürs Deployment; -16 LUFS (Web) als grobe Lautheits-Richtschnur.</li>
+  <li><strong>Bilder:</strong> PNG (UI/Transparenz), JPG (Fotos), SVG (Icons/Diagramme).</li>
+  <li><strong>Untertitel/Barrierefreiheit:</strong> SRT/VTT; transkribierte Kernbotschaften in Foliennotizen.</li>
+</ul>
+
+<h2><span style="background-color:#2e7d32; color:white; padding:4px 8px; border-radius:12px;">Workflow für multimediale Inhalte <small>(LF 12a)</small></span></h2>
+<p><strong>Vorbereitung → Produktion → Postproduktion → Qualitätssicherung → Bereitstellung</strong></p>
+<ul>
+  <li><strong>Vorbereitung:</strong> Ziel, Botschaft, Storyboard, CI; Masterfolie anlegen; Gliederung mitlaufen lassen. <em>Quelle:</em> IT-Berufe (Master/Gliederung, „weniger ist mehr“). :contentReference[oaicite:6]{index=6}</li>
+  <li><strong>Produktion:</strong> Screencast (Cursor, Fenster, Shortcuts), sauberes Audio (Pop-Schutz, ruhiger Raum).</li>
+  <li><strong>Postproduktion:</strong> Schnitt, Titel, Callouts, Texteinblendungen, Farb-/Audiokorrektur.</li>
+  <li><strong>Qualitätssicherung:</strong> Rechtschreibung/Design/Technik prüfen; Generalprobe. <em>Quelle:</em> IT-Berufe. :contentReference[oaicite:7]{index=7}</li>
+  <li><strong>Bereitstellung:</strong> PPTX (animiert) + PDF (robust), Video lokal einbetten, Handout vorbereiten. :contentReference[oaicite:8]{index=8}</li>
+</ul>
+
+<h2><span style="background-color:#00695c; color:white; padding:4px 8px; border-radius:12px;">Gestaltungsregeln in der Präsentation <small>(LF 12a)</small></span></h2>
+<p>Stichpunkte statt Fließtext, große Grafiken, ≥ 24 pt, hohe Kontraste, CI beachten, „6×6-Regel“, serifenlos – dies sind prüfungsrelevante Grundsätze. <em>Quelle:</em> Lernfelder 12a. :contentReference[oaicite:9]{index=9}</p>
+
+<h2><span style="background-color:#5d4037; color:white; padding:4px 8px; border-radius:12px;">Recht, Datenschutz & Medienkompetenz <small>(LF 6)</small></span></h2>
+<ul>
+  <li><strong>Urheber-/Markenrecht:</strong> Nutzungsrechte für Bilder/Logos klären; Quellen kenntlich machen. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:10]{index=10}</li>
+  <li><strong>DSGVO:</strong> Personenbezug minimieren, Pseudonymisierung in Screens, Impressums-/Informationspflichten beachten. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:11]{index=11}</li>
+  <li><strong>Netiquette & Medienethik:</strong> angemessene Kommunikation, seriöse Quellen. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:12]{index=12}</li>
+</ul>
+
+<h2><span style="background-color:#9c27b0; color:white; padding:4px 8px; border-radius:12px;">Teamarbeit, Versionierung & CI <small>(LF 9/LF 12a)</small></span></h2>
+<ul>
+  <li><strong>Tool-Versionen abstimmen:</strong> gleiche Programmversion im Team, gemeinsame Mastervorlage. <em>Quelle:</em> IT-Berufe. :contentReference[oaicite:13]{index=13}</li>
+  <li><strong>Dokumentation/Vorlagen:</strong> Pflichtenheft/Projektunterlagen durch Grafiken, Tabellen, Mindmaps unterstützen. <em>Quelle:</em> Lernfelder 9. :contentReference[oaicite:14]{index=14}</li>
+</ul>
+
+<h2><span style="background-color:#ff7043; color:white; padding:4px 8px; border-radius:12px;">Prüfungsnahe Einsatzszenarien</span></h2>
+<ul>
+  <li><strong>Testergebnisse als Kurzvideo (AP2):</strong> Screencast (3–5 min) mit Untertiteln; Kerngrafiken auf Folien; Quelle/Zeitraum angeben. <em>Quelle:</em> Lernfelder 12a (Präsentationsaufbau/15 Min). :contentReference[oaicite:15]{index=15}</li>
+  <li><strong>Architektur-Pitch (LF 9):</strong> Netzplan (Vektor), UML-Diagramme, animierte Übergänge nur dezent; Begleit-Handout. <em>Quelle:</em> Lernfelder 9. :contentReference[oaicite:16]{index=16}</li>
+  <li><strong>Schulung (LF 6):</strong> Video-Snippets + Whiteboard-Sequenzen; Recht/DSGVO prüfen; Inhaltsquellen dokumentieren. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:17]{index=17}</li>
+</ul>
+
+<h2><span style="background-color:#c2185b; color:white; padding:4px 8px; border-radius:12px;">Konkrete Tool-Empfehlungen nach Aufgabe</span></h2>
+<ul>
+  <li><strong>Diagramme/UML/BPMN:</strong> Vektor-/Diagramm-Editor (SVG-Export) für skalierbare, CI-konforme Grafiken (Use-Case, Aktivität, Sequenz; Prozessfluss).</li>
+  <li><strong>Screencast & Demo:</strong> Desktop-Recorder (Fenster/Quelle sperren, 1080p), separater Audiotrack für sauberen Schnitt.</li>
+  <li><strong>Video-Schnitt:</strong> NLE mit Titler/Callouts; Export MP4/H.264, konstante Bildrate.</li>
+  <li><strong>Audio:</strong> Editor mit Rauschminderung/Kompressor; Pop-Schutz, 48 kHz/16-bit.</li>
+  <li><strong>Whiteboard:</strong> Remote-Skizzen, Export als PDF/PNG fürs Handout.</li>
+  <li><strong>Präsentation:</strong> Master/Layouts, einheitliche Diagrammstile, Export als PDF + Quell-PPTX. <em>Quelle:</em> IT-Berufe. :contentReference[oaicite:18]{index=18}</li>
+</ul>
+
+<h2><span style="background-color:#455a64; color:white; padding:4px 8px; border-radius:12px;">Checkliste Qualität & Abnahme</span></h2>
+<ul>
+  <li><strong>Fachlich:</strong> Botschaft klar, Datenstand/Zeitraum benannt, Definitionen (z. B. KPI) auf der Folie.</li>
+  <li><strong>Gestaltung:</strong> Groß/kontrastreich, keine 3D-Effekte, konsistente Farben/Schriften (CI). <em>Quelle:</em> Lernfelder 12a. :contentReference[oaicite:19]{index=19}</li>
+  <li><strong>Technik:</strong> Auflösung, Ton, Untertitel, Medien eingebettet; PDF-Fallback. <em>Quelle:</em> IT-Berufe (Ablauf/Handout/Medienwechsel). :contentReference[oaicite:20]{index=20}</li>
+  <li><strong>Recht/Datenschutz:</strong> Bildrechte/Logos, DSGVO-Konformität, Impressum/Quellen. <em>Quelle:</em> Lernfelder 6. :contentReference[oaicite:21]{index=21}</li>
+  <li><strong>Team/Version:</strong> gleiche Programmversion, Master geteilt; Generalprobe. <em>Quelle:</em> IT-Berufe. :contentReference[oaicite:22]{index=22}</li>
+</ul>
+
+<h2>Quellen</h2>
+<ul>
+  <li>Prüfungskatalog Fachinformatiker/in Anwendungsentwicklung, ZPA Nord-West, 2. Aufl. 2024. :contentReference[oaicite:23]{index=23} :contentReference[oaicite:24]{index=24}</li>
+  <li>Lernfelder 12a – <em>Kundenspezifische Anwendungsentwicklung</em> (Präsentationsinhalte, Foliengestaltung, 15-Min-Rahmen). :contentReference[oaicite:25]{index=25} :contentReference[oaicite:26]{index=26} :contentReference[oaicite:27]{index=27}</li>
+  <li>Lernfelder 9 – <em>Netzwerke und Dienste bereitstellen</em> (Pflichtenheft, Visualisierung komplexer Inhalte). :contentReference[oaicite:28]{index=28} :contentReference[oaicite:29]{index=29}</li>
+  <li>Lernfelder 6 – <em>Serviceanfragen bearbeiten</em> (Medienkompetenz, Tool-Kategorien, Urheberrecht/DSGVO). :contentReference[oaicite:30]{index=30} :contentReference[oaicite:31]{index=31} :contentReference[oaicite:32]{index=32}</li>
+  <li>IT-Berufe – <em>Wirtschafts- und Geschäftsprozesse</em> (Masterseite/Checkliste, Ablauf/Handout/Medienwechsel, Team-Version). :contentReference[oaicite:33]{index=33} :contentReference[oaicite:34]{index=34} :contentReference[oaicite:35]{index=35}</li>
+</ul>

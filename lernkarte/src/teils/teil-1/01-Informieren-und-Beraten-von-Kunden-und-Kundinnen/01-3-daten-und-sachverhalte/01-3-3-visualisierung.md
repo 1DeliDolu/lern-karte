@@ -1,3 +1,133 @@
-# 01.3.3 Visualisierung
+<h1>Visualisierung in der Anwendungsentwicklung</h1>
 
-Methoden zur Visualisierung von Daten und Sachverhalten.
+<h2><span style="background-color:#ff7043; color:white; padding:4px 8px; border-radius:12px;">Prüfungsbezug & Lernfelder</span></h2>
+<p>Visualisierung ist prüfungsrelevant in AP2 und zieht sich fachübergreifend durch mehrere Lernfelder. Sie verbindet das strukturierte Aufbereiten von Informationen mit normierten Notationen (z.&nbsp;B. UML/BPMN) und der adressatengerechten Präsentation technischer Sachverhalte.</p>
+<ul>
+  <li><strong>AP2 – Planen eines Softwareproduktes:</strong> Bedienoberflächen funktionsgerecht und ergonomisch konzipieren; Maßnahmen zur Qualitätskontrolle planen (inkl. Dokumentation/Visualisierung).</li>
+  <li><strong>AP2 – Entwicklung & Umsetzung von Algorithmen:</strong> Algorithmen grafisch darstellen (UML-Diagramme/BPMN) und erläutern.</li>
+  <li><strong>LF3 (Clients in Netzwerke einbinden):</strong> Topologien, VLAN/VPN und Gerätebeziehungen in Netzwerkplänen eindeutig visualisieren.</li>
+  <li><strong>LF6 (Serviceanfragen bearbeiten):</strong> Service-KPIs (z.&nbsp;B. Verfügbarkeit, MTTR) in Dashboards visuell darstellen; Wissensartikel grafisch konsistent aufbereiten.</li>
+  <li><strong>LF9 (Netzwerke & Dienste bereitstellen):</strong> Lasten-/Pflichtenheft mit Netz-/Systemplänen, Architekturskizzen, Diagrammen und Legenden untermauern.</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog Fachinformatiker/in Anwendungsentwicklung, 2. Auflage 2024; Lernfelder&nbsp;3 (LF3); Lernfelder&nbsp;6 (LF6); Lernfelder&nbsp;9 (LF9).</em></p>
+
+<h2><span style="background-color:#1976d2; color:white; padding:4px 8px; border-radius:12px;">Grundprinzipien der Visualisierung</span></h2>
+<p>Eine gute Visualisierung reduziert Komplexität ohne Informationsverlust. Sie macht Muster, Ausreißer und Beziehungen erkennbar, beschleunigt Entscheidungen und stützt Argumentationen. Leitfragen sind: <em>Welche Botschaft?</em>, <em>für welches Publikum?</em>, <em>in welchem Nutzungskontext (Report, Präsentation, Ticket, Doku)?</em></p>
+<ul>
+  <li><strong>Informationsziel &amp; Kernbotschaft:</strong> Eine Aussage pro Visualisierung – „Was soll die Leserschaft unmittelbar erkennen?“</li>
+  <li><strong>Datenangemessenheit:</strong> Diagrammwahl richtet sich nach Datenstruktur (zeitlich, kategorial, Verhältnis, Verteilung, Relation).</li>
+  <li><strong>Konsistenz:</strong> Einheitliche Farben, Symbole, Schriftgrößen und Benennungen über das gesamte Artefakt/Projekt.</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (Präsentation/Ergonomie), Lernfelder&nbsp;6 (Servicekommunikation), Lernfelder&nbsp;9 (Pflichtenheft/Netzpläne).</em></p>
+
+<h2><span style="background-color:#8e24aa; color:white; padding:4px 8px; border-radius:12px;">Wahrnehmung & Gestaltung (Cognitive Design)</span></h2>
+<p>Visualisierungen nutzen präattentive Merkmale (Position, Länge, Ausrichtung, Größe, Form, Helligkeit), damit Betrachter Muster ohne bewusste Anstrengung erfassen. Gestaltgesetze (Nähe, Ähnlichkeit, Kontinuität, Geschlossenheit) strukturieren Inhalte.</p>
+<ul>
+  <li><strong>Farbkodierung:</strong> Farben sparsam einsetzen; Bedeutung konsistent halten; Rot/Grün vermeiden oder doppelt kodieren (Form/Label) für Barrierefreiheit.</li>
+  <li><strong>Reduktion:</strong> Entfernen Sie „Chart-Tinte“ ohne Informationswert (Raster schwach, unnötige 3D-Effekte vermeiden).</li>
+  <li><strong>Beschriftung am Datenpunkt:</strong> Legenden wenn möglich durch direkte Labels ersetzen; Achsen klar benennen, Einheiten angeben.</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (Ergonomie), Lernfelder&nbsp;6 (KPI/Reporting), Lernfelder&nbsp;9 (Dokumentationsqualität).</em></p>
+
+<h2><span style="background-color:#2e7d32; color:white; padding:4px 8px; border-radius:12px;">Diagrammtypen & richtige Auswahl</span></h2>
+<h3><span style="background-color:#43a047; color:white; padding:4px 8px; border-radius:12px;">Zeitreihen</span></h3>
+<p>Verlauf über Zeit, Trends, Saisonalität:</p>
+<ul>
+  <li><strong>Liniendiagramm:</strong> Service-Verfügbarkeit pro Tag/Woche (LF6).</li>
+  <li><strong>Flächendiagramm:</strong> Kapazitätsnutzung kumuliert (LF9).</li>
+</ul>
+<h3><span style="background-color:#1b5e20; color:white; padding:4px 8px; border-radius:12px;">Vergleiche (kategorial)</span></h3>
+<ul>
+  <li><strong>Balken/Spalten:</strong> Ticketanzahl je Kategorie; Fehlerklassen je Release.</li>
+  <li><strong>Dot/Strip Plot:</strong> Antwortzeiten mehrerer Provider (LF9).</li>
+</ul>
+<h3><span style="background-color:#00695c; color:white; padding:4px 8px; border-radius:12px;">Anteile</span></h3>
+<ul>
+  <li><strong>Gestapelte Balken:</strong> SLA-Erfüllung je Monat (Anteil pünktlich/verspätet).</li>
+  <li><strong>Ring nur sparsam:</strong> wenn maximal 3–4 Segmente und eindeutige Labels.</li>
+</ul>
+<h3><span style="background-color:#4e342e; color:white; padding:4px 8px; border-radius:12px;">Verteilung & Korrelation</span></h3>
+<ul>
+  <li><strong>Histogramm/Kernel-Dichte:</strong> Build-Dauer pro Pipeline-Run.</li>
+  <li><strong>Scatterplot:</strong> Datenvolumen vs. Latenz (LF3/LF9).</li>
+</ul>
+<p><em>Quelle: Lernfelder&nbsp;6 (KPI-Auswertung), Lernfelder&nbsp;9 (Leistungskennzahlen Netz), Prüfungskatalog (Qualität/Ergonomie).</em></p>
+
+<h2><span style="background-color:#d32f2f; color:white; padding:4px 8px; border-radius:12px;">UML & BPMN in der Prüfung (AP2)</span></h2>
+<p>UML/BPMN ersetzen ältere Notationen (z.&nbsp;B. Struktogramm) und dienen der eindeutigen, standardisierten Darstellung.</p>
+<ul>
+  <li><strong>Use-Case-Diagramm:</strong> Abgrenzung der Systemfunktionalität aus Sicht von Akteuren; ideal für Lastenheft-Kontext (LF9).</li>
+  <li><strong>Klassendiagramm:</strong> Domänenmodell (Klassen, Attribute, Beziehungen, Multiplizitäten); Abgleich mit ERM möglich.</li>
+  <li><strong>Aktivitätsdiagramm:</strong> Ablauf/Workflow inkl. Verzweigungen, Swimlanes für Rollen (LF6, Prozesse).</li>
+  <li><strong>Sequenzdiagramm:</strong> Nachrichtenfluss über Zeit zwischen Instanzen (Schnittstellen, Services).</li>
+  <li><strong>BPMN-Prozessdiagramm:</strong> Ereignisse, Aktivitäten, Gateways; ideal für Incident- und Change-Prozesse (LF6).</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (UML/BPMN, Algorithmen grafisch darstellen), Lernfelder&nbsp;6 (ITSM-Prozesse), Lernfelder&nbsp;9 (Prozess & Doku).</em></p>
+
+<h2><span style="background-color:#0097a7; color:white; padding:4px 8px; border-radius:12px;">Netzwerk- & Infrastrukturvisualisierung (LF3/LF9)</span></h2>
+<p>Netzpläne verbinden physische und logische Sichten. Eindeutigkeit hat Priorität: einheitliche Symbolik, klare Legende, Layer (physisch/logisch/Security).</p>
+<ul>
+  <li><strong>Topologien klar darstellen:</strong> Stern, Ring, Bus, Mesh; Trunks, Uplinks und Redundanzen markieren.</li>
+  <li><strong>VLAN/VPN:</strong> VLAN-Tags (802.1Q) nummerieren, Subnetze notieren; VPN-Tunnel (End-to-Site / Site-to-Site) samt Netzbereichen.</li>
+  <li><strong>Adressierung & Dienste:</strong> IP-Bereiche, DHCP-Scopes, DNS-Server, Default-Gateway, NAT/Firewall-Zonen (DMZ) beschriften.</li>
+  <li><strong>Performancehinweise:</strong> Bandbreiten (z.&nbsp;B. 1/10/40&nbsp;GbE), Latenzanforderungen, QoS-Klassen.</li>
+</ul>
+<p><em>Quelle: Lernfelder&nbsp;3 (LAN/WLAN, VLAN/VPN, Topologien), Lernfelder&nbsp;9 (Netzpläne, Pflichtenheft, Redundanz).</em></p>
+
+<h2><span style="background-color:#f9a825; color:white; padding:4px 8px; border-radius:12px;">Dashboards & KPI-Visualisierung im Service (LF6)</span></h2>
+<p>Service-Kennzahlen unterstützen Steuerung und Verbesserung (KVP). Visualisierungen müssen interpretierbar und handlungsleitend sein.</p>
+<ul>
+  <li><strong>Typische KPIs:</strong> MTTR, MTBF, First-Contact-Resolution, Backlog, SLA-Einhaltung, Verfügbarkeit (n-neun).</li>
+  <li><strong>Design:</strong> Ampel nur mit Zweitkodierung (Form/Text), Ziele als Referenzlinien, Drill-down von Übersicht → Detail.</li>
+  <li><strong>Kontext:</strong> Zeitfenster, Datenquelle, Definitionen (z.&nbsp;B. „Incident geschlossen“) sichtbar machen.</li>
+</ul>
+<p><em>Quelle: Lernfelder&nbsp;6 (ITSM, KPI, SLA), Prüfungskatalog (Qualitätssicherung, Reporting).</em></p>
+
+<h2><span style="background-color:#5d4037; color:white; padding:4px 8px; border-radius:12px;">Multimediale Aufbereitung</span></h2>
+<p>Für Einweisungen, Reviews und Schulungen ergänzen Bilder/Screencasts/Videos die Diagramme.</p>
+<ul>
+  <li><strong>Screenshots:</strong> Hervorhebungen (Frame/Blur), Schritt-nummern, kurze Captions.</li>
+  <li><strong>Screencasts:</strong> Max. 3–5&nbsp;Minuten pro Thema; Kapitelmarker; Untertitel (Barrierefreiheit).</li>
+  <li><strong>GIF/Animation:</strong> Nur für Mikrointeraktionen; sonst Video bevorzugen.</li>
+</ul>
+<p><em>Quelle: Lernfelder&nbsp;6 (Einweisung/Training), Prüfungskatalog (Präsentation/Medienkompetenz).</em></p>
+
+<h2><span style="background-color:#455a64; color:white; padding:4px 8px; border-radius:12px;">Qualitätssicherung & Checkliste</span></h2>
+<ul>
+  <li><strong>Vollständigkeit:</strong> Titel, Quelle, Datum, Datensatz/Version, Annahmen.</li>
+  <li><strong>Eindeutigkeit:</strong> Legenden/Labels, Einheiten, Dezimalstellen konsistent.</li>
+  <li><strong>Lesbarkeit:</strong> Schrift ≥ 10–12&nbsp;pt (Print) / skalierbar (Screen); hoher Kontrast.</li>
+  <li><strong>Korrektheit:</strong> Achsen beginnen (wenn sinnvoll) bei 0; Aggregationen geprüft; Ausreißer erklärt.</li>
+  <li><strong>Wiederverwendung:</strong> Vorlagenbibliothek (Farben, Formen, Pfeile, Netzsymbole) pflegen.</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (Qualität), Lernfelder&nbsp;9 (Dokumentationspflichten), Lernfelder&nbsp;6 (Wissensartikel).</em></p>
+
+<h2><span style="background-color:#7cb342; color:white; padding:4px 8px; border-radius:12px;">Barrierefreiheit & Datenschutz</span></h2>
+<ul>
+  <li><strong>Accessibility:</strong> Farbfehlsichtigkeit beachten (doppelte Kodierung), Alternativtexte, ausreichende Zielgrößen (UI-Mockups).</li>
+  <li><strong>DSGVO:</strong> Personenbezug vermeiden/anonymisieren; Pseudonymisierung in Screens; Logos/Geheimhaltung beachten.</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (Datenschutz/IT-Sicherheit), Lernfelder&nbsp;6 (Compliance), Lernfelder&nbsp;9 (Vertragsunterlagen).</em></p>
+
+<h2><span style="background-color:#c2185b; color:white; padding:4px 8px; border-radius:12px;">Typische Prüfungsaufgaben & Stolpersteine</span></h2>
+<ul>
+  <li><strong>Aufgaben:</strong> „Wählen und begründen Sie ein geeignetes Diagramm…“, „Skizzieren Sie den Prozess als BPMN…“, „Erstellen Sie ein Klassendiagramm zum Text…“, „Zeichnen Sie ein Netzschema mit VLAN/VPN…“</li>
+  <li><strong>Fehlerquellen:</strong> Falsche Diagrammwahl (z.&nbsp;B. Torte für Zeitreihen), unklare Legenden, inkonsistente Farben, fehlende Einheiten, ungenaue UML-Notation (Pfeil-/Multiplizitätsfehler), unvollständige Netzbeschriftung (Subnetz/Gateway).</li>
+</ul>
+<p><em>Quelle: Prüfungskatalog (AP2-Aufgabenformate), Lernfelder&nbsp;3/9 (Netzwerksichten), Lernfelder&nbsp;6 (Prozessvisualisierung).</em></p>
+
+<h2><span style="background-color:#6a1b9a; color:white; padding:4px 8px; border-radius:12px;">Praxisnahe Beispiele</span></h2>
+<ul>
+  <li><strong>LF3/LF9:</strong> Netzplan mit Stern-Topologie, VLAN 10/20/30, Trunk-Uplink 10 GbE, Site-to-Site-VPN, DHCP/DNS-Rollen ausgewiesen.</li>
+  <li><strong>AP2 (UML):</strong> Use-Case „Ticket erstellen“ (Akteure: Enduser, Servicedesk); Aktivitätsdiagramm für Incident-Flow; Sequenzdiagramm für „Benutzeranmeldung“ (Frontend → Auth-Service → User-DB).</li>
+  <li><strong>LF6:</strong> Dashboard mit Liniendiagramm (Verfügbarkeit/Monat), Balken (Incidents je Kategorie), Ampel-KPI (SLA) mit Schwellenwerten.</li>
+</ul>
+<p><em>Quelle: Lernfelder&nbsp;3 (VLAN/VPN), Lernfelder&nbsp;6 (ITSM-Flows/KPI), Lernfelder&nbsp;9 (Pflichtenheft-Anlagen).</em></p>
+
+<h2>Quellen</h2>
+<ul>
+  <li>Prüfungskatalog Fachinformatiker/in Anwendungsentwicklung, ZPA Nord-West, 2. Auflage 2024 (AP2-Bezug, UML/BPMN, Ergonomie).</li>
+  <li>Lernfelder&nbsp;3 – <em>Clients in Rechnernetzwerke einbinden</em> (LF3: Topologien, VLAN/VPN, Dienste, Adressierung).</li>
+  <li>Lernfelder&nbsp;6 – <em>Serviceanfragen bearbeiten</em> (LF6: ITSM-Prozesse, KPI/SLA, Wissensmanagement, Kommunikation).</li>
+  <li>Lernfelder&nbsp;9 – <em>Netzwerke und Dienste bereitstellen</em> (LF9: Lasten-/Pflichtenheft, Netzpläne, Redundanz, Dokumentation).</li>
+</ul>

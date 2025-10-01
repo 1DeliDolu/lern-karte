@@ -10,6 +10,8 @@ marked.setOptions({
   // disable automatic email/URL mangling (deprecated default)
   // see: https://www.npmjs.com/package/marked-mangle
   mangle: false,
+  // Allow HTML tags in markdown (important for inline styling)
+  sanitize: false,
 });
 
 const DOCS_ROOT = path.join(process.cwd(), 'src', 'teils');

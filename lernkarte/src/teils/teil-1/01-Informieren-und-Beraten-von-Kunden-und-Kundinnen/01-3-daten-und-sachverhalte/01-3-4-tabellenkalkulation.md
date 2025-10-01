@@ -1,3 +1,134 @@
-# 01.3.4 Tabellenkalkulation
+<h1>Tabellenkalkulation: Daten interpretieren, multimedial aufbereiten & präsentieren</h1>
 
-Tabellen, Formeln und einfache Analysen mit Tabellenkalkulationsprogrammen.
+<h2><span style="background-color:#37474f; color:white; padding:4px 8px; border-radius:12px;">Prüfungsbezug</span></h2>
+<p>Die Tabellenkalkulation ist zentral, um <em>Daten und Sachverhalte</em> zu interpretieren, adressatengerecht aufzubereiten und gemäß betrieblichen Vorgaben zu präsentieren (AP2). Der Prüfungskatalog fordert explizit die multimediale Aufbereitung und Präsentation von Ergebnissen, u.&nbsp;a. aus Tests, sowie das Zusammenführen heterogener Daten (CSV/JSON/XML). Quelle: Prüfungskatalog FIAE (AP2: Präsentation von Testergebnissen; Datenaustauschformate).</p>
+
+<h2><span style="background-color:#ff7043; color:white; padding:4px 8px; border-radius:12px;">Lernfelder & Einsatzkontexte</span></h2>
+<ul>
+  <li><strong><span style="background-color:#2e7d32; color:white; padding:2px 6px; border-radius:12px;">Lernfeld 6</span> Service/KPI:</strong> SLA-, MTTR-/MTBF-Analysen, Ticket-Bestände, Trendvisualisierung in Dashboards. Quelle: Lernfelder&nbsp;6 (KPI-/SLA-Kennzahlen).</li>
+  <li><strong><span style="background-color:#1565c0; color:white; padding:2px 6px; border-radius:12px;">Lernfeld 9</span> Planung/Kalkulation:</strong> Angebots- und Kostenkalkulationen, Nutzwert-/Preisvergleiche, Reporting im Lasten-/Pflichtenheft. Quelle: Lernfelder&nbsp;9 (Kalkulationsvorlagen).</li>
+  <li><strong><span style="background-color:#6a1b9a; color:white; padding:2px 6px; border-radius:12px;">Lernfeld 3</span> Dokumentation/Inventar:</strong> IP-Adresslisten, Messprotokolle, Gerätetabellen erfassen & fortschreiben. Quelle: Lernfelder&nbsp;3 (Tabellenkalkulation für Listen/Protokolle/IP-Bereiche).</li>
+  <li><strong><span style="background-color:#ad1457; color:white; padding:2px 6px; border-radius:12px;">Lernfeld 12a</span> Wirtschaftlichkeit/Präsentation:</strong> Projektkosten/-rentabilität, Amortisation, strukturierte Ergebnispräsentation. Quellen: Lernfelder&nbsp;12a (Kosten/Rentabilität, Präsentationsstruktur). :contentReference[oaicite:5]{index=5} </li>
+</ul>
+
+<h2><span style="background-color:#1976d2; color:white; padding:4px 8px; border-radius:12px;">Grundlagen & Datenmodellierung</span></h2>
+<p>Eine Tabellenkalkulation ist dann wirksam, wenn Struktur und Semantik stimmen. Verwenden Sie <em>eine Zeile = ein Datensatz</em>, <em>eine Spalte = ein Attribut</em>, eindeutige Kopfzeilen (ohne Zeilenumbrüche), konsistente Datentypen (Zahl, Datum, Text) und <em>„Als Tabelle formatieren“</em> (strukturierte Verweise). Achten Sie auf landesspezifische Formate (Dezimaltrennzeichen „,“; Datumsformate) und vermeiden Sie gemischte Typen in Spalten.</p>
+<ul>
+  <li><strong>Normierung:</strong> Trennen Sie Dimensionstabellen (z.&nbsp;B. Kategorien) von Faktentabellen (z.&nbsp;B. Ticket-Zählungen) – erleichtert Pivot und Aggregation.</li>
+  <li><strong>Benennungen:</strong> Eindeutige Blatt- und Bereichsnamen („Fakten_Incidents_2025“, „Dim_Kategorie“), Versionsschema („KPI_2025-10-01_v03.xlsx“).</li>
+</ul>
+<p><em>Bezug:</em> Konsistente, prüfungstaugliche Darstellung ist Teil der multimedialen Aufbereitung in AP2. Quelle: Prüfungskatalog (Präsentation/Qualität).</p>
+
+<h2><span style="background-color:#00897b; color:white; padding:4px 8px; border-radius:12px;">Datenimport & -bereinigung</span></h2>
+<p>Für die Auswertung müssen Daten korrekt importiert, bereinigt und zusammengeführt werden.</p>
+<ul>
+  <li><strong>Import (CSV/TXT/JSON/XML):</strong> Trennzeichen/Dezimaltrennzeichen prüfen, Textqualifizierer (") beachten, Zeichencodierung (UTF-8) setzen, Datumsparser kontrollieren.</li>
+  <li><strong>Zusammenführung:</strong> <em>CSV</em> als niedrigschwelliger Standard im AP2-Kontext; heterogene Quellen (CSV/JSON/XML) abgleichen und auf ein gemeinsames Schema mappen.</li>
+  <li><strong>Bereinigung:</strong> Duplikate entfernen, Leer-/Steuerzeichen trimmen, Ausreißer markieren, Referenzlisten für Kategorien (Data Dictionary) pflegen.</li>
+</ul>
+<p><em>Bezug:</em> „Daten heterogener Quellen zusammenführen … Datenaustauschformate: XML, JSON, CSV“. Quelle: Prüfungskatalog. </p>
+
+<h2><span style="background-color:#6d4c41; color:white; padding:4px 8px; border-radius:12px;">Formeln & Funktionen (praxisnah)</span></h2>
+<h3><span style="background-color:#2e7d32; color:white; padding:4px 8px; border-radius:12px;">Aggregation & Statistik (LF6)</span></h3>
+<ul>
+  <li><strong>Summen/Mittelwerte:</strong> <code>=SUMME(B2:B1000)</code>, <code>=MITTELWERT(B:B)</code></li>
+  <li><strong>Kriterienbasiert:</strong> <code>=SUMMEWENNS(B:B;A:A;">="&DATUM(2025;1;1);A:A;"<="&DATUM(2025;12;31))</code>, <code>=ZÄHLENWENNS(Status;"offen";Prio;"hoch")</code></li>
+  <li><strong>Fehlerbehandlung:</strong> <code>=WENNFEHLER(Formel; "—")</code>, <code>=ISTNV()</code>, <code>=ISTFEHLER()</code></li>
+</ul>
+<p><em>Bezug:</em> KPI-Auswertung (MTTR/MTBF/SLA-Erfüllung). Quelle: Lernfelder&nbsp;6. </p>
+
+<h3><span style="background-color:#1565c0; color:white; padding:4px 8px; border-radius:12px;">Nachschlagen & Dimensionen (LF9)</span></h3>
+<ul>
+  <li><strong>Lookup modern:</strong> <code>=XVERWEIS(Schlüssel;Dim[Key];Dim[Bezeichnung];"NV")</code></li>
+  <li><strong>Klassisch/kompatibel:</strong> <code>=SVERWEIS(Schlüssel;Tabelle;Spaltenindex;FALSCH)</code> oder <code>=INDEX(Spalte;VERGLEICH(Schlüssel;Schlüsselspalte;0))</code></li>
+</ul>
+<p><em>Bezug:</em> Stücklisten/Preislisten, Anbietermerkmale in Kalkulationsvorlagen. Quelle: Lernfelder&nbsp;9. :contentReference[oaicite:10]{index=10}</p>
+
+<h3><span style="background-color:#ad1457; color:white; padding:4px 8px; border-radius:12px;">Datum/Zeit & Servicezeiten (LF6/LF12a)</span></h3>
+<ul>
+  <li><strong>Servicefenster:</strong> <code>=ARBEITSTAGE(Ausfall;Reparatur)</code>, <code>=NETTOARBEITSTAGE(A1;A2;Feiertage)</code></li>
+  <li><strong>Trends:</strong> <code>=MONAT(Datum)</code>, <code>=JAHR(Datum)</code>, Gruppierung nach Monat/Quartal.</li>
+</ul>
+<p><em>Bezug:</em> Zeitliche KPI-Trends, Projektlaufzeiten/Rentabilität. Quellen: Lernfelder&nbsp;6; Lernfelder&nbsp;12a (Wirtschaftlichkeitsbetrachtungen). :contentReference[oaicite:11]{index=11}</p>
+
+<h3><span style="background-color:#6a1b9a; color:white; padding:4px 8px; border-radius:12px;">Dynamische Arrays & Text (LF3/LF6)</span></h3>
+<ul>
+  <li><strong>Listen/Dimensionen:</strong> <code>=EINDEUTIG(Bereich)</code>, <code>=SORTIEREN(Bereich;Spalte;1)</code>, <code>=FILTER(Tabelle;Kriterium)</code></li>
+  <li><strong>Textaufbereitung:</strong> <code>=TEXTKETTE(Trenner;Leer_ignore;Bereiche)</code>, <code>=LINKS/RECHTS/TEIL</code>, <code>=GLÄTTEN</code>, <code>=SÄUBERN</code></li>
+</ul>
+<p><em>Bezug:</em> Inventarlisten/IP-Bereiche, Messprotokolle. Quelle: Lernfelder&nbsp;3. </p>
+
+<h2><span style="background-color:#00838f; color:white; padding:4px 8px; border-radius:12px;">Pivot-Tabellen & Gruppierung</span></h2>
+<p>Pivots verdichten große Datenmengen ohne Formeln: <em>Zeilen</em> (Dimensionen), <em>Spalten</em> (weitere Dimensionen), <em>Werte</em> (Kennzahlen, z.&nbsp;B. Anzahl, Mittelwert), <em>Filter</em> (Sichten). Gruppierungen (Monat/Quartal), berechnete Felder (z.&nbsp;B. Erfüllungsquote), Slicer für interaktive Berichte.</p>
+<p><em>Bezug:</em> KPI-Dashboards (LF6), Angebots-/Kostenübersichten (LF9). Quellen: Lernfelder&nbsp;6; Lernfelder&nbsp;9.</p>
+
+<h2><span style="background-color:#f9a825; color:white; padding:4px 8px; border-radius:12px;">Visualisierung in der Tabellenkalkulation</span></h2>
+<ul>
+  <li><strong>Diagrammwahl:</strong> Linie für Zeitreihen (Verfügbarkeit), Balken für Kategorien (Tickets nach Ursache), gestapelte Balken für Anteile (SLA erfüllt/verfehlt), Punktdiagramm für Korrelationen (Datenvolumen vs. Latenz).</li>
+  <li><strong>Hervorhebung:</strong> Bedingte Formatierung (Ampel + Textlabels), Datenschnitt/Slicer, Sparklines für Trends.</li>
+  <li><strong>Lesbarkeit:</strong> Direkte Datenbeschriftung, dezente Raster, keine 3D-Effekte, einheitliche Farben/Schrift.</li>
+</ul>
+<p><em>Bezug:</em> AP2-Präsentationserfordernisse. Quelle: Prüfungskatalog (Ergebnisse präsentieren).</p>
+
+<h2><span style="background-color:#5d4037; color:white; padding:4px 8px; border-radius:12px;">Qualitätssicherung, Compliance & Vorgaben</span></h2>
+<ul>
+  <li><strong>Validierung:</strong> <em>Datenüberprüfung/Datenvalidierung</em> (Dropdown-Listen, Wertebereiche), konsistente Einheiten, Prüffelder (z.&nbsp;B. „Datenstand am …“).</li>
+  <li><strong>Schutz & Rechte:</strong> Blatt-/Dateischutz, Freigabe mit Lese-/Schreibrechten, sensiblen Personenbezug minimieren; Pseudonymisierung in Auswertungen.</li>
+  <li><strong>Vorlagen & CI:</strong> Firmen-Vorlagen (Deckblatt, Farbpalette, Diagrammstile), verbindliche Benennungen und FußLernfeldern („Quelle, Zeitraum, Definitionen“).</li>
+  <li><strong>Nachvollziehbarkeit:</strong> Änderungslog (Version/Autor), Kennzeichnung von Annahmen.</li>
+</ul>
+<p><em>Bezug:</em> Betriebliche Vorgaben/Präsentationslogik (LF12a-Präsentationsleitfaden). Quelle: Lernfelder&nbsp;12a (Aufbau/Leitpunkte der Projektpräsentation).</p>
+
+<h2><span style="background-color:#7cb342; color:white; padding:4px 8px; border-radius:12px;">Prüfungsnahe Beispiele & Vorgehensrezepte</span></h2>
+<h3><span style="background-color:#2e7d32; color:white; padding:4px 8px; border-radius:12px;">KPI-Dashboard (LF6)</span></h3>
+<ul>
+  <li><strong>Daten:</strong> Tickets (Erstellt-Datum, Kategorie, Priorität, Status, Lösungszeit).</li>
+  <li><strong>Berechnungen:</strong> MTTR: <code>=MITTELWERTWENNS(Lösungsdauer;Status;"geschlossen")</code>; SLA-Quote: <code>=SUMMEWENNS(Erfüllt;Monat;=m)/ANZAHLWENN(Monat;=m)</code>.</li>
+  <li><strong>Visualisierung:</strong> Linien (Verfügbarkeit je Monat), Balken (Tickets je Kategorie), Ampel (SLA-Status). Quelle: Lernfelder&nbsp;6. </li>
+</ul>
+
+<h3><span style="background-color:#1565c0; color:white; padding:4px 8px; border-radius:12px;">Kosten-/Angebotskalkulation (LF9)</span></h3>
+<ul>
+  <li><strong>Struktur:</strong> Eingabebereich (Mengen, EK-Preise, Rabatte, Skonto, Bezugskosten), Ergebnisbereich (Selbstkosten, Zielpreis, Marge).</li>
+  <li><strong>Formeln:</strong> Selbstkosten: <code>=SUMME(Einzelkosten)+Gemeinkosten</code>; Zielverkaufspreis: <code>=Selbstkosten/(1-Zielmarge)</code>.</li>
+  <li><strong>Kontrollen:</strong> Szenarien (Best/Worst Case), Datenvalidierung, Diagramm „Kostenstruktur“. Quelle: Lernfelder&nbsp;9 (Kalkulationsvorlagen, Preisbildung).</li>
+</ul>
+
+<h3><span style="background-color:#6a1b9a; color:white; padding:4px 8px; border-radius:12px;">Inventar- & IP-Adressverwaltung (LF3)</span></h3>
+<ul>
+  <li><strong>Tabellen:</strong> Geräte (Standort, Typ, Baujahr, OS, Netz, IP), Drucker (Papier, Interface, IP), Messprotokolle.</li>
+  <li><strong>Hilfen:</strong> Dropdowns (Standorte), <code>=EINDEUTIG()</code> für Gerätetypen, bedingte Formatierung für Wartungsfälligkeiten.</li>
+  <li><strong>Ausgabe:</strong> Pivot „Bestand je Standort“, Diagramm „Gerätealter nach Abteilung“. Quelle: Lernfelder&nbsp;3.</li>
+</ul>
+
+<h3><span style="background-color:#ad1457; color:white; padding:4px 8px; border-radius:12px;">Projektwirtschaftlichkeit (LF12a)</span></h3>
+<ul>
+  <li><strong>Eingaben:</strong> Personentage, Stundensätze, Laufzeit, Lizenzen, Energie, Fremdleistungen; erwartete Erträge/Kostenersparnisse.</li>
+  <li><strong>Kennzahlen:</strong> Ergebnis <code>=Ertrag-Kosten</code>; Rentabilität: <code>=Gewinn/Kapitaleinsatz*100%</code>; Amortisationsdauer: <code>=Kosten/periodische&nbsp;Rückflüsse</code>.</li>
+  <li><strong>Visualisierung:</strong> Wasserfall „Kosten → Ergebnis“, Liniendiagramm „Break-even“. Quelle: Lernfelder&nbsp;12a (Rentabilität/Amortisation). </li>
+</ul>
+
+<h2><span style="background-color:#c2185b; color:white; padding:4px 8px; border-radius:12px;">Fehlerbilder & Robustheit</span></h2>
+<ul>
+  <li><strong>Typische Fehler:</strong> <code>#WERT!</code> (Typkonflikt), <code>#BEZUG!</code> (gelöschter Bereich), <code>#NAME?</code> (Falsch geschriebene Funktion), <code>#DIV/0!</code>, <code>#NV</code> (Lookup-Fehler).</li>
+  <li><strong>Gegenmaßnahmen:</strong> <code>=WENNFEHLER()</code>, Hilfsspalten für sauber geparste Datums-/Zahlentypen, <em>Strukturierte Verweise</em> statt „ganze Spalten“ für Performance.</li>
+  <li><strong>Dokumentation:</strong> „Datenstand“, Quellenangabe, Berechnungslogik (Formel-Legende).</li>
+</ul>
+
+<h2><span style="background-color:#455a64; color:white; padding:4px 8px; border-radius:12px;">Checkliste für die AP2-Präsentation</span></h2>
+<ul>
+  <li><strong>Fachliche Richtigkeit:</strong> Definitionen (z.&nbsp;B. „Incident geschlossen“) am Rand der Folien/Tabelle.</li>
+  <li><strong>Lesbarkeit:</strong> Einheiten, Achsenskalierung, keine 3D-Effekte, konsistentes Farbschema (CI).</li>
+  <li><strong>Nachvollziehbarkeit:</strong> Quelle, Zeitraum, Datenstand, Annahmen, Version.</li>
+  <li><strong>Storyline:</strong> Problem → Methode (Import/Bereinigung/Berechnung) → Ergebnis → Handlungsempfehlung.</li>
+</ul>
+<p><em>Bezug:</em> Struktur/Leitpunkte der Projektpräsentation (LF12a). Quelle: Lernfelder&nbsp;12a. </p>
+
+<h2>Quellen</h2>
+<ul>
+  <li>Prüfungskatalog Fachinformatiker/in Anwendungsentwicklung, ZPA Nord-West, 2. Aufl. 2024 (AP2: Präsentation, Datenaustauschformate). </li>
+  <li>Lernfelder&nbsp;6 – <em>Serviceanfragen bearbeiten (LF6)</em> – KPI/SLA-Auswertung und Kennzahlen. </li>
+  <li>Lernfelder&nbsp;9 – <em>Netzwerke und Dienste bereitstellen (LF9)</em> – Kalkulationsvorlagen/Preisbildung. </li>
+  <li>Lernfelder&nbsp;3 – <em>Clients in Netzwerke einbinden (LF3)</em> – Tabellenkalkulation für Listen/Protokolle/IP-Bereiche. </li>
+  <li>Lernfelder&nbsp;12a – <em>Kundenspezifische Anwendungsentwicklung (LF12a)</em> – Wirtschaftlichkeit & Präsentationsleitfaden. </li>
+</ul>
