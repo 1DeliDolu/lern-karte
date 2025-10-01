@@ -47,23 +47,18 @@ const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme, open }) => ({
   flexGrow: 1,
-  padding: theme.spacing(1),
-  paddingTop: theme.spacing(1),
-  paddingLeft: theme.spacing(1),
-  paddingRight: theme.spacing(1),
+  padding: theme.spacing(3),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  // default: no negative margin so content is visible when drawer is closed
-  marginLeft: 0,
+  marginLeft: `-${drawerWidth}px`,
   ...(open && {
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    // when drawer is open, push the main content to the right
-    marginLeft: drawerWidth,
+    marginLeft: 0,
   }),
 }));
 
@@ -322,7 +317,7 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
             <MenuIcon />
           </IconButton>
         )}
-        <Box sx={{ maxWidth: '100%', mx: 0, width: '100%', px: 0 }}>
+        <Box sx={{ maxWidth: '100%', mx: 'auto', width: '100%' }}>
           <Paper
             id="docs-main"
             data-testid="docs-main"

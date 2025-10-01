@@ -3,14 +3,39 @@ import Link from 'next/link'
 import { Box, Container, Typography, Card, CardContent } from '@mui/material'
 import FolderIcon from '@mui/icons-material/Folder'
 import ArticleIcon from '@mui/icons-material/Article'
-import { buildDocsTreeForCategory } from '@/lib/docs-finder'
+import { buildDocsTreeForCategory, DocNode } from '@/lib/docs-finder'
+import DocsPersistentDrawer, { DocsNavNode } from '@/components/DocsPersistentDrawer'
 import { formatLabel } from '@/utils/format'
 
 export default async function Teil2Page() {
   const docTree = buildDocsTreeForCategory('teil-2');
   
+  const convertToNavNode = (node: DocNode, basePath: string): DocsNavNode => {
+    const href = `${basePath}/${node.path}`;
+    
+    if (node.type === 'dir') {
+      return {
+        id: node.path,
+        type: 'dir',
+        name: node.name,
+        href,
+        children: node.children.map((child: DocNode) => convertToNavNode(child, basePath))
+      };
+    }
+    
+    return {
+      id: node.path,
+      type: 'file',
+      name: node.name,
+      href
+    };
+  };
+  
+  const nodes = docTree.map(node => convertToNavNode(node, '/docs/teil-2'));
+  
   return (
-    <Container maxWidth="lg">
+    <DocsPersistentDrawer nodes={nodes}>
+      <Container maxWidth="lg">
       <Box sx={{ py: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
           Teil 2
@@ -62,5 +87,6 @@ export default async function Teil2Page() {
         </Box>
       </Box>
     </Container>
+    </DocsPersistentDrawer>
   )
 }
