@@ -46,9 +46,10 @@ const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme, open }) => ({
   flexGrow: 1,
-  padding: theme.spacing(2),
-  paddingTop: theme.spacing(3),
-  paddingLeft: theme.spacing(2),
+  padding: theme.spacing(1),
+  paddingTop: theme.spacing(1),
+  paddingLeft: theme.spacing(1),
+  paddingRight: theme.spacing(1),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -188,7 +189,7 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
                   </ListItemIcon>
                   <ListItemText
                     primary={formatLabel(node.name)}
-                    primaryTypographyProps={{ fontWeight: 600 }}
+                    slotProps={{ primary: { fontWeight: 600 } }}
                   />
                 </ListItemButton>
               </ListItem>
@@ -263,43 +264,38 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <Box sx={{ flexGrow: 1, overflow: 'auto', p: 1, display: 'flex', flexDirection: 'column', gap: 1 }}>
+        <Box sx={{ flexGrow: 1, overflow: 'auto', p: 0, display: 'flex', flexDirection: 'column', gap: 0 }}>
           {topLevelFiles.length > 0 && (
             <List disablePadding>{renderListItems(topLevelFiles)}</List>
           )}
 
           {topLevelDirs.map(dir => {
-            const normalizedHref = normalizePath(dir.href);
-            const selected = normalizedHref === normalizedPath;
-
             return (
               <Accordion
                 key={dir.id}
                 expanded={expanded === dir.id}
                 onChange={handleAccordionChange(dir.id)}
+                sx={{ 
+                  '&:before': { display: 'none' },
+                  boxShadow: 'none',
+                  border: 'none',
+                  borderRadius: 0
+                }}
               >
-                <AccordionSummary aria-controls={`${dir.id}-content`} id={`${dir.id}-header`}>
+                <AccordionSummary 
+                  aria-controls={`${dir.id}-content`} 
+                  id={`${dir.id}-header`}
+                  sx={{ px: 2, py: 1 }}
+                >
                   <FolderOutlinedIcon fontSize="small" />
                   <Typography component="span" fontWeight={600}>
                     {formatLabel(dir.name)}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails sx={{ p: 0 }}>
                   <List disablePadding>
-                    <ListItem disablePadding>
-                      <ListItemButton component={Link} href={dir.href} selected={selected}>
-                        <ListItemIcon sx={{ minWidth: 32 }}>
-                          <FolderOutlinedIcon fontSize="small" />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={formatLabel(dir.name)}
-                          primaryTypographyProps={{ fontWeight: 600 }}
-                        />
-                      </ListItemButton>
-                    </ListItem>
-
                     {dir.children.length > 0 ? (
-                      renderListItems(dir.children, 1)
+                      renderListItems(dir.children, 0)
                     ) : (
                       <Typography variant="body2" color="text.secondary" sx={{ px: 2, py: 1 }}>
                         Keine Inhalte vorhanden.
@@ -317,9 +313,9 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
           <IconButton
             onClick={() => setOpen(true)}
             sx={{
-              position: 'absolute',
-              left: 8,
-              top: 8,
+              position: 'fixed',
+              left: 16,
+              top: 80,
               zIndex: 1200,
               bgcolor: 'background.paper',
               boxShadow: 2,
@@ -329,12 +325,12 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
             <MenuIcon />
           </IconButton>
         )}
-        <Box sx={{ maxWidth: 1100, mx: 'auto', width: '100%', pl: { xs: 6, sm: 0 } }}>
+        <Box sx={{ maxWidth: '100%', mx: 0, width: '100%', pl: { xs: 6, sm: 0 } }}>
           <Paper
             id="docs-main"
             data-testid="docs-main"
             elevation={0}
-            sx={{ mt: 0, p: { xs: 2, md: 3 }, bgcolor: 'background.paper', minHeight: '60vh' }}
+            sx={{ mt: 0, p: { xs: 1, md: 2 }, bgcolor: 'background.paper', minHeight: '60vh' }}
           >
             {React.Children.toArray(children)}
           </Paper>

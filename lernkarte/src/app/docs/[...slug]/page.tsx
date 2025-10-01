@@ -10,6 +10,15 @@ type Props = {
   params: Promise<{ slug: string[] }>
 }
 
+// Helper function to format labels: replace dashes with spaces and capitalize first letter of each word
+function formatLabel(text: string): string {
+  return text
+    .replace(/-/g, ' ')
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
 export default async function DocPage({ params }: Props) {
   const { slug } = await params
   
@@ -69,32 +78,18 @@ export default async function DocPage({ params }: Props) {
   
   // Read the document using the remaining slug segments
   const docSegments = slug.slice(1)
-  
-  // Debug logging
-  console.log('Category:', category);
-  console.log('Doc segments:', docSegments);
-  
   const doc = readDoc(category, docSegments)
-  
-  console.log('Doc found:', doc ? 'YES' : 'NO');
-  if (doc) {
-    console.log('Match type:', doc.matchType);
-    console.log('Matched path:', doc.matchedPath);
-    console.log('Doc content length:', doc.content?.length || 0);
-    console.log('Doc HTML length:', doc.html?.length || 0);
-    console.log('Doc HTML preview:', doc.html?.substring(0, 200));
-  }
   
   if (!doc) {
     notFound()
   }
   
-  // Build breadcrumbs
+  // Build breadcrumbs with formatted labels
   const breadcrumbs = [
     { label: 'Docs', href: '/docs' },
     { label: category === 'teil-1' ? 'Teil 1' : category === 'teil-2' ? 'Teil 2' : 'Teil 3', href: `/docs/${category}` },
     ...docSegments.map((segment, idx) => ({
-      label: segment.replace(/-/g, ' '),
+      label: formatLabel(segment),
       href: `/docs/${category}/${docSegments.slice(0, idx + 1).join('/')}`
     }))
   ]
@@ -126,12 +121,6 @@ export default async function DocPage({ params }: Props) {
       </Breadcrumbs>
       
       {/* Document content */}
-      <Typography variant="h4" gutterBottom>
-        DEBUG: Content loaded: {doc.content ? 'YES' : 'NO'}
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        HTML Length: {doc.html?.length || 0}
-      </Typography>
       <Box
         sx={{
           '& h1': { mt: 0, mb: 2, fontSize: '2.5rem', fontWeight: 700 },
