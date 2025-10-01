@@ -154,13 +154,9 @@ export default async function DocPage({ params }: Props) {
   return (
     <DocsPersistentDrawer nodes={nodes}>
       <Box sx={{ py: 4, px: { xs: 2, sm: 3, md: 4 }, maxWidth: 'lg', mx: 'auto' }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          {formatLabel(docSegments[docSegments.length - 1])}
-        </Typography>
-        
         <Box
           sx={{
-            mt: 3,
+            mt: 0,
             '& h1': { mt: 0, mb: 2, fontSize: '2.5rem', fontWeight: 700 },
             '& h2': { mt: 3, mb: 2, fontSize: '2rem', fontWeight: 600 },
             '& h3': { mt: 2, mb: 1.5, fontSize: '1.5rem', fontWeight: 600 },
