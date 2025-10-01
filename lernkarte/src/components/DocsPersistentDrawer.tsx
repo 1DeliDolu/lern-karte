@@ -7,8 +7,6 @@ import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-import MuiAppBar, { type AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
@@ -44,15 +42,13 @@ const drawerWidth = 280;
 const STORAGE_KEY = 'docs:persistent-drawer';
 const ACCORDION_KEY = 'docs:persistent-accordion';
 
-interface PersistentAppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
-
 const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme, open }) => ({
   flexGrow: 1,
-  padding: theme.spacing(3),
+  padding: theme.spacing(2),
+  paddingTop: theme.spacing(3),
+  paddingLeft: theme.spacing(2),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -66,30 +62,6 @@ const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
     }),
     // when drawer is open, push the main content to the right
     marginLeft: drawerWidth,
-  }),
-}));
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: prop => prop !== 'open',
-})<PersistentAppBarProps>(({ theme, open }) => ({
-  position: 'sticky',
-  top: 0,
-  backgroundColor: theme.palette.background.paper,
-  color: theme.palette.text.primary,
-  boxShadow: 'none',
-  borderBottom: `1px solid ${theme.palette.divider}`,
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
   }),
 }));
 
@@ -272,25 +244,6 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
   return (
     <Box sx={{ display: 'flex', width: '100%' }}>
       <CssBaseline />
-      <AppBar open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={() => setOpen(true)}
-            sx={[
-              { mr: 2 },
-              open && { display: 'none' },
-            ]}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div">
-            Dokümantasyon
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -360,9 +313,30 @@ export default function DocsPersistentDrawer({ nodes, children }: Props) {
         </Box>
       </Drawer>
       <Main open={open}>
-        <Box sx={{ maxWidth: 1100, mx: 'auto', width: '100%' }}>
-          <Paper elevation={0} sx={{ mt: 0, p: { xs: 2, md: 3 }, bgcolor: 'background.paper', minHeight: '60vh' }}>
-            {children}
+        {!open && (
+          <IconButton
+            onClick={() => setOpen(true)}
+            sx={{
+              position: 'absolute',
+              left: 8,
+              top: 8,
+              zIndex: 1200,
+              bgcolor: 'background.paper',
+              boxShadow: 2,
+              '&:hover': { bgcolor: 'action.hover' }
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
+        <Box sx={{ maxWidth: 1100, mx: 'auto', width: '100%', pl: { xs: 6, sm: 0 } }}>
+          <Paper
+            id="docs-main"
+            data-testid="docs-main"
+            elevation={0}
+            sx={{ mt: 0, p: { xs: 2, md: 3 }, bgcolor: 'background.paper', minHeight: '60vh' }}
+          >
+            {React.Children.toArray(children)}
           </Paper>
         </Box>
       </Main>

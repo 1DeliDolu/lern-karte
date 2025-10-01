@@ -11,7 +11,7 @@ marked.setOptions({
   mangle: false,
 });
 
-const DOCS_ROOT = path.join(process.cwd(), 'src', 'teil');
+const DOCS_ROOT = path.join(process.cwd(), 'src', 'teils');
 
 export function listDocs() {
   // filter out dynamic route folders (e.g. [...slug]) and non-directory entries
