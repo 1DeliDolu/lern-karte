@@ -5,22 +5,69 @@ import FolderIcon from "@mui/icons-material/Folder";
 
 const categories = [
   {
-    id: "teil-1",
-    title: "Teil 1",
-    description:
-      "Informieren und Beraten, IT-Lösungen entwickeln, Qualitätssicherung, IT-Sicherheit",
+    id: "lernfeld-1",
+    title: "Lernfeld 1",
+    description: "Das Unternehmen und die eigene Rolle im Betrieb beschreiben",
   },
   {
-    id: "teil-2",
-    title: "Teil 2",
-    description:
-      "IT-Systeme betreiben, Speicherlösungen, Softwareanwendungen, Qualität sicherstellen",
+    id: "lernfeld-2",
+    title: "Lernfeld 2",
+    description: "Arbeitsplätze nach Kundenwunsch ausstatten",
   },
   {
-    id: "teil-3",
-    title: "Teil 3",
-    description:
-      "Berufsausbildung, Organisation, Sicherheit, Umweltschutz, Zusammenarbeit",
+    id: "lernfeld-3",
+    title: "Lernfeld 3",
+    description: "Clients in Netzwerke einbinden",
+  },
+  {
+    id: "lernfeld-4",
+    title: "Lernfeld 4",
+    description: "Schutzbedarfsanalyse im eigenen Arbeitsbereich durchführen",
+  },
+  {
+    id: "lernfeld-5",
+    title: "Lernfeld 5",
+    description: "Software zur Verwaltung von Daten anpassen",
+  },
+  {
+    id: "lernfeld-6",
+    title: "Lernfeld 6",
+    description: "Serviceanfragen bearbeiten",
+  },
+  {
+    id: "lernfeld-7",
+    title: "Lernfeld 7",
+    description: "Cyber-physische Systeme ergänzen",
+  },
+  {
+    id: "lernfeld-8",
+    title: "Lernfeld 8",
+    description: "Daten systemübergreifend bereitstellen",
+  },
+  {
+    id: "lernfeld-9",
+    title: "Lernfeld 9",
+    description: "Netzwerke und Dienste bereitstellen",
+  },
+  {
+    id: "lernfeld-10a",
+    title: "Lernfeld 10a",
+    description: "Benutzerschnittstellen gestalten und entwickeln",
+  },
+  {
+    id: "lernfeld-10c",
+    title: "Lernfeld 10c",
+    description: "Werkzeuge des maschinellen Lernens einsetzen",
+  },
+  {
+    id: "lernfeld-11a",
+    title: "Lernfeld 11a",
+    description: "Funktionalität in Anwendungen realisieren",
+  },
+  {
+    id: "lernfeld-12a",
+    title: "Lernfeld 12a",
+    description: "Kundenspezifische Anwendungsentwicklung durchführen",
   },
 ];
 
@@ -51,7 +98,7 @@ export default function DocsPage() {
             <Card
               key={cat.id}
               component={Link}
-              href={`/docs/${cat.id}`}
+              href={`/lernfeld/${cat.id}`}
               sx={{
                 height: "100%",
                 textDecoration: "none",
