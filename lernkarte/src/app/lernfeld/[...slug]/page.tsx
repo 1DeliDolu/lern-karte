@@ -8,7 +8,7 @@ import { buildDocsTreeForCategory, DocNode, readDoc } from "@/lib/feld-finder";
 import FeldPersistentDrawer, {
   DocsNavNode,
 } from "@/components/FeldPersistentDrawer";
-import { formatLabel, naturalSort } from "@/utils/feld-format";
+import { formatLabelFeld as formatLabel, naturalSort } from "@/utils/format";
 
 type Props = {
   params: Promise<{ slug: string[] }>;

@@ -7,7 +7,7 @@ import { buildDocsTreeForCategory, DocNode } from "@/lib/feld-finder";
 import FeldPersistentDrawer, {
   DocsNavNode,
 } from "@/components/FeldPersistentDrawer";
-import { formatLabel } from "@/utils/feld-format";
+import { formatLabelFeld as formatLabel } from "@/utils/format";
 
 export default async function Teil1Page() {
   const docTree = buildDocsTreeForCategory("lernfeld-1");

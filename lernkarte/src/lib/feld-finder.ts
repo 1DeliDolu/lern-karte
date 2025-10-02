@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import { naturalSort } from "@/utils/feld-format";
+import { naturalSort } from "@/utils/format";
 
 // Configure marked to avoid deprecation warnings about header IDs
 marked.setOptions({
@@ -61,7 +61,7 @@ function decodeSegment(seg: string) {
 }
 
 // Re-export formatLabel for convenience
-export { formatLabel } from "@/utils/feld-format";
+export { formatLabelFeld as formatLabel } from "@/utils/format";
 
 export function buildDocsTree(root = DOCS_ROOT): DocNode[] {
   const entries = fs.readdirSync(root, { withFileTypes: true });

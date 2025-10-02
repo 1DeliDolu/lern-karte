@@ -7,6 +7,16 @@ export function formatLabel(text: string): string {
     .join(' ');
 }
 
+// Format label for Lernfeld display: replace dashes and underscores with spaces, remove markdown suffix, and capitalize first letter of each word
+export function formatLabelFeld(text: string): string {
+  return text
+    .replace(/_markdown$/, "") // Remove "_markdown" suffix if present
+    .replace(/[-_]/g, " ") // Replace both dashes and underscores with spaces
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
 // Natural sort comparison for alphanumeric strings
 // This ensures "02-item" comes before "10-item" (numeric sorting)
 export function naturalSort(a: string, b: string): number {
