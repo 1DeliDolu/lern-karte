@@ -1,16 +1,17 @@
-import {fragen} from '@/constants/fragen';
+import { fragen } from "@/constants/fragen";
 
-import type { Karte } from '@/types/fargen';
-
-
+import type { Karte } from "@/types/question";
 
 // Generate 202 placeholder questions. Replace with real content as needed.
 // Use the questions imported from src/constants/fragen.ts.
 // Support both default and named exports and ensure the type matches.
 type FragenModule = { default?: Karte[] } | Karte[];
 const _fragenModule = fragen as FragenModule;
-const _fragen = (_fragenModule as { default?: Karte[] })?.default ?? _fragenModule;
-export const QUESTIONS: Karte[] = Array.isArray(_fragen) ? _fragen as Karte[] : [];
+const _fragen =
+  (_fragenModule as { default?: Karte[] })?.default ?? _fragenModule;
+export const QUESTIONS: Karte[] = Array.isArray(_fragen)
+  ? (_fragen as Karte[])
+  : [];
 
 export const QUESTIONS_PER_KARTE = 25;
 

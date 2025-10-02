@@ -16,6 +16,7 @@ export default function Navigation() {
     { label: 'Home', href: '/' },
     { label: 'Lernkarte', href: '/lern' },
     { label: 'Dokumentation', href: '/docs' },
+    { label: 'Lernfelder', href: '/lernfeldern' }
   ];
 
   return (
