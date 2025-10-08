@@ -1,135 +1,98 @@
-<html>
-<head>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-    h1, h2, h3 { margin-top: 25px; }
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 20px;
-      color: white;
-      font-weight: bold;
-      margin: 4px 0;
-    }
-    .lf3 { background-color: #4CAF50; }   /* Grün */
-    .lf6 { background-color: #2196F3; }   /* Blau */
-    .lf9 { background-color: #FF9800; }   /* Orange */
-    .lf12 { background-color: #9C27B0; }  /* Violett */
-    .section { margin-bottom: 30px; }
-    ul { margin-top: 10px; }
-    .exam-box {
-      background: #f4f4f4;
-      border-left: 6px solid #2196F3;
-      padding: 12px;
-      margin: 15px 0;
-    }
-    .tip {
-      background: #fff3cd;
-      border-left: 6px solid #ffc107;
-      padding: 12px;
-      margin: 15px 0;
-    }
-    .example {
-      background: #e8f5e9;
-      border-left: 6px solid #4CAF50;
-      padding: 12px;
-      margin: 15px 0;
-    }
-  </style>
-</head>
-<body>
+# 🧠 Thema: BGB vs. HGB – prüfungsrelevante Grundlagen für IT-Verträge & Services
 
-  <div class="badge lf3">Lernfeld 3 – Clients in Netzwerke einbinden</div><br>
-  <div class="badge lf6">Lernfeld 6 – Serviceanfragen bearbeiten</div><br>
-  <div class="badge lf9">Lernfeld 9 – Netzwerke und Dienste bereitstellen</div><br>
-  <div class="badge lf12">Lernfeld 12 – Kundenspezifische Anwendungsentwicklung durchführen</div><br>
+## 🔹 Einordnung
 
-  <div class="section">
-    <h2>02 – Kundenbeziehungen unter Beachtung rechtlicher Regelungen und betrieblicher Grundsätze</h2>
+> **BGB** regelt das allgemeine Zivilrecht (u. a. Verträge zwischen Bürgern und Unternehmen mit Verbrauchern). **HGB** ergänzt das BGB als **Sonderprivatrecht für Kaufleute/Unternehmen**. Im IT-Servicekontext müssen beide beachtet werden. 
 
+---
 
-<h3>BGB – Bürgerliches Gesetzbuch</h3>
-<ul>
-  <li><strong>Vertragsrecht:</strong> Kaufvertrag (§433 BGB), Werkvertrag (§631 BGB), Dienstvertrag (§611 BGB).</li>
-  <li><strong>Schuldrecht:</strong> Rechte & Pflichten der Vertragspartner (z.B. Lieferung, Zahlung, Haftung).</li>
-  <li><strong>Verbraucherschutz:</strong> Widerrufsrecht (14 Tage bei Fernabsatz), AGB-Kontrolle, Schutz vor Benachteiligung.</li>
-  <li><strong>Gewährleistung:</strong> Gesetzlich 2 Jahre, unabhängig von Garantie.</li>
-</ul>
+## 💡 BGB vs. HGB im Vergleich (IT-Praxis)
 
-<h3>HGB – Handelsgesetzbuch</h3>
-<ul>
-  <li><strong>Kaufmannsbegriff (§1 HGB):</strong> Jeder, der ein Handelsgewerbe betreibt.</li>
-  <li><strong>Handelsgeschäfte:</strong> Spezielle Vorschriften für Kaufverträge zwischen Kaufleuten.</li>
-  <li><strong>Buchführungspflicht:</strong> Kaufleute müssen Bücher führen und Bilanzen erstellen.</li>
-  <li><strong>Besonderheit:</strong> Schweigen auf kaufmännische Bestätigungsschreiben = Zustimmung.</li>
-  <li><strong>Untersuchungs- und Rügepflicht (§377 HGB):</strong> Mängel müssen unverzüglich angezeigt werden.</li>
-</ul>
+| Punkt                        | **BGB**                                                                                  | **HGB**                                                                                                                           |
+| ---------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Geltungsbereich**          | Allgemeines Zivilrecht, z. B. Verträge mit Verbrauchern                                  | Handelsrecht unter **Kaufleuten/Unternehmen**                                                                                     |
+| **Grundsatz**                | **Vertragsfreiheit** – Inhalte sind grundsätzlich frei vereinbar                         | Ebenfalls Vertragsfreiheit; in der Praxis oft **strenge, detaillierte Regelungen** und Standardverträge                           |
+| **Typische IT-Verträge**     | Kauf-, Werk-, Dienst-, Miet-, Leasingvertrag (Grundtypen)                                | Handelsgeschäfte zwischen Unternehmen, oft mit **AGB** und spezifischen Klauseln (z. B. Vertrags-/Konventionalstrafen)            |
+| **Beispiele aus der Praxis** | SLA-Leistungsinhalte stützen sich z. B. auf Dienst-/Werk-/Mietrecht (siehe SaaS-Mapping) | In Unternehmensverträgen werden **Vertrags-/Konventionalstrafen** (z. B. bis 5 %) vereinbart; Unternehmen müssen **HGB** beachten |
+| **Rechnungslegung**          | –                                                                                        | **§ 255 HGB:** Definition der **Anschaffungskosten** (bis betriebsbereiter Zustand, inkl. Nebenkosten, abzgl. Nachlässe)          |
 
-<h3>Betriebliche Grundsätze</h3>
-<ul>
-  <li>Transparenz und Fairness bei Angeboten und Beratung.</li>
-  <li>Einhaltung von <strong>DSGVO</strong> (Datenschutz-Grundverordnung) und IT-Sicherheitsstandards.</li>
-  <li>Dokumentationspflicht bei Projekten und Kundenkontakten.</li>
-  <li>Nachhaltigkeit, Wirtschaftlichkeit und Kundenorientierung als Leitprinzipien.</li>
-</ul>
+📌 Belege: Vertragsfreiheit/Vertragsarten/AGB/Strafen  · BGB/HGB-Abgrenzung  · § 255 HGB (Anschaffungskosten) 
 
+---
 
-  </div>
+## 🧩 Vertragsarten & IT-Services (BGB-Logik + HGB-Praxis)
 
-  <div class="section">
-    <h2>Prüfungsrelevanz – AP2 & Lernfelder</h2>
-    <ul>
-      <li><strong>AP2 – Planen eines Softwareproduktes:</strong> Kundenanforderungen vertraglich sichern.</li>
-      <li><strong>AP2 – Entwicklung & Algorithmen:</strong> Vertragsarten im Softwareprojekt beachten.</li>
-      <li><strong>AP2 – Wirtschafts- und Sozialkunde:</strong> BGB/HGB-Fragen, Kaufvertrag, AGB, Rechte/Pflichten.</li>
-      <li><strong>LF3:</strong> Netzwerkanbindung + rechtliche Verantwortung.</li>
-      <li><strong>LF6:</strong> Serviceanfragen & rechtliche Rahmenbedingungen.</li>
-      <li><strong>LF9:</strong> Pflichtenheft, Vertragsarten, Projektmanagement.</li>
-      <li><strong>LF12:</strong> Kundenprojekte mit rechtlicher Absicherung (z.B. Software-AGB, Gewährleistung).</li>
-    </ul>
-  </div>
+### Kern-Vertragsarten (Grundtypen)
 
-  <div class="section">
-    <h2>Typische Prüfungsfragen</h2>
-    <div class="exam-box">
-      <p><strong>Definitionen:</strong><br>
-      – Erklären Sie den Unterschied zwischen BGB und HGB.<br>
-      – Welche Vertragsarten regelt das BGB?</p>
-    </div>
-    <div class="exam-box">
-      <p><strong>Fallbeispiele:</strong><br>
-      – Ein Kunde reklamiert eine Software – welche Rechte greifen?<br>
-      – Kaufmann schweigt auf ein Angebot – welche rechtliche Wirkung hat das?</p>
-    </div>
-    <div class="exam-box">
-      <p><strong>Multiple Choice (WISO):</strong><br>
-      – Welches Gesetz regelt Kaufmannspflichten?<br>
-      – Wie lange beträgt die gesetzliche Gewährleistung?</p>
-    </div>
-  </div>
+* **Kaufvertrag, Werkvertrag, Dienstvertrag, Mietvertrag, Leasingvertrag** – Grundformen, auf die IT-Leistungen regelmäßig „abbilden“. 
 
-  <div class="section">
-    <h2>Beispielantwort</h2>
-    <div class="example">
-      <p><strong>Frage:</strong> Kunde reklamiert eine fehlerhafte Software innerhalb von 10 Tagen – welche Rechte hat er?</p>
-      <p><strong>Lösung:</strong><br>
-      – <strong>BGB §437:</strong> Nacherfüllung (Reparatur/Neulieferung), Rücktritt, Minderung, Schadensersatz.<br>
-      – <strong>HGB §377:</strong> Kaufleute müssen Mängel unverzüglich rügen.<br>
-      – AGB beachten: evtl. zusätzliche Garantiebedingungen.</p>
-    </div>
-  </div>
+### SLAs & Co. (vertragliche Hüllen)
 
-  <div class="section">
-    <h2>Tipps für die Prüfung</h2>
-    <div class="tip">
-      <ul>
-        <li><strong>Merksatz:</strong> BGB = allgemeines Zivilrecht, HGB = spezielles Handelsrecht.</li>
-        <li><strong>Unterscheide:</strong> Gewährleistung (gesetzlich, 2 Jahre) vs. Garantie (freiwillig).</li>
-        <li><strong>Fallfragen:</strong> Prüfen, ob Privatperson oder Kaufmann beteiligt ist → entscheidet über BGB oder HGB.</li>
-        <li><strong>Beispiele nutzen:</strong> Laptop-Kauf (BGB) vs. IT-Rahmenvertrag zwischen Firmen (HGB).</li>
-      </ul>
-    </div>
-  </div>
+* **SLA** (Service Level Agreement): regelt Art und Güte des Services zwischen Anbieter und Kunde.
+* **OLA** (intern) und **UC** (Subunternehmer) ergänzen SLAs in mehrstufigen Leistungsketten. 
 
-</body>
-</html>  
+### SaaS-Leistungen: juristische Einordnung (typisch in Prüfungsfällen)
+
+| SaaS-Leistungsbestandteil                | Rechtliche Einordnung     |
+| ---------------------------------------- | ------------------------- |
+| **Nutzung** (Zugriff auf Software/Cloud) | meist **Mietrecht**       |
+| **Updates/Aktualisierung**               | oft **Werkvertragsrecht** |
+| **Customizing** (Anpassung)              | oft **Werkvertragsrecht** |
+| **Speicherplatzüberlassung**             | **Mietrecht**             |
+
+> **Merksatz:** SaaS-Verträge sind gesetzlich nicht speziell geregelt → Verträge **genau prüfen** und bei Lücken auf BGB-Typen (Miete/Dienst/Werk) zurückgreifen. 
+
+---
+
+## ⚖️ AGB, Governance & Compliance (Handelspraxis)
+
+* Unternehmen nutzen **AGB** und Standardverträge; **HGB-Pflichten** sind zu beachten. **Vertragsstrafen**/Konventionalstrafen (pauschalierter SE) können **vertraglich** festgelegt werden. 
+* Im Servicebereich sind **rechtliche Vorgaben** (BGB/HGB, UWG, DSGVO, TMG, UrhG, StGB u. a.) integraler Bestandteil der Governance/Compliance. 
+
+---
+
+## 🧠 Prüfungsnah: typische Aufgabenstellungen
+
+### 1) **Fall „SaaS-Angebot“**
+
+**Aufgabe:** Ordnen Sie die Vertragsbestandteile einer SaaS-Leistung den Vertragstypen zu und benennen Sie zwei wesentliche SLA-Kriterien.
+**Lösungsskizze (Kurzform):** Nutzung/Mietrecht; Updates/Werkvertragsrecht; Customizing/Werkvertragsrecht; Speicherplatz/Mietrecht. SLA-Kriterien: z. B. **Reaktions-/Wiederherstellungszeiten**, **Supportzeiten**, **Verfügbarkeit**, **Haftungsgrenzen**.
+
+### 2) **Fall „Hardwarebeschaffung“**
+
+**Aufgabe:** Ermitteln Sie die **Anschaffungskosten** eines Netzwerkswitches inkl. Installation/Einweisung und Skonto.
+**Lösungshinweis:** **§ 255 HGB**: alle Aufwendungen bis **betriebsbereiter Zustand**, inkl. Nebenkosten, **abzgl. Nachlässe** (Rabatt/Skonto). 
+
+### 3) **Fall „Unternehmensvertrag“**
+
+**Aufgabe:** Nennen Sie zwei Gründe, warum Unternehmensverträge **genau** zu prüfen sind.
+**Lösungshinweis:** **Vertragsfreiheit**, komplexe **AGB**, mögliche **Vertrags-/Konventionalstrafen**; HGB-Pflichten. 
+
+---
+
+## ✅ Schnell-Check für die Klausur
+
+* **BGB oder HGB?** → Verbraucherbezug = **BGB**; reines Unternehmensgeschäft = **HGB** + BGB-Grundsätze. 
+* **Vertragstyp klären:** Kauf/Werk/Dienst/Miete/Leasing – danach Rechte/Pflichten/Haftung ableiten. 
+* **SaaS auseinanderziehen:** Nutzung (=Miete) vs. Ergebnisleistung (=Werk). 
+* **Kostenbegriff merken:** **§ 255 HGB** für Anschaffungskosten (inkl. Nebenkosten, abzgl. Nachlässe). 
+
+---
+
+## 🧾 Mini-Formulierungsbeispiele (Auszug)
+
+```text
+SLA – Verfügbarkeit: Der Anbieter stellt den Service mit einer monatlichen Verfügbarkeit von 99,5 % bereit.
+SLA – Reaktion/Wiederherstellung: Reaktionszeit 4 h, Wiederherstellungszeit 12 h (Schweregrad 2).
+Haftung/Strafe: Vertragsstrafe bis zu 5 % des Auftragswertes bei schuldhafter Fristüberschreitung.
+```
+
+➡️ Praxisnah, aber **immer** auf AGB/BGB/HGB-Kompatibilität prüfen. 
+
+---
+
+📚 **Quelle:**
+Lernfeld 6 – *Serviceanfragen bearbeiten*, **1.1.4 Rechtliche Anforderungen (BGB/HGB, Governance/Compliance)**, S. 25; **1.2 Vertragsarten/AGB/Strafen**, S. 26–27; **SLA/OLA/UC**, S. 26 ff.
+Lernfeld 6 – *Serviceanfragen vertiefend analysieren*, **SLA-Kennzahlen/Kriterien**, S. 59. 
+Lernfeld 9 – *Netzwerke und Dienste bereitstellen*, **Anschaffungs- und Betriebskosten (§ 255 HGB)**, S. 362 ff. 
+Lernfeld 6 – **SaaS-Einordnung (Miet-/Werk-/Dienstvertragsrecht)**, S. 27. 
