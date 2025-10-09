@@ -47,4 +47,10 @@ public/lernfeld10a
 public/lernfeld11a
 public/lernfeld12a
 
-
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
