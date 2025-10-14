@@ -1,8 +1,11 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import PersistentDrawer, { type NavNode, type PersistentDrawerConfig } from './PersistentDrawer';
-import { formatLabelFeld } from '@/utils/format';
+import * as React from "react";
+import PersistentDrawer, {
+  type NavNode,
+  type PersistentDrawerConfig,
+} from "./PersistentDrawer";
+import { formatLabelFeldTruncated } from "@/utils/format";
 
 export type DocsNavNode = NavNode;
 
@@ -12,13 +15,17 @@ type Props = {
 };
 
 const config: PersistentDrawerConfig = {
-  storageKey: 'lernfeld:persistent-drawer',
-  accordionKey: 'lernfeld:persistent-accordion',
-  pathPrefix: '/lernfeld/',
-  breadcrumbTitle: 'Dokumentation',
-  formatLabel: formatLabelFeld,
+  storageKey: "lernfeld:persistent-drawer",
+  accordionKey: "lernfeld:persistent-accordion",
+  pathPrefix: "/lernfeld/",
+  breadcrumbTitle: "Dokumentation",
+  formatLabel: formatLabelFeldTruncated,
 };
 
 export default function FeldPersistentDrawer({ nodes, children }: Props) {
-  return <PersistentDrawer nodes={nodes} config={config}>{children}</PersistentDrawer>;
+  return (
+    <PersistentDrawer nodes={nodes} config={config}>
+      {children}
+    </PersistentDrawer>
+  );
 }

@@ -1,8 +1,8 @@
-import path from 'path';
-import { createDocFinder } from './doc-finder';
-import { formatLabel } from '@/utils/format';
+import path from "path";
+import { createDocFinder } from "./doc-finder";
+import { formatLabel, truncateToThreeWords } from "@/utils/format";
 
-const DOCS_ROOT = path.join(process.cwd(), 'src', 'teils');
+const DOCS_ROOT = path.join(process.cwd(), "src", "teils");
 
 // Create the doc finder instance for 'teils' (docs)
 const docFinder = createDocFinder(DOCS_ROOT);
@@ -17,8 +17,8 @@ export const listDocsRecursive = docFinder.listDocsRecursive;
 export const readDoc = docFinder.readDoc;
 
 // Re-export types
-export type { DocNode, DirectoryNode, FileNode, DocFile } from './doc-finder';
-export { isDirectoryNode, isFileNode } from './doc-finder';
+export type { DocNode, DirectoryNode, FileNode, DocFile } from "./doc-finder";
+export { isDirectoryNode, isFileNode } from "./doc-finder";
 
 // Re-export formatLabel for convenience
-export { formatLabel };
+export { formatLabel, truncateToThreeWords };
