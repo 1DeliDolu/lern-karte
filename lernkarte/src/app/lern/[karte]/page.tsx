@@ -10,7 +10,7 @@ export default async function KartePage({ params }: Props) {
   const awaitedParams = await params;
   const karteNum = parseInt(awaitedParams.karte, 10);
 
-  if (Number.isNaN(karteNum) || karteNum < 1 || karteNum > 8) {
+  if (Number.isNaN(karteNum) || karteNum < 1 || karteNum > 9) {
     return (
       <div>
         <h2>Ungültige Karte</h2>
