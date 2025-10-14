@@ -1,0 +1,49 @@
+Lies den hochgeladenen PDF-Text sorgfältig.
+Erstelle eine strukturierte, präzise und didaktisch klare sowie detaillierte **Zusammenfassung** des von mir genannten Abschnitts.
+
+### Zitierweise
+- Gib die **Seitennummer nur einmal** direkt nach der Hauptüberschrift im Format `[Seite: X]` an.
+- Innerhalb der Unterpunkte und Erklärungen **keine weiteren Seitenangaben** hinzufügen.
+
+1. Danach folgt die Zusammenfassung in **Markdown-Struktur**:
+   * # <emoji> Hauptüberschrift (z. B. „4.1.1 Kundenanforderungen formulieren [Seite: 12]“)
+   * Fließtext mit den Kernaussagen (ohne weitere Seitenangaben)
+   * | Begriff | Definition | – tabellarisch analog zur Darstellung im Text
+   * ## <emoji> Unterüberschriften für Prozessschritte, Methoden, Ziele etc.
+   * Nummerierte Listen oder Bulletpoints, wo sinnvoll
+   * Fachbegriffe **fett** markieren
+
+### Sprachregel
+- Schreibe die Hauptausgabe auf **Deutsch**.
+
+### Qualitätsanforderungen
+- Vollständigkeit: Alle relevanten Punkte des Abschnitts müssen enthalten sein.
+- Klarheit: detaillierte, präzise Sätze, didaktisch aufbereitet.
+- Einheitliche Formatierung: Immer modernes Markdown, keine Abweichungen.
+- Keine freien Interpretationen, nur inhaltliche Verdichtung.
+
+### Abschnittsauswahl & Geltungsbereich (generisch)
+- Wenn ich dir einen Abschnitt nenne (z. B. „**4.1**“ oder „**4.1.1**“), dann:
+  - **Fasse ab diesem Abschnitt (inklusive) bis unmittelbar vor den nächsten Abschnitt **derselben Ebene** zusammen.**
+    - Beispiel: „4.1.1 …“ → zusammenfassen bis vor „4.1.2 …“. Alle **Unterabschnitte** von 4.1.1 (z. B. 4.1.1.1, (a), (b) …) **einschließen**.
+    - Beispiel: „4.1 …“ → zusammenfassen bis vor „4.2 …“. Alle **Unterabschnitte** von 4.1 (z. B. 4.1.1, 4.1.2 …) **einschließen**.
+  - Die **Nummerierung** und **Original-Reihenfolge** der Überschriften und Unterpunkte **beibehalten**, auch wenn sich Gliederungsnummern in anderen Dokumenten unterscheiden.
+- Falls der benannte Abschnitt **am Dokumentende** liegt, fasse bis zum **Dokumentende**.
+
+### Unterüberschriften & Unterpunkte (generisch)
+- **Unterüberschriften exakt wie im Text wiedergeben**, z. B. „(1) Einsatzgebiete“, „(2) …“ oder „a), b), c) …“ – **wortgetreu und in Originalreihenfolge**.
+- Falls es **Unterpunkte** innerhalb solcher Unterüberschriften gibt (z. B. „(x) …“), diese **vollständig** und **hierarchisch korrekt** übernehmen.
+
+### Domänenspezifische Inhalte (falls vorhanden)
+- **Tabellen** (z. B. „Einsatzgebiete in der Bereitstellung von Netzen und Diensten nach den Ausbildungsordnungen“):
+  - **Als Markdown-Tabelle** reproduzieren, **gleiche Spalten-/Zeilenstruktur**, keine Auslassungen.
+- **Definitionen, Ziele, Strategien** (z. B. „Ziele und Migrationsstrategien der Netzbereitstellung“):
+  - **Getrennt** und **vollständig** listen (Blöcke: *Definitionen*, *Ziele*, *Strategien*).
+  - Zentrale Fachbegriffe **fett** markieren.
+- Wenn der Abschnitt „**Kundenanforderungen formulieren**“ enthält:
+  - **Alle im Original aufgeführten Kriterien/Unterpunkte** (z. B. Bedarf, Einsatzgebiete, Leistungsmerkmale, Qualitätsanforderungen, rechtliche/vertragliche Rahmenbedingungen, Wirtschaftlichkeit usw.) **vollständig** übernehmen und strukturiert darstellen.
+
+### Ergebnis
+Die Ausgabe soll so aussehen, dass sie direkt in eine **bilinguale Q&A-Datenbank** übernommen werden kann.
+
+# Titel
