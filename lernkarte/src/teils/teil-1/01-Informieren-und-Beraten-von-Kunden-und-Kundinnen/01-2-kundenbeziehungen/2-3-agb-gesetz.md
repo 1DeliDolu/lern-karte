@@ -1,166 +1,183 @@
-Bu, alıntı/kanıt yer tutucularının (örn. `oaicite`, `filecite`) yanlışlıkla HTML içine karışmasından kaynaklanıyor. Bazı ortamlarda bu yer tutucular işlenemediği için düz metin olarak görünür. Aşağıya **temizlenmiş ve doğrudan render edilebilen** HTML sürümünü bırakıyorum.
+## 📘 Thema / Zuordnung
 
-<!DOCTYPE html>
+**Thema:** AGB-Gesetz (Allgemeine Geschäftsbedingungen – §§ 305 ff. BGB)
+**Zuordnung im Prüfungskatalog:**
+👉 **Fragenkomplex 01 – Fachrichtungsübergreifende berufsprofilgebende Fertigkeiten**
+👉 **Themenkreis:** *„Kundenbeziehungen unter Beachtung rechtlicher Regelungen und betrieblicher Grundsätze gestalten“*
+👉 **Rechtliche Grundlagen:** `BGB`, `HGB`, `UWG`, `AGB-Gesetz`, `Compliance`, `Regelkonformität`
+👉 **Lernfelder:** LF 3 (Netzwerke), LF 6 (Serviceanfragen), LF 9 (Netzwerke & Dienste), LF 12 (Kundenspezifische Anwendungsentwicklung)
 
-<html lang="de">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AGB-Gesetz (AGB in den §§ 305 ff. BGB)</title>
-<style>
-  :root{
-    --badge-radius: 999px;
-    --pad: .35rem .6rem;
-    --fs: .82rem;
-  }
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.6;margin:0;background:#fafafa;color:#111}
-  header{padding:2rem 1.25rem 1rem;border-bottom:1px solid #eaeaea;background:linear-gradient(180deg,#ffffff, #fafafa)}
-  h1{margin:.2rem 0 1rem;font-size:1.8rem}
-  .badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:.25rem 0 0}
-  .badge{display:inline-flex;align-items:center;gap:.4rem;border-radius:var(--badge-radius);padding:var(--pad);font-weight:600;font-size:var(--fs);color:#fff;white-space:nowrap}
-  .b-katalog{background:#7c3aed}
-  .b-lf{background:#2563eb}
-  .b-handbuch{background:#059669}
-  .b-praxis{background:#e11d48}
-  main{padding:1.25rem;max-width:1000px;margin:auto}
-  h2{font-size:1.25rem;margin:1.75rem 0 .5rem}
-  h3{font-size:1.05rem;margin:1.25rem 0 .4rem}
-  .card{background:#fff;border:1px solid #eaeaea;border-radius:14px;padding:1rem 1rem 1rem 1.1rem;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-  .grid{display:grid;gap:1rem}
-  .g-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-  .note{font-size:.95rem;background:#0ea5e90f;border-left:4px solid #0ea5e9;padding:.75rem;border-radius:10px}
-  .kex{background:#fef3c7;border-left:4px solid #f59e0b;padding:.6rem .75rem;border-radius:10px}
-  .list-check li{margin:.25rem 0}
-  ul,ol{padding-left:1.2rem}
-  .src{font-size:.9rem;color:#374151}
-  code{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:6px;padding:.05rem .35rem}
-  .pill{font-size:.75rem;display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:.25rem .55rem;margin-right:.35rem}
-</style>
-</head>
-<body>
+---
 
-<header>
-  <h1>AGB-Gesetz (AGB nach §§ 305 ff. BGB) – Überblick & Prüfungsrelevanz</h1>
-  <div class="badges">
-    <span class="badge b-katalog">Prüfungskatalog • WISO & Lernfelder-Übersicht</span>
-    <span class="badge b-lf">LF 2 • Vertragsarten & AGB</span>
-    <span class="badge b-lf">LF 6 • Governance, Verträge, SLA/OLA/UC</span>
-    <span class="badge b-handbuch">IT-Handbuch (Westermann) • AGB-Grundlagen</span>
-    <span class="badge b-praxis">Praxis • Verbraucher vs. Unternehmen</span>
-  </div>
-</header>
+### 🔍 Vollständige Erklärung
 
-<main>
+Das sogenannte **AGB-Gesetz** war bis 2002 ein eigenständiges Gesetz (Gesetz zur Regelung des Rechts der Allgemeinen Geschäftsbedingungen).
+Seit der **Schuldrechtsreform 2002** ist es **in das Bürgerliche Gesetzbuch (BGB) integriert** – in die **§§ 305 bis 310 BGB**.
 
-  <section class="card">
-    <h2>1) Einordnung in Katalog, Lernfelder & Handbuch</h2>
-    <div class="grid g-2">
-      <div>
-        <h3><span class="pill">Prüfungskatalog (ZPA)</span></h3>
-        <p>AGB-Themen tauchen im Bereich <strong>Wirtschafts- und Sozialkunde</strong> sowie in prozessualen Lernfeldern auf (Verträge, Recht, Organisation). Der Katalog benennt WISO als eigenen Prüfungsbereich und listet die <em>Lernfelder LF 1–12</em> als Rahmen für die Fachthemen.</p>
-      </div>
-      <div>
-        <h3><span class="pill">Lernfelder</span></h3>
-        <ul>
-          <li><strong>LF 2</strong>: <em>Vertragsarten und AGB unterscheiden</em> mit Definition, Zweck & Vor-/Nachteilen; Bezug auf <code>§ 305 BGB</code>.</li>
-          <li><strong>LF 6</strong>: Rechtliche Rahmen (BGB/HGB, DSGVO, TMG), Vertragsarten, <strong>SLA/OLA/UC</strong> im Service-Kontext (Governance/Compliance).</li>
-        </ul>
-      </div>
-      <div>
-        <h3><span class="pill">IT-Handbuch (Westermann)</span></h3>
-        <p>Stellt AGB als <em>vorformulierte Vertragsbedingungen</em> dar, erläutert Einbeziehung/Wirksamkeit (u. a. <code>§ 305</code>, <code>§ 307 BGB</code>) und den Vorrang der <strong>Individualabrede</strong>.</p>
-      </div>
-    </div>
-  </section>
+Allgemeine Geschäftsbedingungen (`AGB`) sind **vorgefertigte Vertragsbedingungen**, die **eine Vertragspartei (meist der Unternehmer)** für eine Vielzahl von Verträgen **einseitig stellt**.
+Sie gelten nur, **wenn sie wirksam in den Vertrag einbezogen wurden** und **keine unzulässigen Klauseln enthalten**.
 
-  <section class="card">
-    <h2>2) AGB – Begriff, Rechtsgrundlage, Zweck</h2>
-    <p><strong>Allgemeine Geschäftsbedingungen (AGB)</strong> sind <em>vorformulierte Vertragsbedingungen</em> für eine Vielzahl von Verträgen, die der Verwender der anderen Partei bei Vertragsschluss stellt (<code>§ 305 BGB</code>). Ziel: Vertragsgestaltung vereinfachen und einen schnellen Überblick über wesentliche Klauseln geben.</p>
+Für Fachinformatiker/-innen ist das Thema **AGB** zentral, sobald sie:
+
+* Verträge mit Kunden (z. B. Software-, Wartungs- oder Dienstleistungsverträge) abschließen,
+* Online-Dienste oder Shops betreiben,
+* oder Lizenzbedingungen („Terms of Service“) in Softwareprojekten formulieren oder prüfen müssen.
+
+---
+
+### 🧩 Wichtige Punkte (aus allen relevanten Abschnitten)
+
+#### 📜 1. Begriff & Bedeutung
+
+* `AGB` = **Allgemeine Geschäftsbedingungen** (§ 305 BGB)
+* Vorformulierte Vertragsklauseln für **mehrfache Verwendung**
+* Vom Verwender **einseitig gestellt**, ohne dass der Kunde den Inhalt verhandeln kann
+* Ziel: **Rechtssicherheit und Effizienz** bei vielen gleichartigen Verträgen (z. B. Hosting-Verträge, Software-Wartung)
+
+**Beispiele für AGB-Klauseln:**
+
+* Zahlungsbedingungen („Zahlung innerhalb von 14 Tagen netto“)
+* Haftungsbegrenzung („Haftung bei leichter Fahrlässigkeit ausgeschlossen“)
+* Lieferbedingungen („Lieferung ab Lager, Versand auf Risiko des Käufers“)
+* Nutzungsrechte („Software darf nur in Lizenzumfang verwendet werden“)
+
+---
+
+#### 🧾 2. Einbeziehung von AGB (§ 305 BGB)
+
+Damit AGB **Bestandteil des Vertrags** werden, müssen folgende Voraussetzungen erfüllt sein:
+
+1. **Hinweis vor Vertragsschluss**
+   Der Verwender (z. B. das IT-Unternehmen) muss den Kunden **ausdrücklich** auf die AGB hinweisen.
+   → Beispiel: „Es gelten unsere Allgemeinen Geschäftsbedingungen, abrufbar unter [www.firma.de/agb.“](http://www.firma.de/agb.“)
+
+2. **Möglichkeit der Kenntnisnahme**
+   Der Kunde muss **zumutbar Einsicht nehmen können** (z. B. per PDF oder Aushang).
+
+3. **Einverständnis**
+   Der Kunde muss den AGB **zustimmen** (z. B. durch Unterschrift oder Klick auf „AGB akzeptieren“).
+
+Fehlt eine dieser Voraussetzungen, gelten die AGB **nicht als Vertragsbestandteil**!
+
+---
+
+#### ⚖️ 3. Inhaltskontrolle (§§ 307–309 BGB)
+
+Selbst wenn AGB einbezogen sind, dürfen sie **nicht unangemessen benachteiligen**.
+
+**Unzulässig sind z. B.:**
+
+* **Überraschende Klauseln (§ 305c BGB)** → z. B. versteckte Gebühren oder Vertragsverlängerungen
+* **Unangemessene Benachteiligung (§ 307 BGB)** → z. B. Ausschluss aller Mängelrechte
+* **Ausschluss gesetzlicher Gewährleistung (§ 309 Nr. 8 BGB)**
+* **Haftungsausschluss für grobe Fahrlässigkeit oder Vorsatz (§ 309 Nr. 7 BGB)**
+* **Automatische Vertragsverlängerung ohne Kündigungsmöglichkeit**
+
+✅ **Zulässig** sind dagegen klare, transparente und faire Regelungen, die den gesetzlichen Grundgedanken nicht widersprechen.
+
+---
+
+#### 💡 4. Bedeutung in der IT-Praxis
+
+**Typische Anwendung in der IT-Branche:**
+
+* Software- oder Cloud-Verträge („SaaS Terms“)
+* Webshop-AGB (Online-Verkauf digitaler Produkte)
+* Wartungs- und Supportverträge
+* Lizenzbedingungen („EULA“)
+
+**Beispiel:**
+Ein Softwareunternehmen bietet ein Abo-Modell an.
+Die AGB regeln u. a.:
+
+* Vertragsdauer und Kündigung
+* Update-Zyklen
+* Haftung bei Datenverlust
+* Nutzungsrechte an der Software
+
+Wichtig: Die AGB dürfen **keine einseitige Bevorzugung** des Unternehmens enthalten, sonst sind sie **unwirksam**.
+
+---
+
+#### 🧑‍⚖️ 5. Folgen unwirksamer AGB
+
+Sind AGB oder einzelne Klauseln **unwirksam**,
+dann gilt **anstelle der unwirksamen Regelung das Gesetz** (BGB oder HGB).
+
+Beispiel:
+Eine Klausel schließt **Mängelhaftung vollständig aus** → unwirksam!
+→ Es gilt die **gesetzliche Gewährleistung nach §§ 434 ff. BGB**.
+
+---
+
+### 💼 Praxis- & Prüfungsbezug
+
+#### 📑 In der Projektdokumentation
+
+* AGB sind Teil der Vertragsgestaltung oder Angebotsunterlagen.
+* Prüflinge müssen zeigen, dass sie rechtliche Rahmenbedingungen beachten (Haftung, Datenschutz, Gewährleistung).
+
+#### 🎤 Im Fachgespräch
+
+Typische Fragen:
+
+* „Wie werden AGB wirksam in einen Vertrag einbezogen?“
+* „Welche Klauseln sind in AGB unzulässig?“
+* „Was passiert, wenn AGB gegen das BGB verstoßen?“
+* „Wie sichern Sie sich im Softwareprojekt rechtlich ab?“
+
+#### 🧮 In der schriftlichen WISO-Prüfung
+
+Themenbereiche:
+
+* Vertragsrecht nach BGB
+* AGB und Verbraucherschutz
+* Haftung und Gewährleistung
+* Onlinehandel, Datenschutz, Rücktrittsrecht
+
+---
+
+### 🧠 Lernziel-Integration
+
+Aus dem **Prüfungskatalog AP2**:
+
+> „Kundenbeziehungen unter Beachtung rechtlicher Regelungen und betrieblicher Grundsätze gestalten.“
+> – Beachtung von BGB, HGB, UWG, AGB-Gesetz, Compliance und Regelkonformität
+> – Prüfling kann rechtliche Rahmenbedingungen im Kundenkontakt erläutern und anwenden
+
+Aus **LF 6 – Serviceanfragen bearbeiten:**
+
+> „Verträge und Servicevereinbarungen (z. B. SLA, AGB) rechtssicher gestalten, prüfen und anwenden.“
+
+Aus **LF 12a – Kundenspezifische Anwendungsentwicklung:**
+
+> „Bei Projekten rechtliche Rahmenbedingungen (AGB, Datenschutz, Urheberrecht, Haftung) berücksichtigen.“
+
+---
+
+### 🪶 Zusammenfassung
+
+| Bereich                   | Inhalt                                           | Beispiel                                    |
+| ------------------------- | ------------------------------------------------ | ------------------------------------------- |
+| **Ziel**                  | Rechtssicherheit und Transparenz bei Verträgen   | Softwarelizenzvertrag, Hostingvertrag       |
+| **Gesetzliche Grundlage** | §§ 305 – 310 BGB (ehemals AGB-Gesetz)            | Einbeziehung, Transparenz, Inhaltskontrolle |
+| **Wirksamkeit**           | Nur bei Hinweis, Kenntnisnahme und Zustimmung    | Checkbox „AGB akzeptieren“ im Webshop       |
+| **Verbotene Klauseln**    | Überraschend, benachteiligend, unklar            | Ausschluss von Mängelhaftung                |
+| **Folge unwirksamer AGB** | Gesetzliche Regelung tritt an Stelle der Klausel | §§ 434 ff. BGB (Gewährleistung)             |
+| **Prüfungsbezug**         | Vertragsrecht, Verbraucherschutz, Onlinehandel   | WISO & Fachgespräch                         |
+
+---
+
+### ✨ Fazit
+
+Das **AGB-Gesetz (heute: §§ 305–310 BGB)** sorgt für **fair formulierte, verständliche und rechtssichere Vertragsbedingungen**.
+Für Fachinformatiker ist es unverzichtbar, um **rechtliche Risiken in IT-Verträgen** zu vermeiden.
+Wer AGB erstellt, prüfen oder anwenden muss, sollte stets auf **Transparenz, Fairness und gesetzliche Konformität** achten.
+
+> 🧭 **Merksatz:**
+> „AGB gelten nur, wenn der Kunde sie kennt – und nur, wenn sie fair sind.“
 
 
-<div class="grid g-2">
-  <div>
-    <h3>Vorteile (aus Sicht beider Seiten)</h3>
-    <ul class="list-check">
-      <li>Schneller Überblick über zentrale Vertragsbestandteile.</li>
-      <li>Wiederverwendbarkeit & rechtliche Vorprüfung durch den Verwender.</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Typische Nachteile/Risiken</h3>
-    <ul class="list-check">
-      <li>Risiken können – soweit zulässig – auf den Vertragspartner verlagert werden; Verbraucher sind besonders zu informieren.</li>
-      <li>AGB gelten nur bei wirksamer <strong>Einbeziehung</strong> (Hinweis & Möglichkeit der Kenntnisnahme) und dürfen nicht <em>unangemessen benachteiligen</em> (<code>§ 307 BGB</code>).</li>
-    </ul>
-  </div>
-</div>
+---
 
-<div class="note">
-  <strong>Merke:</strong> <em>Individualvereinbarungen</em> gehen AGB vor – betroffene AGB-Klauseln sind dann gegenstandslos.
-</div>
-
-
-  </section>
-
-  <section class="card">
-    <h2>3) Einbeziehung & Wirksamkeit im Überblick</h2>
-    <div class="grid g-2">
-      <div>
-        <h3>Einbeziehung (Beispiele)</h3>
-        <ul>
-          <li><strong>Unternehmergeschäft (B2B):</strong> AGB werden z. B. mit dem Angebot übermittelt; branchenübliches Verhalten kann Einbeziehung erleichtern.</li>
-          <li><strong>Verbraucher (B2C):</strong> ausdrücklicher Hinweis + zumutbare Kenntnisnahme + Einverständnis erforderlich (<code>§ 305 II BGB</code>).</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Inhaltskontrolle (Auszug)</h3>
-        <ul>
-          <li><strong>Unangemessene Benachteiligung</strong> → Klausel unwirksam (<code>§ 307 BGB</code>).</li>
-          <li><strong>Verbraucherschutz</strong>: Differenzierung zwischen Verbraucher und Unternehmer ist zentral (Privatkauf vs. Handelskauf).</li>
-        </ul>
-      </div>
-    </div>
-    <div class="kex"><strong>Prüfungsblick:</strong> Häufig wird geprüft, ob eine Klausel wirksam einbezogen wurde (Hinweis/Einverständnis) und ob sie einer Inhaltskontrolle standhält. Verweise auf <code>§§ 305 ff. BGB</code> erwarten!</div>
-  </section>
-
-  <section class="card">
-    <h2>4) AGB im IT-Kontext: typische Klauseln & Schnittstellen</h2>
-    <div class="grid g-2">
-      <div>
-        <h3>Gewährleistung (Auszug)</h3>
-        <ul>
-          <li><strong>B2C:</strong> Gesetzliche Gewährleistung i. d. R. 2 Jahre ab Übergabe; bei Gebrauchtware Verkürzung auf 1 Jahr möglich.</li>
-          <li><strong>B2B:</strong> Verkürzungen sind weitergehend möglich, jedoch stets an Transparenz und Angemessenheit messen.</li>
-        </ul>
-      </div>
-      <div>
-        <h3>SLA/Service-Verträge</h3>
-        <ul>
-          <li><strong>SLA</strong> zwischen Anbieter und Kunde; <strong>OLA</strong> intern; <strong>UC</strong> mit Subunternehmern. Klauseln: Verfügbarkeit, Reaktionszeit, Eskalation, Vertragsstrafen.</li>
-          <li>Rechtsrahmen in LF 6: BGB/HGB, DSGVO/TMG, UrhG; Governance & Compliance als Organisationsprinzip.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>5) Beispiele & Mini-Fälle (Examensnähe)</h2>
-    <ol>
-      <li><strong>Einbeziehung B2C im Onlineshop:</strong> Im Bestellprozess sichtbarer Hinweis „AGB gelesen und akzeptiert“ + verlinkter Volltext ⇒ Einbeziehung möglich (<code>§ 305 II BGB</code>). Danach Klauseln mit <code>§ 307 BGB</code> prüfen.</li>
-      <li><strong>Werkvertrag IT-Projekt (B2B):</strong> AGB enthalten verkürzte Mängelrüge-/Verjährungsfristen. In B2B teils zulässig; immer Transparenz & Angemessenheit prüfen. Vorrang der Individualabrede beachten.</li>
-      <li><strong>SLA-Klauseln:</strong> KPIs (Serviceverfügbarkeit), Reaktions-/Lösungszeiten, Eskalation, Pönalen klar regeln; Zuordnung zu Haupt-/Nebenpflichten dokumentieren.</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Quelle</h2>
-    <p class="src">
-      <strong>Prüfungskatalog Fachinformatiker Anwendungsentwicklung</strong> (ZPA, aktuelle Auflage): Prüfungsbereiche (u. a. WISO) und LF-Übersicht.<br />
-      <strong>Lernfelder</strong> (LF 2, LF 6): Vertragsarten & AGB; Rechtsrahmen, Governance & Serviceverträge (SLA/OLA/UC).<br />
-      <strong>IT-Handbuch Wirtschafts- & Geschäftsprozesse (Westermann)</strong>: AGB-Begriff, Einbeziehung, Vorrang Individualabrede, <code>§ 307 BGB</code>; Verbraucher/Unternehmen; Gewährleistung.
-    </p>
-  </section>
-<a style="text-decoration:none" href="./2-4-compliance.md">Compliance</a>
-</main>
-</body>
-</html>
+[Nächstes](./2-4-compliance.md)
