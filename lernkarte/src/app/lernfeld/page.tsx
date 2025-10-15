@@ -56,7 +56,7 @@ const categories = [
   },
   {
     id: "lernfeld-10b",
-    title: "Lernfeld 10b -> FISI",
+    title: "Lernfeld 10b → FISI",
     description: "Serverdienste bereitstellen und Administrationsaufgaben automatisieren",
   },
   {
