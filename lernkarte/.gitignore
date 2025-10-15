@@ -41,11 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 #local
-fragen.ts
 
-public/lernfeld10a
-public/lernfeld11a
-public/lernfeld12a
+
+
 
 # Playwright
 node_modules/
