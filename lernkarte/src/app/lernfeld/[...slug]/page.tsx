@@ -34,9 +34,15 @@ export default async function DocPage({ params }: Props) {
     "lernfeld-8",
     "lernfeld-9",
     "lernfeld-10a",
+    "lernfeld-10b",
     "lernfeld-10c",
+    "lernfeld-10d",
     "lernfeld-11a",
+    "lernfeld-11b",
+    "lernfeld-11d",
     "lernfeld-12a",
+    "lernfeld-12b",
+    "lernfeld-12d",
   ];
 
   if (!validCategories.includes(category)) {

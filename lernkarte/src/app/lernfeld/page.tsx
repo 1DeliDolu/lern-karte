@@ -55,9 +55,19 @@ const categories = [
     description: "Benutzerschnittstellen gestalten und entwickeln",
   },
   {
+    id: "lernfeld-10b",
+    title: "Lernfeld 10b -> FISI",
+    description: "Serverdienste bereitstellen und Administrationsaufgaben automatisieren",
+  },
+  {
     id: "lernfeld-10c",
     title: "Lernfeld 10c",
     description: "Werkzeuge des maschinellen Lernens einsetzen",
+  },
+  {
+    id: "lernfeld-10d",
+    title: "Lernfeld 10d → FISI",
+    description: "Cyber-physische Systeme entwickeln",
   },
   {
     id: "lernfeld-11a",
@@ -65,9 +75,29 @@ const categories = [
     description: "Funktionalität in Anwendungen realisieren",
   },
   {
+    id: "lernfeld-11b",
+    title: "Lernfeld 11b → FISI",
+    description: "Betrieb und Sicherheit vernetzter Systeme gewährleisten",
+  },
+  {
+    id: "lernfeld-11d",
+    title: "Lernfeld 11d → FISI",
+    description: "Betrieb und Sicherheit vernetzter Systeme gewährleisten (Lernfeld 11d)",
+  },
+  {
     id: "lernfeld-12a",
     title: "Lernfeld 12a",
     description: "Kundenspezifische Anwendungsentwicklung durchführen",
+  },
+  {
+    id: "lernfeld-12b",
+    title: "Lernfeld 12b → FISI",
+    description: "Kundenspezifische Systemintegration durchführen",
+  },
+    {
+    id: "lernfeld-12d",
+    title: "Lernfeld 12d → FISI",
+    description: "Kundenspezifische Systemintegration durchführen",
   },
 ];
 
