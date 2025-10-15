@@ -144,4 +144,4 @@ In Projekten, Fachgesprächen und im WISO-Teil müssen Prüflinge diese Kenntnis
 
 ---
 
-[Nächstes](./2-2-gesetz-gegen-unlauteren-wettbewerb.md)
+## [Nächstes](./2-2-gesetz-gegen-unlauteren-wettbewerb.md)

@@ -149,4 +149,4 @@ Ein Fachinformatiker muss wissen, **wo rechtliche Grenzen in der Werbung verlauf
 
 --- 
 
-[Nächstes](./2-3-agb-gesetz.md)
+## [Nächstes](./2-3-agb-gesetz.md)

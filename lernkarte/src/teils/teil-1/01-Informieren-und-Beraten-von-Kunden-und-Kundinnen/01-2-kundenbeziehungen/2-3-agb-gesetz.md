@@ -180,4 +180,4 @@ Wer AGB erstellt, prüfen oder anwenden muss, sollte stets auf **Transparenz, Fa
 
 ---
 
-[Nächstes](./2-4-compliance.md)
+## [Nächstes](./2-4-compliance.md)
