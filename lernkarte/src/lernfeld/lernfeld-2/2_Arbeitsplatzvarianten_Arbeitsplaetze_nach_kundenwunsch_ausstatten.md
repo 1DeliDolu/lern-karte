@@ -74,4 +74,22 @@ Aufgabe: **IT-Trends recherchieren** (Verbände/Medien/Portale) und **präsentie
 
 ---
 
-## [Nächstes Thema](./2.1_Eine_Einfuehrung_in_die_IT_fuer_Arbeitsplaetze_geben/2.1_Eine_Einfuehrung_in_die_IT_fuer_Arbeitsplaetze_geben.md)
+## [Nächstes Thema 1](./2.1_Eine_Einfuehrung_in_die_IT_fuer_Arbeitsplaetze_geben/2.1_Eine_Einfuehrung_in_die_IT_fuer_Arbeitsplaetze_geben.md)
+
+## [Section 2](./2.2_Das_Leistungsportfolio_im_Ausbildungsbetrieb_praesentieren/)
+
+## [Section 3](./2.3_Auswahlkriterien_zu_IT-Produkten_allgemein_unterscheiden//)
+
+## [Section 4](./2.4_Komponenten_eines_Arbeitsplatzcomputers_unterscheiden/)
+
+## [Section 5](./2.5_Kundenanforderungen_im_Leistungsprozess_beruecksichtigen_und_Projektmanagement_vorbereiten/)
+
+## [Section 6](./2.6_Bedarfs-_und_Anforderungsanalysen_durchfuehren/)
+
+## [Section 7](./2.7_Pflichtenhefte_erstellen/)
+
+## [Section 8](./2.8_Angebote_und_Stundensaetze_kalkulieren_und_die_Rendite_beruecksichtigen/)
+
+## [Section 9](./2.9_Angebotsvergleiche_bei_Beschaffungsmassnahmen_durchfuehren/)
+
+## [Section 10](./2.10_Lieferung_Installation_und_Übergabe_vornehmen/)
