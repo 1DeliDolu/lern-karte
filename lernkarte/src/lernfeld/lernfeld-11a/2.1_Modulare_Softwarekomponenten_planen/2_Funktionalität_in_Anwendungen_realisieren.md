@@ -75,3 +75,7 @@ Das Kapitel bündelt die Schritte, um funktionale Anforderungen in lauffähige, 
 * Modelliere **Algorithmen** vor der Implementierung; prüfe **Rekursion** auf Abbruch.
 * Nutze etablierte **Bibliotheken/Standards** für Sicherheit, Daten­austausch und DB-Zugriff.
 * **Teste** automatisiert und **dokumentiere** für Entwickler wie Nutzer.
+
+---
+
+## [Nächstes Thema:](./2.1.1_Das_Prinzip_der_Modularisierung_praesentieren_markdown.md)
