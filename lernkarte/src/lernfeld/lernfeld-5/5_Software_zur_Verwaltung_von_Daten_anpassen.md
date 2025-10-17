@@ -1,251 +1,145 @@
-# 💾 5 Software zur Verwaltung von Daten anpassen [Seite: 455]
-
-Dieses Lernfeld behandelt den gesamten Prozess der **Anpassung oder Neuentwicklung von Software** zur Datenverwaltung – von der Analyse der Anforderungen über die Planung, Entwicklung, Testung bis zur Dokumentation. Es vermittelt außerdem die Grundlagen der **Datenabbildung**, **Datenorganisation** und **Programmierpraxis**.
+✅ **Zusammenfassung: 5 Software zur Verwaltung von Daten anpassen [Seite 456]**
 
 ---
 
-## 🎯 Lernziele
+# 💾 5 Software zur Verwaltung von Daten anpassen [Seite: 456]
 
-Lernende sollen:
-
-* das **Umfeld der Softwareentwicklung analysieren**,
-* die **Verwaltung und Darstellung von Daten in IT-Systemen** verstehen,
-* die **Prozessphasen der Softwareentwicklung** kennen,
-* **Softwareanforderungen spezifizieren**,
-* einfache **Programme (z. B. in Python)** zur Datenverarbeitung und -verwaltung implementieren,
-* Software **testen und dokumentieren** können.
+Im **Lernfeld 5** geht es um den gesamten **Anpassungs- und Entwicklungsprozess von Software** – von der **Anforderungsanalyse über Planung, Programmierung, Test und Dokumentation** bis hin zur **Anpassung an neue Daten- und Systemanforderungen**. Ziel ist, zu verstehen, wie **Informationen digital abgebildet, verarbeitet, gespeichert und geschützt** werden.
 
 ---
 
-## 🧠 5.1 Das Umfeld der Softwareentwicklung analysieren
+## ⚙️ 5.1 Das Umfeld der Softwareentwicklung analysieren
 
-### 🧩 5.1.1 Aufgaben und Kompetenzen von Softwareentwicklern
+### 🧩 5.1.1 Aufgaben und Kompetenzen von Softwareentwicklern beschreiben
 
-**Softwareentwickler** wirken an Entwicklung, Anpassung und Pflege von Software mit.
+* **Softwareentwickler** wirken an Entwicklung oder Anpassung von Software / Software-Bausteinen mit.
+* **Tätigkeitsfelder:** Frontend- und Backend-Entwicklung, Mobile-, Spiele-, System-, Datenbank-, Web-, Embedded-Entwicklung, DevOps u. a.
+* **Programmiersprachen:** z. B. Python, C#, Java – gute Entwickler können sich schnell in neue Sprachen einarbeiten.
+* **Fachkenntnisse:** Debugging, Testverfahren, Vorgehensmodelle, Dokumentation.
+* **Soft Skills:** Teamfähigkeit, Geduld, analytisches Denken, Organisationstalent, Kommunikations- und Kundenkompetenz.
 
-| Aufgaben                                               | Kompetenzen                                                                         |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| Analyse von Prozessen, Architekturen und Anforderungen | Technisches & mathematisches Verständnis                                            |
-| Entwicklung von Front- und Backend-Lösungen            | Analytisches Denkvermögen, Abstraktionsfähigkeit                                    |
-| Programmierung & Testdurchführung                      | Teamfähigkeit, Geduld, Ausdauer                                                     |
-| Kundenberatung, Dokumentation & Wartung                | Kenntnisse in Programmiersprachen, Softwarearchitektur, Algorithmen, SQL, Debugging |
-
-➡️ Neben Fachwissen sind **Soft Skills** wie Teamarbeit, Kundenkommunikation und Organisationstalent entscheidend.
-
----
-
-### 💽 5.1.2 Softwarearten
-
-Nach **IEEE 610.12** umfasst Software:
-
-> *Programme, Abläufe, Dokumentationen und Daten, die zum Betrieb eines Rechnersystems erforderlich sind.*
-
-#### Einteilung nach Aufgaben:
-
-* **Systemsoftware** – Betriebssysteme, Treiber
-* **Unterstützungssoftware** – Compiler, Editoren
-* **Anwendersoftware** – betriebswirtschaftliche, technische Anwendungen
-
-#### Nach Individualität:
-
-| Typ                    | Beschreibung                                         |
-| ---------------------- | ---------------------------------------------------- |
-| **Standardsoftware**   | Marktübliche Software, durch *Customizing* anpassbar |
-| **Individualsoftware** | Maßgeschneiderte Lösung für ein Unternehmen          |
+| **Aufgaben**                             | **Kompetenzen**                                      |
+| ---------------------------------------- | ---------------------------------------------------- |
+| Analyse von Prozessen und Anforderungen  | Technisches und mathematisches Verständnis           |
+| Entwicklung von Front- / Backendlösungen | Analytisches Denkvermögen, Abstraktionsfähigkeit     |
+| Programmierung in mehreren Sprachen      | Team- und Kommunikationsfähigkeit                    |
+| Kundenberatung und -betreuung            | Englischkenntnisse, Innovationsinteresse             |
+| Planung, Test und Dokumentation          | Kenntnisse in Architektur, Algorithmen, SQL, Testing |
 
 ---
 
-### 🔧 5.1.3 Neuentwicklung vs. Anpassung
+### 💻 5.1.2 Software aus Sicht von Softwareentwicklern unterscheiden
 
-**Softwareentwicklung** = Neuentwicklung oder Verbesserung bestehender Systeme.
+* **Software (nach IEEE 610.12):** Programme + Abläufe + Dokumentation + Daten, die für den Betrieb eines Systems notwendig sind.
+* **Einteilung nach Aufgabe (ISO/IEC 2382):**
 
-| Art der Anpassung              | Beschreibung                                                                                                 |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| **Customizing**                | Anpassung durch **Konfiguration** (Module) und **Parametrisierung** (aktivieren/deaktivieren von Funktionen) |
-| **Erweiterungsprogrammierung** | Individuell erweiterte Module über Schnittstellen                                                            |
-| **Neuentwicklung**             | Vollständige Individualsoftware                                                                              |
-| **Datenmigration**             | Übertragung von Daten aus einem Altsystem                                                                    |
+  * **Systemsoftware:** Betriebssysteme, Treiber.
+  * **Unterstützungssoftware:** Compiler, Editoren.
+  * **Anwendersoftware:** Büro-, Wirtschafts-, Wissenschafts-, Unterhaltungssoftware.
+* **Grad der Individualisierung:**
 
-➡️ Anpassung von Individualsoftware ist flexibler, Standardsoftware wird meist parametrisiert oder erweitert.
+  * **Standardsoftware:** Marktprodukt, wird mittels Customizing angepasst.
+  * **Individualsoftware:** kundenspezifisch entwickelt, flexibel anpassbar.
 
----
-
-### 🧭 5.1.4 In Softwareprojekten mitarbeiten
-
-#### Projektdefinition (DIN 69901)
-
-Ein **Projekt** ist ein einmaliges Vorhaben mit definiertem Anfang und Ende, bestimmten Zielen, Zeit-, Kosten- und Personalgrenzen.
-
-#### Einteilungen:
-
-* **nach Träger:** Unternehmens- oder öffentliche Projekte
-* **nach Leistung:** z. B. Datenbankprojekt
-* **nach Anlass:** Neuentwicklungs-, Anpassungs-, Migrationsprojekte
-
-#### Projektstruktur:
-
-* **Lenkungsausschuss** – gibt Ziele und Ressourcen frei
-* **Projektleitung** – plant, steuert, überwacht
-* **Projektteams** – entwickeln Teilkomponenten
-
-#### Phasen eines Softwareprojekts:
-
-1. **Projektstart:** Projektauftrag & Kick-off
-2. **Projektplanung:** Inhalte, Zeit, Kosten, Ressourcen
-3. **Projektdurchführung:** Realisierung & Kommunikation
-4. **Projektkontrolle:** Überwachung, Berichterstattung
-5. **Projektabschluss:** Abnahme, Dokumentation, Evaluation
+| **Typ**            | **Merkmale**                                                           |
+| ------------------ | ---------------------------------------------------------------------- |
+| Standardsoftware   | Marktprodukt, per Konfiguration oder Parametrisierung anpassbar        |
+| Individualsoftware | Individuell entwickelt, auf Prozesse zugeschnitten, leicht erweiterbar |
 
 ---
 
-## 💡 5.2 Grundlagen zur Verwaltung von Daten in IT-Systemen
+### 🛠️ 5.1.3 Neuentwicklung und Anpassung von Software unterscheiden
 
-### 🗂️ 5.2.1 Informationen und Daten
+* **Softwareentwicklung:** Neuentwicklung oder Verbesserung bestehender Systeme.
+* **Anpassungsarten:**
 
-* **Information:** Wissenstransfer, der Wissen beim Empfänger verändert.
-* **Daten:** formalisierte Darstellung von Information in maschinenlesbarer Form.
-* Grundlage: **EVA-Prinzip** (Eingabe → Verarbeitung → Ausgabe)
-* Darstellung über **Binärcode** (0 / 1).
+| **Art der Anpassung**          | **Beschreibung**                                                                                                                                        |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Customizing**                | Anpassung von Standardsoftware ohne Quellcodeänderung. <br> • *Konfiguration:* Modulauswahl  • *Parametrisierung:* Funktionsumfang per Parameter setzen |
+| **Erweiterungsprogrammierung** | Individuell entwickelte Zusatzmodule über Schnittstellen eingebunden                                                                                    |
+| **Neuentwicklung**             | Komplette Individualsoftware, wenn Anpassung nicht ausreicht                                                                                            |
+| **Datenmigration**             | Übertragung von Daten vom Alt- auf Neusystem                                                                                                            |
 
----
-
-### 🔢 5.2.2 Zahlensysteme der IT
-
-| System          | Basis | Zeichen  | Bemerkung                            |
-| --------------- | ----- | -------- | ------------------------------------ |
-| **Dezimal**     | 10    | 0–9      | Alltagssystem                        |
-| **Dual**        | 2     | 0,1      | Grundlage der Informatik             |
-| **Hexadezimal** | 16    | 0–9, A–F | kompakte Darstellung von Binärwerten |
-
-Umrechnung:
-
-* Division/Addition (Dezimal ↔ Dual)
-* 4 Bit = 1 Hex-Zeichen
+Anpassungen können Oberfläche, Sprache, Währung oder Funktionalität betreffen und werden je nach Komplexität intern oder durch externe Dienstleister vorgenommen.
 
 ---
 
-### 💬 5.2.3 Darstellungsformen von Daten
+### 📊 5.1.4 In Softwareprojekten mitarbeiten
 
-**Zahlen:** Ganzzahlen (Zweierkomplement), Fließkommazahlen (IEEE 754)
-**Zeichen/Text:** über **Zeichensätze**
+* **Softwareentwicklung = Projektarbeit.**
+* **Projekt nach DIN 69901:** Einmaliges Vorhaben mit definierten Zielen, Zeit-, Kosten- und Ressourcenrahmen.
+* **Projektarten:** Neuentwicklungs-, Anpassungs- oder Migrationsprojekte.
+* **Projektstruktur:** Lenkungsausschuss → Projektleitung → Teilprojektleitungen → Projektteams.
 
-* ASCII (128 Zeichen, 7 Bit)
-* ISO 8859 (8 Bit, regionale Varianten)
-* Unicode / UTF-8/16/32 (weltweiter Standard)
-  **Grafikdaten:** Rastergrafiken (Pixel) vs. Vektorgrafiken (mathematische Objekte)
-  **Audiodaten:** Digitalisierung durch **Sampling** (Frequenz, Tiefe, Kanäle)
-  **Algorithmen:** schrittweise Verfahren zur Problemlösung, programmiert mit Befehlen.
+#### 🧭 Projektphasen
 
----
-
-### 🗃️ 5.2.4 Datenarten & Herkunft
-
-**Einteilung nach:**
-
-* **Repräsentation:** analog/digital
-* **Struktur:** unstrukturiert – semistrukturiert – strukturiert
-* **Sicherheitsstufen:** öffentlich → intern → vertraulich → geheim
-* **Herkunft:** Primärdaten (selbst erhoben) vs. Sekundärdaten (bereits vorhanden)
+1. **Projektstart:** Bedarf und Nutzen bewerten, Projektauftrag, Kick-off.
+2. **Projektplanung:** Ziele, Zeit, Budget, Ressourcen, Risiken, Kommunikation planen.
+3. **Projektdurchführung:** Umsetzung, Koordination, Änderungsmanagement.
+4. **Projektkontrolle:** Überwachung von Kosten, Terminen, Qualität.
+5. **Projektabschluss:** Abnahme, Abschlussbericht, Archivierung, Teamauflösung.
 
 ---
 
-### 💾 5.2.5 Speicherung von Daten
+## 🧮 5.2 Grundlagen zur Verwaltung von Daten in IT-Systemen erläutern
 
-**Kernaspekte:**
+* Daten bilden Informationen digital ab und werden verarbeitet, übertragen und gespeichert.
+* **Ziel:** Grundverständnis über Darstellung, Struktur und Sicherheit von Daten.
 
-* **Datenschutz:** Schutz personenbezogener Daten (BDSG, DSGVO)
-* **Datensicherheit:** Schutz vor Verlust, Manipulation, unbefugtem Zugriff
-* **Informationssicherheit:** Schutzziele → Verfügbarkeit, Integrität, Vertraulichkeit
+### 🧠 Kernpunkte
 
-**Speichergrößen:** Bit, Byte, Kilobyte (KB), Kibibyte (KiB) usw.
-**Speicherlösungen:**
-
-* Cloud-Storage (öffentlich/privat/hybrid)
-* Flash-, File-, Block- und Object-Storage
-
----
-
-## 💻 5.3 Den Prozess der Softwareentwicklung analysieren
-
-**Phasen nach IEEE 12207:**
-
-1. **Anforderungsanalyse** – Lasten-/Pflichtenheft
-2. **Design** – Modelle, Datenbank, Algorithmen
-3. **Implementierung** – Programmierung
-4. **Testen** – Modul-, System-, Akzeptanztests
-5. **Dokumentation** – Handbücher, Protokolle
-6. **Auslieferung** – Installation & Schulung
-7. **Wartung** – Anpassungen & Support
-
-### Vorgehensmodelle
-
-| Klassisch                          | Agil                                       |
-| ---------------------------------- | ------------------------------------------ |
-| Wasserfall, V-Modell, Spiralmodell | Scrum, DevOps, Extreme Programming, Kanban |
+* **Information ≠ Daten:** Information = Wissenstransfer; Daten = formalisierte Darstellung davon.
+* **EVA-Prinzip:** Eingabe → Verarbeitung → Ausgabe.
+* **Binärcode (0 / 1):** Grundlage aller digitalen Daten.
+* **Zahlensysteme:** Dezimal (10), Dual (2), Hexadezimal (16).
+* **Datendarstellung:** Zahlen, Texte (ASCII, Unicode), Grafiken (Bitmap, Vektor), Audio (Sampling), Programme (Algorithmen).
+* **Datenarten:** Analog / digital, strukturiert / unstrukturiert / semistrukturiert, öffentlich / intern / vertraulich / geheim.
+* **Datenquellen:** Primär- (Erhebung) und Sekundärdaten (Bestands- oder Fremddaten).
+* **Datensicherheit:** Schutzziele Verfügbarkeit, Integrität, Vertraulichkeit.
+* **Speichereinheiten:** Bit, Byte, KB–YB und binäre Präfixe (KiB, MiB …).
+* **Speicherlösungen:** Cloud-, Flash-, File-, Block-, Object-Storage.
 
 ---
 
-## 🧮 5.4 Anforderungsspezifikation & Entwurf
+## 🔄 5.3 Den Prozess der Softwareentwicklung analysieren
 
-### 🗒️ 5.4.1 Anforderungen spezifizieren
+* **Phasen (nach IEEE 12207):** Analyse → Design → Implementierung → Test → Dokumentation → Auslieferung → Wartung.
+* **Projektmanagement:** Planung, Steuerung, Kommunikation, Risikomanagement.
+* **Vorgehensmodelle:**
 
-* **Funktional:** was die Software tun soll
-* **Nicht funktional:** wie sie es tun soll (Qualität, Zuverlässigkeit, Performance, Usability)
-* **Rahmenbedingungen:** Technik, Organisation, Normen
+  * **Wasserfallmodell:** linear, klar getrennte Phasen.
+  * **Spiralmodell:** iterativ, risikoorientiert.
+  * **V-Modell:** Kopplung von Entwicklung und Tests.
+  * **Scrum:** agil, Sprints, Selbstorganisation.
+  * **DevOps:** Verknüpft Entwicklung und Betrieb.
 
-### 📑 5.4.2 Lasten- und Pflichtenheft
+---
 
-| Dokument          | Verantwortlich | Inhalt                               |
-| ----------------- | -------------- | ------------------------------------ |
-| **Lastenheft**    | Auftraggeber   | Was & Wofür (Ziele, Anforderungen)   |
-| **Pflichtenheft** | Auftragnehmer  | Wie & Womit (Umsetzung, Architektur) |
+## 🧰 5.4 Anforderungsspezifikation und Softwareentwurf
 
-Ablauf:
-Lastenheft → Pflichtenheft → Vertrag → Projektstart
+* **Anforderungsspezifikation (IEEE 29148):**
 
-### 🧩 5.4.3 Softwareentwurf
-
-* Architektur & Module definieren
-* Schnittstellen, Datenmodelle, Algorithmen entwerfen
-* Unabhängig von Programmiersprache
-
-### 🧮 5.4.4 Modellierungssprachen
-
-| Modell                    | Zweck                                                               |
-| ------------------------- | ------------------------------------------------------------------- |
-| **PAP / Struktogramm**    | Ablaufsteuerung (imperativ)                                         |
-| **Entscheidungstabellen** | Bedingungslogik                                                     |
-| **Pseudocode**            | textuelle Darstellung von Algorithmen                               |
-| **UML**                   | objektorientiertes Design (Klassen-, Aktivitäts-, Sequenzdiagramme) |
-| **ERM**                   | Datenmodellierung für relationale DBs                               |
+  * Funktionale und nicht-funktionale Anforderungen.
+  * Kriterien: Korrektheit, Eindeutigkeit, Prüfbarkeit, Nachvollziehbarkeit.
+* **Lastenheft:** „Was und wofür“ – vom Auftraggeber.
+* **Pflichtenheft:** „Wie und womit“ – vom Auftragnehmer.
+* **Softwareentwurf:** Definition von Architektur, Komponenten, Schnittstellen, Datenmodellen.
+* **Modellierungssprachen:** PAP, Struktogramm, Entscheidungstabelle, Pseudocode, UML, ERM.
 
 ---
 
 ## 🐍 5.5 Einfache Anwendungen in Python implementieren
 
-* Python = **interpretierte, leicht erlernbare Sprache** mit klarer Syntax
-* Einsatz in **Datenanalyse, Webentwicklung, KI, Automatisierung**
-
-### 🔧 Entwicklungsumgebungen (IDE)
-
-* **IDLE** (Standard), **PyCharm**, **Visual Studio Code**, **Visual Studio**
-
-### 📜 Grundlagen
-
-* Einrückung strukturiert Blöcke (keine Klammern)
-* Groß-/Kleinschreibung relevant
-* Kommentare mit `#`
-* Datentypen: Ganzzahlen, Fließkomma, Bool, Strings
-* **Module** werden per `import` eingebunden
-* **Ausgabe:** `print("Text")`
+* **Python:** einsteigerfreundlich, interpretiert, plattformunabhängig.
+* **IDE:** z. B. PyCharm, Visual Studio Code.
+* **Syntaxgrundlagen:** Einrückungen = Blockstruktur, case-sensitive, Kommentare (#, """).
+* **Elemente:** Bezeichner, Literale, Schlüsselwörter, Module, Namensräume.
+* **Ziel:** Datenverarbeitung und -verwaltung programmatisch umsetzen.
 
 ---
 
-✅ **Ziel des Lernfelds 5:**
-Schüler*innen sollen verstehen, **wie Informationen in Daten abgebildet**,
-**Software geplant, entwickelt und getestet**,
-und **Daten effizient sowie sicher verarbeitet** werden.
-
+📘 **Kernaussage:**
+Dieses Lernfeld vermittelt das vollständige Verständnis für **Softwareentwicklung, Anpassung und Datenverwaltung** – vom Umfeld über Prozessmodelle, Anforderungsspezifikation bis zur praktischen Programmierung mit Python.
 
 ---
 
