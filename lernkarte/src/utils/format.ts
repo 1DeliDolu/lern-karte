@@ -32,6 +32,12 @@ export function formatLabelFeldTruncated(text: string): string {
   return truncateToThreeWords(formatted);
 }
 
+// Format label for docs and truncate to 3 words
+export function formatLabelTruncated(text: string): string {
+  const formatted = formatLabel(text);
+  return truncateToThreeWords(formatted);
+}
+
 // Natural sort comparison for alphanumeric strings
 // This ensures "02-item" comes before "10-item" (numeric sorting)
 export function naturalSort(a: string, b: string): number {

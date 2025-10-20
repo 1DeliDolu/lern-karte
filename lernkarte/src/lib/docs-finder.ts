@@ -1,6 +1,6 @@
 import path from "path";
 import { createDocFinder } from "./doc-finder";
-import { formatLabel, truncateToThreeWords } from "@/utils/format";
+import { formatLabel, formatLabelTruncated, truncateToThreeWords } from "@/utils/format";
 
 const DOCS_ROOT = path.join(process.cwd(), "src", "teils");
 
@@ -20,5 +20,5 @@ export const readDoc = docFinder.readDoc;
 export type { DocNode, DirectoryNode, FileNode, DocFile } from "./doc-finder";
 export { isDirectoryNode, isFileNode } from "./doc-finder";
 
-// Re-export formatLabel for convenience
-export { formatLabel, truncateToThreeWords };
+// Re-export format helpers for convenience
+export { formatLabel, formatLabelTruncated, truncateToThreeWords };

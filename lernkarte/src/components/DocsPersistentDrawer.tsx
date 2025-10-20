@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import PersistentDrawer, { type NavNode, type PersistentDrawerConfig } from './PersistentDrawer';
-import { formatLabel } from '@/utils/format';
+import { formatLabelTruncated } from '@/utils/format';
 
 export type DocsNavNode = NavNode;
 
@@ -16,7 +16,7 @@ const config: PersistentDrawerConfig = {
   accordionKey: 'docs:persistent-accordion',
   pathPrefix: '/docs/',
   breadcrumbTitle: 'Dokumentation',
-  formatLabel: formatLabel,
+  formatLabel: formatLabelTruncated,
 };
 
 export default function DocsPersistentDrawer({ nodes, children }: Props) {

@@ -1,147 +1,301 @@
-## 📘 Thema / Zuordnung
+## 🧩 Thema: Bürgerliches Gesetzbuch (BGB)
 
-**Thema:** BGB / HGB – Bürgerliches Gesetzbuch & Handelsgesetzbuch
-**Zuordnung:**
-👉 **Fragenkomplex 01 – Fachrichtungsübergreifende berufsprofilgebende Fertigkeiten**
-👉 **Themenkreis:** *„Kundenbeziehungen unter Beachtung rechtlicher Regelungen und betrieblicher Grundsätze gestalten“*
-👉 **Lernfelder:** LF 3, LF 6, LF 9, LF 12
-👉 **Rechtliche Grundlagen laut Prüfungskatalog:** `BGB`, `HGB`, `UWG`, `AGB-Gesetz`, `Compliance`, `Regelkonformität`
+Das **Bürgerliche Gesetzbuch (BGB)** ist das zentrale Gesetz des deutschen Zivilrechts.
+Es regelt die **Rechtsverhältnisse zwischen Privatpersonen**, also zwischen Bürgern, Unternehmen und Organisationen.
+In der Ausbildung und IHK-Prüfung (besonders in **Wirtschafts- und Sozialkunde**, AP2) ist das BGB ein **grundlegendes Prüfungsthema**. ⚪️
 
 ---
 
-### 🔍 Vollständige Erklärung
+### 🧱 Aufbau des BGB
 
-Das **Bürgerliche Gesetzbuch (BGB)** und das **Handelsgesetzbuch (HGB)** bilden die **rechtliche Basis des Wirtschaftslebens** in Deutschland.
-Für Fachinformatiker/-innen sind diese Gesetze besonders relevant, wenn sie:
+Das BGB besteht aus **fünf Büchern**:
 
-* Verträge mit Kunden oder Lieferanten abschließen,
-* Software- und Dienstleistungsverträge gestalten,
-* Haftungs- und Gewährleistungsfragen klären,
-* Aufträge im Rahmen der Projektarbeit bearbeiten oder dokumentieren.
+| Buch                    | Inhalt                                                      | Beispiel                               |
+| ----------------------- | ----------------------------------------------------------- | -------------------------------------- |
+| **1. Allgemeiner Teil** | Grundlagen wie Rechtsfähigkeit, Willenserklärungen, Fristen | z. B. Zustandekommen eines Vertrags    |
+| **2. Schuldrecht**      | Rechte und Pflichten aus Verträgen                          | z. B. Kaufvertrag, Mietvertrag         |
+| **3. Sachenrecht**      | Eigentum und Besitz                                         | z. B. Eigentumsübertragung, Pfandrecht |
+| **4. Familienrecht**    | Ehe, Verwandtschaft, Vormundschaft                          | z. B. Sorgerecht                       |
+| **5. Erbrecht**         | Erbfolge, Testamente, Pflichtteile                          | z. B. gesetzliche Erbfolge             |
 
-Beide Gesetzbücher regeln also das **rechtlich korrekte Verhalten im Geschäftsverkehr** und werden in der AP2-Prüfung insbesondere im **WISO-Teil** und im **Fragenkomplex „Kundenbeziehungen“** abgefragt.
-
----
-
-### 🧩 Wichtige Punkte (aus allen relevanten Abschnitten)
-
-#### ⚖️ 1. Bürgerliches Gesetzbuch (BGB)
-
-Das `BGB` regelt die **privatrechtlichen Beziehungen** zwischen Bürgern, Unternehmen und Organisationen.
-Zentrale Themen:
-
-* **Rechtsgeschäft (§§ 104–185 BGB):** Entstehung von Verträgen (Angebot + Annahme)
-* **Vertragsarten:** Kaufvertrag, Dienstvertrag, Werkvertrag (z. B. Softwareentwicklung)
-* **Pflichten aus Verträgen (§ 241 BGB):** Leistungspflichten und Nebenpflichten (z. B. Informationspflichten, Datenschutz)
-* **Leistungsstörungen:** Verzug, Unmöglichkeit, Rücktritt, Mängelhaftung
-* **Schuldrecht (§§ 241–853 BGB):** Verpflichtung, Schadensersatz, Rücktrittsrechte
-* **AGB (§§ 305 ff. BGB):** Einbeziehung und Wirksamkeit von Allgemeinen Geschäftsbedingungen
-* **Verjährung (§ 195 BGB):** Drei Jahre bei Ansprüchen aus Verträgen
-
-📌 **Beispiel für Anwendungsfall:**
-Ein Fachinformatiker erstellt eine Software für einen Kunden. Nach BGB § 631 ff. handelt es sich um einen **Werkvertrag**, der den Erfolg (funktionsfähige Software) schuldet. Wird der Termin nicht eingehalten, entsteht **Verzug** (§ 286 BGB) und ggf. ein Anspruch auf **Schadensersatz** (§ 280 BGB).
+🟩 (LF1)
 
 ---
 
-#### 📘 2. Handelsgesetzbuch (HGB)
+### ⚖️ Grundbegriffe im BGB
 
-Das `HGB` ist das **Sonderprivatrecht für Kaufleute** und ergänzt das BGB.
-Es gilt, sobald ein Unternehmen als **Kaufmann** (§ 1 HGB) eingetragen ist.
-Wichtige Inhalte:
+* **Rechtsfähigkeit:**
+  Fähigkeit, Träger von Rechten und Pflichten zu sein (beginnt mit der Geburt).
+  🟩 (LF1)
 
-* **Kaufmannseigenschaft (§§ 1–6 HGB):** Wer ist Kaufmann?
-* **Firma (§ 17 HGB):** Der Name des Unternehmens im Geschäftsverkehr
-* **Handelsregister (§§ 8–16 HGB):** Eintragungspflichten und Publizität
-* **Prokura und Handlungsvollmacht (§§ 48–58 HGB):** Vertretungsrechte im Betrieb
-* **Handelsgeschäfte (§§ 343–406 HGB):** Spezielle Regelungen für beiderseitige Handelsgeschäfte (z. B. sofortige Mängelrüge)
-* **Buchführungspflicht (§ 238 HGB):** Ordnungsgemäße Buchführung, Bilanzierung
-* **Aufbewahrungspflicht (§ 257 HGB):** 6–10 Jahre für Handelsunterlagen
+* **Geschäftsfähigkeit:**
+  Fähigkeit, **rechtlich wirksame Willenserklärungen** abzugeben.
 
-📌 **Beispiel für Anwendungsfall:**
-Ein Fachinformatiker als kaufmännischer Angestellter führt ein Softwarehaus. Er muss nach HGB **Geschäftsvorfälle buchen**, **Rechnungen aufbewahren** und **Verträge dokumentieren**. Wird Software vertrieben, gelten zusätzlich kaufmännische Vorschriften (z. B. sofortige Mängelrüge nach § 377 HGB).
+  * unter 7 Jahren: **geschäftsunfähig**
+  * 7–17 Jahre: **beschränkt geschäftsfähig**
+  * ab 18 Jahren: **voll geschäftsfähig**
 
----
-
-#### 🏢 3. Ergänzende Regelungen laut Prüfungskatalog
-
-Im Fragenkomplex werden weitere Gesetze integriert:
-
-* **`UWG` (Gesetz gegen den unlauteren Wettbewerb):** Verbot irreführender Werbung, Datenschutz bei Direktmarketing
-* **`AGB-Gesetz` / AGB im BGB:** Gestaltung von Vertragsbedingungen in Softwareverträgen
-* **`Compliance`:** Einhaltung von Gesetzen, Richtlinien, internen Vorgaben
-* **`Regelkonformität`:** IT-Verträge und Datenschutz müssen rechtliche und betriebliche Vorgaben einhalten
+* **Willenserklärung:**
+  Äußerung eines Willens, die auf eine **Rechtsfolge** gerichtet ist (z. B. Angebot, Annahme).
+  👉 Grundlage für jedes Rechtsgeschäft (z. B. Vertrag). 🟩 (LF1)
 
 ---
 
-### 💡 Praxis- & Prüfungsbezug
+### 🧾 Zustandekommen eines Vertrags
 
-#### 🧾 **In der Projektdokumentation**
+Ein Vertrag entsteht durch **zwei übereinstimmende Willenserklärungen**:
 
-* Die Projektbeschreibung enthält **rechtliche Rahmenbedingungen** (z. B. Datenschutz, Vertragsgrundlagen).
-* Prüflinge müssen zeigen, dass sie **kundenorientiert und rechtssicher handeln** (z. B. Umgang mit Anforderungen, Abnahmen, Nachträgen).
+1. **Angebot** (§ 145 BGB)
+2. **Annahme** (§ 147 BGB)
 
-#### 🎤 **Im Fachgespräch**
+Beispiel:
 
-Typische Fragen:
+```text
+Kunde bestellt einen Laptop (Angebot).
+Händler bestätigt die Bestellung (Annahme).
+→ Kaufvertrag kommt zustande.
+```
 
-* „Worin unterscheiden sich Dienst- und Werkvertrag?“
-* „Welche Bedeutung hat § 377 HGB für die Softwareabnahme?“
-* „Wie gehen Sie mit Mängeln oder Änderungswünschen um?“
-* „Wie sichern Sie rechtlich die Anforderungen Ihres Kunden ab?“
-
-#### 🧮 **In der schriftlichen Prüfung (WISO)**
-
-Mögliche Themen:
-
-* Vertragsrecht (BGB)
-* Kaufmännische Pflichten (HGB)
-* Haftung, Garantie, Gewährleistung
-* Datenschutz und Urheberrecht
-* Unternehmensformen, AGB, Wettbewerbsrecht
+👉 Beide Parteien sind nun **vertraglich gebunden**. 🟥 (LF5)
 
 ---
 
-### 🧠 Lernziel-Integration
+### 📦 Wichtige Vertragstypen im BGB
 
-Aus dem **Prüfungskatalog AP2** ergibt sich:
+| Vertrag                            | Beschreibung                               | Beispiel            |
+| ---------------------------------- | ------------------------------------------ | ------------------- |
+| **Kaufvertrag (§§ 433 ff. BGB)**   | Austausch von Ware gegen Geld              | PC-Kauf             |
+| **Werkvertrag (§§ 631 ff. BGB)**   | Herstellung eines Werkes gegen Bezahlung   | Softwareentwicklung |
+| **Dienstvertrag (§§ 611 ff. BGB)** | Leistung von Diensten ohne Erfolgsgarantie | IT-Support          |
+| **Mietvertrag (§§ 535 ff. BGB)**   | Überlassung von Sachen gegen Entgelt       | Servermiete         |
 
-> „Kundenbeziehungen unter Beachtung rechtlicher Regelungen und betrieblicher Grundsätze gestalten.“
-> – Berücksichtigung von BGB, HGB, UWG, AGB, Compliance
-> – Einhaltung gesetzlicher und betrieblicher Vorgaben
-> – Kunden rechtlich korrekt beraten, Verträge prüfen, Datenschutz beachten
-
-Aus **LF 9 / LF 12a** (Projekt- und Vertragsphasen):
-
-> „Kundenaufträge planen, Pflichten- und Lastenhefte erstellen, Abnahmen dokumentieren.“
-> „Verträge und rechtliche Rahmenbedingungen kennen und berücksichtigen.“
-
-Aus **LF 6 (Serviceanfragen bearbeiten):**
-
-> „Vertragsgestaltung, Service-Level-Agreements (SLA) und rechtliche Anforderungen (BGB, HGB, DSGVO) beachten.“
+🟩 (LF6, LF12)
 
 ---
 
-### 🪶 Zusammenfassung
+### 🛠️ Mängelhaftung und Gewährleistung (§§ 434–437 BGB)
 
-| Bereich                | Relevanz                                  | Beispiele                                                        |
-| ---------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
-| **BGB**                | Grundlage aller zivilrechtlichen Verträge | Werkvertrag (Softwareentwicklung), Mängelhaftung, Rücktritt, AGB |
-| **HGB**                | Sonderrecht für Kaufleute                 | Firma, Prokura, Handelsregister, Mängelrüge                      |
-| **Ergänzende Gesetze** | Wettbewerbs- und Datenschutzrecht         | UWG, DSGVO, AGB-Gesetz                                           |
-| **Prüfungsrelevanz**   | Schriftlich (WISO) & Fachgespräch         | Vertragsarten, Haftung, Pflichten, Abnahme                       |
+Ein **Sachmangel** liegt vor, wenn die Ware **nicht der vereinbarten Beschaffenheit** entspricht.
+Der Käufer hat bei Mängeln folgende Rechte:
 
-📌 **Merksatz:**
+1. **Nachbesserung oder Ersatzlieferung (Nacherfüllung)**
+2. **Rücktritt oder Minderung** (wenn Nachbesserung scheitert)
+3. **Schadensersatz**
 
-> Ein Fachinformatiker muss nicht nur programmieren, sondern auch rechtssicher handeln.
-> BGB und HGB sind die Basis, um Kundenbeziehungen korrekt, transparent und compliant zu gestalten.
+📅 **Frist:** 2 Jahre ab Übergabe der Ware (gesetzliche Gewährleistung).
+🟩 (LF6)
 
 ---
 
-**👉 Fazit:**
-`BGB` und `HGB` sind zentrale Prüfungsinhalte für den rechtlichen Teil der AP2.
-Sie definieren die Regeln des wirtschaftlichen Handelns, Vertragsgestaltung, Haftung und Dokumentation.
-In Projekten, Fachgesprächen und im WISO-Teil müssen Prüflinge diese Kenntnisse **anhand praxisnaher Fälle sicher anwenden können.**
+### 💶 Verjährung von Ansprüchen (§§ 194 ff. BGB)
+
+| Art des Anspruchs      | Frist   | Beginn der Frist |
+| ---------------------- | ------- | ---------------- |
+| Gewährleistung         | 2 Jahre | Ab Lieferung     |
+| Allgemeine Forderungen | 3 Jahre | Jahresende       |
+| Werkmängel             | 5 Jahre | Ab Abnahme       |
+
+🟩 (LF6)
 
 ---
 
-## [Nächstes](./2-2-gesetz-gegen-unlauteren-wettbewerb.md)
+### ⚖️ Prüfungshinweis
+
+In der **IHK-Abschlussprüfung (AP2, WiSo)** werden häufig gefragt:
+
+* „Wie kommt ein Vertrag zustande?“
+* „Was ist der Unterschied zwischen Gewährleistung und Garantie?“
+* „Was bedeutet beschränkte Geschäftsfähigkeit?“
+* „Wie lange beträgt die Verjährungsfrist für Kaufverträge?“
+  🟥 (LF5)
+
+---
+
+### 🧭 Zusammenfassung
+
+Das **BGB** ist das Fundament des deutschen **Privatrechts**.
+Es regelt Vertragsabschlüsse, Haftung, Eigentum und Familien- sowie Erbrecht.
+Für Fachinformatiker ist es vor allem im Bereich **Vertragsrecht, Serviceverträge und Mängelhaftung** prüfungsrelevant.
+🟩 (LF1, LF6, LF12)
+
+---
+
+**Merksatz:**
+
+> „Kein Vertrag ohne zwei übereinstimmende Willenserklärungen.“
+
+⚪️ (Logisch abgeleitet)
+
+
+## 🧩 Thema: Handelsgesetzbuch (HGB)
+
+Das **Handelsgesetzbuch (HGB)** ist das **Sonderprivatrecht für Kaufleute**.
+Es baut auf dem **Bürgerlichen Gesetzbuch (BGB)** auf und ergänzt dieses um spezielle Regelungen für den **Handel und kaufmännische Geschäfte**.
+Das HGB ist besonders relevant für **betriebliche Abläufe, Vertragsrecht, Buchführung und Haftung von Unternehmen**. 🟥 (LF5)
+
+---
+
+### 🧱 Aufbau des HGB
+
+| Buch                                                     | Inhalt                                | Bedeutung                                      |
+| -------------------------------------------------------- | ------------------------------------- | ---------------------------------------------- |
+| **1. Buch:** Handelsstand                                | Wer ist Kaufmann? Rechte & Pflichten  | z. B. Handelsregister, Firma                   |
+| **2. Buch:** Handelsgesellschaften & stille Gesellschaft | Regelungen für OHG, KG, GmbH & Co. KG | z. B. Haftung, Vertretung                      |
+| **3. Buch:** Handelsbücher                               | Buchführung und Jahresabschluss       | z. B. Bilanz, Inventar                         |
+| **4. Buch:** Handelsgeschäfte                            | Kaufmännische Verträge                | z. B. Handelskauf, Fixkauf                     |
+| **5. Buch:** Seehandel                                   | Sonderregeln für Seeschifffahrt       | in der Ausbildung meist nicht prüfungsrelevant |
+
+🟩 (LF1)
+
+---
+
+### ⚖️ Verhältnis zwischen BGB und HGB
+
+Das HGB **ergänzt** das BGB.
+Wenn im HGB keine Regelung vorhanden ist, gilt **das BGB** (§ 1 Abs. 2 HGB).
+
+📘 **Beispiel:**
+Ein Kaufvertrag zwischen zwei Privatpersonen → BGB
+Ein Kaufvertrag zwischen zwei Kaufleuten → HGB + BGB
+
+🟩 (LF1, LF6)
+
+---
+
+### 🧾 Wer ist Kaufmann? (§§ 1–7 HGB)
+
+| Art des Kaufmanns        | Beschreibung                                            | Beispiel                           |
+| ------------------------ | ------------------------------------------------------- | ---------------------------------- |
+| **Ist-Kaufmann (§ 1)**   | Betreibt ein Handelsgewerbe                             | IT-Systemhaus mit Gewinnabsicht    |
+| **Kann-Kaufmann (§ 2)**  | Freiwillige Eintragung ins Handelsregister              | Freiberufler oder Kleinunternehmer |
+| **Formkaufmann (§ 6)**   | Kapitalgesellschaft (z. B. GmbH, AG)                    | GmbH-Softwarefirma                 |
+| **Fiktivkaufmann (§ 5)** | Wer im Handelsregister steht, gilt als Kaufmann         | durch Eintragung                   |
+| **Scheinkaufmann**       | Gibt sich fälschlich als Kaufmann aus → haftet trotzdem | durch Auftreten nach außen         |
+
+🟩 (LF1)
+
+---
+
+### 🏢 Das Handelsregister (§§ 8–16 HGB)
+
+Das Handelsregister ist ein **öffentliches Verzeichnis**, das vom **Amtsgericht** geführt wird.
+Es informiert über die **rechtlichen Verhältnisse von Kaufleuten und Unternehmen**.
+
+**Abteilungen:**
+
+* **Abteilung A (HRA):** Einzelkaufleute, OHG, KG
+* **Abteilung B (HRB):** Kapitalgesellschaften (GmbH, AG)
+
+📄 **Eintragungen haben Wirkung:**
+
+* **Deklaratorisch** → nur bekanntmachend (z. B. Geschäftsführerwechsel)
+* **Konstitutiv** → rechtsbegründend (z. B. GmbH entsteht erst mit Eintragung)
+
+🟩 (LF1)
+
+---
+
+### 🧾 Firma (§§ 17–37 HGB)
+
+Die **Firma** ist der **Name**, unter dem ein Kaufmann seine Geschäfte betreibt und unterschreibt.
+
+**Grundsätze:**
+
+* **Firmenwahrheit:** darf nicht irreführend sein
+* **Firmenklarheit:** muss sich deutlich von anderen unterscheiden
+* **Firmenbeständigkeit:** darf nach Inhaberwechsel fortgeführt werden
+* **Firmenöffentlichkeit:** muss ins Handelsregister eingetragen sein
+
+📘 Beispiel:
+
+> „TechVision GmbH“ ist die **Firma**, nicht das Produkt oder die Marke.
+
+🟩 (LF1)
+
+---
+
+### 📚 Buchführungspflicht (§§ 238 ff. HGB)
+
+Jeder Kaufmann ist verpflichtet,
+**Bücher zu führen**, aus denen seine **Handelsgeschäfte und Vermögenslage** ersichtlich sind.
+
+**Pflichten:**
+
+* Inventar (Bestandsverzeichnis) erstellen
+* Bilanz und Gewinn- und Verlustrechnung (GuV)
+* Jahresabschluss aufstellen (bei Kapitalgesellschaften zusätzlich: Anhang und Lagebericht)
+
+**Aufbewahrungsfristen:**
+
+* Handelsbücher, Inventare, Bilanzen: **10 Jahre**
+* Handelsbriefe: **6 Jahre**
+
+💡 Diese Vorschriften sind auch Grundlage für die **IHK-Prüfung in WiSo**.
+🟥 (LF5, LF12)
+
+---
+
+### 💼 Handelsgeschäfte (4. Buch HGB)
+
+Handelsgeschäfte sind **alle Geschäfte eines Kaufmanns**, die zum Betrieb seines Handelsgewerbes gehören (§ 343 HGB).
+
+#### 📦 Beispiel: Handelskauf (§§ 373 ff. HGB)
+
+| Begriff                                        | Erklärung                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Zweiseitiger Handelskauf**                   | Beide Vertragspartner sind Kaufleute                                                 |
+| **Untersuchungs- und Rügepflicht (§ 377 HGB)** | Ware muss **sofort geprüft** werden – Mängel müssen **unverzüglich gemeldet** werden |
+| **Schweigen auf Angebot (§ 362 HGB)**          | Gilt bei **regelmäßiger Geschäftsbeziehung** als Annahme                             |
+| **Fixkauf (§ 376 HGB)**                        | Lieferung zu einem **fest vereinbarten Termin** – sonst Rücktritt möglich            |
+
+💡 **Wichtig für die Prüfung:**
+Unterscheide zwischen **BGB-Gewährleistung** und **HGB-Rügepflicht**!
+
+🟥 (LF6)
+
+---
+
+### 🤝 Handelsvertretung und Prokura
+
+| Begriff                       | Bedeutung                                                         | Rechtsgrundlage |
+| ----------------------------- | ----------------------------------------------------------------- | --------------- |
+| **Handelsvertreter**          | Vermittelt oder schließt Geschäfte im Namen des Unternehmers ab   | §§ 84 ff. HGB   |
+| **Prokurist**                 | Erhält umfassende Vertretungsmacht (z. B. für Verträge, Personal) | §§ 48 ff. HGB   |
+| **Handlungsbevollmächtigter** | Darf nur im Rahmen des täglichen Geschäfts handeln                | § 54 HGB        |
+
+🟩 (LF1, LF12)
+
+---
+
+### ⚖️ Prüfungshinweis
+
+In der IHK-Prüfung **Wirtschafts- und Sozialkunde (WiSo)** wird häufig geprüft:
+
+* Unterschied **BGB ↔ HGB**
+* Wer ist **Kaufmann**?
+* Was gilt bei der **Rügepflicht** (§ 377 HGB)?
+* Welche **Buchführungspflichten** gelten?
+* Welche **Firmenarten** und **Vertretungsformen** gibt es?
+
+🟥 (LF5)
+
+---
+
+### 🧭 Zusammenfassung
+
+| Thema           | BGB               | HGB                            |
+| --------------- | ----------------- | ------------------------------ |
+| Gilt für        | Alle Bürger       | Kaufleute                      |
+| Schwerpunkt     | Privatrecht       | Handelsrecht                   |
+| Vertragsschluss | Angebot + Annahme | Kaufleute mit Sonderrechten    |
+| Buchführung     | keine Pflicht     | Pflicht ab Gewerbebetrieb      |
+| Grundlage für   | Privatrecht       | Wirtschaftsleben & Unternehmen |
+
+Das **HGB** ist damit das **wirtschaftsrechtliche Fundament** für kaufmännisches Handeln und ergänzt das BGB um unternehmensrelevante Vorschriften.
+🟩 (LF1, LF6, LF12)
+
+---
+
+📘 **Merksatz:**
+
+> „Das BGB gilt für alle – das HGB nur für Kaufleute.“
