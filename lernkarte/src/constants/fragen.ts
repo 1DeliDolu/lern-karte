@@ -1106,112 +1106,220 @@ export const fragen: Karte[] = [
       "SQL Join’lar (birleştirmeler) nedir? „INNER JOIN“, „LEFT JOIN“, „RIGHT JOIN“ ve „FULL JOIN“ kavramlarını kısaca açıklayın.",
     antwortTR:
       "SQL Join’lar, ilişkilendirilmiş bir sütuna (bağ/koşul) dayanarak iki veya daha fazla tablodan verileri birleştirmek için kullanılır; genellikle SELECT ifadesinde ON koşulu ile tanımlanır.\nINNER JOIN: Her iki tabloda da eşleşme olan satırları döndürür.\nLEFT JOIN: Sol tablonun tüm satırlarını ve sağ tabloda eşleşen satırları döndürür.\nRIGHT JOIN: Sağ tablonun tüm satırlarını ve sol tabloda eşleşen satırları döndürür.\nFULL JOIN: Tablolardan en az birinde eşleşme varsa satırları döndürür.",
-  },{
-id:111,
-frageDE: "Was ist JSON und wo wird es verwendet?",
-antwortDE: "JSON (JavaScript Object Notation) ist ein Datenformat, das zur Speicherung und Übertragung strukturierter Daten verwendet wird. JSON speichert Daten in Form von Attribut-Wert-Paaren. Ein JSON-Dokument besteht aus geschweiften Klammern und enthält eine oder mehrere Eigenschaften. Jede Eigenschaft besteht aus einem Namen und einem Wert, die durch einen Doppelpunkt getrennt sind.\n{\n„name“: „Andreas Müller“,\n„age“: 30,\n„city“: „Hamburg“\n}\nJSON wird häufig in Webanwendungen und APIs (Application Programming Interfaces) eingesetzt.",
-frageTR: "JSON nedir ve nerede kullanılır?",
-antwortTR: "JSON (JavaScript Object Notation), yapılandırılmış verilerin depolanması ve aktarılması için kullanılan bir veri formatıdır. JSON verileri, öznitelik-değer çiftleri biçiminde saklar. Bir JSON belgesi süslü parantezler içinde yer alır ve bir veya daha fazla özellik içerir. Her özellik bir ad ve iki nokta üst üste ile ayrılmış bir değerden oluşur.\n{\n\"name\": \"Andreas Müller\",\n\"age\": 30,\n\"city\": \"Hamburg\"\n}\nJSON genellikle web uygulamalarında ve API’lerde (Application Programming Interfaces – Uygulama Programlama Arayüzleri) kullanılır."
-},
-{
-id:112,
-frageDE: "Was sind die Unterschiede zwischen den Datenformaten CSV und XML?",
-antwortDE: "CSV (Comma-Separated Values) und XML (eXtensible Markup Language) sind verschiedene Datenformate, die zur Speicherung und Übertragung von strukturierten Daten verwendet werden.\nCSV ist ein textbasiertes Format, bei dem Daten in Tabellenform organisiert sind. Jede Zeile repräsentiert einen Datensatz und die einzelnen Werte innerhalb einer Zeile sind durch Trennzeichen voneinander getrennt. CSV enthält normalerweise keine Strukturinformationen oder Hierarchie.\nXML ist eine Markup-Sprache, die eine hierarchische Struktur verwendet. Daten werden in Tags eingebettet und können ineinander verschachtelt werden, um komplexe Hierarchien darzustellen.",
-frageTR: "CSV ve XML veri formatları arasındaki farklar nelerdir?",
-antwortTR: "CSV (Comma-Separated Values – Virgülle Ayrılmış Değerler) ve XML (eXtensible Markup Language – Genişletilebilir Biçimlendirme Dili), yapılandırılmış verilerin depolanması ve aktarılması için kullanılan farklı veri formatlarıdır.\nCSV, verilerin tablo biçiminde düzenlendiği metin tabanlı bir formattır. Her satır bir veri kaydını temsil eder ve satır içindeki değerler ayırıcılarla (örneğin virgül) birbirinden ayrılır. CSV genellikle yapı veya hiyerarşi bilgisi içermez.\nXML, hiyerarşik bir yapı kullanan bir biçimlendirme dilidir. Veriler etiketler (tags) içine yerleştirilir ve karmaşık hiyerarşileri temsil etmek için iç içe geçebilir."
-},
-{
-id:113,
-frageDE: "Wozu dient die DTD (Dokumenttyp-Definition) bei der Verwendung von XML-Dateien?",
-antwortDE: "Die Dokumenttyp-Definition (DTD) ist eine Möglichkeit, die Struktur und den Inhalt von XML-Dokumenten zu definieren. Sie dient dazu, Regeln und Beschränkungen für die Elemente, Attribute und deren Beziehungen in einem XML-Dokument festzulegen.\nDie DTD stellt eine formale Beschreibung bereit, die es ermöglicht, die Gültigkeit und Konformität eines XML-Dokuments zu überprüfen.",
-frageTR: "XML dosyalarında DTD (Belge Türü Tanımı) ne işe yarar?",
-antwortTR: "Doküman Tipi Tanımı (DTD – Document Type Definition), XML belgelerinin yapısını ve içeriğini tanımlamanın bir yoludur. DTD, bir XML belgesindeki öğeler, öznitelikler ve bunların ilişkileri için kuralları ve kısıtlamaları belirlemek amacıyla kullanılır.\nDTD, bir XML belgesinin geçerliliğini ve tanımlanan yapıya uygunluğunu doğrulamaya yarayan resmi bir tanım sağlar."
-},
-{
-id:114,
-frageDE: "Was sind die Unterschiede zwischen einer „well-formed“ und einer „valid“ XML-Datei?",
-antwortDE: "Eine „well-formed“ XML-Datei erfüllt die syntaktischen Regeln des XML-Formats. Sie folgt den XML-Konventionen wie dem korrekten Verschachteln von Elementen, der Verwendung von Tags und Attributen gemäß den XML-Spezifikationen. Eine „well-formed“ XML-Datei kann von einem XML-Parser gelesen werden, ohne dass Syntaxfehler auftreten.\nEine „valid“ XML-Datei erfüllt nicht nur die syntaktischen Anforderungen, sondern entspricht auch den Regeln und Einschränkungen einer definierten Dokumenttyp-Definition (DTD) oder eines XML-Schemas. Eine „valid“ XML-Datei wird auf Konformität mit den in der DTD oder im XML-Schema festgelegten Regeln überprüft.",
-frageTR: "“Well-formed” ve “valid” XML dosyaları arasındaki farklar nelerdir?",
-antwortTR: "“Well-formed” (iyi biçimlendirilmiş) bir XML dosyası, XML formatının sözdizimsel kurallarını karşılayan dosyadır. Bu tür dosyalar, öğelerin doğru şekilde iç içe yerleştirilmesi, etiketlerin ve özniteliklerin XML kurallarına uygun kullanımı gibi XML standartlarına uyar. “Well-formed” bir XML dosyası, XML ayrıştırıcısı (parser) tarafından sözdizim hatası olmadan okunabilir.\n“Valid” (geçerli) bir XML dosyası ise yalnızca sözdizim kurallarına uymakla kalmaz, aynı zamanda tanımlanmış bir DTD (Document Type Definition) veya XML şemasında belirtilen kurallar ve kısıtlamalarla da uyumlu olmalıdır. “Valid” XML dosyaları, tanımlı DTD veya şemadaki kurallara uygunluk açısından doğrulanır."
-},
-{
-id:115,
-frageDE: "Beschreiben Sie die Eigenschaften von Struktogrammen in Bezug auf Allgemeingültigkeit, Deklaration von Variablen und Exklusivität.",
-antwortDE: "Allgemeingültigkeit: Struktogramme sollen keine spezifischen Syntaxelemente einer bestimmten Programmiersprache beinhalten. Ihr Design sollte allgemeingültig und universell sein, sodass die dargestellten Logiken leicht verstanden und in jede Programmiersprache übersetzt werden können.\nDeklaration von Variablen: Die Deklarationen von Variablen und Konstanten werden im ersten Anweisungsblock vorgenommen.\nExklusivität: Jede Anweisung in einem Struktogramm wird durch einen eigenen Strukturblock repräsentiert. Selbst bei Anweisungen, die ähnlich oder identisch sind, ist es nicht erlaubt, sie in einem einzigen Strukturblock zu kombinieren.",
-frageTR: "Strüktogramların genelliği, değişkenlerin bildirimi ve özgünlük açısından özelliklerini açıklayın.",
-antwortTR: "Genellik (Allgemeingültigkeit): Strüktogramlar belirli bir programlama diline ait özel sözdizimi öğelerini içermemelidir. Tasarımı genel ve evrensel olmalı, böylece gösterilen mantık kolayca anlaşılabilir ve herhangi bir programlama diline dönüştürülebilir olmalıdır.\nDeğişken Bildirimi (Deklaration von Variablen): Değişkenlerin ve sabitlerin bildirimleri ilk komut bloğunda yapılır.\nÖzgünlük (Exklusivität): Bir strüktogramdaki her komut, kendi yapı bloğu ile temsil edilir. Benzer veya aynı komutlar olsa bile, bunların tek bir yapı bloğunda birleştirilmesine izin verilmez."
-}
-,{
-id:116,
-frageDE: "Der UML-Standard unterscheidet zwischen Strukturdiagrammen und Verhaltensdiagrammen. Nennen Sie jeweils zwei Beispiele aus diesen beiden Kategorien.",
-antwortDE: "Strukturdiagramme:\n- Klassendiagramm\n- Objektdiagramm\n- Paketdiagramm\n- Komponentendiagramm\n- Profildiagramm\n- Verteilungsdiagramm\n- Kompositionsstrukturdiagramm\n\nVerhaltensdiagramme:\n- Anwendungsfalldiagramm\n- Zustandsdiagramm\n- Aktivitätsdiagramm\n- Sequenzdiagramm\n- Kommunikationsdiagramm\n- Zeitdiagramm\n- Interaktionsübersichtsdiagramm",
-frageTR: "UML standardı yapı (Struktur) ve davranış (Verhalten) diyagramları arasında ayrım yapar. Her iki kategoriye de iki örnek veriniz.",
-antwortTR: "Yapı Diyagramları (Strukturdiagramme):\n- Sınıf Diyagramı (Klassendiagramm)\n- Nesne Diyagramı (Objektdiagramm)\n- Paket Diyagramı (Paketdiagramm)\n- Bileşen Diyagramı (Komponentendiagramm)\n- Profil Diyagramı (Profildiagramm)\n- Dağıtım Diyagramı (Verteilungsdiagramm)\n- Kompozisyon Yapı Diyagramı (Kompositionsstrukturdiagramm)\n\nDavranış Diyagramları (Verhaltensdiagramme):\n- Kullanım Durumu Diyagramı (Anwendungsfalldiagramm)\n- Durum Diyagramı (Zustandsdiagramm)\n- Aktivite Diyagramı (Aktivitätsdiagramm)\n- Sekans Diyagramı (Sequenzdiagramm)\n- İletişim Diyagramı (Kommunikationsdiagramm)\n- Zaman Diyagramı (Zeitdiagramm)\n- Etkileşim Genel Görünüm Diyagramı (Interaktionsübersichtsdiagramm)"
-},
-{
-id:117,
-frageDE: "Ein UML-Anwendungsfalldiagramm visualisiert einen Ablauf in einem System, ist aber keine Ablaufbeschreibung. Erklären Sie diesen Zusammenhang.",
-antwortDE: "Ein Anwendungsfalldiagramm ist keine Ablaufbeschreibung sondern ein Verhaltensdiagramm, das die Funktionalität eines Systems aus der Sicht der Benutzerinnen und Benutzer darstellt. Es zeigt die verschiedenen Akteure, die mit dem System interagieren, und die Anwendungsfälle, also die spezifischen Funktionen oder Aufgaben, die das System ausführen kann. Es stellt die Beziehungen zwischen diesen Akteuren und Anwendungsfällen dar, zeigt aber nicht die genauen Abläufe oder den zeitlichen Verlauf dieser Interaktionen.\nDas Anwendungsfalldiagramm dient zur Identifizierung und Darstellung der funktionalen Anforderungen an ein System.",
-frageTR: "Bir UML kullanım durumu diyagramı (Anwendungsfalldiagramm) bir sistemdeki süreci görselleştirir ancak bir süreç açıklaması değildir. Bu ilişkiyi açıklayınız.",
-antwortTR: "Bir kullanım durumu diyagramı (Anwendungsfalldiagramm) bir süreç açıklaması değil, sistemin işlevselliğini kullanıcıların bakış açısından gösteren bir davranış diyagramıdır (Verhaltensdiagramm). Bu diyagram, sistemle etkileşime giren aktörleri (kullanıcılar veya harici sistemler) ve sistemin gerçekleştirebileceği belirli işlevleri veya görevleri (kullanım durumlarını) gösterir. Aktörler ile kullanım durumları arasındaki ilişkileri belirtir ancak bu etkileşimlerin tam akışını veya zaman sırasını göstermez.\nKullanım durumu diyagramı, bir sistemin fonksiyonel gereksinimlerini belirlemek ve göstermek için kullanılır."
-},
-{
-id:118,
-frageDE: "Was stellt ein Sequenzdiagramm in UML dar und in welchen Szenarien wird es typischerweise verwendet?",
-antwortDE: "Ein Sequenzdiagramm in der Unified Modeling Language (UML) zeigt die Interaktionen zwischen Objekten in der Reihenfolge, in der sie auftreten. Ein Sequenzdiagramm besteht aus einer Reihe von vertikalen „Lebenslinien“, die Objekte oder Klassen repräsentieren, und horizontalen „Nachrichten“, die zwischen den Lebenslinien hin und her gehen. Die Nachrichten sind zeitlich von oben nach unten geordnet, sodass man sehen kann, in welcher Reihenfolge die Interaktionen stattfinden.\nSequenzdiagramme helfen dabei, die dynamischen Interaktionen in einem System darzustellen und zu analysieren.",
-frageTR: "Bir UML sekans diyagramı (Sequenzdiagramm) neyi gösterir ve hangi durumlarda kullanılır?",
-antwortTR: "UML (Unified Modeling Language – Birleşik Modelleme Dili) sekans diyagramı (Sequenzdiagramm), nesneler arasındaki etkileşimleri, bunların gerçekleşme sırasına göre gösterir. Sekans diyagramı, nesneleri veya sınıfları temsil eden dikey \"yaşam çizgilerinden\" (Lebenslinien) ve bu çizgiler arasında zaman sırasına göre (üstten alta) gönderilen yatay \"mesajlardan\" oluşur.\nSekans diyagramları, bir sistemdeki dinamik etkileşimleri göstermek ve analiz etmek için kullanılır."
-},
-{
-id:119,
-frageDE: "Wofür wird das UML-Aktivitätsdiagramm bei der Modellierung genutzt?",
-antwortDE: "Ein UML-Aktivitätsdiagramm ist ein Verhaltensdiagramm, das die Reihenfolge und Bedingungen für die Ausführung verschiedener Aktivitäten in einem System darstellt. Es wird in der Modellierung verwendet, um Arbeitsabläufe zu visualisieren, das Verhalten von Systemteilen zu modellieren, Anforderungen zu analysieren und zu designen sowie um parallele Abläufe darzustellen. Es besteht aus Elementen wie Start- und Endknoten, Aktionsknoten, Entscheidungsknoten und Synchronisationsstangen.",
-frageTR: "UML aktivite diyagramı (Aktivitätsdiagramm) modellemede ne için kullanılır?",
-antwortTR: "UML aktivite diyagramı (Aktivitätsdiagramm) bir davranış diyagramıdır (Verhaltensdiagramm) ve bir sistemdeki farklı aktivitelerin yürütülme sırasını ve koşullarını gösterir. Modellemede iş akışlarını görselleştirmek, sistem bileşenlerinin davranışını modellemek, gereksinimleri analiz etmek ve paralel süreçleri göstermek için kullanılır. Diyagram; başlangıç ve bitiş düğümleri, eylem düğümleri, karar düğümleri ve senkronizasyon çubukları gibi öğelerden oluşur."
-},
-{
-id:120,
-frageDE: "Erklären Sie die Verwendung des UML-Zustandsdiagramms zur Modellierung von Verhalten in einem System.",
-antwortDE: "In einem UML-Zustandsdiagramm wird der Lebenszyklus eines Objekts durch die Darstellung seiner verschiedenen Zustände und Übergänge dargestellt. Es ist besonders nützlich bei der Modellierung von Objekten, die komplexes Verhalten aufweisen und viele verschiedene Zustände haben können.\nUML-Zustandsdiagramme geben den aktuellen Zustand eines Objekts, die Aktionen, die beim Eintritt, während des Verweilens und beim Verlassen des Zustands durchgeführt werden, sowie die Bedingungen für den Übergang zu anderen Zuständen wieder. Hierdurch ermöglichen sie die Darstellung und das Verständnis komplexer verhaltensbasierter Systeme.",
-frageTR: "Bir UML durum diyagramı (Zustandsdiagramm), bir sistemdeki davranışın modellenmesinde nasıl kullanılır?",
-antwortTR: "Bir UML durum diyagramı (Zustandsdiagramm), bir nesnenin yaşam döngüsünü (Lebenszyklus) farklı durumları ve bu durumlar arasındaki geçişleri göstererek modeller. Özellikle karmaşık davranışlara ve birden fazla duruma sahip nesnelerin modellenmesinde kullanışlıdır.\nUML durum diyagramları, bir nesnenin mevcut durumunu, bir duruma girildiğinde, o durumda kalındığında ve durumdan çıkıldığında gerçekleştirilen eylemleri, ayrıca diğer durumlara geçiş koşullarını gösterir. Bu sayede karmaşık, davranışa dayalı sistemlerin temsil edilmesi ve anlaşılması sağlanır."
-},
-{
-id:121,
-frageDE: "Welche Informationen kann man aus dem Klassendiagramm ableiten?",
-antwortDE: "Das Klassendiagramm zeigt Klassen, ihre Attribute und Methoden sowie Beziehungen zwischen den Klassen.\nAus einem Klassendiagramm kann man folgende Informationen ableiten:\n- Klassen und Objekte: Welche Klassen gibt es und welche Objekte repräsentieren sie?\n- Attribute und Operationen: Welche Eigenschaften und Verhaltensweisen haben die Klassen?\n- Beziehungen: Wie sind die Klassen miteinander verknüpft (z.B. durch Assoziationen oder Vererbungen)?\n- Sichtbarkeit: Welche Attribute und Operationen sind öffentlich, privat oder geschützt?\n- Kardinalität: Wie viele Instanzen einer Klasse können mit einer anderen in Beziehung stehen?",
-frageTR: "Bir sınıf diyagramından (Klassendiagramm) hangi bilgiler elde edilebilir?",
-antwortTR: "Sınıf diyagramı (Klassendiagramm), sınıfları, bunların özniteliklerini (Attributes), metotlarını (Methoden) ve sınıflar arasındaki ilişkileri gösterir.\nBir sınıf diyagramından şu bilgiler çıkarılabilir:\n- Sınıflar ve nesneler: Hangi sınıfların mevcut olduğu ve bu sınıfların hangi nesneleri temsil ettiği.\n- Öznitelikler ve işlemler: Sınıfların hangi özelliklere ve davranışlara sahip olduğu.\n- İlişkiler: Sınıfların birbirleriyle nasıl bağlantılı olduğu (örneğin ilişki – Assoziation veya kalıtım – Vererbung yoluyla).\n- Görünürlük (Sichtbarkeit): Hangi özniteliklerin ve metotların genel (public), özel (private) veya korumalı (protected) olduğu.\n- Kardinalite (Kardinalität): Bir sınıfın diğer bir sınıfla kaç örnek üzerinden ilişkilendirilebileceği."
-},
-{
-id:122,
-frageDE: "In UML-Klassendiagrammen wird zwischen den Beziehungstypen Aggregation und Komposition unterschieden. Erläutern Sie den Unterschied zwischen diesen beiden Beziehungstypen.",
-antwortDE: "Bei der Aggregation handelt es sich um eine lose Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) eine Sammlung oder eine Gruppe von Objekten einer anderen Klasse (die Teile) enthält. Die Beziehung zwischen dem Ganzen und den Teilen ist in der Regel optional, das heißt, das Ganze kann ohne die Teile existieren.\nBei der Komposition handelt es sich um eine starke Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) aus einer anderen Klasse (dem Teil) besteht. Die Teile können nur als Teil des Ganzen existieren und haben keine eigenständige Existenz. Wenn das Ganze zerstört wird, werden auch die Teile zerstört.",
-frageTR: "UML sınıf diyagramlarında (Klassendiagramm) yer alan ilişki türlerinden Aggregation (toplama) ve Komposition (bileşim) arasındaki fark nedir?",
-antwortTR: "Aggregation (toplama), iki sınıf arasında gevşek bir ilişki türüdür. Bu ilişkide bir sınıf (bütün) diğer sınıfın nesnelerinin (parçaların) bir grubunu veya koleksiyonunu içerir. Bu tür ilişkide parçalar bütünden bağımsız olarak var olabilir; yani bütün (örneğin bir sınıf) olmadan da parçalar varlığını sürdürebilir.\nKomposition (bileşim) ise iki sınıf arasında güçlü bir ilişkidir. Bu ilişkide bir sınıf (bütün), diğer sınıfın (parça) bir bileşenidir. Parçalar yalnızca bütünün bir parçası olarak var olabilir ve bağımsız şekilde varlık gösteremez. Bütün yok edildiğinde, ona bağlı parçalar da yok olur."
-},
-{
-id:123,
-frageDE: "Erklären Sie das Prinzip der Vererbung in der objektorientierten Programmierung.",
-antwortDE: "In der objektorientierten Programmierung ist Vererbung ein Schlüsselprinzip, das es ermöglicht, neue Klassen aus bereits existierenden Klassen zu erzeugen. Die neu erstellte Klasse wird als „Unterklasse“ oder „abgeleitete Klasse“ bezeichnet, während die existierende Klasse, von der sie erbt, als „Oberklasse“ oder „Basisklasse“ bezeichnet wird.\nDie Vererbung ist nützlich für die Wiederverwendung von Code und die Reduzierung von Redundanz. Sie ermöglicht es, dass Eigenschaften (Attribute) und Verhaltensweisen (Methoden), die in der Oberklasse definiert sind, an die Unterklasse weitergegeben werden.",
-frageTR: "Nesne yönelimli programlamada (objektorientierte Programmierung) kalıtım (Vererbung) ilkesi nedir?",
-antwortTR: "Nesne yönelimli programlamada (OOP – objektorientierte Programmierung) kalıtım (Vererbung) ilkesi, mevcut sınıflardan yeni sınıflar türetmeyi sağlayan temel bir kavramdır. Yeni oluşturulan sınıfa alt sınıf (Unterklasse veya abgeleitete Klasse), miras alınan sınıfa ise üst sınıf (Oberklasse veya Basisklasse) denir.\nKalıtım, kodun yeniden kullanılmasını (Code-Wiederverwendung) ve tekrarlılığı azaltmayı (Redundanz) sağlar. Üst sınıfta tanımlanan özellikler (Attributes) ve davranışlar (Methoden), alt sınıfa aktarılabilir."
-},
-{
-id:124,
-frageDE: "In welchem Zusammenhang steht das Konzept der Datenkapselung in der objektorientierten Programmierung mit den Prinzipien der Datenintegrität und der Code-Wartbarkeit?",
-antwortDE: "Datenkapselung ist ein zentraler Grundsatz der objektorientierten Programmierung. Sie verbirgt die Daten (Variablen) und die Methoden einer Klasse und schützt Daten vor dem direkten Zugriff von außen. Nur die öffentlichen Methoden der Klasse können auf die internen Daten zugreifen.\nDies schafft ein hohes Maß an Datenintegrität, da die Daten nur auf sichere und kontrollierte Weise manipuliert werden können. Darüber hinaus verbessert es die Wartbarkeit und Verständlichkeit des Codes, da Änderungen an der internen Implementierung der Klasse nicht die Teile des Programms beeinflussen, die die Klasse verwenden.",
-frageTR: "Nesne yönelimli programlamada (objektorientierte Programmierung) veri gizleme (Datenkapselung) kavramı, veri bütünlüğü (Datenintegrität) ve kod bakım kolaylığı (Code-Wartbarkeit) ilkeleriyle nasıl ilişkilidir?",
-antwortTR: "Veri gizleme (Datenkapselung), nesne yönelimli programlamanın temel ilkelerinden biridir. Bu ilke, bir sınıfın değişkenlerini (verilerini) ve metotlarını dış erişime karşı gizler ve verilerin doğrudan değiştirilmesini engeller. Yalnızca sınıfın genel (public) metotları iç veriler üzerinde işlem yapabilir.\nBu yaklaşım, verilerin yalnızca güvenli ve kontrol edilen yollarla değiştirilmesini sağladığından yüksek düzeyde veri bütünlüğü (Datenintegrität) sağlar. Ayrıca, bir sınıfın iç yapısında yapılan değişikliklerin programın diğer bölümlerini etkilememesi sayesinde kodun bakımını (Wartbarkeit) ve anlaşılabilirliğini artırır."
-},
-{
-id:125,
-frageDE: "Was ist der Unterschied zwischen Prozeduren und Funktionen in der Programmierung?",
-antwortDE: "Eine Funktion ist ein Codeblock, der eine spezifische Aufgabe ausführt und in der Regel einen Wert zurückgibt.\nEine Prozedur ist auch ein Codeblock, der eine spezifische Aufgabe ausführt. Der Hauptunterschied besteht darin, dass eine Prozedur normalerweise keinen Wert zurückgibt. Eine Prozedur führt eine Aufgabe aus und kehrt dann zur aufrufenden Stelle im Code zurück.",
-frageTR: "Programlamada prosedür (Prozedur) ile fonksiyon (Funktion) arasındaki fark nedir?",
-antwortTR: "Bir fonksiyon (Funktion), belirli bir görevi yerine getiren ve genellikle bir değer döndüren bir kod bloğudur.\nBir prosedür (Prozedur) de belirli bir görevi yerine getiren bir kod bloğudur, ancak temel fark şudur: prosedür genellikle bir değer döndürmez. Prosedür yalnızca işlemi gerçekleştirir ve ardından kodun çağrıldığı yere geri döner."
-}
-
-
-
+  },
+  {
+    id: 106,
+    frageDE:
+      "Was ist der Unterschied zwischen „Primary Key“, „Foreign Key“ und „Unique Key“ in einer Datenbank?",
+    antwortDE:
+      "Primary Key: Ein Primary Key (Primärschlüssel) identifiziert eindeutig jeden Datensatz in einer Tabelle. Es darf keine NULL-Werte enthalten und jeder Wert muss eindeutig sein.\nForeign Key: Ein Foreign Key (Fremdschlüssel) stellt eine Beziehung zwischen zwei Tabellen her. Er verweist auf den Primary Key einer anderen Tabelle und gewährleistet referenzielle Integrität.\nUnique Key: Ein Unique Key sorgt dafür, dass die Werte in einer Spalte eindeutig sind, ähnlich wie beim Primary Key. Im Gegensatz zum Primary Key darf jedoch eine Tabelle mehrere Unique Keys haben und NULL-Werte enthalten.",
+    frageTR:
+      "Bir veritabanında „Primary Key (Birincil Anahtar)“, „Foreign Key (Yabancı Anahtar)“ ve „Unique Key (Benzersiz Anahtar)“ arasındaki fark nedir?",
+    antwortTR:
+      "Primary Key (Birincil Anahtar): Her bir tablo kaydını benzersiz olarak tanımlar. NULL değer içeremez ve her değer benzersiz olmalıdır.\nForeign Key (Yabancı Anahtar): İki tablo arasında ilişki kurar. Başka bir tablodaki Primary Key’e referans verir ve referans bütünlüğünü sağlar.\nUnique Key (Benzersiz Anahtar): Bir sütundaki değerlerin benzersiz olmasını sağlar, Primary Key’e benzer şekilde. Ancak bir tabloda birden fazla Unique Key olabilir ve NULL değer içerebilir.",
+  },
+  {
+    id: 107,
+    frageDE:
+      "Wie kann man in SQL Daten gruppieren und aggregieren? Nennen Sie wichtige Funktionen und Befehle.",
+    antwortDE:
+      "In SQL werden Daten mit dem Befehl GROUP BY gruppiert. Dieser wird in Kombination mit Aggregatfunktionen verwendet, um zusammenfassende Informationen zu erzeugen.\nWichtige Aggregatfunktionen sind:\nCOUNT() – zählt Datensätze,\nSUM() – summiert Werte,\nAVG() – berechnet den Durchschnitt,\nMIN() – gibt den kleinsten Wert zurück,\nMAX() – gibt den größten Wert zurück.\nHAVING wird verwendet, um Ergebnisse nach der Gruppierung zu filtern (ähnlich wie WHERE, aber nach der Aggregation).",
+    frageTR:
+      "SQL’de veriler nasıl gruplanır ve özetlenir (aggregate edilir)? Önemli fonksiyonları ve komutları belirtin.",
+    antwortTR:
+      "SQL’de veriler GROUP BY komutu ile gruplanır. Bu komut, özet bilgiler oluşturmak için toplama (aggregate) fonksiyonlarıyla birlikte kullanılır.\nÖnemli toplama (aggregate) fonksiyonları şunlardır:\nCOUNT() – kayıtları sayar,\nSUM() – değerleri toplar,\nAVG() – ortalamayı hesaplar,\nMIN() – en küçük değeri döndürür,\nMAX() – en büyük değeri döndürür.\nHAVING ifadesi, gruplama sonrasında sonuçları filtrelemek için kullanılır (WHERE ifadesine benzer, ancak toplama işleminden sonra uygulanır).",
+  },
+  {
+    id: 108,
+    frageDE:
+      "Was ist Normalisierung in einer Datenbank und welche Vorteile bringt sie?",
+    antwortDE:
+      "Normalisierung ist der Prozess der Organisation von Daten in einer Datenbank, um Redundanz zu minimieren und Datenintegrität zu verbessern. Dabei werden Tabellen so gestaltet, dass jedes Datenelement nur einmal gespeichert wird.\nVorteile:\n– Vermeidung redundanter Daten,\n– Verbesserung der Konsistenz und Integrität,\n– Vereinfachung von Updates und Wartung,\n– geringere Gefahr von Anomalien bei Einfügen, Löschen und Aktualisieren.\nDie Normalisierung erfolgt in sogenannten Normalformen (1NF, 2NF, 3NF, …).",
+    frageTR:
+      "Veritabanında Normalisierung (normalizasyon) nedir ve hangi avantajları sağlar?",
+    antwortTR:
+      "Normalisierung (normalizasyon), veritabanındaki verilerin gereksiz tekrarları (redundanz) azaltmak ve veri bütünlüğünü (integrität) artırmak amacıyla düzenlenmesidir. Bu işlemde tablolar, her verinin yalnızca bir kez saklanacağı şekilde tasarlanır.\nAvantajları:\n– Yinelenen verilerin önlenmesi,\n– Tutarlılık ve bütünlüğün artırılması,\n– Güncelleme ve bakım işlemlerinin kolaylaştırılması,\n– Ekleme, silme ve güncelleme anormalliklerinin azaltılması.\nNormalizasyon, Normalformen (Normal Formlar — 1NF, 2NF, 3NF vb.) adı verilen aşamalarla gerçekleştirilir.",
+  },
+  {
+    id: 109,
+    frageDE:
+      "Was ist ein Entity-Relationship-Modell (ER-Modell) und wozu dient es in der Datenbankentwicklung?",
+    antwortDE:
+      "Ein Entity-Relationship-Modell (ER-Modell) ist ein konzeptionelles Datenmodell, das Entitäten (Datenobjekte) und deren Beziehungen zueinander beschreibt. Es wird in der Phase des Datenbankdesigns verwendet, um die logische Struktur einer Datenbank zu planen.\nZweck:\n– Visualisierung der Datenstruktur,\n– Verständnis der Beziehungen zwischen Entitäten,\n– Grundlage für die Erstellung des physischen Datenbankmodells.",
+    frageTR:
+      "Entity-Relationship-Modell (ER-Modeli) nedir ve veritabanı geliştirmede (Datenbankentwicklung) ne işe yarar?",
+    antwortTR:
+      "Entity-Relationship-Modell (ER-Modeli), varlıkları (Entitäten—veri nesneleri) ve bunlar arasındaki ilişkileri tanımlayan kavramsal bir veri modelidir. Veritabanı tasarımı aşamasında, veritabanının mantıksal yapısını planlamak için kullanılır.\nAmacı:\n– Veri yapısının görselleştirilmesi,\n– Varlıklar arasındaki ilişkilerin anlaşılması,\n– Fiziksel veritabanı modelinin oluşturulması için temel sağlanması.",
+  },
+  {
+    id: 110,
+    frageDE:
+      "Was versteht man unter referenzieller Integrität in einer relationalen Datenbank?",
+    antwortDE:
+      "Referenzielle Integrität stellt sicher, dass Beziehungen zwischen Tabellen konsistent bleiben. Wenn eine Tabelle (Kindtabelle) auf eine andere Tabelle (Elterntabelle) verweist, darf ein Fremdschlüsselwert nur auf existierende Primärschlüsselwerte zeigen.\nWenn z. B. ein Datensatz in der Elterntabelle gelöscht wird, kann die referenzielle Integrität vorschreiben, dass:\n– der entsprechende Datensatz in der Kindtabelle ebenfalls gelöscht wird (ON DELETE CASCADE),\n– der Fremdschlüsselwert auf NULL gesetzt wird (ON DELETE SET NULL),\n– oder die Löschung verhindert wird (RESTRICT).",
+    frageTR:
+      "İlişkisel bir veritabanında referenzielle Integrität (referans bütünlüğü) ne anlama gelir?",
+    antwortTR:
+      "Referenzielle Integrität (referans bütünlüğü), tablolar arasındaki ilişkilerin tutarlılığını sağlar. Bir tablo (çocuk tablo), başka bir tabloya (ebeveyn tablo) referans verdiğinde, yabancı anahtar (Foreign Key) yalnızca mevcut bir birincil anahtar (Primary Key) değerine işaret edebilir.\nÖrneğin, ebeveyn tablodaki bir kayıt silindiğinde, referans bütünlüğü şu kuralları uygulayabilir:\n– İlgili kayıt çocuk tablodan da silinir (ON DELETE CASCADE),\n– Yabancı anahtar değeri NULL yapılır (ON DELETE SET NULL),\n– Silme işlemi engellenir (RESTRICT).",
+  },
+  {
+    id: 111,
+    frageDE: "Was ist JSON und wo wird es verwendet?",
+    antwortDE:
+      "JSON (JavaScript Object Notation) ist ein Datenformat, das zur Speicherung und Übertragung strukturierter Daten verwendet wird. JSON speichert Daten in Form von Attribut-Wert-Paaren. Ein JSON-Dokument besteht aus geschweiften Klammern und enthält eine oder mehrere Eigenschaften. Jede Eigenschaft besteht aus einem Namen und einem Wert, die durch einen Doppelpunkt getrennt sind.\n{\n„name“: „Andreas Müller“,\n„age“: 30,\n„city“: „Hamburg“\n}\nJSON wird häufig in Webanwendungen und APIs (Application Programming Interfaces) eingesetzt.",
+    frageTR: "JSON nedir ve nerede kullanılır?",
+    antwortTR:
+      'JSON (JavaScript Object Notation), yapılandırılmış verilerin depolanması ve aktarılması için kullanılan bir veri formatıdır. JSON verileri, öznitelik-değer çiftleri biçiminde saklar. Bir JSON belgesi süslü parantezler içinde yer alır ve bir veya daha fazla özellik içerir. Her özellik bir ad ve iki nokta üst üste ile ayrılmış bir değerden oluşur.\n{\n"name": "Andreas Müller",\n"age": 30,\n"city": "Hamburg"\n}\nJSON genellikle web uygulamalarında ve API’lerde (Application Programming Interfaces – Uygulama Programlama Arayüzleri) kullanılır.',
+  },
+  {
+    id: 112,
+    frageDE:
+      "Was sind die Unterschiede zwischen den Datenformaten CSV und XML?",
+    antwortDE:
+      "CSV (Comma-Separated Values) und XML (eXtensible Markup Language) sind verschiedene Datenformate, die zur Speicherung und Übertragung von strukturierten Daten verwendet werden.\nCSV ist ein textbasiertes Format, bei dem Daten in Tabellenform organisiert sind. Jede Zeile repräsentiert einen Datensatz und die einzelnen Werte innerhalb einer Zeile sind durch Trennzeichen voneinander getrennt. CSV enthält normalerweise keine Strukturinformationen oder Hierarchie.\nXML ist eine Markup-Sprache, die eine hierarchische Struktur verwendet. Daten werden in Tags eingebettet und können ineinander verschachtelt werden, um komplexe Hierarchien darzustellen.",
+    frageTR: "CSV ve XML veri formatları arasındaki farklar nelerdir?",
+    antwortTR:
+      "CSV (Comma-Separated Values – Virgülle Ayrılmış Değerler) ve XML (eXtensible Markup Language – Genişletilebilir Biçimlendirme Dili), yapılandırılmış verilerin depolanması ve aktarılması için kullanılan farklı veri formatlarıdır.\nCSV, verilerin tablo biçiminde düzenlendiği metin tabanlı bir formattır. Her satır bir veri kaydını temsil eder ve satır içindeki değerler ayırıcılarla (örneğin virgül) birbirinden ayrılır. CSV genellikle yapı veya hiyerarşi bilgisi içermez.\nXML, hiyerarşik bir yapı kullanan bir biçimlendirme dilidir. Veriler etiketler (tags) içine yerleştirilir ve karmaşık hiyerarşileri temsil etmek için iç içe geçebilir.",
+  },
+  {
+    id: 113,
+    frageDE:
+      "Wozu dient die DTD (Dokumenttyp-Definition) bei der Verwendung von XML-Dateien?",
+    antwortDE:
+      "Die Dokumenttyp-Definition (DTD) ist eine Möglichkeit, die Struktur und den Inhalt von XML-Dokumenten zu definieren. Sie dient dazu, Regeln und Beschränkungen für die Elemente, Attribute und deren Beziehungen in einem XML-Dokument festzulegen.\nDie DTD stellt eine formale Beschreibung bereit, die es ermöglicht, die Gültigkeit und Konformität eines XML-Dokuments zu überprüfen.",
+    frageTR: "XML dosyalarında DTD (Belge Türü Tanımı) ne işe yarar?",
+    antwortTR:
+      "Doküman Tipi Tanımı (DTD – Document Type Definition), XML belgelerinin yapısını ve içeriğini tanımlamanın bir yoludur. DTD, bir XML belgesindeki öğeler, öznitelikler ve bunların ilişkileri için kuralları ve kısıtlamaları belirlemek amacıyla kullanılır.\nDTD, bir XML belgesinin geçerliliğini ve tanımlanan yapıya uygunluğunu doğrulamaya yarayan resmi bir tanım sağlar.",
+  },
+  {
+    id: 114,
+    frageDE:
+      "Was sind die Unterschiede zwischen einer „well-formed“ und einer „valid“ XML-Datei?",
+    antwortDE:
+      "Eine „well-formed“ XML-Datei erfüllt die syntaktischen Regeln des XML-Formats. Sie folgt den XML-Konventionen wie dem korrekten Verschachteln von Elementen, der Verwendung von Tags und Attributen gemäß den XML-Spezifikationen. Eine „well-formed“ XML-Datei kann von einem XML-Parser gelesen werden, ohne dass Syntaxfehler auftreten.\nEine „valid“ XML-Datei erfüllt nicht nur die syntaktischen Anforderungen, sondern entspricht auch den Regeln und Einschränkungen einer definierten Dokumenttyp-Definition (DTD) oder eines XML-Schemas. Eine „valid“ XML-Datei wird auf Konformität mit den in der DTD oder im XML-Schema festgelegten Regeln überprüft.",
+    frageTR:
+      "“Well-formed” ve “valid” XML dosyaları arasındaki farklar nelerdir?",
+    antwortTR:
+      "“Well-formed” (iyi biçimlendirilmiş) bir XML dosyası, XML formatının sözdizimsel kurallarını karşılayan dosyadır. Bu tür dosyalar, öğelerin doğru şekilde iç içe yerleştirilmesi, etiketlerin ve özniteliklerin XML kurallarına uygun kullanımı gibi XML standartlarına uyar. “Well-formed” bir XML dosyası, XML ayrıştırıcısı (parser) tarafından sözdizim hatası olmadan okunabilir.\n“Valid” (geçerli) bir XML dosyası ise yalnızca sözdizim kurallarına uymakla kalmaz, aynı zamanda tanımlanmış bir DTD (Document Type Definition) veya XML şemasında belirtilen kurallar ve kısıtlamalarla da uyumlu olmalıdır. “Valid” XML dosyaları, tanımlı DTD veya şemadaki kurallara uygunluk açısından doğrulanır.",
+  },
+  {
+    id: 115,
+    frageDE:
+      "Beschreiben Sie die Eigenschaften von Struktogrammen in Bezug auf Allgemeingültigkeit, Deklaration von Variablen und Exklusivität.",
+    antwortDE:
+      "Allgemeingültigkeit: Struktogramme sollen keine spezifischen Syntaxelemente einer bestimmten Programmiersprache beinhalten. Ihr Design sollte allgemeingültig und universell sein, sodass die dargestellten Logiken leicht verstanden und in jede Programmiersprache übersetzt werden können.\nDeklaration von Variablen: Die Deklarationen von Variablen und Konstanten werden im ersten Anweisungsblock vorgenommen.\nExklusivität: Jede Anweisung in einem Struktogramm wird durch einen eigenen Strukturblock repräsentiert. Selbst bei Anweisungen, die ähnlich oder identisch sind, ist es nicht erlaubt, sie in einem einzigen Strukturblock zu kombinieren.",
+    frageTR:
+      "Strüktogramların genelliği, değişkenlerin bildirimi ve özgünlük açısından özelliklerini açıklayın.",
+    antwortTR:
+      "Genellik (Allgemeingültigkeit): Strüktogramlar belirli bir programlama diline ait özel sözdizimi öğelerini içermemelidir. Tasarımı genel ve evrensel olmalı, böylece gösterilen mantık kolayca anlaşılabilir ve herhangi bir programlama diline dönüştürülebilir olmalıdır.\nDeğişken Bildirimi (Deklaration von Variablen): Değişkenlerin ve sabitlerin bildirimleri ilk komut bloğunda yapılır.\nÖzgünlük (Exklusivität): Bir strüktogramdaki her komut, kendi yapı bloğu ile temsil edilir. Benzer veya aynı komutlar olsa bile, bunların tek bir yapı bloğunda birleştirilmesine izin verilmez.",
+  },
+  {
+    id: 116,
+    frageDE:
+      "Der UML-Standard unterscheidet zwischen Strukturdiagrammen und Verhaltensdiagrammen. Nennen Sie jeweils zwei Beispiele aus diesen beiden Kategorien.",
+    antwortDE:
+      "Strukturdiagramme:\n- Klassendiagramm\n- Objektdiagramm\n- Paketdiagramm\n- Komponentendiagramm\n- Profildiagramm\n- Verteilungsdiagramm\n- Kompositionsstrukturdiagramm\n\nVerhaltensdiagramme:\n- Anwendungsfalldiagramm\n- Zustandsdiagramm\n- Aktivitätsdiagramm\n- Sequenzdiagramm\n- Kommunikationsdiagramm\n- Zeitdiagramm\n- Interaktionsübersichtsdiagramm",
+    frageTR:
+      "UML standardı yapı (Struktur) ve davranış (Verhalten) diyagramları arasında ayrım yapar. Her iki kategoriye de iki örnek veriniz.",
+    antwortTR:
+      "Yapı Diyagramları (Strukturdiagramme):\n- Sınıf Diyagramı (Klassendiagramm)\n- Nesne Diyagramı (Objektdiagramm)\n- Paket Diyagramı (Paketdiagramm)\n- Bileşen Diyagramı (Komponentendiagramm)\n- Profil Diyagramı (Profildiagramm)\n- Dağıtım Diyagramı (Verteilungsdiagramm)\n- Kompozisyon Yapı Diyagramı (Kompositionsstrukturdiagramm)\n\nDavranış Diyagramları (Verhaltensdiagramme):\n- Kullanım Durumu Diyagramı (Anwendungsfalldiagramm)\n- Durum Diyagramı (Zustandsdiagramm)\n- Aktivite Diyagramı (Aktivitätsdiagramm)\n- Sekans Diyagramı (Sequenzdiagramm)\n- İletişim Diyagramı (Kommunikationsdiagramm)\n- Zaman Diyagramı (Zeitdiagramm)\n- Etkileşim Genel Görünüm Diyagramı (Interaktionsübersichtsdiagramm)",
+  },
+  {
+    id: 117,
+    frageDE:
+      "Ein UML-Anwendungsfalldiagramm visualisiert einen Ablauf in einem System, ist aber keine Ablaufbeschreibung. Erklären Sie diesen Zusammenhang.",
+    antwortDE:
+      "Ein Anwendungsfalldiagramm ist keine Ablaufbeschreibung sondern ein Verhaltensdiagramm, das die Funktionalität eines Systems aus der Sicht der Benutzerinnen und Benutzer darstellt. Es zeigt die verschiedenen Akteure, die mit dem System interagieren, und die Anwendungsfälle, also die spezifischen Funktionen oder Aufgaben, die das System ausführen kann. Es stellt die Beziehungen zwischen diesen Akteuren und Anwendungsfällen dar, zeigt aber nicht die genauen Abläufe oder den zeitlichen Verlauf dieser Interaktionen.\nDas Anwendungsfalldiagramm dient zur Identifizierung und Darstellung der funktionalen Anforderungen an ein System.",
+    frageTR:
+      "Bir UML kullanım durumu diyagramı (Anwendungsfalldiagramm) bir sistemdeki süreci görselleştirir ancak bir süreç açıklaması değildir. Bu ilişkiyi açıklayınız.",
+    antwortTR:
+      "Bir kullanım durumu diyagramı (Anwendungsfalldiagramm) bir süreç açıklaması değil, sistemin işlevselliğini kullanıcıların bakış açısından gösteren bir davranış diyagramıdır (Verhaltensdiagramm). Bu diyagram, sistemle etkileşime giren aktörleri (kullanıcılar veya harici sistemler) ve sistemin gerçekleştirebileceği belirli işlevleri veya görevleri (kullanım durumlarını) gösterir. Aktörler ile kullanım durumları arasındaki ilişkileri belirtir ancak bu etkileşimlerin tam akışını veya zaman sırasını göstermez.\nKullanım durumu diyagramı, bir sistemin fonksiyonel gereksinimlerini belirlemek ve göstermek için kullanılır.",
+  },
+  {
+    id: 118,
+    frageDE:
+      "Was stellt ein Sequenzdiagramm in UML dar und in welchen Szenarien wird es typischerweise verwendet?",
+    antwortDE:
+      "Ein Sequenzdiagramm in der Unified Modeling Language (UML) zeigt die Interaktionen zwischen Objekten in der Reihenfolge, in der sie auftreten. Ein Sequenzdiagramm besteht aus einer Reihe von vertikalen „Lebenslinien“, die Objekte oder Klassen repräsentieren, und horizontalen „Nachrichten“, die zwischen den Lebenslinien hin und her gehen. Die Nachrichten sind zeitlich von oben nach unten geordnet, sodass man sehen kann, in welcher Reihenfolge die Interaktionen stattfinden.\nSequenzdiagramme helfen dabei, die dynamischen Interaktionen in einem System darzustellen und zu analysieren.",
+    frageTR:
+      "Bir UML sekans diyagramı (Sequenzdiagramm) neyi gösterir ve hangi durumlarda kullanılır?",
+    antwortTR:
+      'UML (Unified Modeling Language – Birleşik Modelleme Dili) sekans diyagramı (Sequenzdiagramm), nesneler arasındaki etkileşimleri, bunların gerçekleşme sırasına göre gösterir. Sekans diyagramı, nesneleri veya sınıfları temsil eden dikey "yaşam çizgilerinden" (Lebenslinien) ve bu çizgiler arasında zaman sırasına göre (üstten alta) gönderilen yatay "mesajlardan" oluşur.\nSekans diyagramları, bir sistemdeki dinamik etkileşimleri göstermek ve analiz etmek için kullanılır.',
+  },
+  {
+    id: 119,
+    frageDE:
+      "Wofür wird das UML-Aktivitätsdiagramm bei der Modellierung genutzt?",
+    antwortDE:
+      "Ein UML-Aktivitätsdiagramm ist ein Verhaltensdiagramm, das die Reihenfolge und Bedingungen für die Ausführung verschiedener Aktivitäten in einem System darstellt. Es wird in der Modellierung verwendet, um Arbeitsabläufe zu visualisieren, das Verhalten von Systemteilen zu modellieren, Anforderungen zu analysieren und zu designen sowie um parallele Abläufe darzustellen. Es besteht aus Elementen wie Start- und Endknoten, Aktionsknoten, Entscheidungsknoten und Synchronisationsstangen.",
+    frageTR:
+      "UML aktivite diyagramı (Aktivitätsdiagramm) modellemede ne için kullanılır?",
+    antwortTR:
+      "UML aktivite diyagramı (Aktivitätsdiagramm) bir davranış diyagramıdır (Verhaltensdiagramm) ve bir sistemdeki farklı aktivitelerin yürütülme sırasını ve koşullarını gösterir. Modellemede iş akışlarını görselleştirmek, sistem bileşenlerinin davranışını modellemek, gereksinimleri analiz etmek ve paralel süreçleri göstermek için kullanılır. Diyagram; başlangıç ve bitiş düğümleri, eylem düğümleri, karar düğümleri ve senkronizasyon çubukları gibi öğelerden oluşur.",
+  },
+  {
+    id: 120,
+    frageDE:
+      "Erklären Sie die Verwendung des UML-Zustandsdiagramms zur Modellierung von Verhalten in einem System.",
+    antwortDE:
+      "In einem UML-Zustandsdiagramm wird der Lebenszyklus eines Objekts durch die Darstellung seiner verschiedenen Zustände und Übergänge dargestellt. Es ist besonders nützlich bei der Modellierung von Objekten, die komplexes Verhalten aufweisen und viele verschiedene Zustände haben können.\nUML-Zustandsdiagramme geben den aktuellen Zustand eines Objekts, die Aktionen, die beim Eintritt, während des Verweilens und beim Verlassen des Zustands durchgeführt werden, sowie die Bedingungen für den Übergang zu anderen Zuständen wieder. Hierdurch ermöglichen sie die Darstellung und das Verständnis komplexer verhaltensbasierter Systeme.",
+    frageTR:
+      "Bir UML durum diyagramı (Zustandsdiagramm), bir sistemdeki davranışın modellenmesinde nasıl kullanılır?",
+    antwortTR:
+      "Bir UML durum diyagramı (Zustandsdiagramm), bir nesnenin yaşam döngüsünü (Lebenszyklus) farklı durumları ve bu durumlar arasındaki geçişleri göstererek modeller. Özellikle karmaşık davranışlara ve birden fazla duruma sahip nesnelerin modellenmesinde kullanışlıdır.\nUML durum diyagramları, bir nesnenin mevcut durumunu, bir duruma girildiğinde, o durumda kalındığında ve durumdan çıkıldığında gerçekleştirilen eylemleri, ayrıca diğer durumlara geçiş koşullarını gösterir. Bu sayede karmaşık, davranışa dayalı sistemlerin temsil edilmesi ve anlaşılması sağlanır.",
+  },
+  {
+    id: 121,
+    frageDE: "Welche Informationen kann man aus dem Klassendiagramm ableiten?",
+    antwortDE:
+      "Das Klassendiagramm zeigt Klassen, ihre Attribute und Methoden sowie Beziehungen zwischen den Klassen.\nAus einem Klassendiagramm kann man folgende Informationen ableiten:\n- Klassen und Objekte: Welche Klassen gibt es und welche Objekte repräsentieren sie?\n- Attribute und Operationen: Welche Eigenschaften und Verhaltensweisen haben die Klassen?\n- Beziehungen: Wie sind die Klassen miteinander verknüpft (z.B. durch Assoziationen oder Vererbungen)?\n- Sichtbarkeit: Welche Attribute und Operationen sind öffentlich, privat oder geschützt?\n- Kardinalität: Wie viele Instanzen einer Klasse können mit einer anderen in Beziehung stehen?",
+    frageTR:
+      "Bir sınıf diyagramından (Klassendiagramm) hangi bilgiler elde edilebilir?",
+    antwortTR:
+      "Sınıf diyagramı (Klassendiagramm), sınıfları, bunların özniteliklerini (Attributes), metotlarını (Methoden) ve sınıflar arasındaki ilişkileri gösterir.\nBir sınıf diyagramından şu bilgiler çıkarılabilir:\n- Sınıflar ve nesneler: Hangi sınıfların mevcut olduğu ve bu sınıfların hangi nesneleri temsil ettiği.\n- Öznitelikler ve işlemler: Sınıfların hangi özelliklere ve davranışlara sahip olduğu.\n- İlişkiler: Sınıfların birbirleriyle nasıl bağlantılı olduğu (örneğin ilişki – Assoziation veya kalıtım – Vererbung yoluyla).\n- Görünürlük (Sichtbarkeit): Hangi özniteliklerin ve metotların genel (public), özel (private) veya korumalı (protected) olduğu.\n- Kardinalite (Kardinalität): Bir sınıfın diğer bir sınıfla kaç örnek üzerinden ilişkilendirilebileceği.",
+  },
+  {
+    id: 122,
+    frageDE:
+      "In UML-Klassendiagrammen wird zwischen den Beziehungstypen Aggregation und Komposition unterschieden. Erläutern Sie den Unterschied zwischen diesen beiden Beziehungstypen.",
+    antwortDE:
+      "Bei der Aggregation handelt es sich um eine lose Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) eine Sammlung oder eine Gruppe von Objekten einer anderen Klasse (die Teile) enthält. Die Beziehung zwischen dem Ganzen und den Teilen ist in der Regel optional, das heißt, das Ganze kann ohne die Teile existieren.\nBei der Komposition handelt es sich um eine starke Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) aus einer anderen Klasse (dem Teil) besteht. Die Teile können nur als Teil des Ganzen existieren und haben keine eigenständige Existenz. Wenn das Ganze zerstört wird, werden auch die Teile zerstört.",
+    frageTR:
+      "UML sınıf diyagramlarında (Klassendiagramm) yer alan ilişki türlerinden Aggregation (toplama) ve Komposition (bileşim) arasındaki fark nedir?",
+    antwortTR:
+      "Aggregation (toplama), iki sınıf arasında gevşek bir ilişki türüdür. Bu ilişkide bir sınıf (bütün) diğer sınıfın nesnelerinin (parçaların) bir grubunu veya koleksiyonunu içerir. Bu tür ilişkide parçalar bütünden bağımsız olarak var olabilir; yani bütün (örneğin bir sınıf) olmadan da parçalar varlığını sürdürebilir.\nKomposition (bileşim) ise iki sınıf arasında güçlü bir ilişkidir. Bu ilişkide bir sınıf (bütün), diğer sınıfın (parça) bir bileşenidir. Parçalar yalnızca bütünün bir parçası olarak var olabilir ve bağımsız şekilde varlık gösteremez. Bütün yok edildiğinde, ona bağlı parçalar da yok olur.",
+  },
+  {
+    id: 123,
+    frageDE:
+      "Erklären Sie das Prinzip der Vererbung in der objektorientierten Programmierung.",
+    antwortDE:
+      "In der objektorientierten Programmierung ist Vererbung ein Schlüsselprinzip, das es ermöglicht, neue Klassen aus bereits existierenden Klassen zu erzeugen. Die neu erstellte Klasse wird als „Unterklasse“ oder „abgeleitete Klasse“ bezeichnet, während die existierende Klasse, von der sie erbt, als „Oberklasse“ oder „Basisklasse“ bezeichnet wird.\nDie Vererbung ist nützlich für die Wiederverwendung von Code und die Reduzierung von Redundanz. Sie ermöglicht es, dass Eigenschaften (Attribute) und Verhaltensweisen (Methoden), die in der Oberklasse definiert sind, an die Unterklasse weitergegeben werden.",
+    frageTR:
+      "Nesne yönelimli programlamada (objektorientierte Programmierung) kalıtım (Vererbung) ilkesi nedir?",
+    antwortTR:
+      "Nesne yönelimli programlamada (OOP – objektorientierte Programmierung) kalıtım (Vererbung) ilkesi, mevcut sınıflardan yeni sınıflar türetmeyi sağlayan temel bir kavramdır. Yeni oluşturulan sınıfa alt sınıf (Unterklasse veya abgeleitete Klasse), miras alınan sınıfa ise üst sınıf (Oberklasse veya Basisklasse) denir.\nKalıtım, kodun yeniden kullanılmasını (Code-Wiederverwendung) ve tekrarlılığı azaltmayı (Redundanz) sağlar. Üst sınıfta tanımlanan özellikler (Attributes) ve davranışlar (Methoden), alt sınıfa aktarılabilir.",
+  },
+  {
+    id: 124,
+    frageDE:
+      "In welchem Zusammenhang steht das Konzept der Datenkapselung in der objektorientierten Programmierung mit den Prinzipien der Datenintegrität und der Code-Wartbarkeit?",
+    antwortDE:
+      "Datenkapselung ist ein zentraler Grundsatz der objektorientierten Programmierung. Sie verbirgt die Daten (Variablen) und die Methoden einer Klasse und schützt Daten vor dem direkten Zugriff von außen. Nur die öffentlichen Methoden der Klasse können auf die internen Daten zugreifen.\nDies schafft ein hohes Maß an Datenintegrität, da die Daten nur auf sichere und kontrollierte Weise manipuliert werden können. Darüber hinaus verbessert es die Wartbarkeit und Verständlichkeit des Codes, da Änderungen an der internen Implementierung der Klasse nicht die Teile des Programms beeinflussen, die die Klasse verwenden.",
+    frageTR:
+      "Nesne yönelimli programlamada (objektorientierte Programmierung) veri gizleme (Datenkapselung) kavramı, veri bütünlüğü (Datenintegrität) ve kod bakım kolaylığı (Code-Wartbarkeit) ilkeleriyle nasıl ilişkilidir?",
+    antwortTR:
+      "Veri gizleme (Datenkapselung), nesne yönelimli programlamanın temel ilkelerinden biridir. Bu ilke, bir sınıfın değişkenlerini (verilerini) ve metotlarını dış erişime karşı gizler ve verilerin doğrudan değiştirilmesini engeller. Yalnızca sınıfın genel (public) metotları iç veriler üzerinde işlem yapabilir.\nBu yaklaşım, verilerin yalnızca güvenli ve kontrol edilen yollarla değiştirilmesini sağladığından yüksek düzeyde veri bütünlüğü (Datenintegrität) sağlar. Ayrıca, bir sınıfın iç yapısında yapılan değişikliklerin programın diğer bölümlerini etkilememesi sayesinde kodun bakımını (Wartbarkeit) ve anlaşılabilirliğini artırır.",
+  },
+  {
+    id: 125,
+    frageDE:
+      "Was ist der Unterschied zwischen Prozeduren und Funktionen in der Programmierung?",
+    antwortDE:
+      "Eine Funktion ist ein Codeblock, der eine spezifische Aufgabe ausführt und in der Regel einen Wert zurückgibt.\nEine Prozedur ist auch ein Codeblock, der eine spezifische Aufgabe ausführt. Der Hauptunterschied besteht darin, dass eine Prozedur normalerweise keinen Wert zurückgibt. Eine Prozedur führt eine Aufgabe aus und kehrt dann zur aufrufenden Stelle im Code zurück.",
+    frageTR:
+      "Programlamada prosedür (Prozedur) ile fonksiyon (Funktion) arasındaki fark nedir?",
+    antwortTR:
+      "Bir fonksiyon (Funktion), belirli bir görevi yerine getiren ve genellikle bir değer döndüren bir kod bloğudur.\nBir prosedür (Prozedur) de belirli bir görevi yerine getiren bir kod bloğudur, ancak temel fark şudur: prosedür genellikle bir değer döndürmez. Prosedür yalnızca işlemi gerçekleştirir ve ardından kodun çağrıldığı yere geri döner.",
+  },
 ];
