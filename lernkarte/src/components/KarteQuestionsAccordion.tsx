@@ -184,6 +184,7 @@ export default function KarteQuestionsAccordion({
             key={panelId}
             expanded={expanded === panelId}
             onChange={handleChange(panelId)}
+            id={`question-${position}`}
           >
             <AccordionSummary
               aria-controls={`${panelId}-content`}

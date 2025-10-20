@@ -1,5 +1,5 @@
 export interface Karte {
-  id: string;
+  id: string | number;
   frageDE: string;
   antwortDE: string;
   frageTR?: string;
