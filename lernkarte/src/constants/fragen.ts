@@ -1457,7 +1457,81 @@ id:145,
   antwortDE: "Das Observer Muster funktioniert durch eine Einweg-Kommunikation von einem Subjekt zu mehreren anderen Objekten (Observer):\n1. Registrierung: Die Observer melden sich beim Subjekt für Updates an. Das Subjekt hält eine Liste aller seiner Observer.\n2. Änderung: Wenn das Subjekt seinen Zustand ändert, informiert es alle registrierten Observer über die Änderung.\n3. Benachrichtigung: Das Subjekt benachrichtigt die Observer über die Zustandsänderung, indem es eine Methode (häufig „update“ genannt) auf den Observern aufruft.\n4. Abmeldung: Observer können sich jederzeit vom Subjekt abmelden, wenn sie keine weiteren Benachrichtigungen erhalten möchten.",
   frageTR: "Observer (gözlemci) tasarım deseni nasıl çalışır?",
   antwortTR: "Observer deseni, bir konu (Subject) ile birden fazla gözlemci (Observer) arasında tek yönlü bir iletişim kurarak çalışır:\n1. Kayıt: Gözlemciler, güncellemeleri almak için konuya kaydolurlar. Konu, tüm kayıtlı gözlemcilerinin bir listesini tutar.\n2. Değişiklik: Konunun durumu değiştiğinde, konu tüm kayıtlı gözlemcilere bu değişiklik hakkında bilgi verir.\n3. Bildirim: Konu, gözlemcilerin ‘update’ olarak adlandırılan bir metodunu çağırarak onlara durum değişikliğini bildirir.\n4. Kayıttan çıkma: Gözlemciler, artık bildirim almak istemediklerinde istedikleri zaman konudan kayıttan çıkabilirler."
+},
+{
+id:146,
+  frageDE: "Welche Komponenten umfasst das MVC-Muster und wie interagieren sie miteinander?",
+  antwortDE: "Das MVC-Muster ist ein Entwurfsmuster, das oft verwendet wird, um die Struktur von Softwareanwendungen zu organisieren. Es besteht aus den folgenden drei Komponenten:\n- Model: Verantwortlich für Daten und Geschäftslogik\n- View: Präsentiert Daten an den Benutzer\n- Controller: Verarbeitet Benutzereingaben und aktualisiert das Model\nDie Interaktion dieser Komponenten funktioniert wie folgt:\n1. Der Benutzer agiert mit der View.\n2. Der Controller erhält Benutzereingaben von der View, führt Aktionen im Model aus.\n3. Das Model benachrichtigt die View über Änderungen.\n4. Die View aktualisiert die Benutzeroberfläche.",
+  frageTR: "MVC (Model-View-Controller) tasarım deseni hangi bileşenlerden oluşur ve bunlar birbirleriyle nasıl etkileşir?",
+  antwortTR: "MVC (Model-View-Controller) tasarım deseni, yazılım uygulamalarının yapısını düzenlemek için sıkça kullanılan bir desendir. Üç ana bileşenden oluşur:\n- Model: Verilerden ve iş mantığından sorumludur.\n- View: Verileri kullanıcıya sunar.\n- Controller: Kullanıcı girdilerini işler ve modeli günceller.\nBu bileşenlerin etkileşimi şu şekilde gerçekleşir:\n1. Kullanıcı, View (görünüm) ile etkileşime girer.\n2. Controller (denetleyici), kullanıcıdan gelen girdileri View üzerinden alır ve gerekli işlemleri Model üzerinde gerçekleştirir.\n3. Model, meydana gelen değişiklikleri View’a bildirir.\n4. View, kullanıcı arayüzünü günceller."
+},
+{
+id:147,
+  frageDE: "Zur Aktualisierung des Views soll Datenbindung (Data Binding) eingesetzt werden. Erläutern Sie den Begriff Datenbindung (Data Binding).",
+  antwortDE: "Datenbindung (Data Binding) ist ein Prozess, der eine Verbindung zwischen Daten (Model) und Benutzeroberfläche (View) herstellt. Es ermöglicht, dass Änderungen an den Daten automatisch in der Benutzeroberfläche reflektiert werden und umgekehrt. Es gibt zwei Arten von Datenbindung:\n- Einweg-Datenbindung (One-Way Data Binding): Daten fließen vom Model zum View.\n- Zweiweg-Datenbindung (Two-Way Data Binding): Daten fließen in beide Richtungen, sodass Änderungen im View auch das Model aktualisieren.",
+  frageTR: "View’un (görünüm) güncellenmesi için veri bağlama (Data Binding) kullanılacaktır. Veri bağlama kavramını açıklayınız.",
+  antwortTR: "Veri bağlama (Data Binding), veriler (Model) ile kullanıcı arayüzü (View) arasında bir bağlantı kurma sürecidir. Bu süreç, verilerde yapılan değişikliklerin otomatik olarak kullanıcı arayüzüne yansımasını ve tersi durumda da kullanıcı arayüzündeki değişikliklerin veriye aktarılmasını sağlar.\nİki tür veri bağlama vardır:\n- Tek yönlü veri bağlama (One-Way Data Binding): Veriler Model’den View’a doğru akar.\n- Çift yönlü veri bağlama (Two-Way Data Binding): Veriler hem Model’den View’a hem de View’dan Model’e doğru akar; böylece kullanıcı arayüzünde yapılan değişiklikler Model’i de günceller."
+},
+{
+id:148,
+  frageDE: "Erklären Sie die Aufgabe des Singleton Pattern.",
+  antwortDE: "Das Singleton-Entwurfsmuster ist ein Software-Entwurfsmuster, das die Instanziierung einer Klasse auf genau ein Objekt beschränkt. Es wird verwendet, um sicherzustellen, dass eine Klasse nur eine einzige Instanz hat, und stellt einen globalen Zugangspunkt zu diesem Objekt bereit.\nDas Hauptziel des Singleton-Musters ist es, einen kontrollierten Mechanismus zur Verfügung zu stellen, um auf begrenzte Ressourcen zuzugreifen. Dieses Muster ist nützlich, wenn genau eine Instanz eines Objekts benötigt wird, um Aktionen zu koordinieren.",
+  frageTR: "Singleton tasarım deseninin (Singleton Pattern) görevini açıklayınız.",
+  antwortTR: "Singleton tasarım deseni, bir sınıfın yalnızca tek bir örneğinin (instance) oluşturulmasına izin veren bir yazılım tasarım desenidir. Bu desen, bir sınıfın yalnızca bir örneğe sahip olmasını garanti eder ve bu örneğe küresel (global) bir erişim noktası sağlar.\nSingleton deseninin temel amacı, sınırlı kaynaklara erişimi kontrol altına alan bir mekanizma sağlamaktır. Bu desen, bir sistemdeki işlemlerin yalnızca tek bir nesne üzerinden koordine edilmesi gerektiği durumlarda özellikle yararlıdır."
+},
+{
+id:149,
+  frageDE: "Was ist SOAP (Simple Object Access Protocol) und wie wird es in der Webentwicklung eingesetzt?",
+  antwortDE: "SOAP (Simple Object Access Protocol) ist ein Protokoll für den Austausch strukturierter Informationen in der Implementierung von Webdiensten über das Internet. Es ist XML-basiert und kann mit jedem Programmiersprachencode verwendet werden, der XML generieren und analysieren kann. SOAP ist unabhängig vom Transportprotokoll, daher können Nachrichten über das gängigste HTTP-Protokoll, aber auch über SMTP, FTP und mehr übertragen werden.\nIn der Webentwicklung wird es hauptsächlich für Webservice-Kommunikation und -Interoperabilität verwendet.",
+  frageTR: "SOAP (Simple Object Access Protocol) nedir ve web geliştirmede nasıl kullanılır?",
+  antwortTR: "SOAP (Simple Object Access Protocol), internet üzerinden web servislerinin uygulanmasında yapılandırılmış bilgilerin değişimini sağlayan bir protokoldür. XML tabanlıdır ve XML üretebilen ve çözümleyebilen (parse eden) herhangi bir programlama diliyle kullanılabilir. SOAP, taşıma protokolünden bağımsızdır; bu nedenle iletiler en yaygın olarak HTTP üzerinden, ancak aynı zamanda SMTP, FTP ve diğer protokoller üzerinden de aktarılabilir.\nWeb geliştirmede SOAP, özellikle web servisleri arasındaki iletişim ve birlikte çalışabilirlik (interoperabilität) için kullanılır."
+},
+{
+id:150,
+  frageDE: "Was ist eine REST-API (Representational State Transfer)?",
+  antwortDE: "Eine REST-API (Representational State Transfer) ist ein Set von Regeln und Konventionen für den Aufbau von Webdiensten. Sie nutzt Standard-HTTP-Methoden (wie GET, POST, PUT und DELETE) zur Interaktion mit Ressourcen, die durch eindeutige URLs identifiziert werden.\nSie ist zustandslos, d.h. jede Anfrage enthält alle Informationen, die benötigt werden, um sie zu bearbeiten, ohne sich auf frühere Anfragen zu beziehen.",
+  frageTR: "REST-API (Representational State Transfer) nedir?",
+  antwortTR: "REST-API (Representational State Transfer), web servislerinin oluşturulması için kullanılan bir dizi kural ve sözleşmedir. Kaynaklarla etkileşimde bulunmak için GET, POST, PUT ve DELETE gibi standart HTTP yöntemlerini kullanır; bu kaynaklar benzersiz URL’ler ile tanımlanır.\nREST-API durum bilgisizdir (stateless), yani her istek, önceki isteklere başvurmadan işlenmesi için gerekli tüm bilgileri içerir."
+},
+{
+id:151,
+frageDE: "Was sind die wichtigsten Architekturrichtlinien für die Gestaltung einer REST-API?",
+antwortDE: "Die Architektur einer REST-API beruht auf folgenden grundlegenden Prinzipien:\nClient-Server: REST trennt Client und Server für unabhängige Entwicklung.\nZustandslos: Jede Anfrage enthält alle nötigen Informationen.\nCaching: Serverantworten können gecacht werden, um die Leistung zu verbessern.\nEinheitliche Schnittstelle: REST nutzt Standardmethoden (z.B. HTTP) für die Kommunikation.\nMehrschichtsystem: REST besteht aus mehreren Ebenen, um Flexibilität zu gewährleisten.\nCode-on-Demand: Optional kann der Server Code an den Client senden.",
+frageTR: "Bir REST-API’nin (Representational State Transfer Uygulama Programlama Arayüzü) tasarımı için en önemli mimari ilkeler nelerdir?",
+antwortTR: "Bir REST-API’nin mimarisi aşağıdaki temel prensiplere dayanır:\nİstemci-Sunucu (Client-Server): REST, istemci (client) ile sunucuyu (server) birbirinden ayırarak bağımsız geliştirmeye olanak tanır.\nDurumsuzluk (Zustandslos): Her istek, gerekli tüm bilgileri kendi içinde barındırır.\nÖnbellekleme (Caching): Sunucu yanıtları önbelleğe alınarak performans artırılabilir.\nBirleşik Arayüz (Einheitliche Schnittstelle): REST, iletişim için standart yöntemleri (örneğin HTTP) kullanır.\nÇok Katmanlı Sistem (Mehrschichtsystem): REST, esneklik sağlamak için birden fazla katmandan oluşur.\nTalep Üzerine Kod (Code-on-Demand): İsteğe bağlı olarak sunucu, istemciye kod gönderebilir."
+},
+{
+id:152,
+frageDE: "Was versteht man unter dem Begriff „Industrie 4.0“?",
+antwortDE: "Industrie 4.0 bezieht sich auf die vierte industrielle Revolution, die durch die Integration von digitalen Technologien in die Produktion und den Betrieb von Unternehmen gekennzeichnet ist. Es umfasst Konzepte wie das Internet der Dinge (IoT), künstliche Intelligenz, maschinelles Lernen, Big Data-Analyse und automatisierte Prozesse.\nIndustrie 4.0 zielt darauf ab, intelligente Fabriken und vernetzte Systeme zu schaffen, in denen Maschinen, Geräte und Menschen miteinander kommunizieren und kooperieren können. Hierdurch bietet sich Unternehmen die Möglichkeit, ihre Produktivität, Flexibilität und Wettbewerbsfähigkeit zu steigern.",
+frageTR: "“Endüstri 4.0” terimi ile ne kastedilmektedir?",
+antwortTR: "Endüstri 4.0, dijital teknolojilerin üretim ve işletme süreçlerine entegre edilmesiyle tanımlanan dördüncü sanayi devrimini ifade eder. Bu kavram; Nesnelerin İnterneti (IoT), yapay zeka, makine öğrenmesi, Büyük Veri (Big Data) analizi ve otomatikleştirilmiş süreçler gibi teknolojileri kapsar.\nEndüstri 4.0’ın amacı, makinelerin, cihazların ve insanların birbiriyle iletişim kurabildiği ve işbirliği yapabildiği akıllı fabrikalar ve bağlantılı sistemler oluşturmaktır. Bu sayede işletmeler üretkenliklerini, esnekliklerini ve rekabet güçlerini artırabilirler."
+},
+{
+id:153,
+frageDE: "Was ist Künstliche Intelligenz (KI)?",
+antwortDE: "Künstliche Intelligenz (KI) bezieht sich auf die Entwicklung von Computern oder Systemen, die in der Lage sind, menschenähnliche Denk- und Entscheidungsprozesse nachzuahmen.\nKI ermöglicht es Maschinen, Informationen zu verstehen, zu lernen, Probleme zu lösen und intelligentes Verhalten zu zeigen.",
+frageTR: "Yapay Zeka (KI - Künstliche Intelligenz) nedir?",
+antwortTR: "Yapay Zeka (KI), insan benzeri düşünme ve karar verme süreçlerini taklit edebilen bilgisayar veya sistemlerin geliştirilmesini ifade eder.\nYapay Zeka, makinelerin bilgiyi anlamasını, öğrenmesini, problemleri çözmesini ve akıllı davranış sergilemesini sağlar."
+},
+{
+id:154,
+frageDE: "Was ist das Internet der Dinge (IoT) und welche Probleme sind damit verbunden?",
+antwortDE: "Das Internet der Dinge (IoT) bezieht sich auf die Vernetzung physischer Geräte, Sensoren und Objekte über das Internet. Hierdurch können diese Objekte miteinander kommunizieren, Daten sammeln und austauschen, sowie intelligente Aktionen ausführen.\nMit dem IoT sind auch neue Probleme verbunden:\n- Da das IoT eine Vielzahl von vernetzten Geräten umfasst, entstehen neue Sicherheitsrisiken.\n- Datenschutz: Das IoT generiert eine enorme Menge an Daten über nutzende Personen, ihre Gewohnheiten und ihr Verhalten.\n- Interoperabilität: Unterschiedliche Standards, Protokolle und Kommunikationswege erschweren die Zusammenarbeit der verschiedenen IoT-Komponenten.",
+frageTR: "Nesnelerin İnterneti (IoT - Internet of Things) nedir ve bununla ilgili hangi sorunlar ortaya çıkmaktadır?",
+antwortTR: "Nesnelerin İnterneti (IoT), fiziksel cihazların, sensörlerin ve nesnelerin internet aracılığıyla birbirine bağlanmasını ifade eder. Bu sayede bu nesneler birbirleriyle iletişim kurabilir, veri toplayabilir, veri alışverişinde bulunabilir ve akıllı işlemler gerçekleştirebilir.\nIoT ile birlikte yeni sorunlar da ortaya çıkmaktadır:\n- Güvenlik riskleri: IoT, çok sayıda bağlı cihaz içerdiği için yeni güvenlik açıkları doğurur.\n- Veri gizliliği: IoT, kullanıcıların kişisel bilgileri, alışkanlıkları ve davranışları hakkında büyük miktarda veri üretir.\n- Birlikte çalışabilirlik (Interoperabilität): Farklı standartlar, protokoller ve iletişim yöntemleri, IoT bileşenlerinin uyum içinde çalışmasını zorlaştırır."
+},
+{
+id:155,
+frageDE: "Welche neuen Herausforderungen entstehen durch Big Data in der Speicherung und Verarbeitung von Daten?",
+antwortDE: "Herausforderungen, die durch Big Data entstehen:\nDatenmengen: Die Speicherung und Verarbeitung großer Datenmengen erfordern leistungsfähige und skalierbare Infrastrukturen, die in der Lage sind, diese Datenmengen effizient zu verarbeiten.\nDatenintegration: Die Integration von heterogenen Datenquellen kann eine Herausforderung sein, da sie unterschiedliche Formate und Strukturen aufweisen können.\nDatenqualität: Große Datensätze können unvollständige, ungenaue oder inkonsistente Daten enthalten.\nDatenverarbeitungsgeschwindigkeit: Big Data-Anwendungen erfordern oft Echtzeitverarbeitung.\nDatenschutz und Sicherheit: Große Datensätze enthalten oft sensible und persönliche Informationen.",
+frageTR: "Büyük Veri (Big Data) nedeniyle veri depolama ve işleme alanında hangi yeni zorluklar ortaya çıkmaktadır?",
+antwortTR: "Büyük Veri’nin yol açtığı zorluklar şunlardır:\nVeri miktarı: Büyük miktarda verinin depolanması ve işlenmesi, bu verileri verimli bir şekilde işleyebilen güçlü ve ölçeklenebilir altyapılar gerektirir.\nVeri entegrasyonu: Farklı format ve yapılara sahip heterojen veri kaynaklarının birleştirilmesi zor olabilir.\nVeri kalitesi: Büyük veri kümeleri eksik, hatalı veya tutarsız veriler içerebilir.\nVeri işleme hızı: Big Data uygulamaları genellikle gerçek zamanlı işlemeyi gerektirir.\nVeri koruma ve güvenlik: Büyük veri kümeleri çoğunlukla hassas ve kişisel bilgiler içerir."
 }
+
+
+
+
 
 
 
