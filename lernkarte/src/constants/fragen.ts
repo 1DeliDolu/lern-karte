@@ -1321,219 +1321,848 @@ export const fragen: Karte[] = [
       "Programlamada prosedür (Prozedur) ile fonksiyon (Funktion) arasındaki fark nedir?",
     antwortTR:
       "Bir fonksiyon (Funktion), belirli bir görevi yerine getiren ve genellikle bir değer döndüren bir kod bloğudur.\nBir prosedür (Prozedur) de belirli bir görevi yerine getiren bir kod bloğudur, ancak temel fark şudur: prosedür genellikle bir değer döndürmez. Prosedür yalnızca işlemi gerçekleştirir ve ardından kodun çağrıldığı yere geri döner.",
-  },{
-id:126,
-frageDE: "Wie unterscheiden sich prozedurale und objektorientierte Programmierung voneinander?",
-antwortDE: "Die prozedurale Programmierung ist auf den Gedanken aufgebaut, dass ein Programm eine Reihe von Aufgaben (Prozeduren) ausführt, die auf Daten operieren. Ein prozedurales Programm besteht i. d. R. aus einer Reihe von Prozeduren, die aufgerufen werden, um eine bestimmte Aufgabe zu erfüllen. Die Daten sind getrennt von den Prozeduren, und die Prozeduren bearbeiten diese Daten.\n\nIn der objektorientierten Programmierung (DOOP) werden Daten und Funktionen zu Objekten zusammengefasst. Ein Objekt kann Attribute (Daten) und Methoden (Funktionen) enthalten. OOP fokussiert auf die drei Hauptprinzipien Vererbung, Kapselung und Polymorphie.",
-frageTR: "Prozedurale Programmierung (prosedürel/yordamcı programlama) ile objektorientierte Programmierung (nesne yönelimli programlama) birbirinden nasıl ayrılır?",
-antwortTR: "Prozedurale Programmierung (prosedürel programlama), bir programın veriler üzerinde çalışan bir dizi görevden (Prozeduren/prosedürler) oluştuğu düşüncesine dayanır. Prozedürel bir program genellikle (i. d. R.) belirli bir görevi yerine getirmek için çağrılan bir dizi Prozedur (prosedür) içerir. Veriler, Prozeduren'den (prosedürlerden) ayrıdır ve Prozeduren (prosedürler) bu verileri işler.\n\nObjektorientierte Programmierung (DOOP, nesne yönelimli programlama), verileri ve fonksiyonları Objekte (nesneler) içinde bir araya getirir. Bir Objekt (nesne) Attribute (özellikler/veriler) ve Methoden (metotlar/fonksiyonlar) içerebilir. OOP, üç temel prensibe odaklanır: Vererbung (kalıtım), Kapselung (enkapsülasyon) ve Polymorphie (çok biçimlilik/polimorfizm)."
-},
-{
-id:127,
-frageDE: "Was ist eine Klasse in der objektorientierten Programmierung?",
-antwortDE: "Eine Klasse in der objektorientierten Programmierung ist ein Bauplan für die Erstellung von Objekten. Sie definiert Eigenschaften (Variablen, die den Zustand repräsentieren) und Methoden (Funktionen, die das Verhalten repräsentieren) eines Objekts.\n\nEine Klasse ermöglicht die Erstellung mehrerer Objekte mit ähnlichen Merkmalen und Verhaltensweisen. Sie bildet die Grundlage für Vererbung und Polymorphie.",
-frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse (sınıf) nedir?",
-antwortTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içindeki bir Klasse (sınıf), Objekte (nesneler) oluşturmak için bir Bauplan (taslak/şablon)dır. Bir Objekt'in (nesnenin) Attribute'larını (özellikler; durumu temsil eden değişkenler) ve Methoden'ını (metotlar; davranışı temsil eden fonksiyonlar) tanımlar.\n\nBir Klasse (sınıf), benzer özellik ve davranışlara sahip birden fazla Objektin (nesnenin) oluşturulmasını sağlar. Ayrıca Vererbung (kalıtım) ve Polymorphie'nin (çok biçimlilik/polimorfizm) temelini oluşturur."
-},
-{
-id:128,
-frageDE: "Was ist eine generische Klasse?",
-antwortDE: "Eine generische Klasse ist ein Konzept in der objektorientierten Programmierung, das es erlaubt, eine Klasse zu definieren, die auf Typen arbeiten kann, die beim Erstellen einer Instanz der Klasse spezifiziert werden.\n\nDer Hauptvorteil von generischen Klassen besteht darin, dass sie Code-Wiederverwendung und Typsicherheit ermöglichen. Sie können eine einzige generische Klasse definieren, die auf mehrere Datentypen angewendet werden kann, anstatt separate Klassen für jeden Datentyp erstellen zu müssen.",
-frageTR: "Generische Klasse (jenerik/jenerik sınıf) nedir?",
-antwortTR: "Generische Klasse (jenerik sınıf), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir kavramdır; bir Klasse'nin (sınıfın) bir Instanz (örnek) oluşturulurken belirtilecek tiplere göre çalışacak şekilde tanımlanmasına olanak tanır.\n\nGenerische Klassen'in (jenerik sınıfların) başlıca avantajı, Code-Wiederverwendung (kodun yeniden kullanımı) ve Typsicherheit (tip güvenliği) sağlamasıdır. Her bir veri tipi için ayrı sınıflar oluşturmak yerine, tek bir generische Klasse (jenerik sınıf) tanımlayıp bunu birden fazla veri tipine uygulayabilirsiniz."
-},
-{
-id:129,
-frageDE: "Wie werden abstrakte Klassen in der Anwendungsentwicklung verwendet und welche Vorteile bieten sie?",
-antwortDE: "Abstrakte Klassen sind Klassen, die nicht instanziiert werden können und in der Regel eine oder mehrere abstrakte Methoden enthalten. Diese Methoden werden in den abgeleiteten Klassen implementiert. Abstrakte Klassen können jedoch auch konkrete Methoden (Methoden mit einer Implementierung) enthalten.\n\nDie Hauptanwendungen und Vorteile abstrakter Klassen sind:\n- Bereitstellung einer gemeinsamen Schnittstelle\n- Code-Wiederverwendung\n- Erzwingung bestimmter Methoden\n- Polymorphismus kann realisiert werden",
-frageTR: "Abstrakte Klassen (soyut sınıflar) Anwendungsentwicklung içinde nasıl kullanılır ve hangi avantajları sağlar?",
-antwortTR: "Abstrakte Klassen (soyut sınıflar), instanziiert edilemeyen (örneklenemeyen) Klassen'dir (sınıflardır) ve genellikle bir veya daha fazla abstrakte Methoden (soyut yöntem) içerir. Bu Methoden (yöntemler), abgeleitete Klassen'de (türetilmiş sınıflarda) uygulanır. Abstrakte Klassen ayrıca konkrete Methoden (somut; uygulaması olan yöntemler) de içerebilir.\n\nAbstrakte Klassen'in (soyut sınıfların) başlıca kullanım alanları ve avantajları:\n- Gemeinsame Schnittstelle (ortak arayüz) sağlama\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Belirli Methoden'in (yöntemlerin) zorunlu kılınması\n- Polymorphismus (çok biçimlilik/polimorfizm) gerçekleştirilebilir"
-},
-{
-id:130,
-frageDE: "Was ist ein Objekt in der objektorientierten Programmierung?",
-antwortDE: "Ein Objekt in der objektorientierten Programmierung ist eine konkrete Instanz einer Klasse. Es besitzt die Attribute und Methoden, die in seiner Klasse definiert sind. Jedes Objekt hat seinen eigenen Satz von Werten für die Attribute. Diese Attribute repräsentieren den Zustand des Objekts, während die Methoden das Verhalten definieren, das auf diesem Zustand operiert.\n\nEin Objekt ist also eine Verkapselung von Daten (Zustand) und den dazu gehörenden Operationen (Verhalten).",
-frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Objekt (nesne) nedir?",
-antwortTR: "Objekt (nesne), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse'nin (sınıfın) somut bir Instanz'ıdır (örneğidir). Sınıfında tanımlanan Attribute'lara (özelliklere) ve Methoden'a (metotlara) sahiptir. Her Objekt (nesne), Attribute'ları (özellikleri) için kendine özgü değerlere sahiptir. Bu Attribute'lar (özellikler) Objekt'in (nesnenin) Zustand'ını (durumunu) temsil ederken, Methoden (metotlar) bu durum üzerinde işleyen Verhalten'ı (davranışı) tanımlar.\n\nDolayısıyla bir Objekt (nesne), Daten'in (verinin/durumun) ve ona ait Operationen'in (işlemlerin/davranışların) bir Verkapselung'udur (kapsüllenmesidir)."
-},{
-id:131,
-frageDE: "Was ist der Unterschied zwischen einer abstrakten Klasse und einem Interface?",
-antwortDE: "Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden enthalten, während ein Interface nur Methodensignaturen (keine Implementierungen) definiert.\n\nWeitere Unterschiede:\n- Eine Klasse kann nur eine abstrakte Klasse erben, aber mehrere Interfaces implementieren.\n- Abstrakte Klassen können Zustände (Attribute) haben, Interfaces nicht.\n- Interfaces dienen der Definition von Verträgen, abstrakte Klassen eher der Wiederverwendung von gemeinsamem Code.",
-frageTR: "Abstrakte Klasse (soyut sınıf) ile Interface (arayüz) arasındaki fark nedir?",
-antwortTR: "Abstrakte Klasse (soyut sınıf), hem abstrakte Methoden (soyut yöntemler) hem de konkrete Methoden (uygulaması olan yöntemler) içerebilirken; bir Interface (arayüz) yalnızca Methodensignaturen'ı (yöntem imzalarını) tanımlar, yani herhangi bir Implementierung (uygulama) içermez.\n\nDiğer farklar:\n- Bir Klasse (sınıf), yalnızca bir abstrakte Klasse'den (soyut sınıftan) miras alabilir, ancak birden fazla Interface (arayüz) implementieren (uygulayabilir).\n- Abstrakte Klassen (soyut sınıflar) Zustände (durumlar/özellikler) içerebilir, Interfaces (arayüzler) içeremez.\n- Interfaces (arayüzler) genellikle bir Vertrag'ı (sözleşme, kurallar bütünü) tanımlamak için kullanılır; abstrakte Klassen (soyut sınıflar) ise ortak kodun yeniden kullanımı için tercih edilir."
-},
-{
-id:132,
-frageDE: "Was versteht man unter Polymorphie in der objektorientierten Programmierung?",
-antwortDE: "Polymorphie bezeichnet die Fähigkeit, dass eine Methode je nach Objekt, das sie aufruft, unterschiedliche Implementierungen ausführen kann. Das bedeutet, dass derselbe Methodenaufruf bei verschiedenen Objekten unterschiedliches Verhalten zeigen kann.\n\nBeispiel: Eine Methode `zeichne()` kann in einer Klasse `Kreis` anders implementiert sein als in einer Klasse `Rechteck`, aber beide werden über dieselbe Schnittstelle aufgerufen.",
-frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Polymorphie (çok biçimlilik/polimorfizm) ne anlama gelir?",
-antwortTR: "Polymorphie (çok biçimlilik), bir Method'un (yöntemin) onu çağıran Objekt'e (nesneye) bağlı olarak farklı Implementierungen'lar (uygulamalar) gerçekleştirebilme yeteneğidir. Bu, aynı Methodenaufruf'un (metot çağrısının) farklı Objekte'lerde (nesnelerde) farklı davranışlar sergileyebilmesi anlamına gelir.\n\nÖrnek: `zeichne()` adlı bir Methode (yöntem), `Kreis` (daire) sınıfında farklı, `Rechteck` (dikdörtgen) sınıfında farklı şekilde uygulanabilir, ancak her ikisi de aynı Schnittstelle (arayüz) üzerinden çağrılır."
-},
-{
-id:133,
-frageDE: "Was versteht man unter Kapselung (Encapsulation)?",
-antwortDE: "Kapselung (Encapsulation) bedeutet, dass die internen Daten und die Implementierungsdetails eines Objekts vor dem Zugriff von außen geschützt werden. Der Zugriff erfolgt über definierte Schnittstellen (Getter- und Setter-Methoden).\n\nZiel ist es, Datenintegrität zu gewährleisten und unbeabsichtigte Änderungen zu verhindern. Außerdem erleichtert Kapselung die Wartung und Weiterentwicklung des Codes.",
-frageTR: "Kapselung (Encapsulation / enkapsülasyon) ne anlama gelir?",
-antwortTR: "Kapselung (Encapsulation / enkapsülasyon), bir Objekt'in (nesnenin) iç verilerinin ve Implementierungsdetails'larının (uygulama ayrıntılarının) dışarıdan erişime karşı korunması anlamına gelir. Bu verilere erişim, tanımlanmış Schnittstellen (arayüzler) aracılığıyla, yani Getter- ve Setter-Methoden (erişimci ve değiştirici yöntemler) üzerinden sağlanır.\n\nAmacı, Datenintegrität'yi (veri bütünlüğünü) sağlamak ve istenmeyen değişiklikleri önlemektir. Ayrıca Kapselung (enkapsülasyon), kodun bakımını ve geliştirilmesini kolaylaştırır."
-},
-{
-id:134,
-frageDE: "Was ist Vererbung in der objektorientierten Programmierung?",
-antwortDE: "Vererbung (Inheritance) ist ein Prinzip der objektorientierten Programmierung, bei dem eine Klasse (Unterklasse oder abgeleitete Klasse) die Eigenschaften und Methoden einer anderen Klasse (Oberklasse oder Basisklasse) übernimmt.\n\nVorteile:\n- Code-Wiederverwendung\n- Erweiterbarkeit\n- Hierarchische Strukturierung von Klassen\n\nBeispiel: Eine Klasse `Auto` kann von einer Klasse `Fahrzeug` erben und zusätzlich eigene Eigenschaften wie `Anzahl der Türen` hinzufügen.",
-frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Vererbung (Inheritance / kalıtım) nedir?",
-antwortTR: "Vererbung (Inheritance / kalıtım), objektorientierte Programmierung (nesne yönelimli programlama) prensiplerinden biridir ve bir Klasse'nin (Unterklasse veya abgeleitete Klasse; alt sınıf veya türetilmiş sınıf), başka bir Klasse'nin (Oberklasse veya Basisklasse; üst sınıf veya temel sınıf) Eigenschaften'lerini (özelliklerini) ve Methoden'larını (yöntemlerini) devralması anlamına gelir.\n\nAvantajları:\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Erweiterbarkeit (genişletilebilirlik)\n- Klassen'in (sınıfların) hiyerarşik yapılandırılması\n\nÖrnek: `Auto` (araba) adlı bir Klasse, `Fahrzeug` (araç) adlı bir Klasse'den kalıtım alabilir ve ayrıca `Anzahl der Türen` (kapı sayısı) gibi kendi özelliklerini ekleyebilir."
-},
-{
-id:135,
-frageDE: "Was ist der Unterschied zwischen Überladung (Overloading) und Überschreibung (Overriding)?",
-antwortDE: "Überladung (Overloading) bedeutet, dass mehrere Methoden denselben Namen, aber unterschiedliche Parameterlisten haben. Sie werden innerhalb derselben Klasse definiert.\n\nÜberschreibung (Overriding) bedeutet, dass eine Methode in einer Unterklasse eine Methode aus der Oberklasse mit derselben Signatur ersetzt, um ihr Verhalten anzupassen oder zu erweitern.\n\nKurz gesagt:\n- Overloading → innerhalb derselben Klasse, unterschiedliche Parameter\n- Overriding → in Unterklasse, gleiche Signatur, anderes Verhalten",
-frageTR: "Überladung (Overloading / aşırı yükleme) ile Überschreibung (Overriding / geçersiz kılma) arasındaki fark nedir?",
-antwortTR: "Überladung (Overloading / aşırı yükleme), aynı ada sahip birden fazla Methode'nin (yöntemin) farklı Parameterlisten (parametre listeleri) ile tanımlanması anlamına gelir. Bu Methoden (yöntemler) aynı Klasse (sınıf) içinde tanımlanır.\n\nÜberschreibung (Overriding / geçersiz kılma) ise, bir Unterklasse'nin (alt sınıfın), Oberklasse'deki (üst sınıftaki) aynı Signatur'a (imzaya) sahip bir Methode'yi (yöntemi) değiştirerek veya genişleterek yeniden tanımlaması anlamına gelir.\n\nKısaca:\n- Overloading → aynı Klasse içinde, farklı parametreler\n- Overriding → Unterklasse içinde, aynı Signatur, farklı Verhalten (davranış)"
-},{
-id:136,
-  frageDE: "Was sind die Unterschiede zwischen der rekursiven und iterativen Vorgehensweise in der Softwareentwicklung?",
-  antwortDE: "In einer iterativen Vorgehensweise wird eine Aufgabe wiederholt, indem Schleifenstrukturen wie for, while oder do-while in der Programmiersprache verwendet werden. Iterative Ansätze sind in der Regel einfacher zu verstehen und erfordern weniger Speicher.\nIneiner rekursiven Vorgehensweise ruft eine Funktion sich selbst auf, um ein Problem zu lösen, das in kleinere Teilprobleme unterteilt werden kann. Rekursion kann eleganter und intuitiver für Probleme sein, die natürlich in kleinere Teilprobleme zerlegt werden können. Allerdings kann Rekursion auch zu erhöhtem Speicherverbrauch führen.",
-  frageTR: "Yazılım geliştirmede yinelemeli (iterative) ve özyinelemeli (rekursive) yaklaşımlar arasındaki farklar nelerdir?",
-  antwortTR: "Yinelemeli (iterative) bir yaklaşımda bir görev, programlama dilindeki for, while veya do-while gibi döngü yapıları kullanılarak tekrarlanır. Yinelemeli yaklaşımlar genellikle daha kolay anlaşılır ve daha az bellek gerektirir.\nÖzyinelemeli (rekursive) bir yaklaşımda ise bir fonksiyon, bir problemi daha küçük alt problemlere ayırarak çözmek için kendisini çağırır. Özyineleme, doğal olarak küçük alt problemlere bölünebilen sorunlar için daha zarif ve sezgisel olabilir. Ancak, özyineleme genellikle daha fazla bellek kullanımına yol açabilir."
-},
-{
-id:137,
-  frageDE: "Erklären Sie das Konzept der Modularisierung in der Softwareentwicklung.",
-  antwortDE: "Modularisierung ist ein Konzept in der Softwareentwicklung, das darin besteht, einen umfangreichen Code in kleinere, unabhängige und verwaltbare Einheiten oder Module zu zerlegen. Jedes Modul fokussiert sich auf eine spezifische Funktion oder einen bestimmten Aspekt des Gesamtprojekts.\nDie Idee hinter der Modularisierung ist es, die Komplexität des Codes zu reduzieren und ihn einfacher zu verwalten, zu warten, zu testen und zu verstehen. Durch die Trennung des Codes in verschiedene Module kann jedes Modul unabhängig voneinander entwickelt, getestet und überarbeitet werden, was die Effizienz und Produktivität des Entwicklungsprozesses erhöht.",
-  frageTR: "Yazılım geliştirmede modülerleştirme (Modularisierung) kavramını açıklayınız.",
-  antwortTR: "Modülerleştirme (Modularisierung), yazılım geliştirmede kapsamlı bir kodu daha küçük, bağımsız ve yönetilebilir birimlere veya modüllere ayırma kavramıdır. Her modül, genel projenin belirli bir işlevine veya yönüne odaklanır.\nModülerleştirmenin arkasındaki fikir, kodun karmaşıklığını azaltmak ve onu daha kolay yönetilebilir, bakım yapılabilir, test edilebilir ve anlaşılabilir hale getirmektir. Kodun farklı modüllere ayrılması sayesinde her modül birbirinden bağımsız olarak geliştirilebilir, test edilebilir ve güncellenebilir; bu da geliştirme sürecinin verimliliğini ve üretkenliğini artırır."
-},
-{
-id:138,
-  frageDE: "Wie können automatische Kompilierung und Bereitstellung (Continuous Integration und Continuous Deployment, kurz CI/CD) implementiert werden?",
-  antwortDE: "Die folgenden Schritte sollten zur automatischen Kompilierung und Bereitstellung im Allgemeinen befolgt werden:\n1 Source Control Management (SCM): Alle Entwicklungsarbeit sollte in einem Versionskontrollsystem gespeichert werden.\nAutomatische Kompilierung: Wenn Änderungen im Versionskontrollsystem vorgenommen werden, wird ein automatisierter Build-Prozess ausgelöst.\nAutomatisierte Tests: Nach der Kompilierung sollte der Code automatisiert getestet werden.\nAutomatisierte Bereitstellung: Nach erfolgreichem Build und Test wird der Code automatisch bereitgestellt.\nMonitoring und Feedback: Nach der Bereitstellung sollte der Zustand überwacht und bei Problemen Feedback gegeben werden.",
-  frageTR: "Otomatik derleme ve dağıtım (Continuous Integration ve Continuous Deployment, kısaca CI/CD) nasıl uygulanabilir?",
-  antwortTR: "Otomatik derleme ve dağıtım için genel olarak aşağıdaki adımlar izlenmelidir:\n1. Kaynak Kontrol Yönetimi (Source Control Management - SCM): Tüm geliştirme çalışmaları bir versiyon kontrol sisteminde saklanmalıdır.\nOtomatik Derleme: Versiyon kontrol sisteminde değişiklik yapıldığında otomatik bir derleme süreci (build) tetiklenir.\nOtomatik Testler: Derlemeden sonra kod otomatik olarak test edilmelidir.\nOtomatik Dağıtım: Başarılı derleme ve testten sonra kod otomatik olarak dağıtılır.\nİzleme ve Geri Bildirim: Dağıtımdan sonra sistemin durumu izlenmeli ve olası sorunlar için geri bildirim sağlanmalıdır."
-},
-{
-id:139,
-  frageDE: "Welche Vorteile bietet die Verwendung einer 3-Schichten-Architektur bei der Entwicklung?",
-  antwortDE: "Die Verwendung einer 3-Schichten-Architektur bei der Entwicklung von Anwendungen bietet mehrere Vorteile.\n- Sie ermöglicht eine klare Trennung zwischen der Präsentationsschicht, der Anwendungslogik und der Datenzugriffsschicht. Dadurch wird der Code besser strukturiert und Wartungsaufgaben werden vereinfacht.\n- Die Schichtung ermöglicht eine bessere Skalierbarkeit, da jede Schicht unabhängig von den anderen skaliert werden kann.\n- Die Schichtung erleichtert die Wiederverwendbarkeit von Komponenten, da jede Schicht unabhängig von den anderen entwickelt und leichter in anderen Projekten wiederverwendet werden kann.",
-  frageTR: "Uygulama geliştirmede 3 katmanlı mimarinin (3-Schichten-Architektur) kullanılması hangi avantajları sağlar?",
-  antwortTR: "Uygulama geliştirmede 3 katmanlı mimari kullanımı birden fazla avantaj sağlar.\n- Sunum katmanı, uygulama mantığı katmanı ve veri erişim katmanı arasında net bir ayrım yapılmasını sağlar. Bu sayede kod daha iyi yapılandırılır ve bakım işlemleri kolaylaşır.\n- Katmanlı yapı, her katmanın diğerlerinden bağımsız olarak ölçeklenebilmesine olanak tanır, bu da ölçeklenebilirliği artırır.\n- Katmanlı mimari, bileşenlerin yeniden kullanılabilirliğini kolaylaştırır çünkü her katman diğerlerinden bağımsız olarak geliştirilebilir ve farklı projelerde kolayca yeniden kullanılabilir."
-},
-{
-id:140,
-  frageDE: "Wie arbeitet der Bubble-Sort-Algorithmus, um eine Liste von Elementen in aufsteigender Reihenfolge zu sortieren?",
-  antwortDE: "Der Bubble-Sort-Algorithmus sortiert eine Liste, indem er benachbarte Elemente vergleicht und sie tauscht, wenn sie in der falschen Reihenfolge sind. Dieses wird wiederholt, bis die gesamte Liste sortiert ist.\n1. Vergleiche die ersten beiden Elemente in der Liste. Wenn das erste Element größer als das zweite ist, tausche sie.\n2. Gehe zur nächsten Position in der Liste und wiederhole den Vergleich und den Austausch mit dem nächsten Paar.\n3. Wiederhole diesen Prozess bis zum Ende der Liste.\n4. Wiederhole die Schritte 1 bis 3 für die restlichen Elemente (außer dem zuletzt sortierten), bis die gesamte Liste sortiert ist.",
-  frageTR: "Bubble-Sort algoritması bir listeyi artan sıraya göre sıralamak için nasıl çalışır?",
-  antwortTR: "Bubble-Sort algoritması, bir listedeki bitişik elemanları karşılaştırarak ve yanlış sıradaysa yerlerini değiştirerek listeyi sıralar. Bu işlem, tüm liste sıralanana kadar tekrarlanır.\n1. Listedeki ilk iki elemanı karşılaştır. Eğer ilk eleman ikinci elemandan büyükse, yerlerini değiştir.\n2. Listedeki bir sonraki konuma geç ve bir sonraki çift için karşılaştırma ve değişim işlemini tekrarla.\n3. Bu işlemi listenin sonuna kadar sürdür.\n4. Adım 1–3'ü kalan elemanlar için (sonda zaten sıralanmış olan hariç) tekrarla, tüm liste sıralanana kadar devam et."
-},{
-id:141,
-  frageDE: "Beschreibe den Ablauf des Suchalgorithmus „Lineare Suche“.",
-  antwortDE: "Die lineare Suche ist eine Methode zum Finden eines bestimmten Wertes in einer Liste. Sie durchläuft sequenziell jedes Element in der Liste und prüft, ob es dem gesuchten Wert entspricht.\n1. Überprüfe das erste Element der Liste.\n2. Entspricht das Element dem gesuchten Wert, beende die Suche.\n3. Wenn das Element nicht dem gesuchten Wert entspricht, gehe zum nächsten Element in der Liste.\n4. Wiederhole Schritt 2 und 3, bis du entweder den gesuchten Wert gefunden hast oder bis das Ende der Liste erreicht ist.\n5. Wenn das Ende der Liste erreicht ist und der gesuchte Wert nicht gefunden wurde, gibt an, dass der gesuchte Wert nicht in der Liste ist.",
-  frageTR: "“Doğrusal arama” (Lineare Suche) algoritmasının işleyişini açıklayınız.",
-  antwortTR: "Doğrusal arama (Lineare Suche), bir listedeki belirli bir değeri bulmak için kullanılan bir yöntemdir. Listeyi baştan sona sırasıyla tarar ve her bir elemanın aranan değere eşit olup olmadığını kontrol eder.\n1. Listenin ilk elemanını kontrol et.\n2. Eleman aranan değere eşitse, aramayı sonlandır.\n3. Eleman aranan değere eşit değilse, listedeki bir sonraki elemana geç.\n4. Adım 2 ve 3’ü, aranan değer bulunana kadar veya listenin sonuna gelene kadar tekrarla.\n5. Listenin sonuna gelindiğinde aranan değer bulunamadıysa, bu değerin listede olmadığını belirt."
-},
-{
-id:142,
-  frageDE: "Wie funktioniert die binäre Suche?",
-  antwortDE: "Die binäre Suche ist ein effizienter Suchalgorithmus, der auf sortierten Listen oder Arrays arbeitet. Er vergleicht den gesuchten Wert mit dem mittleren Element der Liste und teilt dann die Liste entsprechend in zwei Hälften. Dieser Prozess wird rekursiv fortgesetzt, bis der gesuchte Wert gefunden ist oder bis alle Elemente durchsucht wurden.\nDie binäre Suche ist sehr effizient und benötigt im schlimmsten Fall log2(n) Vergleiche, wobei n die Anzahl der Elemente in der Liste ist. Nachteilig ist, dass die binäre Suche voraussetzt, dass die Liste vor der Suche sortiert wird.",
-  frageTR: "İkili arama (binäre Suche) algoritması nasıl çalışır?",
-  antwortTR: "İkili arama (binäre Suche), sıralı listeler veya diziler üzerinde çalışan verimli bir arama algoritmasıdır. Aranan değer, listenin ortasındaki elemanla karşılaştırılır ve ardından liste ikiye bölünür. Bu işlem, aranan değer bulunana kadar veya tüm elemanlar kontrol edilene kadar özyinelemeli (rekursiv) olarak devam eder.\nİkili arama oldukça verimlidir ve en kötü durumda log2(n) kadar karşılaştırma gerektirir; burada n, listedeki eleman sayısını ifade eder. Ancak dezavantajı, arama yapılmadan önce listenin sıralı olması gerektiğidir."
-},
-{
-id:143,
-  frageDE: "Beschreiben Sie die einzelnen Schritte, welche notwendig sind, um eine binäre Suche durchzuführen.",
-  antwortDE: "Die grundlegenden Schritte des binären Suchalgorithmus:\n1. Finden Sie das mittlere Element der Liste.\n2. Vergleichen Sie es mit dem gesuchten Wert.\n3. Wenn sie gleich sind, ist die Suche abgeschlossen.\n4. Wenn der gesuchte Wert kleiner ist, suchen Sie in der linken Hälfte der Liste weiter.\n5. Wenn der gesuchte Wert größer ist, suchen Sie in der rechten Hälfte der Liste weiter.\n6. Wiederholen Sie die Schritte 1–5, bis der Wert gefunden wird oder die Liste vollständig durchsucht wurde.",
-  frageTR: "İkili arama (binäre Suche) algoritmasını gerçekleştirmek için gerekli adımları açıklayınız.",
-  antwortTR: "İkili arama algoritmasının temel adımları şunlardır:\n1. Listenin ortasındaki elemanı bulun.\n2. Bu elemanı aranan değerle karşılaştırın.\n3. Eğer eşitse, arama tamamlanmıştır.\n4. Aranan değer ortadaki elemandan küçükse, aramaya listenin sol yarısında devam edin.\n5. Aranan değer ortadaki elemandan büyükse, aramaya listenin sağ yarısında devam edin.\n6. Değer bulunana kadar veya liste tamamen taranana kadar adım 1–5’i tekrarlayın."
-},
-{
-id:144,
-  frageDE: "Was ist das Observer Muster?",
-  antwortDE: "Das Observer Muster ist ein Entwurfsmuster aus dem Bereich der Softwareentwicklung, das der Kategorie der Verhaltensmuster (Behavioral Patterns) zugeordnet wird. Es ermöglicht eine Einwegabhängigkeit zwischen Objekten, sodass, wenn ein Objekt seinen Zustand ändert, alle abhängigen Objekte benachrichtigt und automatisch aktualisiert werden.\nDieses Muster ist besonders nützlich in Situationen, in denen der Zustand eines Objekts von vielen anderen Objekten abhängig ist und eine enge Kopplung zwischen diesen Objekten vermieden werden soll.",
-  frageTR: "Observer (gözlemci) tasarım deseni nedir?",
-  antwortTR: "Observer (gözlemci) deseni, yazılım geliştirmede davranışsal desenler (Behavioral Patterns) kategorisine giren bir tasarım desenidir. Bu desen, nesneler arasında tek yönlü bir bağımlılık oluşturur; bir nesnenin durumu değiştiğinde, ona bağlı olan tüm diğer nesneler bilgilendirilir ve otomatik olarak güncellenir.\nBu desen özellikle, bir nesnenin durumunun birçok başka nesneye bağlı olduğu durumlarda ve bu nesneler arasındaki sıkı bağımlılığın (tight coupling) önlenmesinin istendiği senaryolarda faydalıdır."
-},
-{
-id:145,
-  frageDE: "Wie funktioniert das Observer Muster?",
-  antwortDE: "Das Observer Muster funktioniert durch eine Einweg-Kommunikation von einem Subjekt zu mehreren anderen Objekten (Observer):\n1. Registrierung: Die Observer melden sich beim Subjekt für Updates an. Das Subjekt hält eine Liste aller seiner Observer.\n2. Änderung: Wenn das Subjekt seinen Zustand ändert, informiert es alle registrierten Observer über die Änderung.\n3. Benachrichtigung: Das Subjekt benachrichtigt die Observer über die Zustandsänderung, indem es eine Methode (häufig „update“ genannt) auf den Observern aufruft.\n4. Abmeldung: Observer können sich jederzeit vom Subjekt abmelden, wenn sie keine weiteren Benachrichtigungen erhalten möchten.",
-  frageTR: "Observer (gözlemci) tasarım deseni nasıl çalışır?",
-  antwortTR: "Observer deseni, bir konu (Subject) ile birden fazla gözlemci (Observer) arasında tek yönlü bir iletişim kurarak çalışır:\n1. Kayıt: Gözlemciler, güncellemeleri almak için konuya kaydolurlar. Konu, tüm kayıtlı gözlemcilerinin bir listesini tutar.\n2. Değişiklik: Konunun durumu değiştiğinde, konu tüm kayıtlı gözlemcilere bu değişiklik hakkında bilgi verir.\n3. Bildirim: Konu, gözlemcilerin ‘update’ olarak adlandırılan bir metodunu çağırarak onlara durum değişikliğini bildirir.\n4. Kayıttan çıkma: Gözlemciler, artık bildirim almak istemediklerinde istedikleri zaman konudan kayıttan çıkabilirler."
-},
-{
-id:146,
-  frageDE: "Welche Komponenten umfasst das MVC-Muster und wie interagieren sie miteinander?",
-  antwortDE: "Das MVC-Muster ist ein Entwurfsmuster, das oft verwendet wird, um die Struktur von Softwareanwendungen zu organisieren. Es besteht aus den folgenden drei Komponenten:\n- Model: Verantwortlich für Daten und Geschäftslogik\n- View: Präsentiert Daten an den Benutzer\n- Controller: Verarbeitet Benutzereingaben und aktualisiert das Model\nDie Interaktion dieser Komponenten funktioniert wie folgt:\n1. Der Benutzer agiert mit der View.\n2. Der Controller erhält Benutzereingaben von der View, führt Aktionen im Model aus.\n3. Das Model benachrichtigt die View über Änderungen.\n4. Die View aktualisiert die Benutzeroberfläche.",
-  frageTR: "MVC (Model-View-Controller) tasarım deseni hangi bileşenlerden oluşur ve bunlar birbirleriyle nasıl etkileşir?",
-  antwortTR: "MVC (Model-View-Controller) tasarım deseni, yazılım uygulamalarının yapısını düzenlemek için sıkça kullanılan bir desendir. Üç ana bileşenden oluşur:\n- Model: Verilerden ve iş mantığından sorumludur.\n- View: Verileri kullanıcıya sunar.\n- Controller: Kullanıcı girdilerini işler ve modeli günceller.\nBu bileşenlerin etkileşimi şu şekilde gerçekleşir:\n1. Kullanıcı, View (görünüm) ile etkileşime girer.\n2. Controller (denetleyici), kullanıcıdan gelen girdileri View üzerinden alır ve gerekli işlemleri Model üzerinde gerçekleştirir.\n3. Model, meydana gelen değişiklikleri View’a bildirir.\n4. View, kullanıcı arayüzünü günceller."
-},
-{
-id:147,
-  frageDE: "Zur Aktualisierung des Views soll Datenbindung (Data Binding) eingesetzt werden. Erläutern Sie den Begriff Datenbindung (Data Binding).",
-  antwortDE: "Datenbindung (Data Binding) ist ein Prozess, der eine Verbindung zwischen Daten (Model) und Benutzeroberfläche (View) herstellt. Es ermöglicht, dass Änderungen an den Daten automatisch in der Benutzeroberfläche reflektiert werden und umgekehrt. Es gibt zwei Arten von Datenbindung:\n- Einweg-Datenbindung (One-Way Data Binding): Daten fließen vom Model zum View.\n- Zweiweg-Datenbindung (Two-Way Data Binding): Daten fließen in beide Richtungen, sodass Änderungen im View auch das Model aktualisieren.",
-  frageTR: "View’un (görünüm) güncellenmesi için veri bağlama (Data Binding) kullanılacaktır. Veri bağlama kavramını açıklayınız.",
-  antwortTR: "Veri bağlama (Data Binding), veriler (Model) ile kullanıcı arayüzü (View) arasında bir bağlantı kurma sürecidir. Bu süreç, verilerde yapılan değişikliklerin otomatik olarak kullanıcı arayüzüne yansımasını ve tersi durumda da kullanıcı arayüzündeki değişikliklerin veriye aktarılmasını sağlar.\nİki tür veri bağlama vardır:\n- Tek yönlü veri bağlama (One-Way Data Binding): Veriler Model’den View’a doğru akar.\n- Çift yönlü veri bağlama (Two-Way Data Binding): Veriler hem Model’den View’a hem de View’dan Model’e doğru akar; böylece kullanıcı arayüzünde yapılan değişiklikler Model’i de günceller."
-},
-{
-id:148,
-  frageDE: "Erklären Sie die Aufgabe des Singleton Pattern.",
-  antwortDE: "Das Singleton-Entwurfsmuster ist ein Software-Entwurfsmuster, das die Instanziierung einer Klasse auf genau ein Objekt beschränkt. Es wird verwendet, um sicherzustellen, dass eine Klasse nur eine einzige Instanz hat, und stellt einen globalen Zugangspunkt zu diesem Objekt bereit.\nDas Hauptziel des Singleton-Musters ist es, einen kontrollierten Mechanismus zur Verfügung zu stellen, um auf begrenzte Ressourcen zuzugreifen. Dieses Muster ist nützlich, wenn genau eine Instanz eines Objekts benötigt wird, um Aktionen zu koordinieren.",
-  frageTR: "Singleton tasarım deseninin (Singleton Pattern) görevini açıklayınız.",
-  antwortTR: "Singleton tasarım deseni, bir sınıfın yalnızca tek bir örneğinin (instance) oluşturulmasına izin veren bir yazılım tasarım desenidir. Bu desen, bir sınıfın yalnızca bir örneğe sahip olmasını garanti eder ve bu örneğe küresel (global) bir erişim noktası sağlar.\nSingleton deseninin temel amacı, sınırlı kaynaklara erişimi kontrol altına alan bir mekanizma sağlamaktır. Bu desen, bir sistemdeki işlemlerin yalnızca tek bir nesne üzerinden koordine edilmesi gerektiği durumlarda özellikle yararlıdır."
-},
-{
-id:149,
-  frageDE: "Was ist SOAP (Simple Object Access Protocol) und wie wird es in der Webentwicklung eingesetzt?",
-  antwortDE: "SOAP (Simple Object Access Protocol) ist ein Protokoll für den Austausch strukturierter Informationen in der Implementierung von Webdiensten über das Internet. Es ist XML-basiert und kann mit jedem Programmiersprachencode verwendet werden, der XML generieren und analysieren kann. SOAP ist unabhängig vom Transportprotokoll, daher können Nachrichten über das gängigste HTTP-Protokoll, aber auch über SMTP, FTP und mehr übertragen werden.\nIn der Webentwicklung wird es hauptsächlich für Webservice-Kommunikation und -Interoperabilität verwendet.",
-  frageTR: "SOAP (Simple Object Access Protocol) nedir ve web geliştirmede nasıl kullanılır?",
-  antwortTR: "SOAP (Simple Object Access Protocol), internet üzerinden web servislerinin uygulanmasında yapılandırılmış bilgilerin değişimini sağlayan bir protokoldür. XML tabanlıdır ve XML üretebilen ve çözümleyebilen (parse eden) herhangi bir programlama diliyle kullanılabilir. SOAP, taşıma protokolünden bağımsızdır; bu nedenle iletiler en yaygın olarak HTTP üzerinden, ancak aynı zamanda SMTP, FTP ve diğer protokoller üzerinden de aktarılabilir.\nWeb geliştirmede SOAP, özellikle web servisleri arasındaki iletişim ve birlikte çalışabilirlik (interoperabilität) için kullanılır."
-},
-{
-id:150,
-  frageDE: "Was ist eine REST-API (Representational State Transfer)?",
-  antwortDE: "Eine REST-API (Representational State Transfer) ist ein Set von Regeln und Konventionen für den Aufbau von Webdiensten. Sie nutzt Standard-HTTP-Methoden (wie GET, POST, PUT und DELETE) zur Interaktion mit Ressourcen, die durch eindeutige URLs identifiziert werden.\nSie ist zustandslos, d.h. jede Anfrage enthält alle Informationen, die benötigt werden, um sie zu bearbeiten, ohne sich auf frühere Anfragen zu beziehen.",
-  frageTR: "REST-API (Representational State Transfer) nedir?",
-  antwortTR: "REST-API (Representational State Transfer), web servislerinin oluşturulması için kullanılan bir dizi kural ve sözleşmedir. Kaynaklarla etkileşimde bulunmak için GET, POST, PUT ve DELETE gibi standart HTTP yöntemlerini kullanır; bu kaynaklar benzersiz URL’ler ile tanımlanır.\nREST-API durum bilgisizdir (stateless), yani her istek, önceki isteklere başvurmadan işlenmesi için gerekli tüm bilgileri içerir."
-},
-{
-id:151,
-frageDE: "Was sind die wichtigsten Architekturrichtlinien für die Gestaltung einer REST-API?",
-antwortDE: "Die Architektur einer REST-API beruht auf folgenden grundlegenden Prinzipien:\nClient-Server: REST trennt Client und Server für unabhängige Entwicklung.\nZustandslos: Jede Anfrage enthält alle nötigen Informationen.\nCaching: Serverantworten können gecacht werden, um die Leistung zu verbessern.\nEinheitliche Schnittstelle: REST nutzt Standardmethoden (z.B. HTTP) für die Kommunikation.\nMehrschichtsystem: REST besteht aus mehreren Ebenen, um Flexibilität zu gewährleisten.\nCode-on-Demand: Optional kann der Server Code an den Client senden.",
-frageTR: "Bir REST-API’nin (Representational State Transfer Uygulama Programlama Arayüzü) tasarımı için en önemli mimari ilkeler nelerdir?",
-antwortTR: "Bir REST-API’nin mimarisi aşağıdaki temel prensiplere dayanır:\nİstemci-Sunucu (Client-Server): REST, istemci (client) ile sunucuyu (server) birbirinden ayırarak bağımsız geliştirmeye olanak tanır.\nDurumsuzluk (Zustandslos): Her istek, gerekli tüm bilgileri kendi içinde barındırır.\nÖnbellekleme (Caching): Sunucu yanıtları önbelleğe alınarak performans artırılabilir.\nBirleşik Arayüz (Einheitliche Schnittstelle): REST, iletişim için standart yöntemleri (örneğin HTTP) kullanır.\nÇok Katmanlı Sistem (Mehrschichtsystem): REST, esneklik sağlamak için birden fazla katmandan oluşur.\nTalep Üzerine Kod (Code-on-Demand): İsteğe bağlı olarak sunucu, istemciye kod gönderebilir."
-},
-{
-id:152,
-frageDE: "Was versteht man unter dem Begriff „Industrie 4.0“?",
-antwortDE: "Industrie 4.0 bezieht sich auf die vierte industrielle Revolution, die durch die Integration von digitalen Technologien in die Produktion und den Betrieb von Unternehmen gekennzeichnet ist. Es umfasst Konzepte wie das Internet der Dinge (IoT), künstliche Intelligenz, maschinelles Lernen, Big Data-Analyse und automatisierte Prozesse.\nIndustrie 4.0 zielt darauf ab, intelligente Fabriken und vernetzte Systeme zu schaffen, in denen Maschinen, Geräte und Menschen miteinander kommunizieren und kooperieren können. Hierdurch bietet sich Unternehmen die Möglichkeit, ihre Produktivität, Flexibilität und Wettbewerbsfähigkeit zu steigern.",
-frageTR: "“Endüstri 4.0” terimi ile ne kastedilmektedir?",
-antwortTR: "Endüstri 4.0, dijital teknolojilerin üretim ve işletme süreçlerine entegre edilmesiyle tanımlanan dördüncü sanayi devrimini ifade eder. Bu kavram; Nesnelerin İnterneti (IoT), yapay zeka, makine öğrenmesi, Büyük Veri (Big Data) analizi ve otomatikleştirilmiş süreçler gibi teknolojileri kapsar.\nEndüstri 4.0’ın amacı, makinelerin, cihazların ve insanların birbiriyle iletişim kurabildiği ve işbirliği yapabildiği akıllı fabrikalar ve bağlantılı sistemler oluşturmaktır. Bu sayede işletmeler üretkenliklerini, esnekliklerini ve rekabet güçlerini artırabilirler."
-},
-{
-id:153,
-frageDE: "Was ist Künstliche Intelligenz (KI)?",
-antwortDE: "Künstliche Intelligenz (KI) bezieht sich auf die Entwicklung von Computern oder Systemen, die in der Lage sind, menschenähnliche Denk- und Entscheidungsprozesse nachzuahmen.\nKI ermöglicht es Maschinen, Informationen zu verstehen, zu lernen, Probleme zu lösen und intelligentes Verhalten zu zeigen.",
-frageTR: "Yapay Zeka (KI - Künstliche Intelligenz) nedir?",
-antwortTR: "Yapay Zeka (KI), insan benzeri düşünme ve karar verme süreçlerini taklit edebilen bilgisayar veya sistemlerin geliştirilmesini ifade eder.\nYapay Zeka, makinelerin bilgiyi anlamasını, öğrenmesini, problemleri çözmesini ve akıllı davranış sergilemesini sağlar."
-},
-{
-id:154,
-frageDE: "Was ist das Internet der Dinge (IoT) und welche Probleme sind damit verbunden?",
-antwortDE: "Das Internet der Dinge (IoT) bezieht sich auf die Vernetzung physischer Geräte, Sensoren und Objekte über das Internet. Hierdurch können diese Objekte miteinander kommunizieren, Daten sammeln und austauschen, sowie intelligente Aktionen ausführen.\nMit dem IoT sind auch neue Probleme verbunden:\n- Da das IoT eine Vielzahl von vernetzten Geräten umfasst, entstehen neue Sicherheitsrisiken.\n- Datenschutz: Das IoT generiert eine enorme Menge an Daten über nutzende Personen, ihre Gewohnheiten und ihr Verhalten.\n- Interoperabilität: Unterschiedliche Standards, Protokolle und Kommunikationswege erschweren die Zusammenarbeit der verschiedenen IoT-Komponenten.",
-frageTR: "Nesnelerin İnterneti (IoT - Internet of Things) nedir ve bununla ilgili hangi sorunlar ortaya çıkmaktadır?",
-antwortTR: "Nesnelerin İnterneti (IoT), fiziksel cihazların, sensörlerin ve nesnelerin internet aracılığıyla birbirine bağlanmasını ifade eder. Bu sayede bu nesneler birbirleriyle iletişim kurabilir, veri toplayabilir, veri alışverişinde bulunabilir ve akıllı işlemler gerçekleştirebilir.\nIoT ile birlikte yeni sorunlar da ortaya çıkmaktadır:\n- Güvenlik riskleri: IoT, çok sayıda bağlı cihaz içerdiği için yeni güvenlik açıkları doğurur.\n- Veri gizliliği: IoT, kullanıcıların kişisel bilgileri, alışkanlıkları ve davranışları hakkında büyük miktarda veri üretir.\n- Birlikte çalışabilirlik (Interoperabilität): Farklı standartlar, protokoller ve iletişim yöntemleri, IoT bileşenlerinin uyum içinde çalışmasını zorlaştırır."
-},
-{
-id:155,
-frageDE: "Welche neuen Herausforderungen entstehen durch Big Data in der Speicherung und Verarbeitung von Daten?",
-antwortDE: "Herausforderungen, die durch Big Data entstehen:\nDatenmengen: Die Speicherung und Verarbeitung großer Datenmengen erfordern leistungsfähige und skalierbare Infrastrukturen, die in der Lage sind, diese Datenmengen effizient zu verarbeiten.\nDatenintegration: Die Integration von heterogenen Datenquellen kann eine Herausforderung sein, da sie unterschiedliche Formate und Strukturen aufweisen können.\nDatenqualität: Große Datensätze können unvollständige, ungenaue oder inkonsistente Daten enthalten.\nDatenverarbeitungsgeschwindigkeit: Big Data-Anwendungen erfordern oft Echtzeitverarbeitung.\nDatenschutz und Sicherheit: Große Datensätze enthalten oft sensible und persönliche Informationen.",
-frageTR: "Büyük Veri (Big Data) nedeniyle veri depolama ve işleme alanında hangi yeni zorluklar ortaya çıkmaktadır?",
-antwortTR: "Büyük Veri’nin yol açtığı zorluklar şunlardır:\nVeri miktarı: Büyük miktarda verinin depolanması ve işlenmesi, bu verileri verimli bir şekilde işleyebilen güçlü ve ölçeklenebilir altyapılar gerektirir.\nVeri entegrasyonu: Farklı format ve yapılara sahip heterojen veri kaynaklarının birleştirilmesi zor olabilir.\nVeri kalitesi: Büyük veri kümeleri eksik, hatalı veya tutarsız veriler içerebilir.\nVeri işleme hızı: Big Data uygulamaları genellikle gerçek zamanlı işlemeyi gerektirir.\nVeri koruma ve güvenlik: Büyük veri kümeleri çoğunlukla hassas ve kişisel bilgiler içerir."
-}
-
-
-
-
-
-
-
-
+  },
+  {
+    id: 126,
+    frageDE:
+      "Wie unterscheiden sich prozedurale und objektorientierte Programmierung voneinander?",
+    antwortDE:
+      "Die prozedurale Programmierung ist auf den Gedanken aufgebaut, dass ein Programm eine Reihe von Aufgaben (Prozeduren) ausführt, die auf Daten operieren. Ein prozedurales Programm besteht i. d. R. aus einer Reihe von Prozeduren, die aufgerufen werden, um eine bestimmte Aufgabe zu erfüllen. Die Daten sind getrennt von den Prozeduren, und die Prozeduren bearbeiten diese Daten.\n\nIn der objektorientierten Programmierung (DOOP) werden Daten und Funktionen zu Objekten zusammengefasst. Ein Objekt kann Attribute (Daten) und Methoden (Funktionen) enthalten. OOP fokussiert auf die drei Hauptprinzipien Vererbung, Kapselung und Polymorphie.",
+    frageTR:
+      "Prozedurale Programmierung (prosedürel/yordamcı programlama) ile objektorientierte Programmierung (nesne yönelimli programlama) birbirinden nasıl ayrılır?",
+    antwortTR:
+      "Prozedurale Programmierung (prosedürel programlama), bir programın veriler üzerinde çalışan bir dizi görevden (Prozeduren/prosedürler) oluştuğu düşüncesine dayanır. Prozedürel bir program genellikle (i. d. R.) belirli bir görevi yerine getirmek için çağrılan bir dizi Prozedur (prosedür) içerir. Veriler, Prozeduren'den (prosedürlerden) ayrıdır ve Prozeduren (prosedürler) bu verileri işler.\n\nObjektorientierte Programmierung (DOOP, nesne yönelimli programlama), verileri ve fonksiyonları Objekte (nesneler) içinde bir araya getirir. Bir Objekt (nesne) Attribute (özellikler/veriler) ve Methoden (metotlar/fonksiyonlar) içerebilir. OOP, üç temel prensibe odaklanır: Vererbung (kalıtım), Kapselung (enkapsülasyon) ve Polymorphie (çok biçimlilik/polimorfizm).",
+  },
+  {
+    id: 127,
+    frageDE: "Was ist eine Klasse in der objektorientierten Programmierung?",
+    antwortDE:
+      "Eine Klasse in der objektorientierten Programmierung ist ein Bauplan für die Erstellung von Objekten. Sie definiert Eigenschaften (Variablen, die den Zustand repräsentieren) und Methoden (Funktionen, die das Verhalten repräsentieren) eines Objekts.\n\nEine Klasse ermöglicht die Erstellung mehrerer Objekte mit ähnlichen Merkmalen und Verhaltensweisen. Sie bildet die Grundlage für Vererbung und Polymorphie.",
+    frageTR:
+      "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse (sınıf) nedir?",
+    antwortTR:
+      "Objektorientierte Programmierung (nesne yönelimli programlama) içindeki bir Klasse (sınıf), Objekte (nesneler) oluşturmak için bir Bauplan (taslak/şablon)dır. Bir Objekt'in (nesnenin) Attribute'larını (özellikler; durumu temsil eden değişkenler) ve Methoden'ını (metotlar; davranışı temsil eden fonksiyonlar) tanımlar.\n\nBir Klasse (sınıf), benzer özellik ve davranışlara sahip birden fazla Objektin (nesnenin) oluşturulmasını sağlar. Ayrıca Vererbung (kalıtım) ve Polymorphie'nin (çok biçimlilik/polimorfizm) temelini oluşturur.",
+  },
+  {
+    id: 128,
+    frageDE: "Was ist eine generische Klasse?",
+    antwortDE:
+      "Eine generische Klasse ist ein Konzept in der objektorientierten Programmierung, das es erlaubt, eine Klasse zu definieren, die auf Typen arbeiten kann, die beim Erstellen einer Instanz der Klasse spezifiziert werden.\n\nDer Hauptvorteil von generischen Klassen besteht darin, dass sie Code-Wiederverwendung und Typsicherheit ermöglichen. Sie können eine einzige generische Klasse definieren, die auf mehrere Datentypen angewendet werden kann, anstatt separate Klassen für jeden Datentyp erstellen zu müssen.",
+    frageTR: "Generische Klasse (jenerik/jenerik sınıf) nedir?",
+    antwortTR:
+      "Generische Klasse (jenerik sınıf), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir kavramdır; bir Klasse'nin (sınıfın) bir Instanz (örnek) oluşturulurken belirtilecek tiplere göre çalışacak şekilde tanımlanmasına olanak tanır.\n\nGenerische Klassen'in (jenerik sınıfların) başlıca avantajı, Code-Wiederverwendung (kodun yeniden kullanımı) ve Typsicherheit (tip güvenliği) sağlamasıdır. Her bir veri tipi için ayrı sınıflar oluşturmak yerine, tek bir generische Klasse (jenerik sınıf) tanımlayıp bunu birden fazla veri tipine uygulayabilirsiniz.",
+  },
+  {
+    id: 129,
+    frageDE:
+      "Wie werden abstrakte Klassen in der Anwendungsentwicklung verwendet und welche Vorteile bieten sie?",
+    antwortDE:
+      "Abstrakte Klassen sind Klassen, die nicht instanziiert werden können und in der Regel eine oder mehrere abstrakte Methoden enthalten. Diese Methoden werden in den abgeleiteten Klassen implementiert. Abstrakte Klassen können jedoch auch konkrete Methoden (Methoden mit einer Implementierung) enthalten.\n\nDie Hauptanwendungen und Vorteile abstrakter Klassen sind:\n- Bereitstellung einer gemeinsamen Schnittstelle\n- Code-Wiederverwendung\n- Erzwingung bestimmter Methoden\n- Polymorphismus kann realisiert werden",
+    frageTR:
+      "Abstrakte Klassen (soyut sınıflar) Anwendungsentwicklung içinde nasıl kullanılır ve hangi avantajları sağlar?",
+    antwortTR:
+      "Abstrakte Klassen (soyut sınıflar), instanziiert edilemeyen (örneklenemeyen) Klassen'dir (sınıflardır) ve genellikle bir veya daha fazla abstrakte Methoden (soyut yöntem) içerir. Bu Methoden (yöntemler), abgeleitete Klassen'de (türetilmiş sınıflarda) uygulanır. Abstrakte Klassen ayrıca konkrete Methoden (somut; uygulaması olan yöntemler) de içerebilir.\n\nAbstrakte Klassen'in (soyut sınıfların) başlıca kullanım alanları ve avantajları:\n- Gemeinsame Schnittstelle (ortak arayüz) sağlama\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Belirli Methoden'in (yöntemlerin) zorunlu kılınması\n- Polymorphismus (çok biçimlilik/polimorfizm) gerçekleştirilebilir",
+  },
+  {
+    id: 130,
+    frageDE: "Was ist ein Objekt in der objektorientierten Programmierung?",
+    antwortDE:
+      "Ein Objekt in der objektorientierten Programmierung ist eine konkrete Instanz einer Klasse. Es besitzt die Attribute und Methoden, die in seiner Klasse definiert sind. Jedes Objekt hat seinen eigenen Satz von Werten für die Attribute. Diese Attribute repräsentieren den Zustand des Objekts, während die Methoden das Verhalten definieren, das auf diesem Zustand operiert.\n\nEin Objekt ist also eine Verkapselung von Daten (Zustand) und den dazu gehörenden Operationen (Verhalten).",
+    frageTR:
+      "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Objekt (nesne) nedir?",
+    antwortTR:
+      "Objekt (nesne), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse'nin (sınıfın) somut bir Instanz'ıdır (örneğidir). Sınıfında tanımlanan Attribute'lara (özelliklere) ve Methoden'a (metotlara) sahiptir. Her Objekt (nesne), Attribute'ları (özellikleri) için kendine özgü değerlere sahiptir. Bu Attribute'lar (özellikler) Objekt'in (nesnenin) Zustand'ını (durumunu) temsil ederken, Methoden (metotlar) bu durum üzerinde işleyen Verhalten'ı (davranışı) tanımlar.\n\nDolayısıyla bir Objekt (nesne), Daten'in (verinin/durumun) ve ona ait Operationen'in (işlemlerin/davranışların) bir Verkapselung'udur (kapsüllenmesidir).",
+  },
+  {
+    id: 131,
+    frageDE:
+      "Was ist der Unterschied zwischen einer abstrakten Klasse und einem Interface?",
+    antwortDE:
+      "Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden enthalten, während ein Interface nur Methodensignaturen (keine Implementierungen) definiert.\n\nWeitere Unterschiede:\n- Eine Klasse kann nur eine abstrakte Klasse erben, aber mehrere Interfaces implementieren.\n- Abstrakte Klassen können Zustände (Attribute) haben, Interfaces nicht.\n- Interfaces dienen der Definition von Verträgen, abstrakte Klassen eher der Wiederverwendung von gemeinsamem Code.",
+    frageTR:
+      "Abstrakte Klasse (soyut sınıf) ile Interface (arayüz) arasındaki fark nedir?",
+    antwortTR:
+      "Abstrakte Klasse (soyut sınıf), hem abstrakte Methoden (soyut yöntemler) hem de konkrete Methoden (uygulaması olan yöntemler) içerebilirken; bir Interface (arayüz) yalnızca Methodensignaturen'ı (yöntem imzalarını) tanımlar, yani herhangi bir Implementierung (uygulama) içermez.\n\nDiğer farklar:\n- Bir Klasse (sınıf), yalnızca bir abstrakte Klasse'den (soyut sınıftan) miras alabilir, ancak birden fazla Interface (arayüz) implementieren (uygulayabilir).\n- Abstrakte Klassen (soyut sınıflar) Zustände (durumlar/özellikler) içerebilir, Interfaces (arayüzler) içeremez.\n- Interfaces (arayüzler) genellikle bir Vertrag'ı (sözleşme, kurallar bütünü) tanımlamak için kullanılır; abstrakte Klassen (soyut sınıflar) ise ortak kodun yeniden kullanımı için tercih edilir.",
+  },
+  {
+    id: 132,
+    frageDE:
+      "Was versteht man unter Polymorphie in der objektorientierten Programmierung?",
+    antwortDE:
+      "Polymorphie bezeichnet die Fähigkeit, dass eine Methode je nach Objekt, das sie aufruft, unterschiedliche Implementierungen ausführen kann. Das bedeutet, dass derselbe Methodenaufruf bei verschiedenen Objekten unterschiedliches Verhalten zeigen kann.\n\nBeispiel: Eine Methode `zeichne()` kann in einer Klasse `Kreis` anders implementiert sein als in einer Klasse `Rechteck`, aber beide werden über dieselbe Schnittstelle aufgerufen.",
+    frageTR:
+      "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Polymorphie (çok biçimlilik/polimorfizm) ne anlama gelir?",
+    antwortTR:
+      "Polymorphie (çok biçimlilik), bir Method'un (yöntemin) onu çağıran Objekt'e (nesneye) bağlı olarak farklı Implementierungen'lar (uygulamalar) gerçekleştirebilme yeteneğidir. Bu, aynı Methodenaufruf'un (metot çağrısının) farklı Objekte'lerde (nesnelerde) farklı davranışlar sergileyebilmesi anlamına gelir.\n\nÖrnek: `zeichne()` adlı bir Methode (yöntem), `Kreis` (daire) sınıfında farklı, `Rechteck` (dikdörtgen) sınıfında farklı şekilde uygulanabilir, ancak her ikisi de aynı Schnittstelle (arayüz) üzerinden çağrılır.",
+  },
+  {
+    id: 133,
+    frageDE: "Was versteht man unter Kapselung (Encapsulation)?",
+    antwortDE:
+      "Kapselung (Encapsulation) bedeutet, dass die internen Daten und die Implementierungsdetails eines Objekts vor dem Zugriff von außen geschützt werden. Der Zugriff erfolgt über definierte Schnittstellen (Getter- und Setter-Methoden).\n\nZiel ist es, Datenintegrität zu gewährleisten und unbeabsichtigte Änderungen zu verhindern. Außerdem erleichtert Kapselung die Wartung und Weiterentwicklung des Codes.",
+    frageTR: "Kapselung (Encapsulation / enkapsülasyon) ne anlama gelir?",
+    antwortTR:
+      "Kapselung (Encapsulation / enkapsülasyon), bir Objekt'in (nesnenin) iç verilerinin ve Implementierungsdetails'larının (uygulama ayrıntılarının) dışarıdan erişime karşı korunması anlamına gelir. Bu verilere erişim, tanımlanmış Schnittstellen (arayüzler) aracılığıyla, yani Getter- ve Setter-Methoden (erişimci ve değiştirici yöntemler) üzerinden sağlanır.\n\nAmacı, Datenintegrität'yi (veri bütünlüğünü) sağlamak ve istenmeyen değişiklikleri önlemektir. Ayrıca Kapselung (enkapsülasyon), kodun bakımını ve geliştirilmesini kolaylaştırır.",
+  },
+  {
+    id: 134,
+    frageDE: "Was ist Vererbung in der objektorientierten Programmierung?",
+    antwortDE:
+      "Vererbung (Inheritance) ist ein Prinzip der objektorientierten Programmierung, bei dem eine Klasse (Unterklasse oder abgeleitete Klasse) die Eigenschaften und Methoden einer anderen Klasse (Oberklasse oder Basisklasse) übernimmt.\n\nVorteile:\n- Code-Wiederverwendung\n- Erweiterbarkeit\n- Hierarchische Strukturierung von Klassen\n\nBeispiel: Eine Klasse `Auto` kann von einer Klasse `Fahrzeug` erben und zusätzlich eigene Eigenschaften wie `Anzahl der Türen` hinzufügen.",
+    frageTR:
+      "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Vererbung (Inheritance / kalıtım) nedir?",
+    antwortTR:
+      "Vererbung (Inheritance / kalıtım), objektorientierte Programmierung (nesne yönelimli programlama) prensiplerinden biridir ve bir Klasse'nin (Unterklasse veya abgeleitete Klasse; alt sınıf veya türetilmiş sınıf), başka bir Klasse'nin (Oberklasse veya Basisklasse; üst sınıf veya temel sınıf) Eigenschaften'lerini (özelliklerini) ve Methoden'larını (yöntemlerini) devralması anlamına gelir.\n\nAvantajları:\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Erweiterbarkeit (genişletilebilirlik)\n- Klassen'in (sınıfların) hiyerarşik yapılandırılması\n\nÖrnek: `Auto` (araba) adlı bir Klasse, `Fahrzeug` (araç) adlı bir Klasse'den kalıtım alabilir ve ayrıca `Anzahl der Türen` (kapı sayısı) gibi kendi özelliklerini ekleyebilir.",
+  },
+  {
+    id: 135,
+    frageDE:
+      "Was ist der Unterschied zwischen Überladung (Overloading) und Überschreibung (Overriding)?",
+    antwortDE:
+      "Überladung (Overloading) bedeutet, dass mehrere Methoden denselben Namen, aber unterschiedliche Parameterlisten haben. Sie werden innerhalb derselben Klasse definiert.\n\nÜberschreibung (Overriding) bedeutet, dass eine Methode in einer Unterklasse eine Methode aus der Oberklasse mit derselben Signatur ersetzt, um ihr Verhalten anzupassen oder zu erweitern.\n\nKurz gesagt:\n- Overloading → innerhalb derselben Klasse, unterschiedliche Parameter\n- Overriding → in Unterklasse, gleiche Signatur, anderes Verhalten",
+    frageTR:
+      "Überladung (Overloading / aşırı yükleme) ile Überschreibung (Overriding / geçersiz kılma) arasındaki fark nedir?",
+    antwortTR:
+      "Überladung (Overloading / aşırı yükleme), aynı ada sahip birden fazla Methode'nin (yöntemin) farklı Parameterlisten (parametre listeleri) ile tanımlanması anlamına gelir. Bu Methoden (yöntemler) aynı Klasse (sınıf) içinde tanımlanır.\n\nÜberschreibung (Overriding / geçersiz kılma) ise, bir Unterklasse'nin (alt sınıfın), Oberklasse'deki (üst sınıftaki) aynı Signatur'a (imzaya) sahip bir Methode'yi (yöntemi) değiştirerek veya genişleterek yeniden tanımlaması anlamına gelir.\n\nKısaca:\n- Overloading → aynı Klasse içinde, farklı parametreler\n- Overriding → Unterklasse içinde, aynı Signatur, farklı Verhalten (davranış)",
+  },
+  {
+    id: 136,
+    frageDE:
+      "Was sind die Unterschiede zwischen der rekursiven und iterativen Vorgehensweise in der Softwareentwicklung?",
+    antwortDE:
+      "In einer iterativen Vorgehensweise wird eine Aufgabe wiederholt, indem Schleifenstrukturen wie for, while oder do-while in der Programmiersprache verwendet werden. Iterative Ansätze sind in der Regel einfacher zu verstehen und erfordern weniger Speicher.\nIneiner rekursiven Vorgehensweise ruft eine Funktion sich selbst auf, um ein Problem zu lösen, das in kleinere Teilprobleme unterteilt werden kann. Rekursion kann eleganter und intuitiver für Probleme sein, die natürlich in kleinere Teilprobleme zerlegt werden können. Allerdings kann Rekursion auch zu erhöhtem Speicherverbrauch führen.",
+    frageTR:
+      "Yazılım geliştirmede yinelemeli (iterative) ve özyinelemeli (rekursive) yaklaşımlar arasındaki farklar nelerdir?",
+    antwortTR:
+      "Yinelemeli (iterative) bir yaklaşımda bir görev, programlama dilindeki for, while veya do-while gibi döngü yapıları kullanılarak tekrarlanır. Yinelemeli yaklaşımlar genellikle daha kolay anlaşılır ve daha az bellek gerektirir.\nÖzyinelemeli (rekursive) bir yaklaşımda ise bir fonksiyon, bir problemi daha küçük alt problemlere ayırarak çözmek için kendisini çağırır. Özyineleme, doğal olarak küçük alt problemlere bölünebilen sorunlar için daha zarif ve sezgisel olabilir. Ancak, özyineleme genellikle daha fazla bellek kullanımına yol açabilir.",
+  },
+  {
+    id: 137,
+    frageDE:
+      "Erklären Sie das Konzept der Modularisierung in der Softwareentwicklung.",
+    antwortDE:
+      "Modularisierung ist ein Konzept in der Softwareentwicklung, das darin besteht, einen umfangreichen Code in kleinere, unabhängige und verwaltbare Einheiten oder Module zu zerlegen. Jedes Modul fokussiert sich auf eine spezifische Funktion oder einen bestimmten Aspekt des Gesamtprojekts.\nDie Idee hinter der Modularisierung ist es, die Komplexität des Codes zu reduzieren und ihn einfacher zu verwalten, zu warten, zu testen und zu verstehen. Durch die Trennung des Codes in verschiedene Module kann jedes Modul unabhängig voneinander entwickelt, getestet und überarbeitet werden, was die Effizienz und Produktivität des Entwicklungsprozesses erhöht.",
+    frageTR:
+      "Yazılım geliştirmede modülerleştirme (Modularisierung) kavramını açıklayınız.",
+    antwortTR:
+      "Modülerleştirme (Modularisierung), yazılım geliştirmede kapsamlı bir kodu daha küçük, bağımsız ve yönetilebilir birimlere veya modüllere ayırma kavramıdır. Her modül, genel projenin belirli bir işlevine veya yönüne odaklanır.\nModülerleştirmenin arkasındaki fikir, kodun karmaşıklığını azaltmak ve onu daha kolay yönetilebilir, bakım yapılabilir, test edilebilir ve anlaşılabilir hale getirmektir. Kodun farklı modüllere ayrılması sayesinde her modül birbirinden bağımsız olarak geliştirilebilir, test edilebilir ve güncellenebilir; bu da geliştirme sürecinin verimliliğini ve üretkenliğini artırır.",
+  },
+  {
+    id: 138,
+    frageDE:
+      "Wie können automatische Kompilierung und Bereitstellung (Continuous Integration und Continuous Deployment, kurz CI/CD) implementiert werden?",
+    antwortDE:
+      "Die folgenden Schritte sollten zur automatischen Kompilierung und Bereitstellung im Allgemeinen befolgt werden:\n1 Source Control Management (SCM): Alle Entwicklungsarbeit sollte in einem Versionskontrollsystem gespeichert werden.\nAutomatische Kompilierung: Wenn Änderungen im Versionskontrollsystem vorgenommen werden, wird ein automatisierter Build-Prozess ausgelöst.\nAutomatisierte Tests: Nach der Kompilierung sollte der Code automatisiert getestet werden.\nAutomatisierte Bereitstellung: Nach erfolgreichem Build und Test wird der Code automatisch bereitgestellt.\nMonitoring und Feedback: Nach der Bereitstellung sollte der Zustand überwacht und bei Problemen Feedback gegeben werden.",
+    frageTR:
+      "Otomatik derleme ve dağıtım (Continuous Integration ve Continuous Deployment, kısaca CI/CD) nasıl uygulanabilir?",
+    antwortTR:
+      "Otomatik derleme ve dağıtım için genel olarak aşağıdaki adımlar izlenmelidir:\n1. Kaynak Kontrol Yönetimi (Source Control Management - SCM): Tüm geliştirme çalışmaları bir versiyon kontrol sisteminde saklanmalıdır.\nOtomatik Derleme: Versiyon kontrol sisteminde değişiklik yapıldığında otomatik bir derleme süreci (build) tetiklenir.\nOtomatik Testler: Derlemeden sonra kod otomatik olarak test edilmelidir.\nOtomatik Dağıtım: Başarılı derleme ve testten sonra kod otomatik olarak dağıtılır.\nİzleme ve Geri Bildirim: Dağıtımdan sonra sistemin durumu izlenmeli ve olası sorunlar için geri bildirim sağlanmalıdır.",
+  },
+  {
+    id: 139,
+    frageDE:
+      "Welche Vorteile bietet die Verwendung einer 3-Schichten-Architektur bei der Entwicklung?",
+    antwortDE:
+      "Die Verwendung einer 3-Schichten-Architektur bei der Entwicklung von Anwendungen bietet mehrere Vorteile.\n- Sie ermöglicht eine klare Trennung zwischen der Präsentationsschicht, der Anwendungslogik und der Datenzugriffsschicht. Dadurch wird der Code besser strukturiert und Wartungsaufgaben werden vereinfacht.\n- Die Schichtung ermöglicht eine bessere Skalierbarkeit, da jede Schicht unabhängig von den anderen skaliert werden kann.\n- Die Schichtung erleichtert die Wiederverwendbarkeit von Komponenten, da jede Schicht unabhängig von den anderen entwickelt und leichter in anderen Projekten wiederverwendet werden kann.",
+    frageTR:
+      "Uygulama geliştirmede 3 katmanlı mimarinin (3-Schichten-Architektur) kullanılması hangi avantajları sağlar?",
+    antwortTR:
+      "Uygulama geliştirmede 3 katmanlı mimari kullanımı birden fazla avantaj sağlar.\n- Sunum katmanı, uygulama mantığı katmanı ve veri erişim katmanı arasında net bir ayrım yapılmasını sağlar. Bu sayede kod daha iyi yapılandırılır ve bakım işlemleri kolaylaşır.\n- Katmanlı yapı, her katmanın diğerlerinden bağımsız olarak ölçeklenebilmesine olanak tanır, bu da ölçeklenebilirliği artırır.\n- Katmanlı mimari, bileşenlerin yeniden kullanılabilirliğini kolaylaştırır çünkü her katman diğerlerinden bağımsız olarak geliştirilebilir ve farklı projelerde kolayca yeniden kullanılabilir.",
+  },
+  {
+    id: 140,
+    frageDE:
+      "Wie arbeitet der Bubble-Sort-Algorithmus, um eine Liste von Elementen in aufsteigender Reihenfolge zu sortieren?",
+    antwortDE:
+      "Der Bubble-Sort-Algorithmus sortiert eine Liste, indem er benachbarte Elemente vergleicht und sie tauscht, wenn sie in der falschen Reihenfolge sind. Dieses wird wiederholt, bis die gesamte Liste sortiert ist.\n1. Vergleiche die ersten beiden Elemente in der Liste. Wenn das erste Element größer als das zweite ist, tausche sie.\n2. Gehe zur nächsten Position in der Liste und wiederhole den Vergleich und den Austausch mit dem nächsten Paar.\n3. Wiederhole diesen Prozess bis zum Ende der Liste.\n4. Wiederhole die Schritte 1 bis 3 für die restlichen Elemente (außer dem zuletzt sortierten), bis die gesamte Liste sortiert ist.",
+    frageTR:
+      "Bubble-Sort algoritması bir listeyi artan sıraya göre sıralamak için nasıl çalışır?",
+    antwortTR:
+      "Bubble-Sort algoritması, bir listedeki bitişik elemanları karşılaştırarak ve yanlış sıradaysa yerlerini değiştirerek listeyi sıralar. Bu işlem, tüm liste sıralanana kadar tekrarlanır.\n1. Listedeki ilk iki elemanı karşılaştır. Eğer ilk eleman ikinci elemandan büyükse, yerlerini değiştir.\n2. Listedeki bir sonraki konuma geç ve bir sonraki çift için karşılaştırma ve değişim işlemini tekrarla.\n3. Bu işlemi listenin sonuna kadar sürdür.\n4. Adım 1–3'ü kalan elemanlar için (sonda zaten sıralanmış olan hariç) tekrarla, tüm liste sıralanana kadar devam et.",
+  },
+  {
+    id: 141,
+    frageDE: "Beschreibe den Ablauf des Suchalgorithmus „Lineare Suche“.",
+    antwortDE:
+      "Die lineare Suche ist eine Methode zum Finden eines bestimmten Wertes in einer Liste. Sie durchläuft sequenziell jedes Element in der Liste und prüft, ob es dem gesuchten Wert entspricht.\n1. Überprüfe das erste Element der Liste.\n2. Entspricht das Element dem gesuchten Wert, beende die Suche.\n3. Wenn das Element nicht dem gesuchten Wert entspricht, gehe zum nächsten Element in der Liste.\n4. Wiederhole Schritt 2 und 3, bis du entweder den gesuchten Wert gefunden hast oder bis das Ende der Liste erreicht ist.\n5. Wenn das Ende der Liste erreicht ist und der gesuchte Wert nicht gefunden wurde, gibt an, dass der gesuchte Wert nicht in der Liste ist.",
+    frageTR:
+      "“Doğrusal arama” (Lineare Suche) algoritmasının işleyişini açıklayınız.",
+    antwortTR:
+      "Doğrusal arama (Lineare Suche), bir listedeki belirli bir değeri bulmak için kullanılan bir yöntemdir. Listeyi baştan sona sırasıyla tarar ve her bir elemanın aranan değere eşit olup olmadığını kontrol eder.\n1. Listenin ilk elemanını kontrol et.\n2. Eleman aranan değere eşitse, aramayı sonlandır.\n3. Eleman aranan değere eşit değilse, listedeki bir sonraki elemana geç.\n4. Adım 2 ve 3’ü, aranan değer bulunana kadar veya listenin sonuna gelene kadar tekrarla.\n5. Listenin sonuna gelindiğinde aranan değer bulunamadıysa, bu değerin listede olmadığını belirt.",
+  },
+  {
+    id: 142,
+    frageDE: "Wie funktioniert die binäre Suche?",
+    antwortDE:
+      "Die binäre Suche ist ein effizienter Suchalgorithmus, der auf sortierten Listen oder Arrays arbeitet. Er vergleicht den gesuchten Wert mit dem mittleren Element der Liste und teilt dann die Liste entsprechend in zwei Hälften. Dieser Prozess wird rekursiv fortgesetzt, bis der gesuchte Wert gefunden ist oder bis alle Elemente durchsucht wurden.\nDie binäre Suche ist sehr effizient und benötigt im schlimmsten Fall log2(n) Vergleiche, wobei n die Anzahl der Elemente in der Liste ist. Nachteilig ist, dass die binäre Suche voraussetzt, dass die Liste vor der Suche sortiert wird.",
+    frageTR: "İkili arama (binäre Suche) algoritması nasıl çalışır?",
+    antwortTR:
+      "İkili arama (binäre Suche), sıralı listeler veya diziler üzerinde çalışan verimli bir arama algoritmasıdır. Aranan değer, listenin ortasındaki elemanla karşılaştırılır ve ardından liste ikiye bölünür. Bu işlem, aranan değer bulunana kadar veya tüm elemanlar kontrol edilene kadar özyinelemeli (rekursiv) olarak devam eder.\nİkili arama oldukça verimlidir ve en kötü durumda log2(n) kadar karşılaştırma gerektirir; burada n, listedeki eleman sayısını ifade eder. Ancak dezavantajı, arama yapılmadan önce listenin sıralı olması gerektiğidir.",
+  },
+  {
+    id: 143,
+    frageDE:
+      "Beschreiben Sie die einzelnen Schritte, welche notwendig sind, um eine binäre Suche durchzuführen.",
+    antwortDE:
+      "Die grundlegenden Schritte des binären Suchalgorithmus:\n1. Finden Sie das mittlere Element der Liste.\n2. Vergleichen Sie es mit dem gesuchten Wert.\n3. Wenn sie gleich sind, ist die Suche abgeschlossen.\n4. Wenn der gesuchte Wert kleiner ist, suchen Sie in der linken Hälfte der Liste weiter.\n5. Wenn der gesuchte Wert größer ist, suchen Sie in der rechten Hälfte der Liste weiter.\n6. Wiederholen Sie die Schritte 1–5, bis der Wert gefunden wird oder die Liste vollständig durchsucht wurde.",
+    frageTR:
+      "İkili arama (binäre Suche) algoritmasını gerçekleştirmek için gerekli adımları açıklayınız.",
+    antwortTR:
+      "İkili arama algoritmasının temel adımları şunlardır:\n1. Listenin ortasındaki elemanı bulun.\n2. Bu elemanı aranan değerle karşılaştırın.\n3. Eğer eşitse, arama tamamlanmıştır.\n4. Aranan değer ortadaki elemandan küçükse, aramaya listenin sol yarısında devam edin.\n5. Aranan değer ortadaki elemandan büyükse, aramaya listenin sağ yarısında devam edin.\n6. Değer bulunana kadar veya liste tamamen taranana kadar adım 1–5’i tekrarlayın.",
+  },
+  {
+    id: 144,
+    frageDE: "Was ist das Observer Muster?",
+    antwortDE:
+      "Das Observer Muster ist ein Entwurfsmuster aus dem Bereich der Softwareentwicklung, das der Kategorie der Verhaltensmuster (Behavioral Patterns) zugeordnet wird. Es ermöglicht eine Einwegabhängigkeit zwischen Objekten, sodass, wenn ein Objekt seinen Zustand ändert, alle abhängigen Objekte benachrichtigt und automatisch aktualisiert werden.\nDieses Muster ist besonders nützlich in Situationen, in denen der Zustand eines Objekts von vielen anderen Objekten abhängig ist und eine enge Kopplung zwischen diesen Objekten vermieden werden soll.",
+    frageTR: "Observer (gözlemci) tasarım deseni nedir?",
+    antwortTR:
+      "Observer (gözlemci) deseni, yazılım geliştirmede davranışsal desenler (Behavioral Patterns) kategorisine giren bir tasarım desenidir. Bu desen, nesneler arasında tek yönlü bir bağımlılık oluşturur; bir nesnenin durumu değiştiğinde, ona bağlı olan tüm diğer nesneler bilgilendirilir ve otomatik olarak güncellenir.\nBu desen özellikle, bir nesnenin durumunun birçok başka nesneye bağlı olduğu durumlarda ve bu nesneler arasındaki sıkı bağımlılığın (tight coupling) önlenmesinin istendiği senaryolarda faydalıdır.",
+  },
+  {
+    id: 145,
+    frageDE: "Wie funktioniert das Observer Muster?",
+    antwortDE:
+      "Das Observer Muster funktioniert durch eine Einweg-Kommunikation von einem Subjekt zu mehreren anderen Objekten (Observer):\n1. Registrierung: Die Observer melden sich beim Subjekt für Updates an. Das Subjekt hält eine Liste aller seiner Observer.\n2. Änderung: Wenn das Subjekt seinen Zustand ändert, informiert es alle registrierten Observer über die Änderung.\n3. Benachrichtigung: Das Subjekt benachrichtigt die Observer über die Zustandsänderung, indem es eine Methode (häufig „update“ genannt) auf den Observern aufruft.\n4. Abmeldung: Observer können sich jederzeit vom Subjekt abmelden, wenn sie keine weiteren Benachrichtigungen erhalten möchten.",
+    frageTR: "Observer (gözlemci) tasarım deseni nasıl çalışır?",
+    antwortTR:
+      "Observer deseni, bir konu (Subject) ile birden fazla gözlemci (Observer) arasında tek yönlü bir iletişim kurarak çalışır:\n1. Kayıt: Gözlemciler, güncellemeleri almak için konuya kaydolurlar. Konu, tüm kayıtlı gözlemcilerinin bir listesini tutar.\n2. Değişiklik: Konunun durumu değiştiğinde, konu tüm kayıtlı gözlemcilere bu değişiklik hakkında bilgi verir.\n3. Bildirim: Konu, gözlemcilerin ‘update’ olarak adlandırılan bir metodunu çağırarak onlara durum değişikliğini bildirir.\n4. Kayıttan çıkma: Gözlemciler, artık bildirim almak istemediklerinde istedikleri zaman konudan kayıttan çıkabilirler.",
+  },
+  {
+    id: 146,
+    frageDE:
+      "Welche Komponenten umfasst das MVC-Muster und wie interagieren sie miteinander?",
+    antwortDE:
+      "Das MVC-Muster ist ein Entwurfsmuster, das oft verwendet wird, um die Struktur von Softwareanwendungen zu organisieren. Es besteht aus den folgenden drei Komponenten:\n- Model: Verantwortlich für Daten und Geschäftslogik\n- View: Präsentiert Daten an den Benutzer\n- Controller: Verarbeitet Benutzereingaben und aktualisiert das Model\nDie Interaktion dieser Komponenten funktioniert wie folgt:\n1. Der Benutzer agiert mit der View.\n2. Der Controller erhält Benutzereingaben von der View, führt Aktionen im Model aus.\n3. Das Model benachrichtigt die View über Änderungen.\n4. Die View aktualisiert die Benutzeroberfläche.",
+    frageTR:
+      "MVC (Model-View-Controller) tasarım deseni hangi bileşenlerden oluşur ve bunlar birbirleriyle nasıl etkileşir?",
+    antwortTR:
+      "MVC (Model-View-Controller) tasarım deseni, yazılım uygulamalarının yapısını düzenlemek için sıkça kullanılan bir desendir. Üç ana bileşenden oluşur:\n- Model: Verilerden ve iş mantığından sorumludur.\n- View: Verileri kullanıcıya sunar.\n- Controller: Kullanıcı girdilerini işler ve modeli günceller.\nBu bileşenlerin etkileşimi şu şekilde gerçekleşir:\n1. Kullanıcı, View (görünüm) ile etkileşime girer.\n2. Controller (denetleyici), kullanıcıdan gelen girdileri View üzerinden alır ve gerekli işlemleri Model üzerinde gerçekleştirir.\n3. Model, meydana gelen değişiklikleri View’a bildirir.\n4. View, kullanıcı arayüzünü günceller.",
+  },
+  {
+    id: 147,
+    frageDE:
+      "Zur Aktualisierung des Views soll Datenbindung (Data Binding) eingesetzt werden. Erläutern Sie den Begriff Datenbindung (Data Binding).",
+    antwortDE:
+      "Datenbindung (Data Binding) ist ein Prozess, der eine Verbindung zwischen Daten (Model) und Benutzeroberfläche (View) herstellt. Es ermöglicht, dass Änderungen an den Daten automatisch in der Benutzeroberfläche reflektiert werden und umgekehrt. Es gibt zwei Arten von Datenbindung:\n- Einweg-Datenbindung (One-Way Data Binding): Daten fließen vom Model zum View.\n- Zweiweg-Datenbindung (Two-Way Data Binding): Daten fließen in beide Richtungen, sodass Änderungen im View auch das Model aktualisieren.",
+    frageTR:
+      "View’un (görünüm) güncellenmesi için veri bağlama (Data Binding) kullanılacaktır. Veri bağlama kavramını açıklayınız.",
+    antwortTR:
+      "Veri bağlama (Data Binding), veriler (Model) ile kullanıcı arayüzü (View) arasında bir bağlantı kurma sürecidir. Bu süreç, verilerde yapılan değişikliklerin otomatik olarak kullanıcı arayüzüne yansımasını ve tersi durumda da kullanıcı arayüzündeki değişikliklerin veriye aktarılmasını sağlar.\nİki tür veri bağlama vardır:\n- Tek yönlü veri bağlama (One-Way Data Binding): Veriler Model’den View’a doğru akar.\n- Çift yönlü veri bağlama (Two-Way Data Binding): Veriler hem Model’den View’a hem de View’dan Model’e doğru akar; böylece kullanıcı arayüzünde yapılan değişiklikler Model’i de günceller.",
+  },
+  {
+    id: 148,
+    frageDE: "Erklären Sie die Aufgabe des Singleton Pattern.",
+    antwortDE:
+      "Das Singleton-Entwurfsmuster ist ein Software-Entwurfsmuster, das die Instanziierung einer Klasse auf genau ein Objekt beschränkt. Es wird verwendet, um sicherzustellen, dass eine Klasse nur eine einzige Instanz hat, und stellt einen globalen Zugangspunkt zu diesem Objekt bereit.\nDas Hauptziel des Singleton-Musters ist es, einen kontrollierten Mechanismus zur Verfügung zu stellen, um auf begrenzte Ressourcen zuzugreifen. Dieses Muster ist nützlich, wenn genau eine Instanz eines Objekts benötigt wird, um Aktionen zu koordinieren.",
+    frageTR:
+      "Singleton tasarım deseninin (Singleton Pattern) görevini açıklayınız.",
+    antwortTR:
+      "Singleton tasarım deseni, bir sınıfın yalnızca tek bir örneğinin (instance) oluşturulmasına izin veren bir yazılım tasarım desenidir. Bu desen, bir sınıfın yalnızca bir örneğe sahip olmasını garanti eder ve bu örneğe küresel (global) bir erişim noktası sağlar.\nSingleton deseninin temel amacı, sınırlı kaynaklara erişimi kontrol altına alan bir mekanizma sağlamaktır. Bu desen, bir sistemdeki işlemlerin yalnızca tek bir nesne üzerinden koordine edilmesi gerektiği durumlarda özellikle yararlıdır.",
+  },
+  {
+    id: 149,
+    frageDE:
+      "Was ist SOAP (Simple Object Access Protocol) und wie wird es in der Webentwicklung eingesetzt?",
+    antwortDE:
+      "SOAP (Simple Object Access Protocol) ist ein Protokoll für den Austausch strukturierter Informationen in der Implementierung von Webdiensten über das Internet. Es ist XML-basiert und kann mit jedem Programmiersprachencode verwendet werden, der XML generieren und analysieren kann. SOAP ist unabhängig vom Transportprotokoll, daher können Nachrichten über das gängigste HTTP-Protokoll, aber auch über SMTP, FTP und mehr übertragen werden.\nIn der Webentwicklung wird es hauptsächlich für Webservice-Kommunikation und -Interoperabilität verwendet.",
+    frageTR:
+      "SOAP (Simple Object Access Protocol) nedir ve web geliştirmede nasıl kullanılır?",
+    antwortTR:
+      "SOAP (Simple Object Access Protocol), internet üzerinden web servislerinin uygulanmasında yapılandırılmış bilgilerin değişimini sağlayan bir protokoldür. XML tabanlıdır ve XML üretebilen ve çözümleyebilen (parse eden) herhangi bir programlama diliyle kullanılabilir. SOAP, taşıma protokolünden bağımsızdır; bu nedenle iletiler en yaygın olarak HTTP üzerinden, ancak aynı zamanda SMTP, FTP ve diğer protokoller üzerinden de aktarılabilir.\nWeb geliştirmede SOAP, özellikle web servisleri arasındaki iletişim ve birlikte çalışabilirlik (interoperabilität) için kullanılır.",
+  },
+  {
+    id: 150,
+    frageDE: "Was ist eine REST-API (Representational State Transfer)?",
+    antwortDE:
+      "Eine REST-API (Representational State Transfer) ist ein Set von Regeln und Konventionen für den Aufbau von Webdiensten. Sie nutzt Standard-HTTP-Methoden (wie GET, POST, PUT und DELETE) zur Interaktion mit Ressourcen, die durch eindeutige URLs identifiziert werden.\nSie ist zustandslos, d.h. jede Anfrage enthält alle Informationen, die benötigt werden, um sie zu bearbeiten, ohne sich auf frühere Anfragen zu beziehen.",
+    frageTR: "REST-API (Representational State Transfer) nedir?",
+    antwortTR:
+      "REST-API (Representational State Transfer), web servislerinin oluşturulması için kullanılan bir dizi kural ve sözleşmedir. Kaynaklarla etkileşimde bulunmak için GET, POST, PUT ve DELETE gibi standart HTTP yöntemlerini kullanır; bu kaynaklar benzersiz URL’ler ile tanımlanır.\nREST-API durum bilgisizdir (stateless), yani her istek, önceki isteklere başvurmadan işlenmesi için gerekli tüm bilgileri içerir.",
+  },
+  {
+    id: 151,
+    frageDE:
+      "Was sind die wichtigsten Architekturrichtlinien für die Gestaltung einer REST-API?",
+    antwortDE:
+      "Die Architektur einer REST-API beruht auf folgenden grundlegenden Prinzipien:\nClient-Server: REST trennt Client und Server für unabhängige Entwicklung.\nZustandslos: Jede Anfrage enthält alle nötigen Informationen.\nCaching: Serverantworten können gecacht werden, um die Leistung zu verbessern.\nEinheitliche Schnittstelle: REST nutzt Standardmethoden (z.B. HTTP) für die Kommunikation.\nMehrschichtsystem: REST besteht aus mehreren Ebenen, um Flexibilität zu gewährleisten.\nCode-on-Demand: Optional kann der Server Code an den Client senden.",
+    frageTR:
+      "Bir REST-API’nin (Representational State Transfer Uygulama Programlama Arayüzü) tasarımı için en önemli mimari ilkeler nelerdir?",
+    antwortTR:
+      "Bir REST-API’nin mimarisi aşağıdaki temel prensiplere dayanır:\nİstemci-Sunucu (Client-Server): REST, istemci (client) ile sunucuyu (server) birbirinden ayırarak bağımsız geliştirmeye olanak tanır.\nDurumsuzluk (Zustandslos): Her istek, gerekli tüm bilgileri kendi içinde barındırır.\nÖnbellekleme (Caching): Sunucu yanıtları önbelleğe alınarak performans artırılabilir.\nBirleşik Arayüz (Einheitliche Schnittstelle): REST, iletişim için standart yöntemleri (örneğin HTTP) kullanır.\nÇok Katmanlı Sistem (Mehrschichtsystem): REST, esneklik sağlamak için birden fazla katmandan oluşur.\nTalep Üzerine Kod (Code-on-Demand): İsteğe bağlı olarak sunucu, istemciye kod gönderebilir.",
+  },
+  {
+    id: 152,
+    frageDE: "Was versteht man unter dem Begriff „Industrie 4.0“?",
+    antwortDE:
+      "Industrie 4.0 bezieht sich auf die vierte industrielle Revolution, die durch die Integration von digitalen Technologien in die Produktion und den Betrieb von Unternehmen gekennzeichnet ist. Es umfasst Konzepte wie das Internet der Dinge (IoT), künstliche Intelligenz, maschinelles Lernen, Big Data-Analyse und automatisierte Prozesse.\nIndustrie 4.0 zielt darauf ab, intelligente Fabriken und vernetzte Systeme zu schaffen, in denen Maschinen, Geräte und Menschen miteinander kommunizieren und kooperieren können. Hierdurch bietet sich Unternehmen die Möglichkeit, ihre Produktivität, Flexibilität und Wettbewerbsfähigkeit zu steigern.",
+    frageTR: "“Endüstri 4.0” terimi ile ne kastedilmektedir?",
+    antwortTR:
+      "Endüstri 4.0, dijital teknolojilerin üretim ve işletme süreçlerine entegre edilmesiyle tanımlanan dördüncü sanayi devrimini ifade eder. Bu kavram; Nesnelerin İnterneti (IoT), yapay zeka, makine öğrenmesi, Büyük Veri (Big Data) analizi ve otomatikleştirilmiş süreçler gibi teknolojileri kapsar.\nEndüstri 4.0’ın amacı, makinelerin, cihazların ve insanların birbiriyle iletişim kurabildiği ve işbirliği yapabildiği akıllı fabrikalar ve bağlantılı sistemler oluşturmaktır. Bu sayede işletmeler üretkenliklerini, esnekliklerini ve rekabet güçlerini artırabilirler.",
+  },
+  {
+    id: 153,
+    frageDE: "Was ist Künstliche Intelligenz (KI)?",
+    antwortDE:
+      "Künstliche Intelligenz (KI) bezieht sich auf die Entwicklung von Computern oder Systemen, die in der Lage sind, menschenähnliche Denk- und Entscheidungsprozesse nachzuahmen.\nKI ermöglicht es Maschinen, Informationen zu verstehen, zu lernen, Probleme zu lösen und intelligentes Verhalten zu zeigen.",
+    frageTR: "Yapay Zeka (KI - Künstliche Intelligenz) nedir?",
+    antwortTR:
+      "Yapay Zeka (KI), insan benzeri düşünme ve karar verme süreçlerini taklit edebilen bilgisayar veya sistemlerin geliştirilmesini ifade eder.\nYapay Zeka, makinelerin bilgiyi anlamasını, öğrenmesini, problemleri çözmesini ve akıllı davranış sergilemesini sağlar.",
+  },
+  {
+    id: 154,
+    frageDE:
+      "Was ist das Internet der Dinge (IoT) und welche Probleme sind damit verbunden?",
+    antwortDE:
+      "Das Internet der Dinge (IoT) bezieht sich auf die Vernetzung physischer Geräte, Sensoren und Objekte über das Internet. Hierdurch können diese Objekte miteinander kommunizieren, Daten sammeln und austauschen, sowie intelligente Aktionen ausführen.\nMit dem IoT sind auch neue Probleme verbunden:\n- Da das IoT eine Vielzahl von vernetzten Geräten umfasst, entstehen neue Sicherheitsrisiken.\n- Datenschutz: Das IoT generiert eine enorme Menge an Daten über nutzende Personen, ihre Gewohnheiten und ihr Verhalten.\n- Interoperabilität: Unterschiedliche Standards, Protokolle und Kommunikationswege erschweren die Zusammenarbeit der verschiedenen IoT-Komponenten.",
+    frageTR:
+      "Nesnelerin İnterneti (IoT - Internet of Things) nedir ve bununla ilgili hangi sorunlar ortaya çıkmaktadır?",
+    antwortTR:
+      "Nesnelerin İnterneti (IoT), fiziksel cihazların, sensörlerin ve nesnelerin internet aracılığıyla birbirine bağlanmasını ifade eder. Bu sayede bu nesneler birbirleriyle iletişim kurabilir, veri toplayabilir, veri alışverişinde bulunabilir ve akıllı işlemler gerçekleştirebilir.\nIoT ile birlikte yeni sorunlar da ortaya çıkmaktadır:\n- Güvenlik riskleri: IoT, çok sayıda bağlı cihaz içerdiği için yeni güvenlik açıkları doğurur.\n- Veri gizliliği: IoT, kullanıcıların kişisel bilgileri, alışkanlıkları ve davranışları hakkında büyük miktarda veri üretir.\n- Birlikte çalışabilirlik (Interoperabilität): Farklı standartlar, protokoller ve iletişim yöntemleri, IoT bileşenlerinin uyum içinde çalışmasını zorlaştırır.",
+  },
+  {
+    id: 155,
+    frageDE:
+      "Welche neuen Herausforderungen entstehen durch Big Data in der Speicherung und Verarbeitung von Daten?",
+    antwortDE:
+      "Herausforderungen, die durch Big Data entstehen:\nDatenmengen: Die Speicherung und Verarbeitung großer Datenmengen erfordern leistungsfähige und skalierbare Infrastrukturen, die in der Lage sind, diese Datenmengen effizient zu verarbeiten.\nDatenintegration: Die Integration von heterogenen Datenquellen kann eine Herausforderung sein, da sie unterschiedliche Formate und Strukturen aufweisen können.\nDatenqualität: Große Datensätze können unvollständige, ungenaue oder inkonsistente Daten enthalten.\nDatenverarbeitungsgeschwindigkeit: Big Data-Anwendungen erfordern oft Echtzeitverarbeitung.\nDatenschutz und Sicherheit: Große Datensätze enthalten oft sensible und persönliche Informationen.",
+    frageTR:
+      "Büyük Veri (Big Data) nedeniyle veri depolama ve işleme alanında hangi yeni zorluklar ortaya çıkmaktadır?",
+    antwortTR:
+      "Büyük Veri’nin yol açtığı zorluklar şunlardır:\nVeri miktarı: Büyük miktarda verinin depolanması ve işlenmesi, bu verileri verimli bir şekilde işleyebilen güçlü ve ölçeklenebilir altyapılar gerektirir.\nVeri entegrasyonu: Farklı format ve yapılara sahip heterojen veri kaynaklarının birleştirilmesi zor olabilir.\nVeri kalitesi: Büyük veri kümeleri eksik, hatalı veya tutarsız veriler içerebilir.\nVeri işleme hızı: Big Data uygulamaları genellikle gerçek zamanlı işlemeyi gerektirir.\nVeri koruma ve güvenlik: Büyük veri kümeleri çoğunlukla hassas ve kişisel bilgiler içerir.",
+  },
+  {
+    id: 156,
+    frageDE: "Was ist eine Blockchain und wie funktioniert sie?",
+    antwortDE:
+      "Eine Blockchain ist eine dezentrale digitale Datenbank, die Informationen in Form von Blöcken speichert und diese chronologisch zu einer Kette verbindet. Jeder Block enthält eine Liste von Transaktionen und einen eindeutigen Hash.\nDie Funktionsweise einer Blockchain beruht auf Konsensalgorithmen und kryptografischen Techniken. Wenn eine Transaktion stattfindet, wird sie von Teilnehmern des Netzwerks überprüft und dann in einen Block zusammengefasst. Dieser Block wird dann mithilfe des vorherigen Blocks und seines Hash-Werts verknüpft. Dadurch entsteht eine Kette von Blöcken, die eine unveränderliche Aufzeichnung aller Transaktionen bildet.",
+    frageTR: "Blockchain nedir ve nasıl çalışır?",
+    antwortTR:
+      "Blockchain, bilgileri bloklar halinde depolayan ve bu blokları kronolojik olarak birbirine bağlayan merkeziyetsiz dijital bir veri tabanıdır. Her blok, bir dizi işlem ve benzersiz bir karma değeri (hash) içerir.\nBlockchain’in çalışma prensibi, mutabakat algoritmaları (Konsensalgorithmen) ve kriptografik tekniklere dayanır. Bir işlem gerçekleştiğinde, ağdaki katılımcılar (nodeler) tarafından doğrulanır ve bir blokta toplanır. Bu blok, kendinden önceki blok ve onun hash değeriyle ilişkilendirilir. Böylece, tüm işlemlerin değiştirilemez bir kayıt zinciri oluşur.",
+  },
+  {
+    id: 157,
+    frageDE: "Was sind Smart Contracts und wie funktionieren sie?",
+    antwortDE:
+      "Smart Contracts sind computerbasierte Verträge, die automatisch ausgeführt werden, sobald die in ihnen festgelegten Bedingungen erfüllt sind. Sie werden auf Blockchain-Plattformen erstellt und sind programmierbare Verträge, die Transaktionen und Aktionen verwalten können. Sie nutzen die Blockchain-Technologie, um Transparenz, Sicherheit und Vertrauenswürdigkeit zu gewährleisten, da sie dezentralisiert und unveränderlich sind.\nSmart Contracts ermöglichen es Parteien, Vereinbarungen ohne einen Zwischenhändler umzusetzen und bieten eine effiziente, zuverlässige und automatisierte Methode zur Abwicklung von Verträgen.",
+    frageTR: "Akıllı Sözleşmeler (Smart Contracts) nedir ve nasıl çalışır?",
+    antwortTR:
+      "Akıllı sözleşmeler, belirlenen koşullar yerine getirildiğinde otomatik olarak yürütülen bilgisayar tabanlı sözleşmelerdir. Blockchain platformları üzerinde oluşturulurlar ve işlemleri veya eylemleri yöneten programlanabilir sözleşmelerdir. Blockchain teknolojisini kullanarak şeffaflık, güvenlik ve güvenilirlik sağlarlar çünkü merkeziyetsizdirler ve değiştirilemezler.\nAkıllı sözleşmeler, tarafların aracıya gerek kalmadan anlaşmaları uygulamasına olanak tanır ve sözleşme işlemlerinin verimli, güvenilir ve otomatik şekilde yürütülmesini sağlar.",
+  },
+  {
+    id: 158,
+    frageDE: "Nennen Sie drei Dienstleistungsmodelle im Cloud-Computing.",
+    antwortDE:
+      "Dienstleistungsmodelle von Cloud-Computing:\nSoftware-as-a-Service (SaaS): Servicemodell, bei dem Anwendungen über das Internet bereitgestellt werden.\nInfrastructure-as-a-Service (IaaS): Servicemodell, bei dem virtuelle Ressourcen, wie z. B. Server und Speicher über das Internet bereitgestellt werden.\nPlatform-as-a-Service (PaaS): Servicemodell, das eine Entwicklungsplattform über das Internet bereitstellt.\nDesktop-as-a-Service (DaaS): ist ein Servicemodell, bei dem ein virtueller Desktop über das Internet bereitgestellt wird.\nEverything-as-a-Service (XaaS): ist ein erweitertes Konzept, bei dem alle IT-Dienstleistungen über das Internet bereitgestellt werden.",
+    frageTR: "Bulut bilişimde (Cloud-Computing) üç hizmet modeli belirtiniz.",
+    antwortTR:
+      "Bulut bilişimin hizmet modelleri şunlardır:\n“Software-as-a-Service” (SaaS - Hizmet olarak Yazılım): Uygulamaların internet üzerinden sunulduğu hizmet modelidir.\n“Infrastructure-as-a-Service” (IaaS - Hizmet olarak Altyapı): Sunucu ve depolama gibi sanal kaynakların internet üzerinden sağlandığı hizmet modelidir.\n“Platform-as-a-Service” (PaaS - Hizmet olarak Platform): Yazılım geliştirme platformunun internet üzerinden sunulduğu hizmet modelidir.\n“Desktop-as-a-Service” (DaaS - Hizmet olarak Masaüstü): Sanal masaüstünün internet üzerinden sunulduğu hizmet modelidir.\n“Everything-as-a-Service” (XaaS - Hizmet olarak Her Şey): Tüm BT hizmetlerinin internet üzerinden sunulduğu genişletilmiş bir kavramdır.",
+  },
+  {
+    id: 159,
+    frageDE:
+      "Was sind die Unterschiede zwischen Cloud-, Fog- und Edge-Computing?",
+    antwortDE:
+      "Cloud-, Fog- und Edge-Computing unterscheiden sich in Bezug auf ihre Position in der Datenverarbeitungshierarchie und ihre jeweiligen Standorte:\n- Cloud-Computing : bezieht sich auf die Bereitstellung von IT-Ressourcen über das Internet. Datenverarbeitung und -speicherung erfolgen in großen Rechenzentren, die von Cloud-Anbietern betrieben werden.\n- Fog-Computing : ist eine dezentrale Ergänzung zur Cloud und liegt zwischen der Cloud und den Edge-Geräten. Es erfolgt eine dezentrale Verarbeitung der Daten am Rande des Netzwerks.\n- Edge-Computing : bezieht sich auf die Datenverarbeitung und -speicherung in unmittelbarer Nähe zur Datenquelle.",
+    frageTR: "Cloud (Bulut), Fog ve Edge bilişim arasındaki farklar nelerdir?",
+    antwortTR:
+      "Cloud, Fog ve Edge bilişim; veri işleme hiyerarşisindeki konumları ve bulundukları yerler açısından farklılık gösterir:\n- Cloud-Computing (Bulut Bilişim): BT kaynaklarının internet üzerinden sağlanmasıdır. Veri işleme ve depolama, bulut sağlayıcılarının işlettiği büyük veri merkezlerinde gerçekleşir.\n- Fog-Computing (Sis Bilişim): Bulutun merkezi yapısına ek olarak verilerin ağın kenarında, bulut ile cihazlar arasında dağıtılmış şekilde işlendiği modeldir.\n- Edge-Computing (Kenar Bilişim): Verilerin, kaynağa en yakın noktada (örneğin sensör veya cihaz üzerinde) işlenmesi ve depolanmasıdır.",
+  },
+  {
+    id: 160,
+    frageDE:
+      "Welche unterschiedlichen Bereitstellungsarten von Cloud-Diensten können unterschieden werden?",
+    antwortDE:
+      "Die Public Cloud bezieht sich auf eine Cloud-Umgebung, die von einem Cloud-Dienstleister betrieben wird und für die breite Öffentlichkeit zugänglich ist.\nDie Private Cloud bezieht sich auf eine Cloud-Umgebung, die speziell für ein einzelnes Unternehmen oder eine Organisation bereitgestellt wird. Im Gegensatz zur Public Cloud wird die Private Cloud hinter einer Firewall betrieben und kann nur von internen Mitarbeitenden genutzt werden.\nDie Hybrid Cloud ist eine Kombination aus Public Cloud und Private Cloud. Unternehmen nutzen sowohl die Ressourcen und Dienste der Public Cloud als auch ihre eigenen Private Cloud-Ressourcen.",
+    frageTR: "Bulut hizmetlerinin farklı dağıtım türleri nelerdir?",
+    antwortTR:
+      "Bulut hizmetlerinin üç temel dağıtım türü vardır:\nPublic Cloud (Genel Bulut): Bir bulut hizmeti sağlayıcısı tarafından işletilen ve genel kullanıma açık olan bulut ortamıdır.\nPrivate Cloud (Özel Bulut): Yalnızca bir kuruluş veya şirket için özel olarak sağlanan bulut ortamıdır. Public Cloud’dan farklı olarak genellikle güvenlik duvarı (Firewall) arkasında bulunur ve yalnızca kurum içi çalışanlar tarafından kullanılabilir.\nHybrid Cloud (Hibrit Bulut): Public Cloud ve Private Cloud’un birleşimidir. Kuruluşlar hem genel bulut hizmetlerinden hem de kendi özel bulut kaynaklarından yararlanır.",
+  },
+  {
+    id: 161,
+    frageDE:
+      "Was versteht man unter elektrischer Stromstärke und elektrischer Spannung?",
+    antwortDE:
+      "Elektrische Stromstärke ist die Menge an elektrischer Ladung, die pro Zeiteinheit durch einen Leiter fließt. Er wird in der Einheit Ampere (A) gemessen.\nElektrische Spannung ist die elektrische Potenzialdifferenz zwischen zwei Punkten in einem elektrischen System. Sie wird in der Einheit Volt (V) gemessen. Spannung erzeugt ein elektrisches Feld zwischen den beiden Punkten und treibt den elektrischen Strom an.",
+    frageTR:
+      "Elektrik akımı (Stromstärke) ve elektrik gerilimi (Spannung) ne anlama gelir?",
+    antwortTR:
+      "Elektrik akımı, bir iletkenden birim zamanda geçen elektrik yükü miktarıdır. Birimi Amper (A)’dir.\nElektrik gerilimi, bir elektrik sisteminde iki nokta arasındaki potansiyel farkıdır. Birimi Volt (V)’tur. Gerilim, iki nokta arasında bir elektrik alanı oluşturarak akımın (Strom) akmasını sağlar.",
+  },
+  {
+    id: 162,
+    frageDE: "Was ist elektrische Leistung und wie wird sie berechnet?",
+    antwortDE:
+      "Elektrische Leistung ist die Rate, mit der elektrische Energie in einem elektrischen System umgesetzt oder übertragen wird. Sie gibt an, wie schnell Arbeit in Form von elektrischer Energie verrichtet wird.\nDie elektrische Leistung (P) wird in der Einheit Watt (W) gemessen und kann mit Hilfe der folgenden Formel berechnet werden:\nP = U * I\nP = elektrische Leistung in Watt\nU = elektrische Spannung in Volt\nI = elektrische Stromstärke in Ampere",
+    frageTR: "Elektrik gücü (Leistung) nedir ve nasıl hesaplanır?",
+    antwortTR:
+      "Elektrik gücü, bir elektrik sisteminde enerjinin ne kadar hızlı dönüştürüldüğünü veya aktarıldığını gösterir. Yani elektrik enerjisinin iş yapma hızını ifade eder.\nElektrik gücü (P) Watt (W) birimiyle ölçülür ve şu formülle hesaplanır:\nP = U * I\nP = Watt (elektrik gücü)\nU = Volt (elektrik gerilimi)\nI = Amper (elektrik akımı)",
+  },
+  {
+    id: 163,
+    frageDE: "Was ist elektrische Arbeit und wie wird sie berechnet?",
+    antwortDE:
+      "Elektrische Arbeit bezieht sich auf die Energiemenge, die bei der Übertragung oder Umwandlung elektrischer Energie verrichtet wird. Sie wird gemessen in der Einheit Joule (J).\nDie elektrische Arbeit (W) kann mit der folgenden Formel berechnet werden:\nW = P * t\nW = elektrische Arbeit in Joule (J) oder Wattsekunde (Ws)\nP = elektrische Leistung in Watt (W)\nt = Zeit",
+    frageTR: "Elektrik işi (Arbeit) nedir ve nasıl hesaplanır?",
+    antwortTR:
+      "Elektrik işi, elektrik enerjisinin aktarımı veya dönüşümü sırasında yapılan enerji miktarını ifade eder. Joule (J) birimiyle ölçülür.\nElektrik işi (W) şu formülle hesaplanır:\nW = P * t\nW = Joule (elektrik işi) veya Watt-saniye (Ws)\nP = Watt (elektrik gücü)\nt = Zaman",
+  },
+  {
+    id: 164,
+    frageDE:
+      "Erklären Sie den Unterschied zwischen verlustfreier und verlustbehafteter Datenkompression.",
+    antwortDE:
+      "Bei der verlustfreien Kompression werden Daten so komprimiert, dass alle ursprünglichen Informationen erhalten bleiben und bei der Dekompression vollständig wiederhergestellt werden können. Das bedeutet, dass die dekomprimierten Daten exakt den ursprünglichen Daten entsprechen.\nBei der verlustbehafteten Kompression werden Daten so komprimiert, dass einige Informationen verloren gehen. Diese Methode erzielt in der Regel eine viel höhere Kompressionsrate als die verlustfreie Kompression, aber die Originaldaten können nicht vollständig wiederhergestellt werden.",
+    frageTR:
+      "Kayıpsız (verlustfrei) ve kayıplı (verlustbehaftet) veri sıkıştırma arasındaki fark nedir?",
+    antwortTR:
+      "Kayıpsız sıkıştırmada veriler, tüm orijinal bilgilerin korunduğu ve açıldığında tamamen geri getirilebildiği şekilde sıkıştırılır. Yani, sıkıştırılmış veriler açıldığında orijinal verilerle tamamen aynıdır.\nKayıplı sıkıştırmada ise veriler, bazı bilgilerin kaybolduğu şekilde sıkıştırılır. Bu yöntem genellikle çok daha yüksek sıkıştırma oranı sağlar, ancak orijinal veriler tamamen geri getirilemez.",
+  },
+  {
+    id: 165,
+    frageDE:
+      "Beschreiben Sie den Unterschied zwischen einer Paketfilter-Firewall und einer Applikationsfilter-Firewall.",
+    antwortDE:
+      "Eine Paketfilter-Firewall analysiert den Netzwerkverkehr auf der Ebene der Netzwerkpakete. Sie überprüft die Header-Informationen der Pakete, wie Quell- und Ziel-IP-Adressen, Portnummern und Protokolltypen, und entscheidet basierend auf vordefinierten Regeln, ob das Paket zugelassen oder blockiert wird.\nEine Applikationsfilter-Firewall arbeitet auf der Anwendungsschicht. Sie kann den Inhalt des Datenverkehrs analysieren und spezifische Anwendungsprotokolle verstehen. Dies ermöglicht es der Firewall, spezifische Angriffsmuster oder verdächtige Aktivitäten in den Anwendungsdaten zu erkennen und zu blockieren.",
+    frageTR:
+      "Paket filtreleme güvenlik duvarı (Paketfilter-Firewall) ile uygulama filtreleme güvenlik duvarı (Applikationsfilter-Firewall) arasındaki fark nedir?",
+    antwortTR:
+      "Bir paket filtreleme güvenlik duvarı, ağ trafiğini paket düzeyinde analiz eder. Paketlerin başlık bilgilerini (örneğin kaynak ve hedef IP adresleri, port numaraları ve protokol türleri) kontrol eder ve önceden tanımlanmış kurallara göre paketin kabul edilip edilmeyeceğine karar verir.\nBir uygulama filtreleme güvenlik duvarı, uygulama katmanında (Application Layer) çalışır. Veri trafiğinin içeriğini analiz edebilir ve belirli uygulama protokollerini anlayabilir. Bu sayede belirli saldırı kalıplarını veya şüpheli etkinlikleri tespit edip engelleyebilir.",
+  },
+  {
+    id: 166,
+    frageDE: "Was ist eine Next-Generation Firewall (NGFW)?",
+    antwortDE:
+      "Eine Next-Generation Firewall (NGFW) ist eine fortschrittliche Firewall, die über die Funktionen herkömmlicher Firewalls hinausgeht. Sie kombiniert Funktionen wie Intrusion Detection/Prevention System (IDS/IPS), Content-Filtering, Anwendungssteuerung und mehr.\nDurch die Kombination dieser Funktionen ermöglicht eine Next-Generation Firewall eine effektive Sicherheitskontrolle und Bedrohungserkennung.",
+    frageTR:
+      "Next-Generation Firewall (NGFW - Yeni Nesil Güvenlik Duvarı) nedir?",
+    antwortTR:
+      "Next-Generation Firewall (NGFW), geleneksel güvenlik duvarlarının sunduğu özelliklerin ötesine geçen gelişmiş bir güvenlik duvarıdır. Saldırı Tespit/Önleme Sistemleri (IDS/IPS), içerik filtreleme (Content-Filtering), uygulama kontrolü (Application Control) gibi birçok özelliği bir arada sunar.\nBu özelliklerin birleşimi sayesinde NGFW, daha etkili bir güvenlik kontrolü ve tehdit tespiti sağlar.",
+  },
+  {
+    id: 167,
+    frageDE: "Was ist ein Penetrationstest und wie wird er durchgeführt?",
+    antwortDE:
+      "Ein Penetrationstest ist ein proaktiver Sicherheitstest, der durchgeführt wird, um die Schwachstellen und Sicherheitslücken eines Systems, Netzwerks oder einer Anwendung zu identifizieren. Das Hauptziel eines Penetrationstests besteht darin, die Sicherheit zu verbessern, indem potenzielle Angriffsszenarien simuliert und ausgewertet werden.\nEin Penetrationstest wird in mehreren Phasen durchgeführt:\n- Informationsbeschaffung\n- Aufdeckung von Schwachstellen\n- Ausnutzung von Schwachstellen\n- Ergebnisanalyse\n- Berichterstattung",
+    frageTR: "Sızma testi (Penetrationstest) nedir ve nasıl gerçekleştirilir?",
+    antwortTR:
+      "Sızma testi, bir sistemin, ağın veya uygulamanın güvenlik açıklarını tespit etmek amacıyla yapılan proaktif bir güvenlik testidir. Temel amacı, olası saldırı senaryolarını simüle ederek güvenliği iyileştirmektir.\nBir sızma testi şu aşamalardan oluşur:\n- Bilgi toplama (Informationsbeschaffung)\n- Güvenlik açıklarının belirlenmesi\n- Güvenlik açıklarının istismarı (Ausnutzung)\n- Sonuçların analizi (Ergebnisanalyse)\n- Raporlama (Berichterstattung)",
+  },
+  {
+    id: 168,
+    frageDE: "Welche Aspekte werden bei einem Device Security Check überprüft?",
+    antwortDE:
+      "Ein Device Security Check ist eine Überprüfung der Sicherheitsmaßnahmen und -einstellungen eines Geräts, um potenzielle Schwachstellen zu identifizieren und die Sicherheit des Geräts zu verbessern. Dabei werden in der Regel folgende Aspekte überprüft:\n- Betriebssystem und Firmware\n- Benutzerkonten und Zugriffsrechte\n- Netzwerkkonfiguration\n- Anwendungen und Dienste\n- Physische Sicherheit\n- Verschlüsselung\nNach Abschluss des Device Security Checks werden Ergebnisse und Empfehlungen für die Verbesserung der Gerätesicherheit dokumentiert.",
+    frageTR:
+      "Bir cihaz güvenlik kontrolünde (Device Security Check) hangi unsurlar incelenir?",
+    antwortTR:
+      "Cihaz güvenlik kontrolü, bir cihazın güvenlik önlemlerinin ve ayarlarının incelenerek olası zayıf noktaların tespit edilmesi ve güvenliğin artırılması sürecidir. Genellikle aşağıdaki unsurlar kontrol edilir:\n- İşletim sistemi ve ürün yazılımı (Firmware)\n- Kullanıcı hesapları ve erişim hakları\n- Ağ yapılandırması (Netzwerkkonfiguration)\n- Uygulamalar ve hizmetler\n- Fiziksel güvenlik\n- Şifreleme (Verschlüsselung)\nKontrolün ardından, cihaz güvenliğini artırmaya yönelik sonuçlar ve öneriler dokümante edilir.",
+  },
+  {
+    id: 169,
+    frageDE: "Wofür steht die Abkürzung RADIUS in der Netzwerktechnik?",
+    antwortDE:
+      "RADIUS (Remote Authentication Dial-In User Service) ist ein Protokoll zur Authentifizierung, Autorisierung und Abrechnung von Netzwerkzugriffen. Es wird häufig in drahtlosen Netzwerken wie WLANs eingesetzt, um Benutzer zu verifizieren und den Zugriff auf das Netzwerk zu kontrollieren.",
+    frageTR: "Ağ teknolojisinde RADIUS kısaltması neyi ifade eder?",
+    antwortTR:
+      "RADIUS (Remote Authentication Dial-In User Service), ağ erişimlerinde kimlik doğrulama (Authentifizierung), yetkilendirme (Autorisierung) ve hesaplama (Accounting) işlemlerini gerçekleştiren bir protokoldür. Genellikle WLAN gibi kablosuz ağlarda kullanıcıları doğrulamak ve ağ erişimini kontrol etmek için kullanılır.",
+  },
+  {
+    id: 170,
+    frageDE:
+      "In Zusammenhang mit RADIUS wird auch oft von RADIUS (AAA) gesprochen. Wofür stehen die drei A in der Abkürzung? Erläutern Sie diese drei Komponenten.",
+    antwortDE:
+      "Authentifizierung: RADIUS verifiziert die Identität von Benutzern, bevor sie Zugang zum Netzwerk erhalten. Dies wird oft durch Überprüfung eines Benutzernamens und Passworts erreicht.\nAutorisierung: Nachdem ein Benutzer authentifiziert wurde, steuert RADIUS, welchen Zugang der Benutzer zum Netzwerk hat. Dies kann beeinflussen, welche Dienste der Benutzer nutzen darf, und andere Zugriffsbeschränkungen beinhalten.\nAccounting: RADIUS protokolliert die Aktivitäten der Benutzer im Netzwerk. Dies kann beinhalten, wann der Benutzer auf das Netzwerk zugegriffen hat, wie lange sie verbunden waren, die Menge der übertragenen Daten und andere Informationen.",
+    frageTR:
+      "RADIUS ile bağlantılı olarak sıkça kullanılan RADIUS (AAA) kısaltmasındaki üç A neyi ifade eder? Bu üç bileşeni açıklayınız.",
+    antwortTR:
+      "AAA şu üç kavramı ifade eder:\n- **Authentifizierung (Kimlik Doğrulama):** RADIUS, kullanıcıların kimliğini doğrular. Bu genellikle kullanıcı adı ve parola kontrolü yoluyla yapılır.\n- **Autorisierung (Yetkilendirme):** Kimlik doğrulama tamamlandıktan sonra, kullanıcının ağda hangi kaynaklara veya hizmetlere erişebileceğini belirler.\n- **Accounting (Hesaplama / Kayıt Tutma):** RADIUS, kullanıcıların ağ üzerindeki aktivitelerini kaydeder. Bu kayıtlar, kullanıcının ne zaman bağlandığı, bağlantı süresi, aktarılan veri miktarı gibi bilgileri içerebilir.",
+  },
+  {
+    id: 171,
+    frageDE: "Was ist ein Pre-Shared Key (PSK) und wo wird er verwendet?",
+    antwortDE:
+      "Ein Pre-Shared Key (PSK) ist ein vorab vereinbarter Schlüssel, der in der Netzwerksicherheit verwendet wird, um die Authentifizierung und den sicheren Zugriff auf ein Netzwerk zu gewährleisten. Der PSK wird zwischen den Teilnehmern des Netzwerks im Voraus vereinbart und dient als gemeinsames Passwort.\nDer PSK wird z. B. in drahtlosen Netzwerken (WLANs) und Virtual Private Networks (VPNs) eingesetzt. In WLANs wird der PSK als Passwort verwendet, um den Zugriff auf das drahtlose Netzwerk zu kontrollieren. In VPNs wird der PSK verwendet, um die Kommunikation zwischen einem Client und einem VPN-Server zu verschlüsseln und zu authentifizieren.",
+    frageTR:
+      "Önceden paylaşılan anahtar (PSK - Pre-Shared Key) nedir ve nerelerde kullanılır?",
+    antwortTR:
+      "Pre-Shared Key (PSK), ağ güvenliğinde kimlik doğrulama ve güvenli erişim sağlamak için önceden belirlenmiş bir anahtardır. PSK, ağdaki katılımcılar arasında önceden paylaşılır ve ortak bir parola görevi görür.\nPSK, genellikle kablosuz ağlarda (WLAN) ve sanal özel ağlarda (VPN) kullanılır. WLAN ağlarında, PSK ağ erişimini kontrol etmek için parola olarak kullanılır. VPN bağlantılarında ise PSK, istemci (Client) ile VPN sunucusu arasındaki iletişimin şifrelenmesi ve kimlik doğrulaması için kullanılır.",
+  },
+  {
+    id: 172,
+    frageDE: "Beschreiben Sie den Aufbau einer IPv4- und einer IPv6-Adresse.",
+    antwortDE:
+      "Eine IPv4-Adresse besteht aus 32 Bits und wird in vier durch Punkte getrennten Oktetten dargestellt. Jedes Oktett repräsentiert einen Teil der Adresse und kann Werte von 0 bis 255 haben. IPv4-Adressen bestehen aus einem Netz- und einem Hostanteil.\nEine IPv6-Adresse besteht aus 128 Bits und wird in acht durch Doppelpunkte getrennten Hexadezimalblöcken dargestellt. Jeder Block besteht aus vier Hexadezimalzahlen und kann Werte von 0 bis F haben. Bei IPv6 werden die Adressen in drei Hauptkomponenten unterteilt: Standortpräfix, Teilnetz-ID und Interface-ID.",
+    frageTR: "Bir IPv4 ve bir IPv6 adresinin yapısını açıklayınız.",
+    antwortTR:
+      "IPv4 adresi 32 bitten oluşur ve noktalarla ayrılmış dört sekizli (oktet) biçiminde yazılır. Her oktet, 0 ile 255 arasında bir değer alabilir. IPv4 adresi bir ağ (Netzanteil) ve bir ana bilgisayar (Hostanteil) kısmından oluşur.\nIPv6 adresi 128 bitten oluşur ve iki nokta (:) ile ayrılmış sekiz adet onaltılık (hexadecimal) blok şeklinde gösterilir. Her blok dört onaltılık karakter içerir ve 0 ile F arasında değer alabilir. IPv6 adresleri üç ana bileşenden oluşur: ağ ön eki (Standortpräfix), alt ağ kimliği (Teilnetz-ID) ve arayüz kimliği (Interface-ID).",
+  },
+  {
+    id: 173,
+    frageDE:
+      "Welche IP-Adresse repräsentiert die Adresse „127.0.0.1“ und was ist ihre Bedeutung?",
+    antwortDE:
+      "Die IP-Adresse 127.0.0.1 ist eine besondere IP-Adresse, die als „localhost“ bezeichnet wird. Diese IP-Adresse ist ein Standard-Adressraum für Loopback oder lokale Host-Kommunikation in einem Computer.\nIn einem Netzwerkkontext bedeutet „Loopback“, dass der Computer eine Netzwerkverbindung zu sich selbst herstellt. Diese Adresse wird normalerweise zum Testen von Netzwerkkommunikation verwendet, ohne tatsächlich Netzwerkpakete über das physische Netzwerk zu senden. Es ist eine Möglichkeit, den Netzwerk-Stack eines Systems zu prüfen und sicherzustellen, dass er korrekt funktioniert.",
+    frageTR: "127.0.0.1 IP adresi neyi ifade eder ve anlamı nedir?",
+    antwortTR:
+      "127.0.0.1 IP adresi, “localhost” olarak adlandırılan özel bir IP adresidir. Bu adres, bir bilgisayarın kendi kendisiyle ağ iletişimi kurmasını sağlayan standart döngü (Loopback) adres alanıdır.\nAğ bağlamında “Loopback”, bilgisayarın fiziksel ağa veri göndermeden kendi kendine ağ bağlantısı kurması anlamına gelir. Bu adres genellikle ağ iletişimini test etmek veya sistemin ağ yığını (Network Stack) doğru çalışıp çalışmadığını kontrol etmek için kullanılır.",
+  },
+  {
+    id: 174,
+    frageDE:
+      "Erklären Sie die Funktion des Standortpräfixes, der Teilnetz-ID und der Interface-ID einer IPv6 Adresse.",
+    antwortDE:
+      "Das Standortpräfix, oder auch Netzwerkpräfix, identifiziert das Netzwerk oder den Subnetzbereich in einer IPv6-Adresse. Er wird normalerweise vom Internetdienstanbieter (ISP) zugewiesen.\nDie Teilnetz-ID wird verwendet, um innerhalb eines größeren Netzwerks oder Subnetzes spezifische Teilnetze zu identifizieren. Sie wird normalerweise von den Netzwerkadministratoren definiert, um ihre internen Netzwerksegmente zu segmentieren und zu verwalten.\nDie Interface-ID identifiziert ein bestimmtes Gerät oder eine Netzwerkschnittstelle innerhalb eines Subnetzes. Sie wird normalerweise automatisch generiert oder manuell zugewiesen.",
+    frageTR:
+      "Bir IPv6 adresindeki ağ ön eki (Standortpräfix), alt ağ kimliği (Teilnetz-ID) ve arayüz kimliği (Interface-ID) ne işe yarar?",
+    antwortTR:
+      "Ağ ön eki (Standortpräfix veya Netzwerkpräfix), IPv6 adresinde ağı veya alt ağ alanını tanımlar. Genellikle internet servis sağlayıcısı (ISP) tarafından atanır.\nAlt ağ kimliği (Teilnetz-ID), daha büyük bir ağ içinde belirli alt ağların tanımlanmasında kullanılır. Genellikle ağ yöneticileri tarafından ağın iç segmentlerini düzenlemek ve yönetmek amacıyla belirlenir.\nArayüz kimliği (Interface-ID), bir alt ağ içindeki belirli bir cihazı veya ağ arayüzünü tanımlar. Bu kimlik genellikle otomatik olarak oluşturulur veya manuel olarak atanır.",
+  },
+  {
+    id: 175,
+    frageDE:
+      "Nennen Sie drei Vorteile vom Protokoll IPv6 gegenüber dem Protokoll IPv4.",
+    antwortDE:
+      "Vorteile des IPv6-Protokolls gegenüber dem IPv4-Protokoll:\n- Größerer Adressraum: IPv6 bietet einen erheblich größeren Adressraum im Vergleich zu IPv4.\n- Automatische Adresskonfiguration: IPv6 enthält Mechanismen für die automatische Konfiguration von IP-Adressen.\n- Verbesserte Sicherheit: IPv6 integriert IPsec (Internet Protocol Security) standardmäßig in das Protokoll.\n- Unterstützung für Quality of Service (QoS): IPv6 enthält integrierte Mechanismen zur Unterstützung von Quality of Service.\n- Vereinfachtes Routing: Durch die Vereinfachung der Header-Struktur und die Verwendung von Hierarchien in IPv6 wird das Routing effizienter.",
+    frageTR:
+      "IPv6 protokolünün, IPv4 protokolüne göre üç avantajını belirtiniz.",
+    antwortTR:
+      "IPv6 protokolünün, IPv4’e göre avantajları şunlardır:\n- Daha geniş adres alanı: IPv6, IPv4’e kıyasla çok daha büyük bir IP adres kapasitesi sunar.\n- Otomatik adres yapılandırması: IPv6, IP adreslerinin otomatik olarak atanmasını sağlayan mekanizmalar içerir.\n- Geliştirilmiş güvenlik: IPv6, IPsec (Internet Protocol Security) desteğini protokolün içine yerleştirmiştir.\n- Quality of Service (QoS) desteği: IPv6, hizmet kalitesi yönetimi için yerleşik mekanizmalar içerir.\n- Basitleştirilmiş yönlendirme: Başlık (Header) yapısının sadeleştirilmesi ve hiyerarşik yapı kullanımı sayesinde yönlendirme daha verimli hale gelmiştir.",
+  },
+  {
+    id: 176,
+    frageDE:
+      "Was ist der Unterschied zwischen den Protokollen TCP (Transmission Control Protocol) und UDP (User Datagram Protocol)?",
+    antwortDE:
+      "TCP und UDP sind beides Transportprotokolle, die in IP-Netzwerken verwendet werden, um Daten zu übertragen.\nTCP ist ein verbindungsorientiertes Protokoll, das eine zuverlässige Datenübertragung gewährleistet und Kontrollmechanismen wie Flusssteuerung und Überlastkontrolle bietet.\nUDP hingegen ist ein verbindungsloses Protokoll, bei dem keine Verbindung hergestellt wird und keine Garantie für die Zuverlässigkeit der Datenübertragung besteht. Es bietet keine eingebauten Kontrollmechanismen und eignet sich besser für Echtzeitkommunikation und Anwendungen, bei denen geringe Latenz wichtiger ist als die vollständige Übertragung aller Daten.",
+    frageTR:
+      "TCP (Transmission Control Protocol – İletim Kontrol Protokolü) ve UDP (User Datagram Protocol – Kullanıcı Veri Paketi Protokolü) protokolleri arasındaki fark nedir?",
+    antwortTR:
+      "TCP ve UDP, IP ağlarında veri iletimi için kullanılan iki aktarım protokolüdür.\nTCP, bağlantı yönelimli (connection-oriented) bir protokoldür ve güvenilir veri aktarımı sağlar. Akış kontrolü (Flow Control) ve tıkanıklık kontrolü (Congestion Control) gibi mekanizmalara sahiptir.\nUDP ise bağlantısız (connectionless) bir protokoldür; bağlantı kurulmaz ve veri iletiminin güvenilirliği garanti edilmez. Dahili kontrol mekanizmaları yoktur ve düşük gecikmenin, verinin tam iletilmesinden daha önemli olduğu gerçek zamanlı iletişim (örneğin ses veya video iletimi) gibi uygulamalar için daha uygundur.",
+  },
+  {
+    id: 177,
+    frageDE: "Erklären Sie die Begriffe Routing und Switching.",
+    antwortDE:
+      "Routing bezieht sich auf den Prozess des Weiterleitens von Datenpaketen zwischen verschiedenen Netzwerken. Ein Router analysiert die IP-Adresse jedes Pakets und entscheidet, welchen Weg das Paket nehmen soll, um sein Zielnetzwerk zu erreichen. Routen werden normalerweise anhand verschiedener Faktoren wie der Netzwerkentfernung, Qualität des Netzwerks, Priorität usw. ausgewählt.\nSwitching bezieht sich auf den Prozess des Weiterleitens von Datenpaketen innerhalb desselben Netzwerks. Ein Switch analysiert die MAC-Adresse jedes Pakets und verwendet eine Switching-Tabelle, um das Paket an das richtige Ziel weiterzuleiten.",
+    frageTR:
+      "Routing (Yönlendirme) ve Switching (Anahtarlama) terimlerini açıklayınız.",
+    antwortTR:
+      "Routing, veri paketlerinin farklı ağlar arasında yönlendirilmesi sürecidir. Bir yönlendirici (router), her paketin IP adresini analiz eder ve paketin hedef ağa ulaşması için izlemesi gereken yolu belirler. Yönlendirme genellikle ağ mesafesi, ağ kalitesi ve öncelik gibi çeşitli faktörlere göre yapılır.\nSwitching ise aynı ağ içerisindeki veri paketlerinin iletilmesi sürecidir. Bir anahtar (switch), her paketin MAC adresini analiz eder ve paketleri doğru hedefe iletmek için bir anahtarlama tablosu (switching table) kullanır.",
+  },
+  {
+    id: 178,
+    frageDE: "Was ist eine MAC-Adresse?",
+    antwortDE:
+      "Eine MAC-Adresse (Media Access Control Address) ist eine eindeutige Kennung, die Netzwerkgeräten zugewiesen ist. Sie wird von Netzwerkkarten und anderen netzwerkfähigen Geräten verwendet, um sie eindeutig zu identifizieren und zu adressieren.\nDie MAC-Adresse besteht aus einer 48-Bit-Zahl, die in der Regel in hexadezimaler Notation dargestellt wird. Sie ist in zwei Teile unterteilt: die OUI (Organizationally Unique Identifier), die den Hersteller des Geräts identifiziert, und die NIC (Network Interface Controller) ID, die eine eindeutige Nummer für das Gerät darstellt.",
+    frageTR: "MAC-Adresi nedir?",
+    antwortTR:
+      "MAC (Media Access Control – Ortam Erişim Kontrolü) adresi, ağ cihazlarına atanmış benzersiz bir tanımlayıcıdır. Ağ kartları (network cards) ve diğer ağ özellikli cihazlar tarafından, cihazların benzersiz şekilde tanımlanması ve adreslenmesi amacıyla kullanılır.\nMAC adresi genellikle onaltılık (hexadecimal) gösterimle yazılan 48 bitlik bir sayıdır. İki kısımdan oluşur: OUI (Organizationally Unique Identifier – Kurumsal Benzersiz Tanımlayıcı), cihaz üreticisini belirtir; NIC (Network Interface Controller) ID ise cihazın benzersiz kimlik numarasını temsil eder.",
+  },
+  {
+    id: 179,
+    frageDE: "Wofür steht die Abkürzung ARP im Bereich der Netzwerktechnik?",
+    antwortDE:
+      "ARP steht für Address Resolution Protocol. Es ist ein Netzwerkprotokoll, das verwendet wird, um die IP-Adressen von Geräten in einem lokalen Netzwerk (LAN) in deren MAC-Adressen aufzulösen.\nARP wird hauptsächlich in IPv4-Netzwerken eingesetzt. Wenn ein Gerät in einem Netzwerk Daten an ein anderes Gerät senden möchte, benötigt es die MAC-Adresse des Zielgeräts, um das Datenpaket an den richtigen Empfänger weiterzuleiten. Das ARP-Protokoll ermöglicht es einem Gerät, die MAC-Adresse eines bestimmten Ziels anhand seiner IP-Adresse zu ermitteln.",
+    frageTR: "Ağ teknolojisinde ARP kısaltması ne anlama gelir?",
+    antwortTR:
+      "ARP, Address Resolution Protocol (Adres Çözümleme Protokolü) anlamına gelir. Bu ağ protokolü, yerel ağlarda (LAN) cihazların IP adreslerini, onların MAC adreslerine dönüştürmek için kullanılır.\nARP özellikle IPv4 ağlarında kullanılır. Bir cihaz, ağdaki başka bir cihaza veri göndermek istediğinde, hedef cihazın MAC adresini bilmesi gerekir. ARP protokolü, bir cihazın IP adresine göre hedef cihazın MAC adresini bulmasını sağlar.",
+  },
+  {
+    id: 180,
+    frageDE:
+      "Beschreiben Sie die Aufgabe des DHCP-Protokolls und nennen Sie drei Informationen, welche mittels DHCP übertragen werden können.",
+    antwortDE:
+      "DHCP steht für Dynamic Host Configuration Protocol. Die Aufgabe des DHCP-Protokolls besteht darin, die automatische Zuweisung von Netzwerkkonfigurationen an Geräte in einem Netzwerk zu ermöglichen. Es erleichtert die Konfiguration von IP-Adressen und anderen Netzwerkeinstellungen, indem es einen zentralen DHCP-Server verwendet, der diese Informationen an die Geräte verteilt.\nMittels DHCP können u. a. folgende Informationen übertragen werden:\n- IP-Adresse\n- Standardgateway\n- Subnetzmaske\n- DNS-Server\n- Lease-Dauer\n- NTP-Server",
+    frageTR:
+      "DHCP protokolünün görevi nedir ve DHCP aracılığıyla hangi üç bilgi iletilebilir?",
+    antwortTR:
+      "DHCP (Dynamic Host Configuration Protocol – Dinamik Ana Bilgisayar Yapılandırma Protokolü), ağdaki cihazlara ağ yapılandırma bilgilerini otomatik olarak atamak için kullanılır. IP adresleri ve diğer ağ ayarlarının manuel yapılandırılmasını önleyerek süreci kolaylaştırır. DHCP sunucusu, bu bilgileri ağdaki istemcilere (clients) merkezi olarak dağıtır.\nDHCP aracılığıyla aktarılabilecek bilgiler şunlardır:\n- IP adresi\n- Varsayılan ağ geçidi (Default Gateway)\n- Alt ağ maskesi (Subnet Mask)\n- DNS sunucusu\n- Kira süresi (Lease Time)\n- NTP sunucusu (Network Time Protocol)",
+  },
+  {
+    id: 181,
+    frageDE:
+      "Erklären den Ablauf der DHCP-Kommunikation nach dem DORA-Prinzip.",
+    antwortDE:
+      "DHCP-Discover: Ein Gerät, das eine Netzwerkverbindung herstellt, sendet eine Broadcast-Nachricht, um DHCP-Server im Netzwerk zu suchen.\nDHCP-Offer: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät eine IP-Adresse und andere Konfigurationsinformationen anbietet.\nDHCP-Request: Das Gerät wählt eine der angebotenen IP-Adressen aus und sendet eine Broadcast-Nachricht, um den ausgewählten DHCP-Server über seine Wahl zu informieren.\nDHCP-Acknowledgement: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät die zugewiesene IP-Adresse und andere Konfigurationsoptionen bestätigt.",
+    frageTR:
+      "DHCP iletişiminin DORA prensibine göre nasıl gerçekleştiğini açıklayınız.",
+    antwortTR:
+      "DHCP iletişimi DORA (Discover, Offer, Request, Acknowledgement) adımlarına göre gerçekleşir:\nDHCP Discover: Ağa bağlanmak isteyen bir cihaz, ağda mevcut DHCP sunucularını bulmak için bir yayın (broadcast) mesajı gönderir.\nDHCP Offer: DHCP sunucusu, cihazın talebine karşılık olarak bir IP adresi ve diğer yapılandırma bilgilerini içeren bir yayın mesajı gönderir.\nDHCP Request: Cihaz, teklif edilen IP adreslerinden birini seçer ve seçtiği DHCP sunucusuna bu seçimi bildirmek için bir yayın mesajı gönderir.\nDHCP Acknowledgement: DHCP sunucusu, cihazın seçimini onaylar ve atanan IP adresi ile diğer ağ yapılandırma bilgilerini içeren bir onay mesajı gönderir.",
+  },
+  {
+    id: 182,
+    frageDE:
+      "Geben Sie für die Abkürzung DNS die vollständige Schreibweise an und erklären Sie die Hauptaufgabe von DNS.",
+    antwortDE:
+      "DNS steht für Domain Name System. Es handelt sich um ein dezentrales System zur Auflösung von Domainnamen in IP-Adressen und umgekehrt.\nDas DNS funktioniert hierarchisch, wobei die oberste Ebene die Root-DNS-Server sind, die die Informationen für die Top-Level-Domains (TLDs) wie .com, .org, .net usw. enthalten.\nUnterhalb der Root-DNS-Server gibt es weitere DNS-Server, die für spezifische Domänen zuständig sind. Jede Domäne kann ihre eigenen DNS-Server haben, die als Autoritative DNS-Server bezeichnet werden und die DNS-Datensätze für die Domäne verwalten.",
+    frageTR:
+      "DNS kısaltmasının açılımını yazınız ve DNS’nin temel görevini açıklayınız.",
+    antwortTR:
+      "DNS (Domain Name System – Alan Adı Sistemi), alan adlarını IP adreslerine ve IP adreslerini alan adlarına çevirmek için kullanılan merkezi olmayan (dağıtık) bir sistemdir.\nDNS hiyerarşik bir yapıda çalışır. En üst düzeyde kök (root) DNS sunucuları bulunur; bu sunucular .com, .org, .net gibi üst seviye alan adları (TLD – Top-Level Domain) hakkındaki bilgileri tutar.\nKök DNS sunucularının altında, belirli alan adlarından sorumlu alt DNS sunucuları bulunur. Her alan adı, kendi yetkili DNS sunucularına (Authoritative DNS Server) sahip olabilir ve bu sunucular ilgili alan adına ait DNS kayıtlarını yönetir.",
+  },
+  {
+    id: 183,
+    frageDE: "Was ist ein Proxy-Server und wozu wird er verwendet?",
+    antwortDE:
+      "Ein Proxy-Server agiert als Vermittler zwischen einem Client und dem Zielserver. Wenn ein Client eine Anfrage stellt, leitet der Proxy-Server diese Anfrage im Namen des Clients weiter und empfängt die Antwort vom Zielserver. Dadurch kann der Proxy-Server den Datenverkehr überwachen, filtern, umleiten oder anonymisieren, um die Sicherheit und Effizienz der Verbindung zu verbessern.",
+    frageTR: "Proxy sunucusu (Proxy-Server) nedir ve ne amaçla kullanılır?",
+    antwortTR:
+      "Proxy sunucusu, istemci (client) ile hedef sunucu (target server) arasında bir aracı görevi gören sunucudur. Bir istemci bir istekte bulunduğunda, bu istek Proxy sunucusu tarafından hedef sunucuya iletilir ve yanıt yine Proxy sunucusu üzerinden istemciye geri gönderilir.\nProxy sunucusu, veri trafiğini izlemek, filtrelemek, yönlendirmek veya anonimleştirmek amacıyla kullanılır. Böylece ağ bağlantısının güvenliği ve verimliliği artırılır.",
+  },
+  {
+    id: 184,
+    frageDE: "Für welche Aufgaben wird ein Reverse-Proxy-Server eingesetzt?",
+    antwortDE:
+      "Ein Reverse-Proxy-Server ist ein Server, der als Vermittler zwischen Clients und einem oder mehreren Back-End-Servern fungiert. Er nimmt Anfragen von Clients entgegen und leitet diese an die entsprechenden Server weiter. Nachdem der Server die Anfrage bearbeitet hat, sendet der Reverse-Proxy die Antwort zurück an den Client.\nEr kann u.a. die folgenden Funktionen übernehmen:\n- Lastverteilung (Load Balancing)\n- Caching\n- Verschlüsselung\n- Schutz der Identität der Back-End-Server\n- Kompression eingehender und ausgehender Daten",
+    frageTR: "Reverse Proxy sunucusu hangi görevler için kullanılır?",
+    antwortTR:
+      "Reverse Proxy (Ters Vekil Sunucu), istemciler (clients) ile bir veya birden fazla arka uç (back-end) sunucu arasında aracı olarak görev yapan bir sunucudur. İstemciden gelen istekleri alır, uygun sunucuya iletir ve alınan yanıtı tekrar istemciye gönderir.\nReverse Proxy aşağıdaki görevleri yerine getirebilir:\n- Yük dengeleme (Load Balancing)\n- Önbellekleme (Caching)\n- Trafiğin şifrelenmesi (Encryption)\n- Arka uç sunucuların kimliğini koruma\n- Gelen ve giden verilerin sıkıştırılması",
+  },
+  {
+    id: 185,
+    frageDE: "Was ist die Datenübertragungsrate und wie wird sie berechnet?",
+    antwortDE:
+      "Die Datenübertragungsrate bezieht sich auf die Menge an Daten, die innerhalb einer bestimmten Zeitspanne übertragen werden können. Sie gibt an, wie schnell Daten von einem Punkt zum anderen übertragen werden. Je höher die Datenübertragungsrate ist, desto schneller können Daten übertragen werden und desto weniger Zeit wird für die Übertragung großer Datenmengen benötigt.\nDatenübertragungsrate = Datenmenge / Zeitintervall",
+    frageTR:
+      "Veri aktarım hızı (Datenübertragungsrate) nedir ve nasıl hesaplanır?",
+    antwortTR:
+      "Veri aktarım hızı, belirli bir zaman aralığında aktarılabilen veri miktarını ifade eder. Verilerin bir noktadan diğerine ne kadar hızlı iletildiğini gösterir. Veri aktarım hızı ne kadar yüksekse, veriler o kadar hızlı iletilir ve büyük veri miktarlarının aktarımı için gereken süre o kadar azalır.\nVeri aktarım hızı aşağıdaki formülle hesaplanır:\nVeri aktarım hızı = Aktarılan veri miktarı / Zaman aralığı",
+  },
+  {
+    id: 186,
+    frageDE: "Was sind die Unterschiede zwischen LAN, MAN, WAN und GAN?",
+    antwortDE:
+      "LAN (Local Area Network): Lokales Netzwerk, das in einem begrenzten geografischen Bereich eingerichtet ist.\nMAN (Metropolitan Area Network): Netzwerk, das sich über eine Stadt oder eine Metropolregion erstreckt. Es bietet eine größere Reichweite als ein LAN, aber eine kleinere als ein WAN.\nWAN (Wide Area Network): Weitläufiges Netzwerk, das über große Entfernungen verteilt ist. Es ermöglicht die Kommunikation zwischen entfernten Standorten.\nGAN (Global Area Network): Netzwerk, das sich über den gesamten Globus erstreckt. Es verbindet verschiedene WANs und ermöglicht die globale Kommunikation zwischen Standorten weltweit.",
+    frageTR: "LAN, MAN, WAN ve GAN arasındaki farklar nelerdir?",
+    antwortTR:
+      "LAN (Local Area Network – Yerel Alan Ağı): Sınırlı bir coğrafi alanda kurulan yerel ağdır.\nMAN (Metropolitan Area Network – Metropol Alan Ağı): Bir şehir veya metropol bölgesi genelinde kurulan ağdır. LAN’dan daha geniş, ancak WAN’dan daha küçük bir kapsama alanına sahiptir.\nWAN (Wide Area Network – Geniş Alan Ağı): Uzak mesafelerdeki konumlar arasında iletişimi sağlayan, büyük coğrafi alanlara yayılmış ağdır.\nGAN (Global Area Network – Küresel Alan Ağı): Tüm dünyayı kapsayan, farklı WAN’ları birbirine bağlayarak küresel iletişimi mümkün kılan ağdır.",
+  },
+  {
+    id: 187,
+    frageDE:
+      "PAN (Personal Area Network) und WLAN (Wireless Local Area Network) sind zwei verschiedene Arten von Netzwerken mit unterschiedlichen Anwendungsbereichen und Funktionalitäten. Erklären Sie diese.",
+    antwortDE:
+      "Ein PAN ist ein Netzwerk, das sich auf den persönlichen oder lokalen Bereich einer Person beschränkt. Es ermöglicht die Verbindung zwischen Geräten in unmittelbarer Nähe zueinander. PANs werden häufig für den Austausch von Daten zwischen persönlichen Geräten, wie z. B. Smartphones, Tablets, Laptops oder Druckern, verwendet.\nEin WLAN ist ein drahtloses lokales Netzwerk, das eine größere Reichweite als ein PAN hat. Es ermöglicht die drahtlose Verbindung und Kommunikation zwischen Geräten über eine größere Fläche. WLANs basieren auf dem Wi-Fi-Standard und ermöglichen den drahtlosen Austausch von Daten zwischen Geräten im Netzwerk.",
+    frageTR:
+      "PAN (Personal Area Network – Kişisel Alan Ağı) ve WLAN (Wireless Local Area Network – Kablosuz Yerel Alan Ağı) farklı kullanım alanları ve işlevleri olan iki ağ türüdür. Açıklayınız.",
+    antwortTR:
+      "PAN, bir kişinin kişisel alanı içinde kalan ve yakın mesafedeki cihazlar arasında bağlantı kurulmasını sağlayan ağ türüdür. Genellikle akıllı telefon, tablet, dizüstü bilgisayar veya yazıcı gibi kişisel cihazlar arasında veri alışverişi yapmak için kullanılır.\nWLAN ise PAN’a göre daha geniş kapsama alanına sahip kablosuz bir yerel ağdır. Cihazların belirli bir alan içinde kablosuz olarak bağlanmasına ve iletişim kurmasına olanak tanır. WLAN’lar Wi-Fi standardına dayanır ve ağ içindeki cihazlar arasında kablosuz veri alışverişini mümkün kılar.",
+  },
+  {
+    id: 188,
+    frageDE:
+      "Nennen Sie zwei Vorteile, die für den Einsatz von VLANs sprechen.",
+    antwortDE:
+      "Vorteile des Einsatzes von VLANs:\nVLANs ermöglichen die logische Segmentierung eines physischen Netzwerks in mehrere virtuelle Netzwerke.\nIn VLANs kann der Datenverkehr priorisiert und optimiert werden.\nEs können unterschiedliche Sicherheitsrichtlinien auf verschiedene VLANs angewendet werden.\nKleinere Broadcastdomänen.\nBessere Verwaltung und Konfiguration des Netzwerks.",
+    frageTR:
+      "VLAN (Virtual Local Area Network – Sanal Yerel Alan Ağı) kullanımının iki avantajını belirtiniz.",
+    antwortTR:
+      "VLAN kullanımının avantajları şunlardır:\nVLAN’lar, tek bir fiziksel ağı mantıksal olarak birden fazla sanal ağa bölmeyi sağlar.\nVLAN içinde veri trafiği önceliklendirilebilir ve optimize edilebilir.\nFarklı VLAN’lara farklı güvenlik politikaları uygulanabilir.\nDaha küçük yayın alanları (Broadcast domain) oluşturulur.\nAğın yönetimi ve yapılandırması daha kolay hale gelir.",
+  },
+  {
+    id: 189,
+    frageDE:
+      "Was ist der Unterschied zwischen statischen und dynamischen VLANs?",
+    antwortDE:
+      "Statische VLANs werden manuell konfiguriert. Jeder Port am Switch wird einem bestimmten VLAN zugeordnet. Diese Zuordnung bleibt unverändert.\nDynamische VLANs verwenden eine dynamische Zuordnung von Ports zu VLANs. Die Zuordnung basiert auf bestimmten Merkmalen der Netzwerkgeräte, wie z. B. MAC-Adresse, Protokoll oder anderen Attributen. Wenn ein Gerät an den Switch angeschlossen wird, identifiziert der Switch automatisch das VLAN, dem der Port zugeordnet werden soll.",
+    frageTR: "Statik VLAN’lar ile dinamik VLAN’lar arasındaki fark nedir?",
+    antwortTR:
+      "Statik VLAN’lar manuel olarak yapılandırılır. Switch üzerindeki her port belirli bir VLAN’a atanır ve bu atama sabit kalır.\nDinamik VLAN’larda ise portların VLAN’a atanması otomatik olarak yapılır. Atama, cihazın MAC adresi, protokol veya diğer belirli özelliklerine göre gerçekleştirilir. Bir cihaz switch’e bağlandığında, switch cihazın hangi VLAN’a ait olduğunu otomatik olarak belirler.",
+  },
+  {
+    id: 190,
+    frageDE: "Was sind tagged Ports?",
+    antwortDE:
+      "Tagged Ports sind Netzwerkports, die den Datenverkehr von mehreren VLANs verarbeiten können. Im Gegensatz zu ungetaggten (untagged) Ports, die nur den Datenverkehr eines einzigen VLANs übertragen können, können tagged Ports Datenpakete aus verschiedenen VLANs empfangen und weiterleiten.\nWenn ein Switch-Port als tagged konfiguriert ist, werden den Datenpaketen VLAN-Tags hinzugefügt, die anzeigen, zu welchem VLAN sie gehören. Dies ermöglicht es dem Switch, den Datenverkehr zwischen den VLANs zu steuern. Der Switch verwendet die VLAN-Tags, um sicherzustellen, dass Datenpakete in den richtigen VLANs zugestellt werden.",
+    frageTR: "Tagged port (etiketlenmiş bağlantı noktası) nedir?",
+    antwortTR:
+      "Tagged port’lar, birden fazla VLAN’a ait veri trafiğini işleyebilen ağ bağlantı noktalarıdır. Untagged port’lar yalnızca tek bir VLAN’a ait trafiği aktarabilirken, tagged port’lar birden fazla VLAN’a ait veri paketlerini alabilir ve yönlendirebilir.\nBir switch portu tagged olarak yapılandırıldığında, veri paketlerine hangi VLAN’a ait olduklarını belirten VLAN etiketleri (tags) eklenir. Bu etiketler sayesinde switch, VLAN’lar arasındaki veri trafiğini doğru şekilde yönlendirebilir ve paketlerin doğru VLAN’a teslim edilmesini sağlar.",
+  },
+  {
+    id: 191,
+    frageDE:
+      "Erläutern Sie, warum Quality of Service (QoS) bei der Übertragung von Telefonie- und Videodaten eine wichtige Rolle spielt.",
+    antwortDE:
+      "Quality of Service (QoS) bezieht sich auf die Fähigkeit eines Netzwerks, unterschiedlichen Anwendungen, Nutzern oder Datentypen unterschiedliche Prioritäten zu gewähren. Das Ziel von QoS ist es, eine bessere und vorhersehbarere Netzwerkleistung zu liefern, indem bestimmte Arten von Netzwerkverkehr bevorzugt werden.\nBei der Übertragung von Telefonie- und Videodaten spielt QoS eine besonders wichtige Rolle. Diese Arten von Daten erfordern eine Echtzeit-Kommunikation und sind empfindlich gegenüber Verzögerungen (Latenz), Paketverlusten und Jitter.",
+    frageTR:
+      "Quality of Service (QoS – Hizmet Kalitesi) neden ses ve video verilerinin iletiminde önemli bir rol oynar?",
+    antwortTR:
+      "Quality of Service (QoS), bir ağın farklı uygulamalara, kullanıcılara veya veri türlerine farklı öncelikler tanıma yeteneğini ifade eder. QoS’un amacı, belirli ağ trafiği türlerine öncelik vererek daha iyi ve öngörülebilir bir ağ performansı sağlamaktır.\nSes ve video verilerinin iletiminde QoS özellikle önemlidir, çünkü bu tür veriler gerçek zamanlı iletişim gerektirir ve gecikmelere (latenz), paket kayıplarına ve titreşimlere (jitter) karşı hassastır.",
+  },
+  {
+    id: 192,
+    frageDE: "Welche verschiedenen VPN-Modelle gibt es?",
+    antwortDE:
+      "End-to-Site-VPN: Auch als Remote Access VPN bezeichnet. Ermöglicht es einem einzelnen Benutzer oder einer entfernten Einheit, eine sichere Verbindung zu einem privaten Netzwerk herzustellen.\nSite-to-Site-VPN: Auch LAN-to-LAN-VPN genannt. Verbindet zwei oder mehr physische Netzwerke miteinander. Der Fokus liegt hierbei auf der Verbindung von Netzwerken oder Standorten.\nEnd-to-End-VPN: Der Begriff „End-to-End-VPN“ wird verwendet, um eine VPN-Lösung zu beschreiben, die von einem Endpunkt zum anderen Endpunkt einer Kommunikation verwendet wird.",
+    frageTR:
+      "Farklı VPN (Virtual Private Network – Sanal Özel Ağ) modelleri nelerdir?",
+    antwortTR:
+      "End-to-Site VPN (Uzak Erişim VPN’i): Bir kullanıcının veya uzak bir birimin güvenli bir şekilde özel bir ağa bağlanmasını sağlar.\nSite-to-Site VPN (LAN-to-LAN VPN): İki veya daha fazla fiziksel ağı birbirine bağlayan VPN türüdür. Genellikle farklı ofis veya şube ağlarını birbirine bağlamak için kullanılır.\nEnd-to-End VPN: İletişimdeki iki uç nokta arasında doğrudan güvenli bir bağlantı sağlayan VPN türüdür.",
+  },
+  {
+    id: 193,
+    frageDE:
+      "Was ist der Unterschied zwischen Tunnelmodus und Transportmodus bei VPNs?",
+    antwortDE:
+      "Im Tunnelmodus wird der gesamte IP-Datenverkehr eines Netzwerkpakets verschlüsselt und in ein neues IP-Paket eingekapselt. Dieses neue IP-Paket enthält sowohl den verschlüsselten ursprünglichen IP-Datenverkehr als auch den VPN-Header. Der VPN-Header enthält Informationen über die Verschlüsselung, Authentifizierung und andere VPN-spezifische Parameter.\nIm Transportmodus wird nur der Nutzlastteil eines IP-Pakets verschlüsselt. Der IP-Header des ursprünglichen Pakets bleibt unverschlüsselt, während die Nutzlast verschlüsselt wird.",
+    frageTR:
+      "VPN’lerde tünel modu (Tunnel Mode) ile taşıma modu (Transport Mode) arasındaki fark nedir?",
+    antwortTR:
+      "Tünel modunda (Tunnel Mode), bir ağ paketinin tüm IP trafiği şifrelenir ve yeni bir IP paketi içine kapsüllenerek gönderilir. Bu yeni paket, hem orijinal şifrelenmiş verileri hem de VPN başlığını (header) içerir. VPN başlığı, kimlik doğrulama ve şifreleme gibi VPN’e özgü bilgileri taşır.\nTaşıma modunda (Transport Mode) ise yalnızca IP paketinin veri kısmı (payload) şifrelenir. Orijinal IP başlığı şifrelenmeden kalır; yalnızca verinin kendisi şifrelenir.",
+  },
+  {
+    id: 194,
+    frageDE:
+      "Beschreiben Sie die zusätzlichen Sicherheitsvorteile, die Zero Trust Network Access (ZTNA) im Vergleich zu traditionellen VPN-Verbindungen bietet.",
+    antwortDE:
+      "Zero Trust Network Access (ZTNA) verbessert die Sicherheit gegenüber VPNs durch Mikrosegmentierung und begrenzt so den Netzwerkzugriff auf genau die benötigten Ressourcen. ZTNA verwendet identitäts- und kontextbasierte Richtlinien, die mehr Informationen berücksichtigen als nur den Standort. ZTNA reduziert die Angriffsfläche, da keine direkte Netzwerkverbindung benötigt wird, und bietet eine Always-On-Sicherheit, die konsistente Schutzmaßnahmen gewährleistet. Durch Echtzeitüberwachung und adaptive Reaktionen auf mögliche Vorfälle erhöht ZTNA die Sicherheit erheblich.",
+    frageTR:
+      "Zero Trust Network Access (ZTNA) geleneksel VPN bağlantılarına kıyasla hangi ek güvenlik avantajlarını sağlar?",
+    antwortTR:
+      "Zero Trust Network Access (ZTNA), güvenliği mikro segmentasyon (microsegmentation) sayesinde artırır ve kullanıcıların yalnızca ihtiyaç duydukları kaynaklara erişmesine izin verir. ZTNA, yalnızca konuma değil, kimlik ve bağlam (identity & context) temelli politikalar uygular.\nZTNA, doğrudan ağ bağlantısı gerektirmediğinden saldırı yüzeyini azaltır ve her zaman etkin (Always-On) güvenlik sağlar. Gerçek zamanlı izleme (real-time monitoring) ve olası olaylara uyarlanabilir tepkiler (adaptive responses) sayesinde genel güvenliği önemli ölçüde artırır.",
+  },
+  {
+    id: 195,
+    frageDE: "Erklären Sie die Aufgaben des IPsec Protokolls.",
+    antwortDE:
+      "IPsec (Internet Protocol Security): IPsec ist eine Protokollsuite, die auf der Netzwerkschicht des TCP/IP-Protokollstapels arbeitet. Sie bietet Mechanismen zur Sicherung des IP-Datenverkehrs, insbesondere in VPN-Umgebungen. IPsec ermöglicht die Verschlüsselung, Authentifizierung und Integritätssicherung von IP-Paketen, um eine sichere Übertragung über unsichere Netzwerke wie das Internet zu gewährleisten.",
+    frageTR:
+      "IPsec (Internet Protocol Security) protokolünün görevlerini açıklayınız.",
+    antwortTR:
+      "IPsec, TCP/IP protokol yığınının (protocol stack) ağ katmanında (network layer) çalışan bir protokol setidir. IPsec, özellikle VPN ortamlarında IP trafiğini güvence altına almak için kullanılır.\nIPsec; IP paketlerinin şifrelenmesini (encryption), kimlik doğrulamasını (authentication) ve bütünlük kontrolünü (integrity check) sağlar. Bu sayede, İnternet gibi güvenli olmayan ağlar üzerinden güvenli veri iletimi mümkün hale gelir.",
+  },
+  {
+    id: 196,
+    frageDE:
+      "Nennen Sie die 7 Schichten des OSI-Modells in aufsteigender Reihenfolge.",
+    antwortDE:
+      "Die 7 Schichten des OSI-Modells (Open Systems Interconnection Model) sind:\n1. Bitübertragungsschicht (Physical Layer)\n2. Sicherungsschicht (Data Link Layer)\n3. Vermittlungsschicht (Network Layer)\n4. Transportschicht (Transport Layer)\n5. Sitzungsschicht (Session Layer)\n6. Darstellungsschicht (Presentation Layer)\n7. Anwendungsschicht (Application Layer)",
+    frageTR:
+      "OSI modelinin (Open Systems Interconnection – Açık Sistemler Bağlantı Modeli) 7 katmanını aşağıdan yukarıya doğru sıralayınız.",
+    antwortTR:
+      "OSI modelinin 7 katmanı şunlardır:\n1. Fiziksel Katman (Physical Layer – Bitübertragungsschicht)\n2. Veri Bağlantı Katmanı (Data Link Layer – Sicherungsschicht)\n3. Ağ Katmanı (Network Layer – Vermittlungsschicht)\n4. Taşıma Katmanı (Transport Layer – Transportschicht)\n5. Oturum Katmanı (Session Layer – Sitzungsschicht)\n6. Sunum Katmanı (Presentation Layer – Darstellungsschicht)\n7. Uygulama Katmanı (Application Layer – Anwendungsschicht)",
+  },
+  {
+    id: 197,
+    frageDE:
+      "Welche Schichten des OSI-Modells gehören zu den transportorientierten Schichten? Erklären Sie auch kurz die Aufgaben dieser Schichten.",
+    antwortDE:
+      "Transportorientierte Schichten:\nDie Bitübertragungsschicht beschäftigt sich mit der physischen Übertragung von Datenbits über das Übertragungsmedium.\nDie Sicherungsschicht kümmert sich um die fehlerfreie Übertragung von Datenframes zwischen benachbarten Netzwerkgeräten. Sie bietet Mechanismen zur Fehlererkennung und Fehlerkorrektur.\nDie Vermittlungsschicht ist für die Adressierung, das Routing und die Weiterleitung von Datenpaketen im Netzwerk verantwortlich.\nDie Transportschicht regelt die Zuordnung der Datenpakete zu einer Anwendung. Sie stellt sicher, dass Datenpakete in der richtigen Reihenfolge ankommen, überwacht die Datenintegrität und regelt den Datenfluss.",
+    frageTR:
+      "OSI modelinde hangi katmanlar taşıma odaklı (transportorientiert) katmanlardır? Bu katmanların görevlerini kısaca açıklayınız.",
+    antwortTR:
+      "Taşıma odaklı katmanlar şunlardır:\nFiziksel Katman (Bitübertragungsschicht): Verilerin bitler hâlinde fiziksel ortam üzerinden iletiminden sorumludur.\nVeri Bağlantı Katmanı (Sicherungsschicht): Ağ cihazları arasında veri çerçevelerinin (frames) hatasız iletimini sağlar, hata tespiti ve düzeltme mekanizmaları içerir.\nAğ Katmanı (Vermittlungsschicht): Adresleme (addressing), yönlendirme (routing) ve veri paketlerinin iletiminden sorumludur.\nTaşıma Katmanı (Transportschicht): Veri paketlerinin uygulamalara doğru şekilde yönlendirilmesini sağlar, paketlerin sırasını korur, veri bütünlüğünü ve akış kontrolünü (flow control) sağlar.",
+  },
+  {
+    id: 198,
+    frageDE:
+      "Welche Schichten des OSI-Modells gehören zu den anwendungsorientierten Schichten? Erklären Sie auch kurz die Aufgaben dieser Schichten.",
+    antwortDE:
+      "Anwendungsorientierte Schichten:\nDie Sitzungsschicht etabliert, verwaltet und beendet Sitzungen zwischen Anwendungen. Sie ermöglicht die Synchronisierung von Datenübertragungen und bietet Mechanismen für den Aufbau und das Beenden von Verbindungen.\nDie Darstellungsschicht kümmert sich um die Datenrepräsentation und den Austausch von Datenformaten zwischen Anwendungen. Sie ist für die Datenkompression, Verschlüsselung sowie für die Datenkonvertierung zuständig.\nDie Anwendungsschicht ist die oberste Schicht des OSI-Modells und enthält Anwendungen und Dienste für Endbenutzer. Sie ermöglicht die Interaktion zwischen Benutzern und dem Netzwerk.",
+    frageTR:
+      "OSI modelinde hangi katmanlar uygulama odaklı (anwendungsorientiert) katmanlardır? Bu katmanların görevlerini açıklayınız.",
+    antwortTR:
+      "Uygulama odaklı katmanlar şunlardır:\nOturum Katmanı (Sitzungsschicht – Session Layer): Uygulamalar arasındaki oturumları başlatır, yönetir ve sonlandırır. Veri iletiminin senkronizasyonunu sağlar ve bağlantı yönetim mekanizmaları sunar.\nSunum Katmanı (Darstellungsschicht – Presentation Layer): Verilerin formatlanmasından, sıkıştırılmasından (compression), şifrelenmesinden (encryption) ve uygulamalar arası veri dönüşümünden sorumludur.\nUygulama Katmanı (Anwendungsschicht – Application Layer): OSI modelinin en üst katmanıdır ve kullanıcıların ağ hizmetleriyle etkileşim kurmasını sağlar. E-posta, dosya aktarımı ve web erişimi gibi uygulama hizmetlerini içerir.",
+  },
+  {
+    id: 199,
+    frageDE:
+      "Nennen Sie Beispiele für Protokolle, welche auf der Vermittlungsschicht und der Transportschicht des OSI-Modells arbeiten.",
+    antwortDE:
+      "Vermittlungsschicht:\n- IP\n- IPsec\n- ICMP\nTransportschicht:\n- TCP\n- UDP",
+    frageTR:
+      "OSI modelinin ağ (Vermittlungsschicht – Network Layer) ve taşıma (Transportschicht – Transport Layer) katmanlarında çalışan protokollere örnek veriniz.",
+    antwortTR:
+      "Ağ Katmanı (Vermittlungsschicht – Network Layer) protokolleri:\n- IP (Internet Protocol)\n- IPsec (Internet Protocol Security)\n- ICMP (Internet Control Message Protocol)\nTaşıma Katmanı (Transportschicht – Transport Layer) protokolleri:\n- TCP (Transmission Control Protocol)\n- UDP (User Datagram Protocol)",
+  },
+  {
+    id: 200,
+    frageDE:
+      "Ordnen Sie Hub, Bridge, Router, Switch und Repeater den entsprechenden Schichten des OSI-Modells zu.",
+    antwortDE:
+      "Bitübertragungsschicht:\n- Hub\n- Repeater\nSicherungsschicht:\n- Layer-2-Switch\n- Bridge\nVermittlungsschicht:\n- Router\n- Layer-3-Switch",
+    frageTR:
+      "Hub, Bridge, Router, Switch ve Repeater cihazlarını OSI modelinin ilgili katmanlarına eşleştiriniz.",
+    antwortTR:
+      "Fiziksel Katman (Bitübertragungsschicht – Physical Layer):\n- Hub\n- Repeater\nVeri Bağlantı Katmanı (Sicherungsschicht – Data Link Layer):\n- Layer-2 Switch\n- Bridge\nAğ Katmanı (Vermittlungsschicht – Network Layer):\n- Router\n- Layer-3 Switch",
+  },
+  {
+    id: 201,
+    frageDE:
+      "Erklären Sie den Unterschied zwischen einem Switch und einem Hub.",
+    antwortDE:
+      "Ein Hub leitet empfangene Datenpakete an alle angeschlossenen Geräte weiter. Dies kann zu erheblichem Netzwerk-Verkehr und Kollisionen führen, da die Daten an alle Geräte gesendet werden, unabhängig davon, für welches Gerät die Daten tatsächlich bestimmt sind.\nEin Switch ist in der Lage, den spezifischen Pfad zu bestimmen, auf dem Datenpakete weitergeleitet werden sollen. Bei Empfang eines Datenpakets sendet der Switch dieses nur an das Zielgerät weiter. Dies wird durch die Speicherung von MAC-Adressen der an den Switch angeschlossenen Geräte erreicht. Diese Funktionsweise verringert Kollisionen und ermöglicht eine bessere Bandbreitennutzung.",
+    frageTR: "Bir Switch ile bir Hub arasındaki farkı açıklayınız.",
+    antwortTR:
+      "Bir Hub, aldığı veri paketlerini bağlı tüm cihazlara iletir. Bu, verilerin aslında hangi cihaza ait olduğuna bakılmaksızın tüm cihazlara gönderilmesi nedeniyle ağ trafiğinin artmasına ve çarpışmalara (collision) yol açabilir.\nBir Switch ise veri paketlerinin iletileceği belirli yolu saptayabilir. Bir paketi aldığında, paketi yalnızca hedef cihaza gönderir. Bunu, Switch’e bağlı cihazların MAC adreslerini (Media Access Control) kaydederek gerçekleştirir. Bu çalışma şekli çarpışmaları azaltır ve bant genişliğinin daha verimli kullanılmasını sağlar.",
+  },
+  {
+    id: 202,
+    frageDE: "Wofür wird das Network File System (NFS) verwendet?",
+    antwortDE:
+      "NFS ist ein Protokoll, das hauptsächlich in Unix- und Linux-Umgebungen eingesetzt wird. Es ermöglicht den transparenten Zugriff auf entfernte Dateisysteme und erleichtert die gemeinsame Nutzung von Dateien zwischen verschiedenen Betriebssystemen.\nNFS basiert auf dem Client-Server-Modell und ermöglicht es einem Computer, über ein Netzwerk auf Dateien zuzugreifen, als wären sie lokal gespeichert.",
+    frageTR: "Network File System (NFS) ne için kullanılır?",
+    antwortTR:
+      "NFS, ağırlıklı olarak Unix ve Linux ortamlarında kullanılan bir protokoldür. Uzak dosya sistemlerine şeffaf erişim sağlar ve farklı işletim sistemleri arasında dosyaların ortak kullanılmasını kolaylaştırır.\nNFS, istemci–sunucu (Client–Server) modeline dayanır ve bir bilgisayarın ağ üzerinden dosyalara, sanki yerel olarak depolanmış gibi erişebilmesini sağlar.",
+  },
+  {
+    id: 203,
+    frageDE: "Was ist die Aufgabe des SMB-Protokolls?",
+    antwortDE:
+      "SMB (Server Message Block) ist ein Protokoll, das ursprünglich von Microsoft entwickelt wurde und hauptsächlich in Windows-Umgebungen verwendet wird. Es ermöglicht die gemeinsame Nutzung von Dateien, Druckern und anderen Ressourcen in einem Netzwerk.\nSMB unterstützt Funktionen wie Authentifizierung, Datei- und Druckerdienste sowie den Zugriff auf Netzwerkfreigaben. Es ist das Standardprotokoll für die Dateifreigabe in Windows-Netzwerken.",
+    frageTR: "SMB (Server Message Block) protokolünün görevi nedir?",
+    antwortTR:
+      "SMB (Server Message Block), ilk olarak Microsoft tarafından geliştirilmiş ve başlıca Windows ortamlarında kullanılan bir protokoldür. Ağ üzerinde dosyaların, yazıcıların ve diğer kaynakların ortak kullanılmasını sağlar.\nSMB; kimlik doğrulama (authentication), dosya ve yazıcı hizmetleri ile ağ paylaşımlarına erişim gibi işlevleri destekler. Windows ağlarında dosya paylaşımı için standart protokoldür.",
+  },
+  {
+    id: 204,
+    frageDE: "Erläutern Sie den Begriff Service Level Agreement (SLA).",
+    antwortDE:
+      "Ein Service Level Agreement (SLA) ist eine schriftliche Vereinbarung zwischen einem Dienstleister und einem Kunden, die die vereinbarten Leistungsparameter und -ziele für eine bestimmte Dienstleistung oder ein Produkt festlegt.\nEin SLA definiert die Erwartungen hinsichtlich Qualität, Reaktionszeiten, Verfügbarkeit, Support und anderen relevanten Aspekten des Services. Es dient als Grundlage für die Bewertung der Servicequalität.",
+    frageTR:
+      "Service Level Agreement (SLA – Hizmet Düzeyi Anlaşması) kavramını açıklayınız.",
+    antwortTR:
+      "Service Level Agreement (SLA), bir hizmet sağlayıcı ile müşteri arasında yapılan ve belirli bir hizmetin veya ürünün üzerinde mutabık kalınan performans parametrelerini ve hedeflerini tanımlayan yazılı bir anlaşmadır.\nBir SLA; kalite, yanıt süreleri, kullanılabilirlik (availability), destek (support) ve hizmetin diğer ilgili unsurlarına ilişkin beklentileri tanımlar. Hizmet kalitesinin değerlendirilmesi için temel bir referans olarak kullanılır.",
+  },
+  {
+    id: 205,
+    frageDE: "Was sind die Aufgaben des First-Level-Supports?",
+    antwortDE:
+      "Der First-Level-Support ist der erste Kontakt für Kunden bei Supportanfragen. Die Aufgaben des 1st-Level Supports umfassen:\nEntgegennahme von Supportanfragen\nKlassifizierung und Priorisierung von Supportanfragen\ngrundlegende Unterstützung, um häufig auftretende Probleme zu lösen\nWeiterleitung von Anfragen, wenn das Problem über den Bereich des 1st-Level Supports hinausgeht\nDokumentation der Supportanfragen in einem Ticketsystem oder einer Wissensdatenbank\nprofessionelle und freundliche Kommunikation mit den Kunden",
+    frageTR: "First-Level-Support’un görevleri nelerdir?",
+    antwortTR:
+      "First-Level-Support (1st-Level Support), destek taleplerinde müşteriler için ilk temas noktasıdır. Görevleri şunları kapsar:\nDestek taleplerini alma\nDestek taleplerini sınıflandırma ve önceliklendirme\nSık görülen sorunları çözmek için temel destek sağlama\nSorun, 1st-Level kapsamını aşıyorsa talepleri ilgili birime yönlendirme (eskalasyon)\nTalepleri bir bilet (ticket) sistemi veya bilgi bankasında (knowledge base) belgeleme\nMüşterilerle profesyonel ve nazik iletişim kurma",
+  },
+  {
+    id: 206,
+    frageDE:
+      "Erklären Sie den Unterschied zwischen dem 2nd-Level- und 3rd-Level-Support.",
+    antwortDE:
+      "Der Second-Level-Support ist die erste Eskalationsstufe, wenn eine Anfrage nicht vom First-Level-Support gelöst werden kann. Er besteht aus erfahrenen Technikern oder Spezialisten. Sie können komplexere Anfragen bearbeiten, Fehlerdiagnosen durchführen und spezifischere Lösungen bereitstellen.\nDer Third-Level-Support ist die höchste Eskalationsstufe im Supportprozess. Er umfasst hochspezialisierte Fachleute, die über umfangreiches technisches Wissen und Expertise verfügen. Sie sind in der Lage, komplexe Probleme zu analysieren und umfassende Fehlerbehebung durchzuführen, die über die Möglichkeiten des Second-Level-Supports hinausgehen.",
+    frageTR:
+      "2nd-Level-Support ile 3rd-Level-Support arasındaki farkı açıklayınız.",
+    antwortTR:
+      "Second-Level-Support (2nd-Level), First-Level-Support’un çözemediği talepler için ilk eskalasyon (yükseltme) seviyesidir. Deneyimli teknisyenler veya uzmanlardan oluşur; daha karmaşık talepleri ele alır, hata teşhisi (diagnosis) yapar ve daha spesifik çözümler sunar.\nThird-Level-Support (3rd-Level) destek sürecindeki en üst eskalasyon seviyesidir. Geniş teknik bilgi ve uzmanlığa sahip yüksek derecede uzman profesyonellerden oluşur; Second-Level’ın ötesindeki karmaşık sorunları analiz eder ve kapsamlı hata giderme (troubleshooting) gerçekleştirir.",
+  },
+  {
+    id: 207,
+    frageDE: "Welchem Zweck dienen Standard Operating Procedures (SOP)?",
+    antwortDE:
+      "Standard Operating Procedures (SOP) sind schriftliche Anweisungen oder Leitfäden, die die spezifischen Schritte und Verfahren beschreiben, die in einer Organisation oder einem Unternehmen bei bestimmten Aufgaben oder Prozessen befolgt werden sollen.\nSie dienen dazu, eine klare Struktur, Einheitlichkeit und Effizienz in organisatorischen Abläufen zu gewährleisten, die Qualität zu kontrollieren und die Einhaltung von Standards sicherzustellen.",
+    frageTR:
+      "Standard Operating Procedures (SOP – Standart İşletim Prosedürleri) ne amaçla kullanılır?",
+    antwortTR:
+      "Standard Operating Procedures (SOP), bir kuruluş veya işletmede belirli görevler ya da süreçlerde izlenmesi gereken adımları ve yöntemleri tanımlayan yazılı talimatlar veya kılavuzlardır.\nSOP’ler; süreçlerde açık bir yapı, birlik (standardizasyon) ve verimlilik sağlamaya, kaliteyi kontrol etmeye ve standartlara uyumu güvence altına almaya hizmet eder.",
+  },
+  {
+    id: 208,
+    frageDE: "Beschreiben was unter dem ITIL-Framework zu verstehen ist.",
+    antwortDE:
+      "ITIL (Information Technology Infrastructure Library) ist ein Framework für das IT-Service-Management (ITSM), das bewährte Praktiken und Standards für die effektive Bereitstellung und Verwaltung von IT-Services bietet. Es wurde entwickelt, um die Qualität von IT-Services zu verbessern, die Kundenzufriedenheit zu steigern und die Effizienz der IT-Organisationen zu maximieren.\nITIL besteht aus einer Sammlung von Best Practices, die in verschiedene Prozesse und Funktionen unterteilt sind. Es wird weltweit von Organisationen verschiedener Größen und Branchen eingesetzt und ist zu einem Industriestandard für das IT-Service-Management geworden.",
+    frageTR:
+      "ITIL (Information Technology Infrastructure Library) çerçevesinden (framework) ne anlaşılmalıdır?",
+    antwortTR:
+      "ITIL, BT Hizmet Yönetimi (ITSM – IT-Service-Management) için, BT hizmetlerinin etkin şekilde sunulması ve yönetilmesine yönelik en iyi uygulamalar (best practices) ve standartlar sağlayan bir çerçevedir. ITIL; BT hizmetlerinin kalitesini yükseltmek, müşteri memnuniyetini artırmak ve BT organizasyonlarının verimliliğini maksimize etmek amacıyla geliştirilmiştir.\nITIL, çeşitli süreç ve fonksiyonlara ayrılmış en iyi uygulamalardan oluşur. Dünya genelinde farklı ölçek ve sektörlerdeki kuruluşlar tarafından kullanılır ve IT hizmet yönetiminde endüstri standardı hâline gelmiştir.",
+  },
 ];
