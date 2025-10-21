@@ -28,3 +28,8 @@ Kurzer Leitfaden für IT-Services: Welche Regeln gelten, wie Verträge sauber au
 - LF 6: Rechtsrahmen, Vertragsarten, SLA/OLA/UC, ITIL Relationship Management.
 - LF 9: Pflichtenheft-Anforderungen, CRM-Praxisbeispiel, KPI.
 - (Inhalte aus den bereitgestellten PDFs, Abschnittsangaben siehe LF-Dokumente.)
+
+
+---
+
+## [Nächstes](./2.1-bgb-hgb.md)
