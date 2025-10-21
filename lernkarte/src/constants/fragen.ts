@@ -1389,7 +1389,77 @@ frageDE: "Was ist der Unterschied zwischen Überladung (Overloading) und Übersc
 antwortDE: "Überladung (Overloading) bedeutet, dass mehrere Methoden denselben Namen, aber unterschiedliche Parameterlisten haben. Sie werden innerhalb derselben Klasse definiert.\n\nÜberschreibung (Overriding) bedeutet, dass eine Methode in einer Unterklasse eine Methode aus der Oberklasse mit derselben Signatur ersetzt, um ihr Verhalten anzupassen oder zu erweitern.\n\nKurz gesagt:\n- Overloading → innerhalb derselben Klasse, unterschiedliche Parameter\n- Overriding → in Unterklasse, gleiche Signatur, anderes Verhalten",
 frageTR: "Überladung (Overloading / aşırı yükleme) ile Überschreibung (Overriding / geçersiz kılma) arasındaki fark nedir?",
 antwortTR: "Überladung (Overloading / aşırı yükleme), aynı ada sahip birden fazla Methode'nin (yöntemin) farklı Parameterlisten (parametre listeleri) ile tanımlanması anlamına gelir. Bu Methoden (yöntemler) aynı Klasse (sınıf) içinde tanımlanır.\n\nÜberschreibung (Overriding / geçersiz kılma) ise, bir Unterklasse'nin (alt sınıfın), Oberklasse'deki (üst sınıftaki) aynı Signatur'a (imzaya) sahip bir Methode'yi (yöntemi) değiştirerek veya genişleterek yeniden tanımlaması anlamına gelir.\n\nKısaca:\n- Overloading → aynı Klasse içinde, farklı parametreler\n- Overriding → Unterklasse içinde, aynı Signatur, farklı Verhalten (davranış)"
+},{
+id:136,
+  frageDE: "Was sind die Unterschiede zwischen der rekursiven und iterativen Vorgehensweise in der Softwareentwicklung?",
+  antwortDE: "In einer iterativen Vorgehensweise wird eine Aufgabe wiederholt, indem Schleifenstrukturen wie for, while oder do-while in der Programmiersprache verwendet werden. Iterative Ansätze sind in der Regel einfacher zu verstehen und erfordern weniger Speicher.\nIneiner rekursiven Vorgehensweise ruft eine Funktion sich selbst auf, um ein Problem zu lösen, das in kleinere Teilprobleme unterteilt werden kann. Rekursion kann eleganter und intuitiver für Probleme sein, die natürlich in kleinere Teilprobleme zerlegt werden können. Allerdings kann Rekursion auch zu erhöhtem Speicherverbrauch führen.",
+  frageTR: "Yazılım geliştirmede yinelemeli (iterative) ve özyinelemeli (rekursive) yaklaşımlar arasındaki farklar nelerdir?",
+  antwortTR: "Yinelemeli (iterative) bir yaklaşımda bir görev, programlama dilindeki for, while veya do-while gibi döngü yapıları kullanılarak tekrarlanır. Yinelemeli yaklaşımlar genellikle daha kolay anlaşılır ve daha az bellek gerektirir.\nÖzyinelemeli (rekursive) bir yaklaşımda ise bir fonksiyon, bir problemi daha küçük alt problemlere ayırarak çözmek için kendisini çağırır. Özyineleme, doğal olarak küçük alt problemlere bölünebilen sorunlar için daha zarif ve sezgisel olabilir. Ancak, özyineleme genellikle daha fazla bellek kullanımına yol açabilir."
+},
+{
+id:137,
+  frageDE: "Erklären Sie das Konzept der Modularisierung in der Softwareentwicklung.",
+  antwortDE: "Modularisierung ist ein Konzept in der Softwareentwicklung, das darin besteht, einen umfangreichen Code in kleinere, unabhängige und verwaltbare Einheiten oder Module zu zerlegen. Jedes Modul fokussiert sich auf eine spezifische Funktion oder einen bestimmten Aspekt des Gesamtprojekts.\nDie Idee hinter der Modularisierung ist es, die Komplexität des Codes zu reduzieren und ihn einfacher zu verwalten, zu warten, zu testen und zu verstehen. Durch die Trennung des Codes in verschiedene Module kann jedes Modul unabhängig voneinander entwickelt, getestet und überarbeitet werden, was die Effizienz und Produktivität des Entwicklungsprozesses erhöht.",
+  frageTR: "Yazılım geliştirmede modülerleştirme (Modularisierung) kavramını açıklayınız.",
+  antwortTR: "Modülerleştirme (Modularisierung), yazılım geliştirmede kapsamlı bir kodu daha küçük, bağımsız ve yönetilebilir birimlere veya modüllere ayırma kavramıdır. Her modül, genel projenin belirli bir işlevine veya yönüne odaklanır.\nModülerleştirmenin arkasındaki fikir, kodun karmaşıklığını azaltmak ve onu daha kolay yönetilebilir, bakım yapılabilir, test edilebilir ve anlaşılabilir hale getirmektir. Kodun farklı modüllere ayrılması sayesinde her modül birbirinden bağımsız olarak geliştirilebilir, test edilebilir ve güncellenebilir; bu da geliştirme sürecinin verimliliğini ve üretkenliğini artırır."
+},
+{
+id:138,
+  frageDE: "Wie können automatische Kompilierung und Bereitstellung (Continuous Integration und Continuous Deployment, kurz CI/CD) implementiert werden?",
+  antwortDE: "Die folgenden Schritte sollten zur automatischen Kompilierung und Bereitstellung im Allgemeinen befolgt werden:\n1 Source Control Management (SCM): Alle Entwicklungsarbeit sollte in einem Versionskontrollsystem gespeichert werden.\nAutomatische Kompilierung: Wenn Änderungen im Versionskontrollsystem vorgenommen werden, wird ein automatisierter Build-Prozess ausgelöst.\nAutomatisierte Tests: Nach der Kompilierung sollte der Code automatisiert getestet werden.\nAutomatisierte Bereitstellung: Nach erfolgreichem Build und Test wird der Code automatisch bereitgestellt.\nMonitoring und Feedback: Nach der Bereitstellung sollte der Zustand überwacht und bei Problemen Feedback gegeben werden.",
+  frageTR: "Otomatik derleme ve dağıtım (Continuous Integration ve Continuous Deployment, kısaca CI/CD) nasıl uygulanabilir?",
+  antwortTR: "Otomatik derleme ve dağıtım için genel olarak aşağıdaki adımlar izlenmelidir:\n1. Kaynak Kontrol Yönetimi (Source Control Management - SCM): Tüm geliştirme çalışmaları bir versiyon kontrol sisteminde saklanmalıdır.\nOtomatik Derleme: Versiyon kontrol sisteminde değişiklik yapıldığında otomatik bir derleme süreci (build) tetiklenir.\nOtomatik Testler: Derlemeden sonra kod otomatik olarak test edilmelidir.\nOtomatik Dağıtım: Başarılı derleme ve testten sonra kod otomatik olarak dağıtılır.\nİzleme ve Geri Bildirim: Dağıtımdan sonra sistemin durumu izlenmeli ve olası sorunlar için geri bildirim sağlanmalıdır."
+},
+{
+id:139,
+  frageDE: "Welche Vorteile bietet die Verwendung einer 3-Schichten-Architektur bei der Entwicklung?",
+  antwortDE: "Die Verwendung einer 3-Schichten-Architektur bei der Entwicklung von Anwendungen bietet mehrere Vorteile.\n- Sie ermöglicht eine klare Trennung zwischen der Präsentationsschicht, der Anwendungslogik und der Datenzugriffsschicht. Dadurch wird der Code besser strukturiert und Wartungsaufgaben werden vereinfacht.\n- Die Schichtung ermöglicht eine bessere Skalierbarkeit, da jede Schicht unabhängig von den anderen skaliert werden kann.\n- Die Schichtung erleichtert die Wiederverwendbarkeit von Komponenten, da jede Schicht unabhängig von den anderen entwickelt und leichter in anderen Projekten wiederverwendet werden kann.",
+  frageTR: "Uygulama geliştirmede 3 katmanlı mimarinin (3-Schichten-Architektur) kullanılması hangi avantajları sağlar?",
+  antwortTR: "Uygulama geliştirmede 3 katmanlı mimari kullanımı birden fazla avantaj sağlar.\n- Sunum katmanı, uygulama mantığı katmanı ve veri erişim katmanı arasında net bir ayrım yapılmasını sağlar. Bu sayede kod daha iyi yapılandırılır ve bakım işlemleri kolaylaşır.\n- Katmanlı yapı, her katmanın diğerlerinden bağımsız olarak ölçeklenebilmesine olanak tanır, bu da ölçeklenebilirliği artırır.\n- Katmanlı mimari, bileşenlerin yeniden kullanılabilirliğini kolaylaştırır çünkü her katman diğerlerinden bağımsız olarak geliştirilebilir ve farklı projelerde kolayca yeniden kullanılabilir."
+},
+{
+id:140,
+  frageDE: "Wie arbeitet der Bubble-Sort-Algorithmus, um eine Liste von Elementen in aufsteigender Reihenfolge zu sortieren?",
+  antwortDE: "Der Bubble-Sort-Algorithmus sortiert eine Liste, indem er benachbarte Elemente vergleicht und sie tauscht, wenn sie in der falschen Reihenfolge sind. Dieses wird wiederholt, bis die gesamte Liste sortiert ist.\n1. Vergleiche die ersten beiden Elemente in der Liste. Wenn das erste Element größer als das zweite ist, tausche sie.\n2. Gehe zur nächsten Position in der Liste und wiederhole den Vergleich und den Austausch mit dem nächsten Paar.\n3. Wiederhole diesen Prozess bis zum Ende der Liste.\n4. Wiederhole die Schritte 1 bis 3 für die restlichen Elemente (außer dem zuletzt sortierten), bis die gesamte Liste sortiert ist.",
+  frageTR: "Bubble-Sort algoritması bir listeyi artan sıraya göre sıralamak için nasıl çalışır?",
+  antwortTR: "Bubble-Sort algoritması, bir listedeki bitişik elemanları karşılaştırarak ve yanlış sıradaysa yerlerini değiştirerek listeyi sıralar. Bu işlem, tüm liste sıralanana kadar tekrarlanır.\n1. Listedeki ilk iki elemanı karşılaştır. Eğer ilk eleman ikinci elemandan büyükse, yerlerini değiştir.\n2. Listedeki bir sonraki konuma geç ve bir sonraki çift için karşılaştırma ve değişim işlemini tekrarla.\n3. Bu işlemi listenin sonuna kadar sürdür.\n4. Adım 1–3'ü kalan elemanlar için (sonda zaten sıralanmış olan hariç) tekrarla, tüm liste sıralanana kadar devam et."
+},{
+id:141,
+  frageDE: "Beschreibe den Ablauf des Suchalgorithmus „Lineare Suche“.",
+  antwortDE: "Die lineare Suche ist eine Methode zum Finden eines bestimmten Wertes in einer Liste. Sie durchläuft sequenziell jedes Element in der Liste und prüft, ob es dem gesuchten Wert entspricht.\n1. Überprüfe das erste Element der Liste.\n2. Entspricht das Element dem gesuchten Wert, beende die Suche.\n3. Wenn das Element nicht dem gesuchten Wert entspricht, gehe zum nächsten Element in der Liste.\n4. Wiederhole Schritt 2 und 3, bis du entweder den gesuchten Wert gefunden hast oder bis das Ende der Liste erreicht ist.\n5. Wenn das Ende der Liste erreicht ist und der gesuchte Wert nicht gefunden wurde, gibt an, dass der gesuchte Wert nicht in der Liste ist.",
+  frageTR: "“Doğrusal arama” (Lineare Suche) algoritmasının işleyişini açıklayınız.",
+  antwortTR: "Doğrusal arama (Lineare Suche), bir listedeki belirli bir değeri bulmak için kullanılan bir yöntemdir. Listeyi baştan sona sırasıyla tarar ve her bir elemanın aranan değere eşit olup olmadığını kontrol eder.\n1. Listenin ilk elemanını kontrol et.\n2. Eleman aranan değere eşitse, aramayı sonlandır.\n3. Eleman aranan değere eşit değilse, listedeki bir sonraki elemana geç.\n4. Adım 2 ve 3’ü, aranan değer bulunana kadar veya listenin sonuna gelene kadar tekrarla.\n5. Listenin sonuna gelindiğinde aranan değer bulunamadıysa, bu değerin listede olmadığını belirt."
+},
+{
+id:142,
+  frageDE: "Wie funktioniert die binäre Suche?",
+  antwortDE: "Die binäre Suche ist ein effizienter Suchalgorithmus, der auf sortierten Listen oder Arrays arbeitet. Er vergleicht den gesuchten Wert mit dem mittleren Element der Liste und teilt dann die Liste entsprechend in zwei Hälften. Dieser Prozess wird rekursiv fortgesetzt, bis der gesuchte Wert gefunden ist oder bis alle Elemente durchsucht wurden.\nDie binäre Suche ist sehr effizient und benötigt im schlimmsten Fall log2(n) Vergleiche, wobei n die Anzahl der Elemente in der Liste ist. Nachteilig ist, dass die binäre Suche voraussetzt, dass die Liste vor der Suche sortiert wird.",
+  frageTR: "İkili arama (binäre Suche) algoritması nasıl çalışır?",
+  antwortTR: "İkili arama (binäre Suche), sıralı listeler veya diziler üzerinde çalışan verimli bir arama algoritmasıdır. Aranan değer, listenin ortasındaki elemanla karşılaştırılır ve ardından liste ikiye bölünür. Bu işlem, aranan değer bulunana kadar veya tüm elemanlar kontrol edilene kadar özyinelemeli (rekursiv) olarak devam eder.\nİkili arama oldukça verimlidir ve en kötü durumda log2(n) kadar karşılaştırma gerektirir; burada n, listedeki eleman sayısını ifade eder. Ancak dezavantajı, arama yapılmadan önce listenin sıralı olması gerektiğidir."
+},
+{
+id:143,
+  frageDE: "Beschreiben Sie die einzelnen Schritte, welche notwendig sind, um eine binäre Suche durchzuführen.",
+  antwortDE: "Die grundlegenden Schritte des binären Suchalgorithmus:\n1. Finden Sie das mittlere Element der Liste.\n2. Vergleichen Sie es mit dem gesuchten Wert.\n3. Wenn sie gleich sind, ist die Suche abgeschlossen.\n4. Wenn der gesuchte Wert kleiner ist, suchen Sie in der linken Hälfte der Liste weiter.\n5. Wenn der gesuchte Wert größer ist, suchen Sie in der rechten Hälfte der Liste weiter.\n6. Wiederholen Sie die Schritte 1–5, bis der Wert gefunden wird oder die Liste vollständig durchsucht wurde.",
+  frageTR: "İkili arama (binäre Suche) algoritmasını gerçekleştirmek için gerekli adımları açıklayınız.",
+  antwortTR: "İkili arama algoritmasının temel adımları şunlardır:\n1. Listenin ortasındaki elemanı bulun.\n2. Bu elemanı aranan değerle karşılaştırın.\n3. Eğer eşitse, arama tamamlanmıştır.\n4. Aranan değer ortadaki elemandan küçükse, aramaya listenin sol yarısında devam edin.\n5. Aranan değer ortadaki elemandan büyükse, aramaya listenin sağ yarısında devam edin.\n6. Değer bulunana kadar veya liste tamamen taranana kadar adım 1–5’i tekrarlayın."
+},
+{
+id:144,
+  frageDE: "Was ist das Observer Muster?",
+  antwortDE: "Das Observer Muster ist ein Entwurfsmuster aus dem Bereich der Softwareentwicklung, das der Kategorie der Verhaltensmuster (Behavioral Patterns) zugeordnet wird. Es ermöglicht eine Einwegabhängigkeit zwischen Objekten, sodass, wenn ein Objekt seinen Zustand ändert, alle abhängigen Objekte benachrichtigt und automatisch aktualisiert werden.\nDieses Muster ist besonders nützlich in Situationen, in denen der Zustand eines Objekts von vielen anderen Objekten abhängig ist und eine enge Kopplung zwischen diesen Objekten vermieden werden soll.",
+  frageTR: "Observer (gözlemci) tasarım deseni nedir?",
+  antwortTR: "Observer (gözlemci) deseni, yazılım geliştirmede davranışsal desenler (Behavioral Patterns) kategorisine giren bir tasarım desenidir. Bu desen, nesneler arasında tek yönlü bir bağımlılık oluşturur; bir nesnenin durumu değiştiğinde, ona bağlı olan tüm diğer nesneler bilgilendirilir ve otomatik olarak güncellenir.\nBu desen özellikle, bir nesnenin durumunun birçok başka nesneye bağlı olduğu durumlarda ve bu nesneler arasındaki sıkı bağımlılığın (tight coupling) önlenmesinin istendiği senaryolarda faydalıdır."
+},
+{
+id:145,
+  frageDE: "Wie funktioniert das Observer Muster?",
+  antwortDE: "Das Observer Muster funktioniert durch eine Einweg-Kommunikation von einem Subjekt zu mehreren anderen Objekten (Observer):\n1. Registrierung: Die Observer melden sich beim Subjekt für Updates an. Das Subjekt hält eine Liste aller seiner Observer.\n2. Änderung: Wenn das Subjekt seinen Zustand ändert, informiert es alle registrierten Observer über die Änderung.\n3. Benachrichtigung: Das Subjekt benachrichtigt die Observer über die Zustandsänderung, indem es eine Methode (häufig „update“ genannt) auf den Observern aufruft.\n4. Abmeldung: Observer können sich jederzeit vom Subjekt abmelden, wenn sie keine weiteren Benachrichtigungen erhalten möchten.",
+  frageTR: "Observer (gözlemci) tasarım deseni nasıl çalışır?",
+  antwortTR: "Observer deseni, bir konu (Subject) ile birden fazla gözlemci (Observer) arasında tek yönlü bir iletişim kurarak çalışır:\n1. Kayıt: Gözlemciler, güncellemeleri almak için konuya kaydolurlar. Konu, tüm kayıtlı gözlemcilerinin bir listesini tutar.\n2. Değişiklik: Konunun durumu değiştiğinde, konu tüm kayıtlı gözlemcilere bu değişiklik hakkında bilgi verir.\n3. Bildirim: Konu, gözlemcilerin ‘update’ olarak adlandırılan bir metodunu çağırarak onlara durum değişikliğini bildirir.\n4. Kayıttan çıkma: Gözlemciler, artık bildirim almak istemediklerinde istedikleri zaman konudan kayıttan çıkabilirler."
 }
+
+
 
 
 ];
