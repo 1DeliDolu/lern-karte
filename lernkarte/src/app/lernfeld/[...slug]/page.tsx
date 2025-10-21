@@ -323,6 +323,11 @@ export default async function DocPage({ params }: Props) {
               fontWeight: 600,
             },
           }}
+          // Rendering precompiled HTML from markdown. If you see hydration
+          // mismatch warnings here, prefer rendering the markdown on the server
+          // and passing the HTML unchanged to the client. Suppress the warning
+          // for now to avoid noisy console output during hydration.
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: doc.html || "" }}
         />
       </Box>

@@ -202,6 +202,8 @@ export default async function DocPage({ params }: Props) {
               fontWeight: 600
             }
           }}
+          // Rendering precompiled HTML from markdown. See note in lernfeld page.
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: doc.html || '' }}
         />
       </Box>

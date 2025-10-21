@@ -1321,5 +1321,75 @@ export const fragen: Karte[] = [
       "Programlamada prosedür (Prozedur) ile fonksiyon (Funktion) arasındaki fark nedir?",
     antwortTR:
       "Bir fonksiyon (Funktion), belirli bir görevi yerine getiren ve genellikle bir değer döndüren bir kod bloğudur.\nBir prosedür (Prozedur) de belirli bir görevi yerine getiren bir kod bloğudur, ancak temel fark şudur: prosedür genellikle bir değer döndürmez. Prosedür yalnızca işlemi gerçekleştirir ve ardından kodun çağrıldığı yere geri döner.",
-  },
+  },{
+id:126,
+frageDE: "Wie unterscheiden sich prozedurale und objektorientierte Programmierung voneinander?",
+antwortDE: "Die prozedurale Programmierung ist auf den Gedanken aufgebaut, dass ein Programm eine Reihe von Aufgaben (Prozeduren) ausführt, die auf Daten operieren. Ein prozedurales Programm besteht i. d. R. aus einer Reihe von Prozeduren, die aufgerufen werden, um eine bestimmte Aufgabe zu erfüllen. Die Daten sind getrennt von den Prozeduren, und die Prozeduren bearbeiten diese Daten.\n\nIn der objektorientierten Programmierung (DOOP) werden Daten und Funktionen zu Objekten zusammengefasst. Ein Objekt kann Attribute (Daten) und Methoden (Funktionen) enthalten. OOP fokussiert auf die drei Hauptprinzipien Vererbung, Kapselung und Polymorphie.",
+frageTR: "Prozedurale Programmierung (prosedürel/yordamcı programlama) ile objektorientierte Programmierung (nesne yönelimli programlama) birbirinden nasıl ayrılır?",
+antwortTR: "Prozedurale Programmierung (prosedürel programlama), bir programın veriler üzerinde çalışan bir dizi görevden (Prozeduren/prosedürler) oluştuğu düşüncesine dayanır. Prozedürel bir program genellikle (i. d. R.) belirli bir görevi yerine getirmek için çağrılan bir dizi Prozedur (prosedür) içerir. Veriler, Prozeduren'den (prosedürlerden) ayrıdır ve Prozeduren (prosedürler) bu verileri işler.\n\nObjektorientierte Programmierung (DOOP, nesne yönelimli programlama), verileri ve fonksiyonları Objekte (nesneler) içinde bir araya getirir. Bir Objekt (nesne) Attribute (özellikler/veriler) ve Methoden (metotlar/fonksiyonlar) içerebilir. OOP, üç temel prensibe odaklanır: Vererbung (kalıtım), Kapselung (enkapsülasyon) ve Polymorphie (çok biçimlilik/polimorfizm)."
+},
+{
+id:127,
+frageDE: "Was ist eine Klasse in der objektorientierten Programmierung?",
+antwortDE: "Eine Klasse in der objektorientierten Programmierung ist ein Bauplan für die Erstellung von Objekten. Sie definiert Eigenschaften (Variablen, die den Zustand repräsentieren) und Methoden (Funktionen, die das Verhalten repräsentieren) eines Objekts.\n\nEine Klasse ermöglicht die Erstellung mehrerer Objekte mit ähnlichen Merkmalen und Verhaltensweisen. Sie bildet die Grundlage für Vererbung und Polymorphie.",
+frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse (sınıf) nedir?",
+antwortTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içindeki bir Klasse (sınıf), Objekte (nesneler) oluşturmak için bir Bauplan (taslak/şablon)dır. Bir Objekt'in (nesnenin) Attribute'larını (özellikler; durumu temsil eden değişkenler) ve Methoden'ını (metotlar; davranışı temsil eden fonksiyonlar) tanımlar.\n\nBir Klasse (sınıf), benzer özellik ve davranışlara sahip birden fazla Objektin (nesnenin) oluşturulmasını sağlar. Ayrıca Vererbung (kalıtım) ve Polymorphie'nin (çok biçimlilik/polimorfizm) temelini oluşturur."
+},
+{
+id:128,
+frageDE: "Was ist eine generische Klasse?",
+antwortDE: "Eine generische Klasse ist ein Konzept in der objektorientierten Programmierung, das es erlaubt, eine Klasse zu definieren, die auf Typen arbeiten kann, die beim Erstellen einer Instanz der Klasse spezifiziert werden.\n\nDer Hauptvorteil von generischen Klassen besteht darin, dass sie Code-Wiederverwendung und Typsicherheit ermöglichen. Sie können eine einzige generische Klasse definieren, die auf mehrere Datentypen angewendet werden kann, anstatt separate Klassen für jeden Datentyp erstellen zu müssen.",
+frageTR: "Generische Klasse (jenerik/jenerik sınıf) nedir?",
+antwortTR: "Generische Klasse (jenerik sınıf), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir kavramdır; bir Klasse'nin (sınıfın) bir Instanz (örnek) oluşturulurken belirtilecek tiplere göre çalışacak şekilde tanımlanmasına olanak tanır.\n\nGenerische Klassen'in (jenerik sınıfların) başlıca avantajı, Code-Wiederverwendung (kodun yeniden kullanımı) ve Typsicherheit (tip güvenliği) sağlamasıdır. Her bir veri tipi için ayrı sınıflar oluşturmak yerine, tek bir generische Klasse (jenerik sınıf) tanımlayıp bunu birden fazla veri tipine uygulayabilirsiniz."
+},
+{
+id:129,
+frageDE: "Wie werden abstrakte Klassen in der Anwendungsentwicklung verwendet und welche Vorteile bieten sie?",
+antwortDE: "Abstrakte Klassen sind Klassen, die nicht instanziiert werden können und in der Regel eine oder mehrere abstrakte Methoden enthalten. Diese Methoden werden in den abgeleiteten Klassen implementiert. Abstrakte Klassen können jedoch auch konkrete Methoden (Methoden mit einer Implementierung) enthalten.\n\nDie Hauptanwendungen und Vorteile abstrakter Klassen sind:\n- Bereitstellung einer gemeinsamen Schnittstelle\n- Code-Wiederverwendung\n- Erzwingung bestimmter Methoden\n- Polymorphismus kann realisiert werden",
+frageTR: "Abstrakte Klassen (soyut sınıflar) Anwendungsentwicklung içinde nasıl kullanılır ve hangi avantajları sağlar?",
+antwortTR: "Abstrakte Klassen (soyut sınıflar), instanziiert edilemeyen (örneklenemeyen) Klassen'dir (sınıflardır) ve genellikle bir veya daha fazla abstrakte Methoden (soyut yöntem) içerir. Bu Methoden (yöntemler), abgeleitete Klassen'de (türetilmiş sınıflarda) uygulanır. Abstrakte Klassen ayrıca konkrete Methoden (somut; uygulaması olan yöntemler) de içerebilir.\n\nAbstrakte Klassen'in (soyut sınıfların) başlıca kullanım alanları ve avantajları:\n- Gemeinsame Schnittstelle (ortak arayüz) sağlama\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Belirli Methoden'in (yöntemlerin) zorunlu kılınması\n- Polymorphismus (çok biçimlilik/polimorfizm) gerçekleştirilebilir"
+},
+{
+id:130,
+frageDE: "Was ist ein Objekt in der objektorientierten Programmierung?",
+antwortDE: "Ein Objekt in der objektorientierten Programmierung ist eine konkrete Instanz einer Klasse. Es besitzt die Attribute und Methoden, die in seiner Klasse definiert sind. Jedes Objekt hat seinen eigenen Satz von Werten für die Attribute. Diese Attribute repräsentieren den Zustand des Objekts, während die Methoden das Verhalten definieren, das auf diesem Zustand operiert.\n\nEin Objekt ist also eine Verkapselung von Daten (Zustand) und den dazu gehörenden Operationen (Verhalten).",
+frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Objekt (nesne) nedir?",
+antwortTR: "Objekt (nesne), objektorientierte Programmierung (nesne yönelimli programlama) içinde bir Klasse'nin (sınıfın) somut bir Instanz'ıdır (örneğidir). Sınıfında tanımlanan Attribute'lara (özelliklere) ve Methoden'a (metotlara) sahiptir. Her Objekt (nesne), Attribute'ları (özellikleri) için kendine özgü değerlere sahiptir. Bu Attribute'lar (özellikler) Objekt'in (nesnenin) Zustand'ını (durumunu) temsil ederken, Methoden (metotlar) bu durum üzerinde işleyen Verhalten'ı (davranışı) tanımlar.\n\nDolayısıyla bir Objekt (nesne), Daten'in (verinin/durumun) ve ona ait Operationen'in (işlemlerin/davranışların) bir Verkapselung'udur (kapsüllenmesidir)."
+},{
+id:131,
+frageDE: "Was ist der Unterschied zwischen einer abstrakten Klasse und einem Interface?",
+antwortDE: "Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden enthalten, während ein Interface nur Methodensignaturen (keine Implementierungen) definiert.\n\nWeitere Unterschiede:\n- Eine Klasse kann nur eine abstrakte Klasse erben, aber mehrere Interfaces implementieren.\n- Abstrakte Klassen können Zustände (Attribute) haben, Interfaces nicht.\n- Interfaces dienen der Definition von Verträgen, abstrakte Klassen eher der Wiederverwendung von gemeinsamem Code.",
+frageTR: "Abstrakte Klasse (soyut sınıf) ile Interface (arayüz) arasındaki fark nedir?",
+antwortTR: "Abstrakte Klasse (soyut sınıf), hem abstrakte Methoden (soyut yöntemler) hem de konkrete Methoden (uygulaması olan yöntemler) içerebilirken; bir Interface (arayüz) yalnızca Methodensignaturen'ı (yöntem imzalarını) tanımlar, yani herhangi bir Implementierung (uygulama) içermez.\n\nDiğer farklar:\n- Bir Klasse (sınıf), yalnızca bir abstrakte Klasse'den (soyut sınıftan) miras alabilir, ancak birden fazla Interface (arayüz) implementieren (uygulayabilir).\n- Abstrakte Klassen (soyut sınıflar) Zustände (durumlar/özellikler) içerebilir, Interfaces (arayüzler) içeremez.\n- Interfaces (arayüzler) genellikle bir Vertrag'ı (sözleşme, kurallar bütünü) tanımlamak için kullanılır; abstrakte Klassen (soyut sınıflar) ise ortak kodun yeniden kullanımı için tercih edilir."
+},
+{
+id:132,
+frageDE: "Was versteht man unter Polymorphie in der objektorientierten Programmierung?",
+antwortDE: "Polymorphie bezeichnet die Fähigkeit, dass eine Methode je nach Objekt, das sie aufruft, unterschiedliche Implementierungen ausführen kann. Das bedeutet, dass derselbe Methodenaufruf bei verschiedenen Objekten unterschiedliches Verhalten zeigen kann.\n\nBeispiel: Eine Methode `zeichne()` kann in einer Klasse `Kreis` anders implementiert sein als in einer Klasse `Rechteck`, aber beide werden über dieselbe Schnittstelle aufgerufen.",
+frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Polymorphie (çok biçimlilik/polimorfizm) ne anlama gelir?",
+antwortTR: "Polymorphie (çok biçimlilik), bir Method'un (yöntemin) onu çağıran Objekt'e (nesneye) bağlı olarak farklı Implementierungen'lar (uygulamalar) gerçekleştirebilme yeteneğidir. Bu, aynı Methodenaufruf'un (metot çağrısının) farklı Objekte'lerde (nesnelerde) farklı davranışlar sergileyebilmesi anlamına gelir.\n\nÖrnek: `zeichne()` adlı bir Methode (yöntem), `Kreis` (daire) sınıfında farklı, `Rechteck` (dikdörtgen) sınıfında farklı şekilde uygulanabilir, ancak her ikisi de aynı Schnittstelle (arayüz) üzerinden çağrılır."
+},
+{
+id:133,
+frageDE: "Was versteht man unter Kapselung (Encapsulation)?",
+antwortDE: "Kapselung (Encapsulation) bedeutet, dass die internen Daten und die Implementierungsdetails eines Objekts vor dem Zugriff von außen geschützt werden. Der Zugriff erfolgt über definierte Schnittstellen (Getter- und Setter-Methoden).\n\nZiel ist es, Datenintegrität zu gewährleisten und unbeabsichtigte Änderungen zu verhindern. Außerdem erleichtert Kapselung die Wartung und Weiterentwicklung des Codes.",
+frageTR: "Kapselung (Encapsulation / enkapsülasyon) ne anlama gelir?",
+antwortTR: "Kapselung (Encapsulation / enkapsülasyon), bir Objekt'in (nesnenin) iç verilerinin ve Implementierungsdetails'larının (uygulama ayrıntılarının) dışarıdan erişime karşı korunması anlamına gelir. Bu verilere erişim, tanımlanmış Schnittstellen (arayüzler) aracılığıyla, yani Getter- ve Setter-Methoden (erişimci ve değiştirici yöntemler) üzerinden sağlanır.\n\nAmacı, Datenintegrität'yi (veri bütünlüğünü) sağlamak ve istenmeyen değişiklikleri önlemektir. Ayrıca Kapselung (enkapsülasyon), kodun bakımını ve geliştirilmesini kolaylaştırır."
+},
+{
+id:134,
+frageDE: "Was ist Vererbung in der objektorientierten Programmierung?",
+antwortDE: "Vererbung (Inheritance) ist ein Prinzip der objektorientierten Programmierung, bei dem eine Klasse (Unterklasse oder abgeleitete Klasse) die Eigenschaften und Methoden einer anderen Klasse (Oberklasse oder Basisklasse) übernimmt.\n\nVorteile:\n- Code-Wiederverwendung\n- Erweiterbarkeit\n- Hierarchische Strukturierung von Klassen\n\nBeispiel: Eine Klasse `Auto` kann von einer Klasse `Fahrzeug` erben und zusätzlich eigene Eigenschaften wie `Anzahl der Türen` hinzufügen.",
+frageTR: "Objektorientierte Programmierung (nesne yönelimli programlama) içinde Vererbung (Inheritance / kalıtım) nedir?",
+antwortTR: "Vererbung (Inheritance / kalıtım), objektorientierte Programmierung (nesne yönelimli programlama) prensiplerinden biridir ve bir Klasse'nin (Unterklasse veya abgeleitete Klasse; alt sınıf veya türetilmiş sınıf), başka bir Klasse'nin (Oberklasse veya Basisklasse; üst sınıf veya temel sınıf) Eigenschaften'lerini (özelliklerini) ve Methoden'larını (yöntemlerini) devralması anlamına gelir.\n\nAvantajları:\n- Code-Wiederverwendung (kodun yeniden kullanımı)\n- Erweiterbarkeit (genişletilebilirlik)\n- Klassen'in (sınıfların) hiyerarşik yapılandırılması\n\nÖrnek: `Auto` (araba) adlı bir Klasse, `Fahrzeug` (araç) adlı bir Klasse'den kalıtım alabilir ve ayrıca `Anzahl der Türen` (kapı sayısı) gibi kendi özelliklerini ekleyebilir."
+},
+{
+id:135,
+frageDE: "Was ist der Unterschied zwischen Überladung (Overloading) und Überschreibung (Overriding)?",
+antwortDE: "Überladung (Overloading) bedeutet, dass mehrere Methoden denselben Namen, aber unterschiedliche Parameterlisten haben. Sie werden innerhalb derselben Klasse definiert.\n\nÜberschreibung (Overriding) bedeutet, dass eine Methode in einer Unterklasse eine Methode aus der Oberklasse mit derselben Signatur ersetzt, um ihr Verhalten anzupassen oder zu erweitern.\n\nKurz gesagt:\n- Overloading → innerhalb derselben Klasse, unterschiedliche Parameter\n- Overriding → in Unterklasse, gleiche Signatur, anderes Verhalten",
+frageTR: "Überladung (Overloading / aşırı yükleme) ile Überschreibung (Overriding / geçersiz kılma) arasındaki fark nedir?",
+antwortTR: "Überladung (Overloading / aşırı yükleme), aynı ada sahip birden fazla Methode'nin (yöntemin) farklı Parameterlisten (parametre listeleri) ile tanımlanması anlamına gelir. Bu Methoden (yöntemler) aynı Klasse (sınıf) içinde tanımlanır.\n\nÜberschreibung (Overriding / geçersiz kılma) ise, bir Unterklasse'nin (alt sınıfın), Oberklasse'deki (üst sınıftaki) aynı Signatur'a (imzaya) sahip bir Methode'yi (yöntemi) değiştirerek veya genişleterek yeniden tanımlaması anlamına gelir.\n\nKısaca:\n- Overloading → aynı Klasse içinde, farklı parametreler\n- Overriding → Unterklasse içinde, aynı Signatur, farklı Verhalten (davranış)"
+}
+
+
 ];
