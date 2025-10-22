@@ -1,4 +1,4 @@
-import { fragen } from "@/constants/fragen";
+import { fragen } from "@/constants/fragenFIAE";
 
 import type { Karte } from "@/types/question";
 

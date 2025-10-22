@@ -106,10 +106,10 @@ export default function DocsPage() {
     <Container maxWidth="lg">
       <Box sx={{ py: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Teil
+          Lernfeld
         </Typography>
         <Typography variant="body1" color="text.secondary" component="p">
-          Wählen Sie einen Bereich aus, um den Teil anzuzeigen.
+          Wählen Sie einen Bereich aus, um den Lernfeld anzuzeigen.
         </Typography>
 
         <Box
