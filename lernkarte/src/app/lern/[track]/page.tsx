@@ -15,11 +15,13 @@ import {
 } from "@/lib/questions";
 
 type TrackPageProps = {
-  params: { track: string };
+  params: Promise<{ track: string }> | { track: string };
 };
 
-export default function TrackPage({ params }: TrackPageProps) {
-  const track = resolveTrack(params.track);
+export default async function TrackPage({ params }: TrackPageProps) {
+  const awaitedParams = await params;
+
+  const track = resolveTrack(awaitedParams.track);
   if (!track) {
     notFound();
   }
