@@ -77,7 +77,7 @@ const SearchResultsContainer = styled(Paper)(({ theme }) => ({
 
 const typeLabels: Record<SearchResult['type'], string> = {
   question: 'Frage',
-  documentation: 'Dokumentation',
+  documentation: 'Lernfeld',
   lernfeld: 'Lernfeld',
   page: 'Sayfa',
 };

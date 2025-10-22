@@ -29,10 +29,10 @@ export default function DocsPage() {
     <Container maxWidth="lg">
       <Box sx={{ py: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Dokumentation
+          Teil
         </Typography>
         <Typography variant="body1" color="text.secondary" component="p">
-          Wählen Sie einen Bereich aus, um die Dokumentation anzuzeigen.
+          Wählen Sie einen Bereich aus, um die Teil anzuzeigen.
         </Typography>
 
         <Box

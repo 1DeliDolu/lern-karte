@@ -39,7 +39,7 @@ type IndexEntry = {
   contentLower: string;
 };
 
-const DOCS_ROOT = path.join(process.cwd(), 'src', 'teils');
+const DOCS_ROOT = path.join(process.cwd(), 'src', 'teil');
 const LERNFELD_ROOT = path.join(process.cwd(), 'src', 'lernfeld');
 const MIN_CONTENT_TERM_LENGTH = 2;
 const MAX_RESULTS = 20;

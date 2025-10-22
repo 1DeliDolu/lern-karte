@@ -15,7 +15,7 @@ const config: PersistentDrawerConfig = {
   storageKey: 'docs:persistent-drawer',
   accordionKey: 'docs:persistent-accordion',
   pathPrefix: '/docs/',
-  breadcrumbTitle: 'Dokumentation',
+  breadcrumbTitle: 'Teil',
   formatLabel: formatLabelTruncated,
 };
 

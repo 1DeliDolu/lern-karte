@@ -18,7 +18,7 @@ const config: PersistentDrawerConfig = {
   storageKey: "lernfeld:persistent-drawer",
   accordionKey: "lernfeld:persistent-accordion",
   pathPrefix: "/lernfeld/",
-  breadcrumbTitle: "Dokumentation",
+  breadcrumbTitle: "Lernfeld",
   formatLabel: formatLabelFeldTruncated,
 };
 
