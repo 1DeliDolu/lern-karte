@@ -153,6 +153,42 @@ export default function KarteQuestionsAccordion({
     []
   );
 
+  React.useEffect(() => {
+    function applyHashTarget() {
+      const { hash } = window.location;
+      if (!hash || hash.length < 2) {
+        return;
+      }
+
+      const target = hash.slice(1);
+      if (!target.startsWith("question-")) {
+        return;
+      }
+
+      const questionNumber = Number.parseInt(target.replace("question-", ""), 10);
+      if (!Number.isFinite(questionNumber)) {
+        return;
+      }
+
+      const panelId = `panel-${questionNumber}`;
+      const inRange = questions.some(
+        (_, idx) => `panel-${startIndex + idx}` === panelId
+      );
+
+      if (!inRange) {
+        return;
+      }
+
+      setExpanded(panelId);
+      const element = document.getElementById(`question-${questionNumber}`);
+      element?.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+
+    applyHashTarget();
+    window.addEventListener("hashchange", applyHashTarget);
+    return () => window.removeEventListener("hashchange", applyHashTarget);
+  }, [questions, startIndex]);
+
   if (questions.length === 0) {
     return (
       <Box sx={{ px: 2, py: 4 }}>

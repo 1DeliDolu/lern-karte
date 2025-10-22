@@ -14,16 +14,18 @@ import {
 } from "@/lib/questions";
 
 type TrackKartePageProps = {
-  params: { track: string; karte: string };
+  params: Promise<{ track: string; karte: string }> | { track: string; karte: string };
 };
 
-export default function TrackKartePage({ params }: TrackKartePageProps) {
-  const track = resolveTrack(params.track);
+export default async function TrackKartePage({ params }: TrackKartePageProps) {
+  const awaitedParams = await params;
+
+  const track = resolveTrack(awaitedParams.track);
   if (!track) {
     notFound();
   }
 
-  const karteNum = Number.parseInt(params.karte, 10);
+  const karteNum = Number.parseInt(awaitedParams.karte, 10);
   if (!Number.isFinite(karteNum)) {
     notFound();
   }
