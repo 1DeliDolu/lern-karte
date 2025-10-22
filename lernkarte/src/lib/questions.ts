@@ -1,12 +1,13 @@
 import { fragen as fragenFIAE } from "@/constants/fragenFIAE";
 import { fragen as fragenFISI } from "@/constants/fragenFISI";
 import { fragen as fragenWISO } from "@/constants/fragenWISO";
+import { fragen as fragenAP1 } from "@/constants/fragenAP1";
 
 import type { Karte } from "@/types/question";
 
 export const QUESTIONS_PER_KARTE = 25;
 
-export type QuestionTrack = "WISO" | "FIAE" | "FISI";
+export type QuestionTrack = "WISO" | "FIAE" | "FISI" | "AP1";
 
 export type QuestionTrackMeta = {
   id: QuestionTrack;
@@ -31,6 +32,7 @@ const QUESTION_SETS: Record<QuestionTrack, Karte[]> = {
   WISO: ensureArray(fragenWISO as FragenModule),
   FIAE: ensureArray(fragenFIAE as FragenModule),
   FISI: ensureArray(fragenFISI as FragenModule),
+  AP1: ensureArray(fragenAP1 as FragenModule),
 };
 
 export const QUESTION_TRACKS: QuestionTrackMeta[] = [
@@ -55,6 +57,13 @@ export const QUESTION_TRACKS: QuestionTrackMeta[] = [
     longTitle: "Fachinformatiker:in Systemintegration (FISI)",
     description: "Infrastruktur, Netzwerke, Administration und Automatisierung.",
   },
+  {
+    id: "AP1",
+    slug: "ap1",
+    label: "fragenAP1",
+    longTitle: "Fachinformatiker:in  (AP1)",
+    description: "Einrichten eines IT-gestützten Arbeitsplatzes (AP1).",
+  },
 ];
 
 const TRACK_BY_SLUG = new Map<string, QuestionTrack>();
@@ -71,7 +80,7 @@ export function resolveTrack(value: string | undefined): QuestionTrack | null {
   }
 
   const upper = value.toUpperCase();
-  return (["WISO", "FIAE", "FISI"] as const).find(
+  return (["WISO", "FIAE", "FISI", "AP1"] as const).find(
     (entry) => entry === upper
   ) ?? null;
 }
