@@ -1,12 +1,15 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
-import { Box, Typography, Card, CardContent } from '@mui/material'
+import { Box, Typography, Card, CardContent, Button, Divider } from '@mui/material'
 import Link from 'next/link'
 import FolderIcon from '@mui/icons-material/Folder'
 import ArticleIcon from '@mui/icons-material/Article'
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { buildDocsTreeForCategory, DocNode, readDoc } from '@/lib/docs-finder'
 import DocsPersistentDrawer, { DocsNavNode } from '@/components/DocsPersistentDrawer'
 import { formatLabel, naturalSort } from '@/utils/format'
+import { getDocPagination } from '@/utils/doc-pagination'
 
 type Props = {
   params: Promise<{ slug: string[] }>
@@ -149,6 +152,13 @@ export default async function DocPage({ params }: Props) {
   if (!doc) {
     notFound();
   }
+
+  const currentHref =
+    dirNode && dirNode.type === 'file'
+      ? dirNode.href
+      : `/docs/${[category, ...docSegments].join('/')}`;
+  const pagination = getDocPagination(nodes, currentHref);
+  const hasPagination = Boolean(pagination.previous || pagination.next);
   
   // Display markdown content with navigation drawer
   return (
@@ -206,6 +216,78 @@ export default async function DocPage({ params }: Props) {
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: doc.html || '' }}
         />
+
+        {hasPagination && (
+          <Box sx={{ mt: 6 }}>
+            <Divider sx={{ mb: 3 }} />
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: 3,
+              }}
+            >
+              {pagination.previous && (
+                <Button
+                  component={Link}
+                  href={pagination.previous.href}
+                  variant="outlined"
+                  startIcon={<ArrowBackIosNewIcon fontSize="small" />}
+                  sx={{
+                    flex: 1,
+                    justifyContent: 'flex-start',
+                    textAlign: 'left',
+                    alignItems: 'center',
+                    px: 2,
+                    py: 1.5,
+                  }}
+                >
+                  <Box sx={{ display: 'grid', gap: 0.5 }}>
+                    <Typography
+                      variant="caption"
+                      sx={{ textTransform: 'uppercase', letterSpacing: 1 }}
+                    >
+                      Zurück
+                    </Typography>
+                    <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                      {formatLabel(pagination.previous.name)}
+                    </Typography>
+                  </Box>
+                </Button>
+              )}
+
+              {pagination.next && (
+                <Button
+                  component={Link}
+                  href={pagination.next.href}
+                  variant="contained"
+                  endIcon={<ArrowForwardIosIcon fontSize="small" />}
+                  sx={{
+                    flex: 1,
+                    justifyContent: 'flex-end',
+                    textAlign: 'right',
+                    alignItems: 'center',
+                    px: 2,
+                    py: 1.5,
+                    ml: { md: 'auto' },
+                  }}
+                >
+                  <Box sx={{ display: 'grid', gap: 0.5 }}>
+                    <Typography
+                      variant="caption"
+                      sx={{ textTransform: 'uppercase', letterSpacing: 1 }}
+                    >
+                      Weiter
+                    </Typography>
+                    <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                      {formatLabel(pagination.next.name)}
+                    </Typography>
+                  </Box>
+                </Button>
+              )}
+            </Box>
+          </Box>
+        )}
       </Box>
     </DocsPersistentDrawer>
   );
