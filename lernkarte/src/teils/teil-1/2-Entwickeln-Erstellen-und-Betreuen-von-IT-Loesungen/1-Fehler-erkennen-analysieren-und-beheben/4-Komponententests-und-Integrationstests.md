@@ -93,5 +93,3 @@ class BeispielJUnitTest {
 * **Systemtest:** **End-to-End-Szenarien**, **nicht-funktionale Qualitätsmerkmale** in repräsentativen **Testumgebungen**; ggf. **unabhängig** testen. (ISTQB CTFL 4.0.2) 
 
 ---
-
-## [➡️ Nächstes](./5-Versionsmanagement-Quellcode.md)

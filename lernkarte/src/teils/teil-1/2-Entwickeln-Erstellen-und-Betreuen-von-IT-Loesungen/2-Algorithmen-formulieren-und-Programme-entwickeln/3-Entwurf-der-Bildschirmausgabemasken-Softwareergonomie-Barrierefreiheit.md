@@ -161,5 +161,3 @@ Wenn du möchtest, kann ich auf Basis deiner konkreten Maske(n) direkt **Sketch/
 
 
 ---
-
-## [➡️ Nächstes](../3-Datenbanken-modellieren-und-erstellen/)

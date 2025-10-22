@@ -142,5 +142,3 @@ Anpassungen können Oberfläche, Sprache, Währung oder Funktionalität betreffe
 Dieses Lernfeld vermittelt das vollständige Verständnis für **Softwareentwicklung, Anpassung und Datenverwaltung** – vom Umfeld über Prozessmodelle, Anforderungsspezifikation bis zur praktischen Programmierung mit Python.
 
 ---
-
-## [Nächstes Thema](./5.1_Das_Umfeld_der_Softwareentwicklung_analysieren/5.1_Das_Umfeld_der_Softwareentwicklung_analysieren.md)

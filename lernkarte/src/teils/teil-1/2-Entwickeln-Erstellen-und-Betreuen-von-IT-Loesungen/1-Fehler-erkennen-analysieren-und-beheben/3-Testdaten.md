@@ -140,5 +140,3 @@ def calculate_cube_volume(x):  # zu testende Methode
 
 
 ---
-
-## [➡️ Nächstes](./4-Komponententests-und-Integrationstests.md)

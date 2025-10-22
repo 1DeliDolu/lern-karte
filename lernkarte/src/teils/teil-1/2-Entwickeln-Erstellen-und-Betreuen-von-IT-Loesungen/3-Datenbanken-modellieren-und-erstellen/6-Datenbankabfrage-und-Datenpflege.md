@@ -279,11 +279,6 @@ COMMIT;
 * **Pflegeoperationen** stets mit **scharfer WHERE-Klausel** und **Transaktionen** bei zusammenhängenden Änderungen ausführen. *(LF11a)* 
 * **Zugriffsrechte** gezielt vergeben, um Pflegeaufgaben sicher zu steuern. *(LF8)* 
 
-Wenn du möchtest, formuliere ich dir als Nächstes **konkrete Übungsaufgaben** (Abfragen & Pflege) auf Basis des **„Ortsverwaltung“-Modells** aus den Materialien — inklusive Musterlösungen. *(LF8)* 
-
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./5-ER-Modell-und-Attribute.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./7-SQL-Abfragen-und-Struktur.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

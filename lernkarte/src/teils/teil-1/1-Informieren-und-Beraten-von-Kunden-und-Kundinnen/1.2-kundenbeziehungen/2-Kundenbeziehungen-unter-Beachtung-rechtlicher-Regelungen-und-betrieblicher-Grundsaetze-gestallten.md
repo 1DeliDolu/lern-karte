@@ -31,5 +31,3 @@ Kurzer Leitfaden für IT-Services: Welche Regeln gelten, wie Verträge sauber au
 
 
 ---
-
-## [Nächstes](./2.1-bgb-hgb.md)

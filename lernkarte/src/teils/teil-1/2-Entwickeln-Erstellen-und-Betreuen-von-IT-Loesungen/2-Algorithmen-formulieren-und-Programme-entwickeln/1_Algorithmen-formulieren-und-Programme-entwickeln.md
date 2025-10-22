@@ -280,5 +280,3 @@ Wenn du magst, erstelle ich dir im nächsten Schritt **aus deinen eigenen Use Ca
 
 
 ---
-
-## [➡️ Nächstes](./1-Abbildung-der-Kontrollstrukturen-mittels-Aktivitaetsdiagramm-oder-Pseudocode-als-didaktisches-Hilfsmittel.md)

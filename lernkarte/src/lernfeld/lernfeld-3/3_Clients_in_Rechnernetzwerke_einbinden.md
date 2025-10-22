@@ -253,5 +253,3 @@ Ein **Client** nutzt Dienste anderer Rechner. Beispiele: PCs, Laptops, Tablets, 
 
 
 ---
-
-## [Nächstes Thema](./3.1_Eine_Einfuehrung_in_das_Netzwerk_des_Ausbildungsbetriebs_geben/3.1_Eine_Einfuehrung_in_das_Netzwerk_des_Ausbildungsbetriebs_geben.md)

@@ -121,4 +121,3 @@ Mit **FMEA** (Failure Mode and Effects Analysis) werden **Bedeutung (B)**, **Auf
 
 ---
 
-## [➡️ Nächstes](./1-Debugging-und-Breakpoint.md)

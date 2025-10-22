@@ -216,5 +216,3 @@ Beispiele:
 
 
 ---
-
-## [Nächstes Thema: Einführung in Verantwortung, Zuständigkeiten und Sicherheitsbereiche beschreiben](./4.1_Grundlagen_zur_Informationssicherheit_erarbeiten/4.1_Grundlagen_zur_Informationssicherheit_erarbeiten.md)

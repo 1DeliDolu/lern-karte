@@ -121,5 +121,3 @@ git tag
 Wenn du möchtest, stelle ich dir daraus eine **Schritt-für-Schritt-Übung** (z. B. *Repository anlegen → Feature-Branch → Merge → Tag & Release*) zusammen – exakt mit den **LF-Befehlen** und **Screenshots** aus deinem Setup.
 
 ---
-
-## [➡️ Nächstes](../3-Datenbanken-modellieren-und-erstellen/)

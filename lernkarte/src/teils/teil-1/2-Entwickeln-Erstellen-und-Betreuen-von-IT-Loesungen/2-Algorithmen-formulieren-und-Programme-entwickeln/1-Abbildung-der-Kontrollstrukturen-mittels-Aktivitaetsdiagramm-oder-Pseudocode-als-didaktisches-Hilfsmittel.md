@@ -160,5 +160,3 @@ Wenn länge > 0 UND länge < 20:
 Wenn du möchtest, erstelle ich dir im nächsten Schritt zu einem deiner Prozesse ein **konkretes Aktivitätsdiagramm** plus den **Pseudocode** dazu – strikt im Stil der obigen Notation aus dem Lehrwerk.
 
 ---
-
-## [➡️ Nächstes](./2-UML-Use-Case-Anwendungsfalldiagramme-Klassendiagramm-Aktivitätsdiagramm.md)

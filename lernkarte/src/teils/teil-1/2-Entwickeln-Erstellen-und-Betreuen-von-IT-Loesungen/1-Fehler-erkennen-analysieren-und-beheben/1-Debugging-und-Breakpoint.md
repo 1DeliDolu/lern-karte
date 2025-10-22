@@ -103,5 +103,3 @@ Wenn du möchtest, setze ich darauf aufbauend **konkrete Debug-Abläufe in PyCha
 
 
 ---
-
-## [➡️ Nächstes](./2-Softwaretests-Blackbox-Whitebox-Review.md)

@@ -129,5 +129,3 @@ Der **Architekturentwurf** legt den Bauplan fest (Komponenten & Beziehungen), ge
 * Fundierte **Architektur- und Framework-Entscheidungen** für wartbare, skalierbare und benutzerfreundliche Software.
 
 ---
-
-## [Nächstes Thema](1.1_Anforderungen_an_eine_Benutzerschnittstelle_ermitteln.md)

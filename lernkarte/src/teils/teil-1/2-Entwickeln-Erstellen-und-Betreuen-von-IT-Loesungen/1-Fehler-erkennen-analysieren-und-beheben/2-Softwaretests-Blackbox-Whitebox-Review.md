@@ -147,5 +147,3 @@ def calculate_cube_volume(x):  # zu testende Methode
 
 
 ---
-
-## [➡️ Nächstes](./3-Testdaten.md)

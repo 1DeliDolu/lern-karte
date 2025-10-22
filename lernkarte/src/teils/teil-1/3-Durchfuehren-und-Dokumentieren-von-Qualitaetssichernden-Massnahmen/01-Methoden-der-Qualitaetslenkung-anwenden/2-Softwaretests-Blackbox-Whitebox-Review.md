@@ -139,4 +139,3 @@ class MathUtilsTest {
 
 **Statisch (Review/Inspektion)** entdeckt früh viele Fehler **ohne Laufzeit**, **dynamisch (White-/Black-Box)** prüft Verhalten **mit Ausführung** samt **nicht-funktionalen** Aspekten (**Zeit/Ressourcen**, **Stress/Recovery**). **Testdaten** werden systematisch über **Äquivalenzklassen** und **Grenzwerte** bestimmt und ggf. mit **Testdatengeneratoren** erzeugt. *(LF5, LF8, LF11a)*    
 
-Wenn du möchtest, erstelle ich dir als Nächstes ein **kompaktes Testprotokoll-Template** (inkl. Felder für **Randwerte**, **erwartete Ergebnisse**, **Abweichungen**, **Freigabe**) — konsequent entlang der obigen LF-Vorgaben.

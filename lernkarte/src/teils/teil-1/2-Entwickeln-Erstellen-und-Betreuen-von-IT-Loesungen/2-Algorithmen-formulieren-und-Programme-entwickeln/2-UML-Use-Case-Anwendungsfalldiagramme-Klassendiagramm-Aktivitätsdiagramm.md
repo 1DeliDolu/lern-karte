@@ -127,5 +127,3 @@ ausschaltenMaschine(m: Maschine): void
 Möchtest du für deinen konkreten Anwendungsfall (z. B. Webshop, Reservierung, Login) ein **Use-Case-Set**, ein **Klassendiagramm** und ein **Aktivitätsdiagramm** im Stil der PDFs ausgearbeitet haben?
 
 ---
-
-## [➡️ Nächstes](./3-Entwurf-der-Bildschirmausgabemasken-Softwareergonomie-Barrierefreiheit.md)
