@@ -2165,7 +2165,354 @@ export const fragen: Karte[] = [
     antwortTR:
       "ITIL, BT Hizmet Yönetimi (ITSM – IT-Service-Management) için, BT hizmetlerinin etkin şekilde sunulması ve yönetilmesine yönelik en iyi uygulamalar (best practices) ve standartlar sağlayan bir çerçevedir. ITIL; BT hizmetlerinin kalitesini yükseltmek, müşteri memnuniyetini artırmak ve BT organizasyonlarının verimliliğini maksimize etmek amacıyla geliştirilmiştir.\nITIL, çeşitli süreç ve fonksiyonlara ayrılmış en iyi uygulamalardan oluşur. Dünya genelinde farklı ölçek ve sektörlerdeki kuruluşlar tarafından kullanılır ve IT hizmet yönetiminde endüstri standardı hâline gelmiştir.",
   },
+  {
+    id: 175,
+    frageDE:
+      "Nennen Sie drei Vorteile vom Protokoll IPv6 gegenüber dem Protokoll IPv4.",
+    antwortDE:
+      "Vorteile des IPv6-Protokolls gegenüber dem IPv4-Protokoll:\n- Größerer Adressraum: IPv6 bietet einen erheblich größeren Adressraum im Vergleich zu IPv4.\n- Automatische Adresskonfiguration: IPv6 enthält Mechanismen für die automatische Konfiguration von IP-Adressen.\n- Verbesserte Sicherheit: IPv6 integriert IPsec (Internet Protocol Security) standardmäßig in das Protokoll.\n- Unterstützung für Quality of Service (QoS): IPv6 enthält integrierte Mechanismen zur Unterstützung von Quality of Service.\n- Vereinfachtes Routing: Durch die Vereinfachung der Header-Struktur und die Verwendung von Hierarchien in IPv6 wird das Routing effizienter.",
+    frageTR:
+      "IPv6 protokolünün, IPv4 protokolüne göre üç avantajını belirtiniz.",
+    antwortTR:
+      "IPv6 protokolünün, IPv4’e göre avantajları şunlardır:\n- Daha geniş adres alanı: IPv6, IPv4’e kıyasla çok daha büyük bir IP adres kapasitesi sunar.\n- Otomatik adres yapılandırması: IPv6, IP adreslerinin otomatik olarak atanmasını sağlayan mekanizmalar içerir.\n- Geliştirilmiş güvenlik: IPv6, IPsec (Internet Protocol Security) desteğini protokolün içine yerleştirmiştir.\n- Quality of Service (QoS) desteği: IPv6, hizmet kalitesi yönetimi için yerleşik mekanizmalar içerir.\n- Basitleştirilmiş yönlendirme: Başlık (Header) yapısının sadeleştirilmesi ve hiyerarşik yapı kullanımı sayesinde yönlendirme daha verimli hale gelmiştir.",
+  },
+  {
+    id: 176,
+    frageDE:
+      "Was ist der Unterschied zwischen den Protokollen TCP (Transmission Control Protocol) und UDP (User Datagram Protocol)?",
+    antwortDE:
+      "TCP und UDP sind beides Transportprotokolle, die in IP-Netzwerken verwendet werden, um Daten zu übertragen.\nTCP ist ein verbindungsorientiertes Protokoll, das eine zuverlässige Datenübertragung gewährleistet und Kontrollmechanismen wie Flusssteuerung und Überlastkontrolle bietet.\nUDP hingegen ist ein verbindungsloses Protokoll, bei dem keine Verbindung hergestellt wird und keine Garantie für die Zuverlässigkeit der Datenübertragung besteht. Es bietet keine eingebauten Kontrollmechanismen und eignet sich besser für Echtzeitkommunikation und Anwendungen, bei denen geringe Latenz wichtiger ist als die vollständige Übertragung aller Daten.",
+    frageTR:
+      "TCP (Transmission Control Protocol – İletim Kontrol Protokolü) ve UDP (User Datagram Protocol – Kullanıcı Veri Paketi Protokolü) protokolleri arasındaki fark nedir?",
+    antwortTR:
+      "TCP ve UDP, IP ağlarında veri iletimi için kullanılan iki aktarım protokolüdür.\nTCP, bağlantı yönelimli (connection-oriented) bir protokoldür ve güvenilir veri aktarımı sağlar. Akış kontrolü (Flow Control) ve tıkanıklık kontrolü (Congestion Control) gibi mekanizmalara sahiptir.\nUDP ise bağlantısız (connectionless) bir protokoldür; bağlantı kurulmaz ve veri iletiminin güvenilirliği garanti edilmez. Dahili kontrol mekanizmaları yoktur ve düşük gecikmenin, verinin tam iletilmesinden daha önemli olduğu gerçek zamanlı iletişim (örneğin ses veya video iletimi) gibi uygulamalar için daha uygundur.",
+  },
+  {
+    id: 177,
+    frageDE: "Erklären Sie die Begriffe Routing und Switching.",
+    antwortDE:
+      "Routing bezieht sich auf den Prozess des Weiterleitens von Datenpaketen zwischen verschiedenen Netzwerken. Ein Router analysiert die IP-Adresse jedes Pakets und entscheidet, welchen Weg das Paket nehmen soll, um sein Zielnetzwerk zu erreichen. Routen werden normalerweise anhand verschiedener Faktoren wie der Netzwerkentfernung, Qualität des Netzwerks, Priorität usw. ausgewählt.\nSwitching bezieht sich auf den Prozess des Weiterleitens von Datenpaketen innerhalb desselben Netzwerks. Ein Switch analysiert die MAC-Adresse jedes Pakets und verwendet eine Switching-Tabelle, um das Paket an das richtige Ziel weiterzuleiten.",
+    frageTR:
+      "Routing (Yönlendirme) ve Switching (Anahtarlama) terimlerini açıklayınız.",
+    antwortTR:
+      "Routing, veri paketlerinin farklı ağlar arasında yönlendirilmesi sürecidir. Bir yönlendirici (router), her paketin IP adresini analiz eder ve paketin hedef ağa ulaşması için izlemesi gereken yolu belirler. Yönlendirme genellikle ağ mesafesi, ağ kalitesi ve öncelik gibi çeşitli faktörlere göre yapılır.\nSwitching ise aynı ağ içerisindeki veri paketlerinin iletilmesi sürecidir. Bir anahtar (switch), her paketin MAC adresini analiz eder ve paketleri doğru hedefe iletmek için bir anahtarlama tablosu (switching table) kullanır.",
+  },
+  {
+    id: 178,
+    frageDE: "Was ist eine MAC-Adresse?",
+    antwortDE:
+      "Eine MAC-Adresse (Media Access Control Address) ist eine eindeutige Kennung, die Netzwerkgeräten zugewiesen ist. Sie wird von Netzwerkkarten und anderen netzwerkfähigen Geräten verwendet, um sie eindeutig zu identifizieren und zu adressieren.\nDie MAC-Adresse besteht aus einer 48-Bit-Zahl, die in der Regel in hexadezimaler Notation dargestellt wird. Sie ist in zwei Teile unterteilt: die OUI (Organizationally Unique Identifier), die den Hersteller des Geräts identifiziert, und die NIC (Network Interface Controller) ID, die eine eindeutige Nummer für das Gerät darstellt.",
+    frageTR: "MAC-Adresi nedir?",
+    antwortTR:
+      "MAC (Media Access Control – Ortam Erişim Kontrolü) adresi, ağ cihazlarına atanmış benzersiz bir tanımlayıcıdır. Ağ kartları (network cards) ve diğer ağ özellikli cihazlar tarafından, cihazların benzersiz şekilde tanımlanması ve adreslenmesi amacıyla kullanılır.\nMAC adresi genellikle onaltılık (hexadecimal) gösterimle yazılan 48 bitlik bir sayıdır. İki kısımdan oluşur: OUI (Organizationally Unique Identifier – Kurumsal Benzersiz Tanımlayıcı), cihaz üreticisini belirtir; NIC (Network Interface Controller) ID ise cihazın benzersiz kimlik numarasını temsil eder.",
+  },
+  {
+    id: 179,
+    frageDE: "Wofür steht die Abkürzung ARP im Bereich der Netzwerktechnik?",
+    antwortDE:
+      "ARP steht für Address Resolution Protocol. Es ist ein Netzwerkprotokoll, das verwendet wird, um die IP-Adressen von Geräten in einem lokalen Netzwerk (LAN) in deren MAC-Adressen aufzulösen.\nARP wird hauptsächlich in IPv4-Netzwerken eingesetzt. Wenn ein Gerät in einem Netzwerk Daten an ein anderes Gerät senden möchte, benötigt es die MAC-Adresse des Zielgeräts, um das Datenpaket an den richtigen Empfänger weiterzuleiten. Das ARP-Protokoll ermöglicht es einem Gerät, die MAC-Adresse eines bestimmten Ziels anhand seiner IP-Adresse zu ermitteln.",
+    frageTR: "Ağ teknolojisinde ARP kısaltması ne anlama gelir?",
+    antwortTR:
+      "ARP, Address Resolution Protocol (Adres Çözümleme Protokolü) anlamına gelir. Bu ağ protokolü, yerel ağlarda (LAN) cihazların IP adreslerini, onların MAC adreslerine dönüştürmek için kullanılır.\nARP özellikle IPv4 ağlarında kullanılır. Bir cihaz, ağdaki başka bir cihaza veri göndermek istediğinde, hedef cihazın MAC adresini bilmesi gerekir. ARP protokolü, bir cihazın IP adresine göre hedef cihazın MAC adresini bulmasını sağlar.",
+  },
+  {
+    id: 180,
+    frageDE:
+      "Beschreiben Sie die Aufgabe des DHCP-Protokolls und nennen Sie drei Informationen, welche mittels DHCP übertragen werden können.",
+    antwortDE:
+      "DHCP steht für Dynamic Host Configuration Protocol. Die Aufgabe des DHCP-Protokolls besteht darin, die automatische Zuweisung von Netzwerkkonfigurationen an Geräte in einem Netzwerk zu ermöglichen. Es erleichtert die Konfiguration von IP-Adressen und anderen Netzwerkeinstellungen, indem es einen zentralen DHCP-Server verwendet, der diese Informationen an die Geräte verteilt.\nMittels DHCP können u. a. folgende Informationen übertragen werden:\n- IP-Adresse\n- Standardgateway\n- Subnetzmaske\n- DNS-Server\n- Lease-Dauer\n- NTP-Server",
+    frageTR:
+      "DHCP protokolünün görevi nedir ve DHCP aracılığıyla hangi üç bilgi iletilebilir?",
+    antwortTR:
+      "DHCP (Dynamic Host Configuration Protocol – Dinamik Ana Bilgisayar Yapılandırma Protokolü), ağdaki cihazlara ağ yapılandırma bilgilerini otomatik olarak atamak için kullanılır. IP adresleri ve diğer ağ ayarlarının manuel yapılandırılmasını önleyerek süreci kolaylaştırır. DHCP sunucusu, bu bilgileri ağdaki istemcilere (clients) merkezi olarak dağıtır.\nDHCP aracılığıyla aktarılabilecek bilgiler şunlardır:\n- IP adresi\n- Varsayılan ağ geçidi (Default Gateway)\n- Alt ağ maskesi (Subnet Mask)\n- DNS sunucusu\n- Kira süresi (Lease Time)\n- NTP sunucusu (Network Time Protocol)",
+  },
+  {
+    id: 181,
+    frageDE:
+      "Erklären den Ablauf der DHCP-Kommunikation nach dem DORA-Prinzip.",
+    antwortDE:
+      "DHCP-Discover: Ein Gerät, das eine Netzwerkverbindung herstellt, sendet eine Broadcast-Nachricht, um DHCP-Server im Netzwerk zu suchen.\nDHCP-Offer: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät eine IP-Adresse und andere Konfigurationsinformationen anbietet.\nDHCP-Request: Das Gerät wählt eine der angebotenen IP-Adressen aus und sendet eine Broadcast-Nachricht, um den ausgewählten DHCP-Server über seine Wahl zu informieren.\nDHCP-Acknowledgement: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät die zugewiesene IP-Adresse und andere Konfigurationsoptionen bestätigt.",
+    frageTR:
+      "DHCP iletişiminin DORA prensibine göre nasıl gerçekleştiğini açıklayınız.",
+    antwortTR:
+      "DHCP iletişimi DORA (Discover, Offer, Request, Acknowledgement) adımlarına göre gerçekleşir:\nDHCP Discover: Ağa bağlanmak isteyen bir cihaz, ağda mevcut DHCP sunucularını bulmak için bir yayın (broadcast) mesajı gönderir.\nDHCP Offer: DHCP sunucusu, cihazın talebine karşılık olarak bir IP adresi ve diğer yapılandırma bilgilerini içeren bir yayın mesajı gönderir.\nDHCP Request: Cihaz, teklif edilen IP adreslerinden birini seçer ve seçtiği DHCP sunucusuna bu seçimi bildirmek için bir yayın mesajı gönderir.\nDHCP Acknowledgement: DHCP sunucusu, cihazın seçimini onaylar ve atanan IP adresi ile diğer ağ yapılandırma bilgilerini içeren bir onay mesajı gönderir.",
+  },
+  {
+    id: 182,
+    frageDE:
+      "Geben Sie für die Abkürzung DNS die vollständige Schreibweise an und erklären Sie die Hauptaufgabe von DNS.",
+    antwortDE:
+      "DNS steht für Domain Name System. Es handelt sich um ein dezentrales System zur Auflösung von Domainnamen in IP-Adressen und umgekehrt.\nDas DNS funktioniert hierarchisch, wobei die oberste Ebene die Root-DNS-Server sind, die die Informationen für die Top-Level-Domains (TLDs) wie .com, .org, .net usw. enthalten.\nUnterhalb der Root-DNS-Server gibt es weitere DNS-Server, die für spezifische Domänen zuständig sind. Jede Domäne kann ihre eigenen DNS-Server haben, die als Autoritative DNS-Server bezeichnet werden und die DNS-Datensätze für die Domäne verwalten.",
+    frageTR:
+      "DNS kısaltmasının açılımını yazınız ve DNS’nin temel görevini açıklayınız.",
+    antwortTR:
+      "DNS (Domain Name System – Alan Adı Sistemi), alan adlarını IP adreslerine ve IP adreslerini alan adlarına çevirmek için kullanılan merkezi olmayan (dağıtık) bir sistemdir.\nDNS hiyerarşik bir yapıda çalışır. En üst düzeyde kök (root) DNS sunucuları bulunur; bu sunucular .com, .org, .net gibi üst seviye alan adları (TLD – Top-Level Domain) hakkındaki bilgileri tutar.\nKök DNS sunucularının altında, belirli alan adlarından sorumlu alt DNS sunucuları bulunur. Her alan adı, kendi yetkili DNS sunucularına (Authoritative DNS Server) sahip olabilir ve bu sunucular ilgili alan adına ait DNS kayıtlarını yönetir.",
+  },
+  {
+    id: 183,
+    frageDE: "Was ist ein Proxy-Server und wozu wird er verwendet?",
+    antwortDE:
+      "Ein Proxy-Server agiert als Vermittler zwischen einem Client und dem Zielserver. Wenn ein Client eine Anfrage stellt, leitet der Proxy-Server diese Anfrage im Namen des Clients weiter und empfängt die Antwort vom Zielserver. Dadurch kann der Proxy-Server den Datenverkehr überwachen, filtern, umleiten oder anonymisieren, um die Sicherheit und Effizienz der Verbindung zu verbessern.",
+    frageTR: "Proxy sunucusu (Proxy-Server) nedir ve ne amaçla kullanılır?",
+    antwortTR:
+      "Proxy sunucusu, istemci (client) ile hedef sunucu (target server) arasında bir aracı görevi gören sunucudur. Bir istemci bir istekte bulunduğunda, bu istek Proxy sunucusu tarafından hedef sunucuya iletilir ve yanıt yine Proxy sunucusu üzerinden istemciye geri gönderilir.\nProxy sunucusu, veri trafiğini izlemek, filtrelemek, yönlendirmek veya anonimleştirmek amacıyla kullanılır. Böylece ağ bağlantısının güvenliği ve verimliliği artırılır.",
+  },
+  {
+    id: 184,
+    frageDE: "Für welche Aufgaben wird ein Reverse-Proxy-Server eingesetzt?",
+    antwortDE:
+      "Ein Reverse-Proxy-Server ist ein Server, der als Vermittler zwischen Clients und einem oder mehreren Back-End-Servern fungiert. Er nimmt Anfragen von Clients entgegen und leitet diese an die entsprechenden Server weiter. Nachdem der Server die Anfrage bearbeitet hat, sendet der Reverse-Proxy die Antwort zurück an den Client.\nEr kann u.a. die folgenden Funktionen übernehmen:\n- Lastverteilung (Load Balancing)\n- Caching\n- Verschlüsselung\n- Schutz der Identität der Back-End-Server\n- Kompression eingehender und ausgehender Daten",
+    frageTR: "Reverse Proxy sunucusu hangi görevler için kullanılır?",
+    antwortTR:
+      "Reverse Proxy (Ters Vekil Sunucu), istemciler (clients) ile bir veya birden fazla arka uç (back-end) sunucu arasında aracı olarak görev yapan bir sunucudur. İstemciden gelen istekleri alır, uygun sunucuya iletir ve alınan yanıtı tekrar istemciye gönderir.\nReverse Proxy aşağıdaki görevleri yerine getirebilir:\n- Yük dengeleme (Load Balancing)\n- Önbellekleme (Caching)\n- Trafiğin şifrelenmesi (Encryption)\n- Arka uç sunucuların kimliğini koruma\n- Gelen ve giden verilerin sıkıştırılması",
+  },
+  {
+    id: 185,
+    frageDE: "Was ist die Datenübertragungsrate und wie wird sie berechnet?",
+    antwortDE:
+      "Die Datenübertragungsrate bezieht sich auf die Menge an Daten, die innerhalb einer bestimmten Zeitspanne übertragen werden können. Sie gibt an, wie schnell Daten von einem Punkt zum anderen übertragen werden. Je höher die Datenübertragungsrate ist, desto schneller können Daten übertragen werden und desto weniger Zeit wird für die Übertragung großer Datenmengen benötigt.\nDatenübertragungsrate = Datenmenge / Zeitintervall",
+    frageTR:
+      "Veri aktarım hızı (Datenübertragungsrate) nedir ve nasıl hesaplanır?",
+    antwortTR:
+      "Veri aktarım hızı, belirli bir zaman aralığında aktarılabilen veri miktarını ifade eder. Verilerin bir noktadan diğerine ne kadar hızlı iletildiğini gösterir. Veri aktarım hızı ne kadar yüksekse, veriler o kadar hızlı iletilir ve büyük veri miktarlarının aktarımı için gereken süre o kadar azalır.\nVeri aktarım hızı aşağıdaki formülle hesaplanır:\nVeri aktarım hızı = Aktarılan veri miktarı / Zaman aralığı",
+  },
+  {
+    id: 186,
+    frageDE: "Was sind die Unterschiede zwischen LAN, MAN, WAN und GAN?",
+    antwortDE:
+      "LAN (Local Area Network): Lokales Netzwerk, das in einem begrenzten geografischen Bereich eingerichtet ist.\nMAN (Metropolitan Area Network): Netzwerk, das sich über eine Stadt oder eine Metropolregion erstreckt. Es bietet eine größere Reichweite als ein LAN, aber eine kleinere als ein WAN.\nWAN (Wide Area Network): Weitläufiges Netzwerk, das über große Entfernungen verteilt ist. Es ermöglicht die Kommunikation zwischen entfernten Standorten.\nGAN (Global Area Network): Netzwerk, das sich über den gesamten Globus erstreckt. Es verbindet verschiedene WANs und ermöglicht die globale Kommunikation zwischen Standorten weltweit.",
+    frageTR: "LAN, MAN, WAN ve GAN arasındaki farklar nelerdir?",
+    antwortTR:
+      "LAN (Local Area Network – Yerel Alan Ağı): Sınırlı bir coğrafi alanda kurulan yerel ağdır.\nMAN (Metropolitan Area Network – Metropol Alan Ağı): Bir şehir veya metropol bölgesi genelinde kurulan ağdır. LAN’dan daha geniş, ancak WAN’dan daha küçük bir kapsama alanına sahiptir.\nWAN (Wide Area Network – Geniş Alan Ağı): Uzak mesafelerdeki konumlar arasında iletişimi sağlayan, büyük coğrafi alanlara yayılmış ağdır.\nGAN (Global Area Network – Küresel Alan Ağı): Tüm dünyayı kapsayan, farklı WAN’ları birbirine bağlayarak küresel iletişimi mümkün kılan ağdır.",
+  },
+  {
+    id: 187,
+    frageDE:
+      "PAN (Personal Area Network) und WLAN (Wireless Local Area Network) sind zwei verschiedene Arten von Netzwerken mit unterschiedlichen Anwendungsbereichen und Funktionalitäten. Erklären Sie diese.",
+    antwortDE:
+      "Ein PAN ist ein Netzwerk, das sich auf den persönlichen oder lokalen Bereich einer Person beschränkt. Es ermöglicht die Verbindung zwischen Geräten in unmittelbarer Nähe zueinander. PANs werden häufig für den Austausch von Daten zwischen persönlichen Geräten, wie z. B. Smartphones, Tablets, Laptops oder Druckern, verwendet.\nEin WLAN ist ein drahtloses lokales Netzwerk, das eine größere Reichweite als ein PAN hat. Es ermöglicht die drahtlose Verbindung und Kommunikation zwischen Geräten über eine größere Fläche. WLANs basieren auf dem Wi-Fi-Standard und ermöglichen den drahtlosen Austausch von Daten zwischen Geräten im Netzwerk.",
+    frageTR:
+      "PAN (Personal Area Network – Kişisel Alan Ağı) ve WLAN (Wireless Local Area Network – Kablosuz Yerel Alan Ağı) farklı kullanım alanları ve işlevleri olan iki ağ türüdür. Açıklayınız.",
+    antwortTR:
+      "PAN, bir kişinin kişisel alanı içinde kalan ve yakın mesafedeki cihazlar arasında bağlantı kurulmasını sağlayan ağ türüdür. Genellikle akıllı telefon, tablet, dizüstü bilgisayar veya yazıcı gibi kişisel cihazlar arasında veri alışverişi yapmak için kullanılır.\nWLAN ise PAN’a göre daha geniş kapsama alanına sahip kablosuz bir yerel ağdır. Cihazların belirli bir alan içinde kablosuz olarak bağlanmasına ve iletişim kurmasına olanak tanır. WLAN’lar Wi-Fi standardına dayanır ve ağ içindeki cihazlar arasında kablosuz veri alışverişini mümkün kılar.",
+  },
+  {
+    id: 188,
+    frageDE:
+      "Nennen Sie zwei Vorteile, die für den Einsatz von VLANs sprechen.",
+    antwortDE:
+      "Vorteile des Einsatzes von VLANs:\nVLANs ermöglichen die logische Segmentierung eines physischen Netzwerks in mehrere virtuelle Netzwerke.\nIn VLANs kann der Datenverkehr priorisiert und optimiert werden.\nEs können unterschiedliche Sicherheitsrichtlinien auf verschiedene VLANs angewendet werden.\nKleinere Broadcastdomänen.\nBessere Verwaltung und Konfiguration des Netzwerks.",
+    frageTR:
+      "VLAN (Virtual Local Area Network – Sanal Yerel Alan Ağı) kullanımının iki avantajını belirtiniz.",
+    antwortTR:
+      "VLAN kullanımının avantajları şunlardır:\nVLAN’lar, tek bir fiziksel ağı mantıksal olarak birden fazla sanal ağa bölmeyi sağlar.\nVLAN içinde veri trafiği önceliklendirilebilir ve optimize edilebilir.\nFarklı VLAN’lara farklı güvenlik politikaları uygulanabilir.\nDaha küçük yayın alanları (Broadcast domain) oluşturulur.\nAğın yönetimi ve yapılandırması daha kolay hale gelir.",
+  },
+  {
+    id: 189,
+    frageDE:
+      "Was ist der Unterschied zwischen statischen und dynamischen VLANs?",
+    antwortDE:
+      "Statische VLANs werden manuell konfiguriert. Jeder Port am Switch wird einem bestimmten VLAN zugeordnet. Diese Zuordnung bleibt unverändert.\nDynamische VLANs verwenden eine dynamische Zuordnung von Ports zu VLANs. Die Zuordnung basiert auf bestimmten Merkmalen der Netzwerkgeräte, wie z. B. MAC-Adresse, Protokoll oder anderen Attributen. Wenn ein Gerät an den Switch angeschlossen wird, identifiziert der Switch automatisch das VLAN, dem der Port zugeordnet werden soll.",
+    frageTR: "Statik VLAN’lar ile dinamik VLAN’lar arasındaki fark nedir?",
+    antwortTR:
+      "Statik VLAN’lar manuel olarak yapılandırılır. Switch üzerindeki her port belirli bir VLAN’a atanır ve bu atama sabit kalır.\nDinamik VLAN’larda ise portların VLAN’a atanması otomatik olarak yapılır. Atama, cihazın MAC adresi, protokol veya diğer belirli özelliklerine göre gerçekleştirilir. Bir cihaz switch’e bağlandığında, switch cihazın hangi VLAN’a ait olduğunu otomatik olarak belirler.",
+  },
+  {
+    id: 190,
+    frageDE: "Was sind tagged Ports?",
+    antwortDE:
+      "Tagged Ports sind Netzwerkports, die den Datenverkehr von mehreren VLANs verarbeiten können. Im Gegensatz zu ungetaggten (untagged) Ports, die nur den Datenverkehr eines einzigen VLANs übertragen können, können tagged Ports Datenpakete aus verschiedenen VLANs empfangen und weiterleiten.\nWenn ein Switch-Port als tagged konfiguriert ist, werden den Datenpaketen VLAN-Tags hinzugefügt, die anzeigen, zu welchem VLAN sie gehören. Dies ermöglicht es dem Switch, den Datenverkehr zwischen den VLANs zu steuern. Der Switch verwendet die VLAN-Tags, um sicherzustellen, dass Datenpakete in den richtigen VLANs zugestellt werden.",
+    frageTR: "Tagged port (etiketlenmiş bağlantı noktası) nedir?",
+    antwortTR:
+      "Tagged port’lar, birden fazla VLAN’a ait veri trafiğini işleyebilen ağ bağlantı noktalarıdır. Untagged port’lar yalnızca tek bir VLAN’a ait trafiği aktarabilirken, tagged port’lar birden fazla VLAN’a ait veri paketlerini alabilir ve yönlendirebilir.\nBir switch portu tagged olarak yapılandırıldığında, veri paketlerine hangi VLAN’a ait olduklarını belirten VLAN etiketleri (tags) eklenir. Bu etiketler sayesinde switch, VLAN’lar arasındaki veri trafiğini doğru şekilde yönlendirebilir ve paketlerin doğru VLAN’a teslim edilmesini sağlar.",
+  },
+  {
+    id: 191,
+    frageDE:
+      "Erläutern Sie, warum Quality of Service (QoS) bei der Übertragung von Telefonie- und Videodaten eine wichtige Rolle spielt.",
+    antwortDE:
+      "Quality of Service (QoS) bezieht sich auf die Fähigkeit eines Netzwerks, unterschiedlichen Anwendungen, Nutzern oder Datentypen unterschiedliche Prioritäten zu gewähren. Das Ziel von QoS ist es, eine bessere und vorhersehbarere Netzwerkleistung zu liefern, indem bestimmte Arten von Netzwerkverkehr bevorzugt werden.\nBei der Übertragung von Telefonie- und Videodaten spielt QoS eine besonders wichtige Rolle. Diese Arten von Daten erfordern eine Echtzeit-Kommunikation und sind empfindlich gegenüber Verzögerungen (Latenz), Paketverlusten und Jitter.",
+    frageTR:
+      "Quality of Service (QoS – Hizmet Kalitesi) neden ses ve video verilerinin iletiminde önemli bir rol oynar?",
+    antwortTR:
+      "Quality of Service (QoS), bir ağın farklı uygulamalara, kullanıcılara veya veri türlerine farklı öncelikler tanıma yeteneğini ifade eder. QoS’un amacı, belirli ağ trafiği türlerine öncelik vererek daha iyi ve öngörülebilir bir ağ performansı sağlamaktır.\nSes ve video verilerinin iletiminde QoS özellikle önemlidir, çünkü bu tür veriler gerçek zamanlı iletişim gerektirir ve gecikmelere (latenz), paket kayıplarına ve titreşimlere (jitter) karşı hassastır.",
+  },
+  {
+    id: 192,
+    frageDE: "Welche verschiedenen VPN-Modelle gibt es?",
+    antwortDE:
+      "End-to-Site-VPN: Auch als Remote Access VPN bezeichnet. Ermöglicht es einem einzelnen Benutzer oder einer entfernten Einheit, eine sichere Verbindung zu einem privaten Netzwerk herzustellen.\nSite-to-Site-VPN: Auch LAN-to-LAN-VPN genannt. Verbindet zwei oder mehr physische Netzwerke miteinander. Der Fokus liegt hierbei auf der Verbindung von Netzwerken oder Standorten.\nEnd-to-End-VPN: Der Begriff „End-to-End-VPN“ wird verwendet, um eine VPN-Lösung zu beschreiben, die von einem Endpunkt zum anderen Endpunkt einer Kommunikation verwendet wird.",
+    frageTR:
+      "Farklı VPN (Virtual Private Network – Sanal Özel Ağ) modelleri nelerdir?",
+    antwortTR:
+      "End-to-Site VPN (Uzak Erişim VPN’i): Bir kullanıcının veya uzak bir birimin güvenli bir şekilde özel bir ağa bağlanmasını sağlar.\nSite-to-Site VPN (LAN-to-LAN VPN): İki veya daha fazla fiziksel ağı birbirine bağlayan VPN türüdür. Genellikle farklı ofis veya şube ağlarını birbirine bağlamak için kullanılır.\nEnd-to-End VPN: İletişimdeki iki uç nokta arasında doğrudan güvenli bir bağlantı sağlayan VPN türüdür.",
+  },
+  {
+    id: 193,
+    frageDE:
+      "Was ist der Unterschied zwischen Tunnelmodus und Transportmodus bei VPNs?",
+    antwortDE:
+      "Im Tunnelmodus wird der gesamte IP-Datenverkehr eines Netzwerkpakets verschlüsselt und in ein neues IP-Paket eingekapselt. Dieses neue IP-Paket enthält sowohl den verschlüsselten ursprünglichen IP-Datenverkehr als auch den VPN-Header. Der VPN-Header enthält Informationen über die Verschlüsselung, Authentifizierung und andere VPN-spezifische Parameter.\nIm Transportmodus wird nur der Nutzlastteil eines IP-Pakets verschlüsselt. Der IP-Header des ursprünglichen Pakets bleibt unverschlüsselt, während die Nutzlast verschlüsselt wird.",
+    frageTR:
+      "VPN’lerde tünel modu (Tunnel Mode) ile taşıma modu (Transport Mode) arasındaki fark nedir?",
+    antwortTR:
+      "Tünel modunda (Tunnel Mode), bir ağ paketinin tüm IP trafiği şifrelenir ve yeni bir IP paketi içine kapsüllenerek gönderilir. Bu yeni paket, hem orijinal şifrelenmiş verileri hem de VPN başlığını (header) içerir. VPN başlığı, kimlik doğrulama ve şifreleme gibi VPN’e özgü bilgileri taşır.\nTaşıma modunda (Transport Mode) ise yalnızca IP paketinin veri kısmı (payload) şifrelenir. Orijinal IP başlığı şifrelenmeden kalır; yalnızca verinin kendisi şifrelenir.",
+  },
+  {
+    id: 194,
+    frageDE:
+      "Beschreiben Sie die zusätzlichen Sicherheitsvorteile, die Zero Trust Network Access (ZTNA) im Vergleich zu traditionellen VPN-Verbindungen bietet.",
+    antwortDE:
+      "Zero Trust Network Access (ZTNA) verbessert die Sicherheit gegenüber VPNs durch Mikrosegmentierung und begrenzt so den Netzwerkzugriff auf genau die benötigten Ressourcen. ZTNA verwendet identitäts- und kontextbasierte Richtlinien, die mehr Informationen berücksichtigen als nur den Standort. ZTNA reduziert die Angriffsfläche, da keine direkte Netzwerkverbindung benötigt wird, und bietet eine Always-On-Sicherheit, die konsistente Schutzmaßnahmen gewährleistet. Durch Echtzeitüberwachung und adaptive Reaktionen auf mögliche Vorfälle erhöht ZTNA die Sicherheit erheblich.",
+    frageTR:
+      "Zero Trust Network Access (ZTNA) geleneksel VPN bağlantılarına kıyasla hangi ek güvenlik avantajlarını sağlar?",
+    antwortTR:
+      "Zero Trust Network Access (ZTNA), güvenliği mikro segmentasyon (microsegmentation) sayesinde artırır ve kullanıcıların yalnızca ihtiyaç duydukları kaynaklara erişmesine izin verir. ZTNA, yalnızca konuma değil, kimlik ve bağlam (identity & context) temelli politikalar uygular.\nZTNA, doğrudan ağ bağlantısı gerektirmediğinden saldırı yüzeyini azaltır ve her zaman etkin (Always-On) güvenlik sağlar. Gerçek zamanlı izleme (real-time monitoring) ve olası olaylara uyarlanabilir tepkiler (adaptive responses) sayesinde genel güvenliği önemli ölçüde artırır.",
+  },
+  {
+    id: 195,
+    frageDE: "Erklären Sie die Aufgaben des IPsec Protokolls.",
+    antwortDE:
+      "IPsec (Internet Protocol Security): IPsec ist eine Protokollsuite, die auf der Netzwerkschicht des TCP/IP-Protokollstapels arbeitet. Sie bietet Mechanismen zur Sicherung des IP-Datenverkehrs, insbesondere in VPN-Umgebungen. IPsec ermöglicht die Verschlüsselung, Authentifizierung und Integritätssicherung von IP-Paketen, um eine sichere Übertragung über unsichere Netzwerke wie das Internet zu gewährleisten.",
+    frageTR:
+      "IPsec (Internet Protocol Security) protokolünün görevlerini açıklayınız.",
+    antwortTR:
+      "IPsec, TCP/IP protokol yığınının (protocol stack) ağ katmanında (network layer) çalışan bir protokol setidir. IPsec, özellikle VPN ortamlarında IP trafiğini güvence altına almak için kullanılır.\nIPsec; IP paketlerinin şifrelenmesini (encryption), kimlik doğrulamasını (authentication) ve bütünlük kontrolünü (integrity check) sağlar. Bu sayede, İnternet gibi güvenli olmayan ağlar üzerinden güvenli veri iletimi mümkün hale gelir.",
+  },
+  {
+    id: 196,
+    frageDE:
+      "Nennen Sie die 7 Schichten des OSI-Modells in aufsteigender Reihenfolge.",
+    antwortDE:
+      "Die 7 Schichten des OSI-Modells (Open Systems Interconnection Model) sind:\n1. Bitübertragungsschicht (Physical Layer)\n2. Sicherungsschicht (Data Link Layer)\n3. Vermittlungsschicht (Network Layer)\n4. Transportschicht (Transport Layer)\n5. Sitzungsschicht (Session Layer)\n6. Darstellungsschicht (Presentation Layer)\n7. Anwendungsschicht (Application Layer)",
+    frageTR:
+      "OSI modelinin (Open Systems Interconnection – Açık Sistemler Bağlantı Modeli) 7 katmanını aşağıdan yukarıya doğru sıralayınız.",
+    antwortTR:
+      "OSI modelinin 7 katmanı şunlardır:\n1. Fiziksel Katman (Physical Layer – Bitübertragungsschicht)\n2. Veri Bağlantı Katmanı (Data Link Layer – Sicherungsschicht)\n3. Ağ Katmanı (Network Layer – Vermittlungsschicht)\n4. Taşıma Katmanı (Transport Layer – Transportschicht)\n5. Oturum Katmanı (Session Layer – Sitzungsschicht)\n6. Sunum Katmanı (Presentation Layer – Darstellungsschicht)\n7. Uygulama Katmanı (Application Layer – Anwendungsschicht)",
+  },
+  {
+    id: 197,
+    frageDE:
+      "Welche Schichten des OSI-Modells gehören zu den transportorientierten Schichten? Erklären Sie auch kurz die Aufgaben dieser Schichten.",
+    antwortDE:
+      "Transportorientierte Schichten:\nDie Bitübertragungsschicht beschäftigt sich mit der physischen Übertragung von Datenbits über das Übertragungsmedium.\nDie Sicherungsschicht kümmert sich um die fehlerfreie Übertragung von Datenframes zwischen benachbarten Netzwerkgeräten. Sie bietet Mechanismen zur Fehlererkennung und Fehlerkorrektur.\nDie Vermittlungsschicht ist für die Adressierung, das Routing und die Weiterleitung von Datenpaketen im Netzwerk verantwortlich.\nDie Transportschicht regelt die Zuordnung der Datenpakete zu einer Anwendung. Sie stellt sicher, dass Datenpakete in der richtigen Reihenfolge ankommen, überwacht die Datenintegrität und regelt den Datenfluss.",
+    frageTR:
+      "OSI modelinde hangi katmanlar taşıma odaklı (transportorientiert) katmanlardır? Bu katmanların görevlerini kısaca açıklayınız.",
+    antwortTR:
+      "Taşıma odaklı katmanlar şunlardır:\nFiziksel Katman (Bitübertragungsschicht): Verilerin bitler hâlinde fiziksel ortam üzerinden iletiminden sorumludur.\nVeri Bağlantı Katmanı (Sicherungsschicht): Ağ cihazları arasında veri çerçevelerinin (frames) hatasız iletimini sağlar, hata tespiti ve düzeltme mekanizmaları içerir.\nAğ Katmanı (Vermittlungsschicht): Adresleme (addressing), yönlendirme (routing) ve veri paketlerinin iletiminden sorumludur.\nTaşıma Katmanı (Transportschicht): Veri paketlerinin uygulamalara doğru şekilde yönlendirilmesini sağlar, paketlerin sırasını korur, veri bütünlüğünü ve akış kontrolünü (flow control) sağlar.",
+  },
+  {
+    id: 198,
+    frageDE:
+      "Welche Schichten des OSI-Modells gehören zu den anwendungsorientierten Schichten? Erklären Sie auch kurz die Aufgaben dieser Schichten.",
+    antwortDE:
+      "Anwendungsorientierte Schichten:\nDie Sitzungsschicht etabliert, verwaltet und beendet Sitzungen zwischen Anwendungen. Sie ermöglicht die Synchronisierung von Datenübertragungen und bietet Mechanismen für den Aufbau und das Beenden von Verbindungen.\nDie Darstellungsschicht kümmert sich um die Datenrepräsentation und den Austausch von Datenformaten zwischen Anwendungen. Sie ist für die Datenkompression, Verschlüsselung sowie für die Datenkonvertierung zuständig.\nDie Anwendungsschicht ist die oberste Schicht des OSI-Modells und enthält Anwendungen und Dienste für Endbenutzer. Sie ermöglicht die Interaktion zwischen Benutzern und dem Netzwerk.",
+    frageTR:
+      "OSI modelinde hangi katmanlar uygulama odaklı (anwendungsorientiert) katmanlardır? Bu katmanların görevlerini açıklayınız.",
+    antwortTR:
+      "Uygulama odaklı katmanlar şunlardır:\nOturum Katmanı (Sitzungsschicht – Session Layer): Uygulamalar arasındaki oturumları başlatır, yönetir ve sonlandırır. Veri iletiminin senkronizasyonunu sağlar ve bağlantı yönetim mekanizmaları sunar.\nSunum Katmanı (Darstellungsschicht – Presentation Layer): Verilerin formatlanmasından, sıkıştırılmasından (compression), şifrelenmesinden (encryption) ve uygulamalar arası veri dönüşümünden sorumludur.\nUygulama Katmanı (Anwendungsschicht – Application Layer): OSI modelinin en üst katmanıdır ve kullanıcıların ağ hizmetleriyle etkileşim kurmasını sağlar. E-posta, dosya aktarımı ve web erişimi gibi uygulama hizmetlerini içerir.",
+  },
+  {
+    id: 199,
+    frageDE:
+      "Nennen Sie Beispiele für Protokolle, welche auf der Vermittlungsschicht und der Transportschicht des OSI-Modells arbeiten.",
+    antwortDE:
+      "Vermittlungsschicht:\n- IP\n- IPsec\n- ICMP\nTransportschicht:\n- TCP\n- UDP",
+    frageTR:
+      "OSI modelinin ağ (Vermittlungsschicht – Network Layer) ve taşıma (Transportschicht – Transport Layer) katmanlarında çalışan protokollere örnek veriniz.",
+    antwortTR:
+      "Ağ Katmanı (Vermittlungsschicht – Network Layer) protokolleri:\n- IP (Internet Protocol)\n- IPsec (Internet Protocol Security)\n- ICMP (Internet Control Message Protocol)\nTaşıma Katmanı (Transportschicht – Transport Layer) protokolleri:\n- TCP (Transmission Control Protocol)\n- UDP (User Datagram Protocol)",
+  },
+  {
+    id: 200,
+    frageDE:
+      "Ordnen Sie Hub, Bridge, Router, Switch und Repeater den entsprechenden Schichten des OSI-Modells zu.",
+    antwortDE:
+      "Bitübertragungsschicht:\n- Hub\n- Repeater\nSicherungsschicht:\n- Layer-2-Switch\n- Bridge\nVermittlungsschicht:\n- Router\n- Layer-3-Switch",
+    frageTR:
+      "Hub, Bridge, Router, Switch ve Repeater cihazlarını OSI modelinin ilgili katmanlarına eşleştiriniz.",
+    antwortTR:
+      "Fiziksel Katman (Bitübertragungsschicht – Physical Layer):\n- Hub\n- Repeater\nVeri Bağlantı Katmanı (Sicherungsschicht – Data Link Layer):\n- Layer-2 Switch\n- Bridge\nAğ Katmanı (Vermittlungsschicht – Network Layer):\n- Router\n- Layer-3 Switch",
+  },
+  {
+    id: 201,
+    frageDE:
+      "Erklären Sie den Unterschied zwischen einem Switch und einem Hub.",
+    antwortDE:
+      "Ein Hub leitet empfangene Datenpakete an alle angeschlossenen Geräte weiter. Dies kann zu erheblichem Netzwerk-Verkehr und Kollisionen führen, da die Daten an alle Geräte gesendet werden, unabhängig davon, für welches Gerät die Daten tatsächlich bestimmt sind.\nEin Switch ist in der Lage, den spezifischen Pfad zu bestimmen, auf dem Datenpakete weitergeleitet werden sollen. Bei Empfang eines Datenpakets sendet der Switch dieses nur an das Zielgerät weiter. Dies wird durch die Speicherung von MAC-Adressen der an den Switch angeschlossenen Geräte erreicht. Diese Funktionsweise verringert Kollisionen und ermöglicht eine bessere Bandbreitennutzung.",
+    frageTR: "Bir Switch ile bir Hub arasındaki farkı açıklayınız.",
+    antwortTR:
+      "Bir Hub, aldığı veri paketlerini bağlı tüm cihazlara iletir. Bu, verilerin aslında hangi cihaza ait olduğuna bakılmaksızın tüm cihazlara gönderilmesi nedeniyle ağ trafiğinin artmasına ve çarpışmalara (collision) yol açabilir.\nBir Switch ise veri paketlerinin iletileceği belirli yolu saptayabilir. Bir paketi aldığında, paketi yalnızca hedef cihaza gönderir. Bunu, Switch’e bağlı cihazların MAC adreslerini (Media Access Control) kaydederek gerçekleştirir. Bu çalışma şekli çarpışmaları azaltır ve bant genişliğinin daha verimli kullanılmasını sağlar.",
+  },
+  {
+    id: 202,
+    frageDE: "Wofür wird das Network File System (NFS) verwendet?",
+    antwortDE:
+      "NFS ist ein Protokoll, das hauptsächlich in Unix- und Linux-Umgebungen eingesetzt wird. Es ermöglicht den transparenten Zugriff auf entfernte Dateisysteme und erleichtert die gemeinsame Nutzung von Dateien zwischen verschiedenen Betriebssystemen.\nNFS basiert auf dem Client-Server-Modell und ermöglicht es einem Computer, über ein Netzwerk auf Dateien zuzugreifen, als wären sie lokal gespeichert.",
+    frageTR: "Network File System (NFS) ne için kullanılır?",
+    antwortTR:
+      "NFS, ağırlıklı olarak Unix ve Linux ortamlarında kullanılan bir protokoldür. Uzak dosya sistemlerine şeffaf erişim sağlar ve farklı işletim sistemleri arasında dosyaların ortak kullanılmasını kolaylaştırır.\nNFS, istemci–sunucu (Client–Server) modeline dayanır ve bir bilgisayarın ağ üzerinden dosyalara, sanki yerel olarak depolanmış gibi erişebilmesini sağlar.",
+  },
+  {
+    id: 203,
+    frageDE: "Was ist die Aufgabe des SMB-Protokolls?",
+    antwortDE:
+      "SMB (Server Message Block) ist ein Protokoll, das ursprünglich von Microsoft entwickelt wurde und hauptsächlich in Windows-Umgebungen verwendet wird. Es ermöglicht die gemeinsame Nutzung von Dateien, Druckern und anderen Ressourcen in einem Netzwerk.\nSMB unterstützt Funktionen wie Authentifizierung, Datei- und Druckerdienste sowie den Zugriff auf Netzwerkfreigaben. Es ist das Standardprotokoll für die Dateifreigabe in Windows-Netzwerken.",
+    frageTR: "SMB (Server Message Block) protokolünün görevi nedir?",
+    antwortTR:
+      "SMB (Server Message Block), ilk olarak Microsoft tarafından geliştirilmiş ve başlıca Windows ortamlarında kullanılan bir protokoldür. Ağ üzerinde dosyaların, yazıcıların ve diğer kaynakların ortak kullanılmasını sağlar.\nSMB; kimlik doğrulama (authentication), dosya ve yazıcı hizmetleri ile ağ paylaşımlarına erişim gibi işlevleri destekler. Windows ağlarında dosya paylaşımı için standart protokoldür.",
+  },
+  {
+    id: 204,
+    frageDE: "Erläutern Sie den Begriff Service Level Agreement (SLA).",
+    antwortDE:
+      "Ein Service Level Agreement (SLA) ist eine schriftliche Vereinbarung zwischen einem Dienstleister und einem Kunden, die die vereinbarten Leistungsparameter und -ziele für eine bestimmte Dienstleistung oder ein Produkt festlegt.\nEin SLA definiert die Erwartungen hinsichtlich Qualität, Reaktionszeiten, Verfügbarkeit, Support und anderen relevanten Aspekten des Services. Es dient als Grundlage für die Bewertung der Servicequalität.",
+    frageTR:
+      "Service Level Agreement (SLA – Hizmet Düzeyi Anlaşması) kavramını açıklayınız.",
+    antwortTR:
+      "Service Level Agreement (SLA), bir hizmet sağlayıcı ile müşteri arasında yapılan ve belirli bir hizmetin veya ürünün üzerinde mutabık kalınan performans parametrelerini ve hedeflerini tanımlayan yazılı bir anlaşmadır.\nBir SLA; kalite, yanıt süreleri, kullanılabilirlik (availability), destek (support) ve hizmetin diğer ilgili unsurlarına ilişkin beklentileri tanımlar. Hizmet kalitesinin değerlendirilmesi için temel bir referans olarak kullanılır.",
+  },
+  {
+    id: 205,
+    frageDE: "Was sind die Aufgaben des First-Level-Supports?",
+    antwortDE:
+      "Der First-Level-Support ist der erste Kontakt für Kunden bei Supportanfragen. Die Aufgaben des 1st-Level Supports umfassen:\nEntgegennahme von Supportanfragen\nKlassifizierung und Priorisierung von Supportanfragen\ngrundlegende Unterstützung, um häufig auftretende Probleme zu lösen\nWeiterleitung von Anfragen, wenn das Problem über den Bereich des 1st-Level Supports hinausgeht\nDokumentation der Supportanfragen in einem Ticketsystem oder einer Wissensdatenbank\nprofessionelle und freundliche Kommunikation mit den Kunden",
+    frageTR: "First-Level-Support’un görevleri nelerdir?",
+    antwortTR:
+      "First-Level-Support (1st-Level Support), destek taleplerinde müşteriler için ilk temas noktasıdır. Görevleri şunları kapsar:\nDestek taleplerini alma\nDestek taleplerini sınıflandırma ve önceliklendirme\nSık görülen sorunları çözmek için temel destek sağlama\nSorun, 1st-Level kapsamını aşıyorsa talepleri ilgili birime yönlendirme (eskalasyon)\nTalepleri bir bilet (ticket) sistemi veya bilgi bankasında (knowledge base) belgeleme\nMüşterilerle profesyonel ve nazik iletişim kurma",
+  },
+  {
+    id: 206,
+    frageDE:
+      "Erklären Sie den Unterschied zwischen dem 2nd-Level- und 3rd-Level-Support.",
+    antwortDE:
+      "Der Second-Level-Support ist die erste Eskalationsstufe, wenn eine Anfrage nicht vom First-Level-Support gelöst werden kann. Er besteht aus erfahrenen Technikern oder Spezialisten. Sie können komplexere Anfragen bearbeiten, Fehlerdiagnosen durchführen und spezifischere Lösungen bereitstellen.\nDer Third-Level-Support ist die höchste Eskalationsstufe im Supportprozess. Er umfasst hochspezialisierte Fachleute, die über umfangreiches technisches Wissen und Expertise verfügen. Sie sind in der Lage, komplexe Probleme zu analysieren und umfassende Fehlerbehebung durchzuführen, die über die Möglichkeiten des Second-Level-Supports hinausgehen.",
+    frageTR:
+      "2nd-Level-Support ile 3rd-Level-Support arasındaki farkı açıklayınız.",
+    antwortTR:
+      "Second-Level-Support (2nd-Level), First-Level-Support’un çözemediği talepler için ilk eskalasyon (yükseltme) seviyesidir. Deneyimli teknisyenler veya uzmanlardan oluşur; daha karmaşık talepleri ele alır, hata teşhisi (diagnosis) yapar ve daha spesifik çözümler sunar.\nThird-Level-Support (3rd-Level) destek sürecindeki en üst eskalasyon seviyesidir. Geniş teknik bilgi ve uzmanlığa sahip yüksek derecede uzman profesyonellerden oluşur; Second-Level’ın ötesindeki karmaşık sorunları analiz eder ve kapsamlı hata giderme (troubleshooting) gerçekleştirir.",
+  },
+  {
+    id: 207,
+    frageDE: "Welchem Zweck dienen Standard Operating Procedures (SOP)?",
+    antwortDE:
+      "Standard Operating Procedures (SOP) sind schriftliche Anweisungen oder Leitfäden, die die spezifischen Schritte und Verfahren beschreiben, die in einer Organisation oder einem Unternehmen bei bestimmten Aufgaben oder Prozessen befolgt werden sollen.\nSie dienen dazu, eine klare Struktur, Einheitlichkeit und Effizienz in organisatorischen Abläufen zu gewährleisten, die Qualität zu kontrollieren und die Einhaltung von Standards sicherzustellen.",
+    frageTR:
+      "Standard Operating Procedures (SOP – Standart İşletim Prosedürleri) ne amaçla kullanılır?",
+    antwortTR:
+      "Standard Operating Procedures (SOP), bir kuruluş veya işletmede belirli görevler ya da süreçlerde izlenmesi gereken adımları ve yöntemleri tanımlayan yazılı talimatlar veya kılavuzlardır.\nSOP’ler; süreçlerde açık bir yapı, birlik (standardizasyon) ve verimlilik sağlamaya, kaliteyi kontrol etmeye ve standartlara uyumu güvence altına almaya hizmet eder.",
+  },
+  {
+    id: 208,
+    frageDE: "Beschreiben was unter dem ITIL-Framework zu verstehen ist.",
+    antwortDE:
+      "ITIL (Information Technology Infrastructure Library) ist ein Framework für das IT-Service-Management (ITSM), das bewährte Praktiken und Standards für die effektive Bereitstellung und Verwaltung von IT-Services bietet. Es wurde entwickelt, um die Qualität von IT-Services zu verbessern, die Kundenzufriedenheit zu steigern und die Effizienz der IT-Organisationen zu maximieren.\nITIL besteht aus einer Sammlung von Best Practices, die in verschiedene Prozesse und Funktionen unterteilt sind. Es wird weltweit von Organisationen verschiedener Größen und Branchen eingesetzt und ist zu einem Industriestandard für das IT-Service-Management geworden.",
+    frageTR:
+      "ITIL (Information Technology Infrastructure Library) çerçevesinden (framework) ne anlaşılmalıdır?",
+    antwortTR:
+      "ITIL, BT Hizmet Yönetimi (ITSM – IT-Service-Management) için, BT hizmetlerinin etkin şekilde sunulması ve yönetilmesine yönelik en iyi uygulamalar (best practices) ve standartlar sağlayan bir çerçevedir. ITIL; BT hizmetlerinin kalitesini yükseltmek, müşteri memnuniyetini artırmak ve BT organizasyonlarının verimliliğini maksimize etmek amacıyla geliştirilmiştir.\nITIL, çeşitli süreç ve fonksiyonlara ayrılmış en iyi uygulamalardan oluşur. Dünya genelinde farklı ölçek ve sektörlerdeki kuruluşlar tarafından kullanılır ve IT hizmet yönetiminde endüstri standardı hâline gelmiştir.",
+  },
 ];
 
 // Backwards-compatible named export used by pages
-export const fragenFISI = fragen;
+export const fragenFIAE = fragen;

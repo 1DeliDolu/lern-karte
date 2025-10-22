@@ -1,22 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
-export default function LernLayout({ children }: { children: React.ReactNode }) {
-  const karteNR = Array.from({ length: 9 }, (_, i) => i + 1);
-
+export default function LernLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div style={{ padding: 20 }}>
-      
-      <h1>Lernkarten</h1>
-  <nav style={{ display: 'flex', gap: 8, justifyContent: 'center', margin: '0 -20px 16px -20px', padding: '8px 20px' }}>
-        {karteNR.map((n) => (
-          <Link key={n} href={`/lern/${n}`} style={{ padding: '6px 10px', border: '1px solid #ccc', borderRadius: 4, textDecoration: 'none' }}>
-            {n}
-          </Link>
-        ))}
-      </nav>
-
-      <div>{children}</div>
-    </div>
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Box sx={{ display: "grid", gap: 4 }}>{children}</Box>
+    </Container>
   );
 }

@@ -3,7 +3,7 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 
 import { NAV_ITEMS } from '@/constants/navItems';
-import { QUESTIONS, QUESTIONS_PER_KARTE } from '@/lib/questions';
+import { INDEXED_QUESTIONS, getTrackMeta } from '@/lib/questions';
 import {
   formatLabel as formatDocLabel,
   listDocsRecursive as listDocsRecursiveDocs,
@@ -185,8 +185,7 @@ export async function GET(request: Request) {
     results.push(result);
   }
 
-  for (let index = 0; index < QUESTIONS.length; index += 1) {
-    const question = QUESTIONS[index];
+  for (const question of INDEXED_QUESTIONS) {
     const fields = [
       question.frageDE,
       question.antwortDE,
@@ -200,19 +199,21 @@ export async function GET(request: Request) {
     const combinedLower = combined.toLowerCase();
     if (!combinedLower.includes(normalizedTerm)) continue;
 
-    const questionNumber = index + 1;
-    const karteNumber = Math.floor(index / QUESTIONS_PER_KARTE) + 1;
-    const titleBase = question.frageDE || question.frageTR || `Frage ${questionNumber}`;
+    const questionNumber = question.questionNumber;
+    const karteNumber = question.karteNumber;
+    const titleBase =
+      question.frageDE || question.frageTR || `Frage ${questionNumber}`;
     const title =
       titleBase.length > 140 ? `${titleBase.slice(0, 139)}…` : titleBase;
-    const location = `Karte ${karteNumber} • Frage ${questionNumber}`;
-    const href = `/lern/${karteNumber}#question-${questionNumber}`;
+    const trackMeta = getTrackMeta(question.track);
+    const location = `${trackMeta.label} • Karte ${karteNumber} • Frage ${questionNumber}`;
+    const href = `/lern/${question.trackSlug}/${karteNumber}#question-${questionNumber}`;
     const snippet = createSnippet(combined, query);
     const questionTitleLower = titleBase.toLowerCase();
     const score = questionTitleLower.includes(normalizedTerm) ? 80 : 65;
 
     addResult({
-      id: `question-${questionNumber}`,
+      id: `question-${question.trackSlug}-${questionNumber}`,
       type: 'question',
       title,
       description: snippet,

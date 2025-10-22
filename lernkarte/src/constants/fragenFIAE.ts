@@ -2166,3 +2166,6 @@ export const fragen: Karte[] = [
       "ITIL, BT Hizmet Yönetimi (ITSM – IT-Service-Management) için, BT hizmetlerinin etkin şekilde sunulması ve yönetilmesine yönelik en iyi uygulamalar (best practices) ve standartlar sağlayan bir çerçevedir. ITIL; BT hizmetlerinin kalitesini yükseltmek, müşteri memnuniyetini artırmak ve BT organizasyonlarının verimliliğini maksimize etmek amacıyla geliştirilmiştir.\nITIL, çeşitli süreç ve fonksiyonlara ayrılmış en iyi uygulamalardan oluşur. Dünya genelinde farklı ölçek ve sektörlerdeki kuruluşlar tarafından kullanılır ve IT hizmet yönetiminde endüstri standardı hâline gelmiştir.",
   },
 ];
+
+// Backwards-compatible named export used by pages
+export const fragenFIAE = fragen;
