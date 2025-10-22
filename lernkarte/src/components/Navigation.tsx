@@ -1,28 +1,28 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { alpha, styled } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-import Paper from '@mui/material/Paper';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import CircularProgress from '@mui/material/CircularProgress';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import * as React from "react";
+import { alpha, styled } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
+import Paper from "@mui/material/Paper";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import CircularProgress from "@mui/material/CircularProgress";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-import { NAV_ITEMS } from '@/constants/navItems';
+import { NAV_ITEMS } from "@/constants/navItems";
 
 type SearchResult = {
   id: string;
-  type: 'question' | 'documentation' | 'lernfeld' | 'page';
+  type: "question" | "documentation" | "lernfeld" | "page";
   title: string;
   description?: string;
   href: string;
@@ -33,58 +33,58 @@ type SearchResponse = {
   results: SearchResult[];
 };
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
+  "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  width: '100%',
+  width: "100%",
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  width: '100%',
-  '& .MuiInputBase-input': {
+  color: "inherit",
+  width: "100%",
+  "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
+    transition: theme.transitions.create("width"),
+    width: "100%",
   },
 }));
 
 const SearchResultsContainer = styled(Paper)(({ theme }) => ({
-  position: 'absolute',
-  top: 'calc(100% + 8px)',
+  position: "absolute",
+  top: "calc(100% + 8px)",
   left: 0,
   right: 0,
   zIndex: theme.zIndex.modal,
   maxHeight: 360,
-  overflowY: 'auto',
+  overflowY: "auto",
   padding: theme.spacing(1, 0),
 }));
 
-const typeLabels: Record<SearchResult['type'], string> = {
-  question: 'Frage',
-  documentation: 'Lernfeld',
-  lernfeld: 'Lernfeld',
-  page: 'Sayfa',
+const typeLabels: Record<SearchResult["type"], string> = {
+  question: "Frage",
+  documentation: "Lernfeld",
+  lernfeld: "Lernfeld",
+  page: "Sayfa",
 };
 
 export default function Navigation() {
   const router = useRouter();
-  const [query, setQuery] = React.useState('');
+  const [query, setQuery] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [results, setResults] = React.useState<SearchResult[]>([]);
   const [loading, setLoading] = React.useState(false);
@@ -125,8 +125,8 @@ export default function Navigation() {
         .catch((err) => {
           if (controller.signal.aborted) return;
           if (fetchIdRef.current !== fetchId) return;
-          console.error('Search request failed', err);
-          setError('Arama sırasında bir sorun oluştu.');
+          console.error("Search request failed", err);
+          setError("Arama sırasında bir sorun oluştu.");
           setLoading(false);
         });
     }, 250);
@@ -150,48 +150,56 @@ export default function Navigation() {
       setQuery(event.target.value);
       if (!open) setOpen(true);
     },
-    [open],
+    [open]
   );
 
   const handleResultClick = React.useCallback(() => {
     setOpen(false);
-    setQuery('');
+    setQuery("");
     setResults([]);
   }, []);
 
   const handleInputKeyDown = React.useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         setOpen(false);
         return;
       }
-      if (event.key === 'Enter' && results[0]) {
+      if (event.key === "Enter" && results[0]) {
         event.preventDefault();
         router.push(results[0].href);
         handleResultClick();
       }
     },
-    [results, router, handleResultClick],
+    [results, router, handleResultClick]
   );
 
-  const shouldShowResults = open && (loading || error || trimmedQuery.length > 0);
+  const shouldShowResults =
+    open && (loading || error || trimmedQuery.length > 0);
 
   return (
-    <AppBar position="static" component="nav">
+    <AppBar position="sticky" component="nav">
       <Toolbar sx={{ gap: 2 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexGrow: 1 }}>
+        <Box
+          sx={{ display: "flex", alignItems: "center", gap: 2, flexGrow: 1 }}
+        >
           <Typography variant="h6" noWrap>
             Lernkarte-App
           </Typography>
           <ClickAwayListener onClickAway={handleClickAway}>
-            <Box sx={{ position: 'relative', minWidth: { xs: '60%', sm: 240, md: 320 } }}>
+            <Box
+              sx={{
+                position: "relative",
+                minWidth: { xs: "60%", sm: 240, md: 320 },
+              }}
+            >
               <Search>
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Ara…"
-                  inputProps={{ 'aria-label': 'search' }}
+                  inputProps={{ "aria-label": "search" }}
                   value={query}
                   onChange={handleInputChange}
                   onFocus={handleFocus}
@@ -203,8 +211,8 @@ export default function Navigation() {
                   {loading ? (
                     <Box
                       sx={{
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: "flex",
+                        alignItems: "center",
                         gap: 1,
                         px: 2,
                         py: 1.5,
@@ -237,29 +245,43 @@ export default function Navigation() {
                             primary={
                               <Box
                                 sx={{
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                  alignItems: 'center',
+                                  display: "flex",
+                                  justifyContent: "space-between",
+                                  alignItems: "center",
                                   gap: 1,
                                 }}
                               >
-                                <Typography component="span" variant="subtitle1" sx={{ fontWeight: 600 }}>
+                                <Typography
+                                  component="span"
+                                  variant="subtitle1"
+                                  sx={{ fontWeight: 600 }}
+                                >
                                   {result.title}
                                 </Typography>
                                 <Typography
                                   component="span"
                                   variant="caption"
                                   color="text.secondary"
-                                  sx={{ textTransform: 'uppercase', flexShrink: 0 }}
+                                  sx={{
+                                    textTransform: "uppercase",
+                                    flexShrink: 0,
+                                  }}
                                 >
                                   {typeLabels[result.type]}
                                 </Typography>
                               </Box>
                             }
                             secondary={
-                              <Box component="div" sx={{ display: 'grid', gap: 0.5, mt: 0.5 }}>
+                              <Box
+                                component="div"
+                                sx={{ display: "grid", gap: 0.5, mt: 0.5 }}
+                              >
                                 {result.location && (
-                                  <Typography component="span" variant="caption" color="text.secondary">
+                                  <Typography
+                                    component="span"
+                                    variant="caption"
+                                    color="text.secondary"
+                                  >
                                     {result.location}
                                   </Typography>
                                 )}
@@ -268,7 +290,12 @@ export default function Navigation() {
                                     component="span"
                                     variant="body2"
                                     color="text.secondary"
-                                    sx={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                                    sx={{
+                                      display: "-webkit-box",
+                                      WebkitLineClamp: 3,
+                                      WebkitBoxOrient: "vertical",
+                                      overflow: "hidden",
+                                    }}
                                   >
                                     {result.description}
                                   </Typography>
@@ -291,13 +318,13 @@ export default function Navigation() {
             </Box>
           </ClickAwayListener>
         </Box>
-        <Box sx={{ display: 'flex', gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1 }}>
           {NAV_ITEMS.map((item) => (
             <Button
               key={item.href}
               component={Link}
               href={item.href}
-              sx={{ color: '#fff', textDecoration: 'none' }}
+              sx={{ color: "#fff", textDecoration: "none" }}
             >
               {item.label}
             </Button>
