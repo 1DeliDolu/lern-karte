@@ -1,77 +1,182 @@
-<h1>Normalisieren relationaler Datenmodelle: 1. bis 3. Normalform (1NF–3NF)</h1>
+# 🧮 Normalisieren: 1. bis 3. Normalform <span style="background:#e0f0ff;">LF8</span>
 
-<h2>
-  <span style="background-color:#2563eb; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Einordnung, Ziel & Prüfungsrelevanz
-</h2>
-<p>Die <strong>Normalisierung</strong> ist ein systematisches Verfahren, um <em>Datenredundanzen</em> zu verringern und <em>Datenkonsistenz</em> zu erhöhen. In der Praxis konzentriert man sich auf die <strong>erste bis dritte Normalform</strong>; daran wird eine Beispieltabelle schrittweise bis zur 3NF überführt. :contentReference[oaicite:0]{index=0}</p>
-<p>Im Designprozess wird nach ER-Modellierung das relationale Modell erstellt und <em>anschließend</em> durch Normalisierung optimiert. Ziel sind Relationen, die vorgegebene Normalformen erfüllen; höhere NF bedeuten strengere Strukturanforderungen. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}</p>
+**Normalisierung** ist das strukturierte Verfahren, um **Redundanzen** in relationalen Datenmodellen zu verringern und damit die **Datenkonsistenz** zu erhöhen. In der Praxis werden i. d. R. die **1. NF** bis **3. NF** angewendet; 4. NF und 5. NF sind selten nötig. Die Normalisierung ist Teil der **logischen Phase** des Datenbankdesigns und optimiert das aus ER-Modellen abgeleitete relationale Schema.   
 
-<h2>
-  <span style="background-color:#16a34a; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Voraussetzungen: Schlüssel, Beziehungen & Integrität
-</h2>
-<p>Normalisierung wirkt im Kontext des relationalen Modells mit <strong>Primär- und Fremdschlüsseln</strong>, die Eindeutigkeit und referenzielle Integrität sichern. Diese werden im logischen Schema verankert und bilden die Grundlage für eine konsistente Zerlegung in Relationen. :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}</p>
+---
 
-<h2>
-  <span style="background-color:#9333ea; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  1. Normalform (1NF): Atomare Werte
-</h2>
-<p><strong>Definition:</strong> Eine Tabelle erfüllt die 1NF, wenn <em>alle Attribute atomare, unteilbare Werte</em> enthalten (keine Listen, Wiederholgruppen oder zusammengesetzten Felder). :contentReference[oaicite:5]{index=5}</p>
-<ul>
-  <li><strong>Typische Verletzung:</strong> Spalte „Bestellpositionen“ enthält Aufzählungen.</li>
-  <li><strong>Abhilfe (Beispiel):</strong> Aufspalten der Sammelspalten in einzelne Attribute (z. B. <em>Pos</em>, <em>Anzahl</em>, <em>Bezeichnung</em>, <em>ANr</em>) und ggf. Erweiterung des Schlüssels (z. B. <em>BestellNr + Pos</em>). :contentReference[oaicite:6]{index=6}</li>
-</ul>
+## 🧭 Ausgangspunkt & Ziel (Beispiel „Bestellung“) <span style="background:#e0f0ff;">LF8</span>
 
-<h2>
-  <span style="background-color:#0ea5e9; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  2. Normalform (2NF): Vollständige Abhängigkeit vom (zusammengesetzten) Schlüssel
-</h2>
-<p><strong>Kernidee:</strong> Jedes <em>Nicht-Schlüsselattribut</em> hängt <em>vollständig</em> vom <em>gesamten</em> Primärschlüssel ab, nicht nur von einem Teil (relevant bei zusammengesetzten Schlüsseln). Partielle Abhängigkeiten werden durch Auslagern in eigene Relationen beseitigt. Die Lehrunterlagen führen die Normalisierung schrittweise von der 1NF weiter, indem solche Abhängigkeiten identifiziert und getrennt werden. :contentReference[oaicite:7]{index=7}</p>
+Als Ausgangsdaten dient eine **nicht normalisierte** Tabelle **Bestellung** mit wiederholten Feldern (*Bestellpositionen*) und zusammengesetzten Angaben (*Kunde*):
 
-<h2>
-  <span style="background-color:#22c55e; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  3. Normalform (3NF): Keine transitiven Abhängigkeiten
-</h2>
-<p><strong>Definition:</strong> Es existieren <em>keine transitiven Abhängigkeiten</em> von Schlüsseln über andere Nicht-Schlüsselattribute (z. B. <em>ANr → Bezeichnung</em> innerhalb einer Positionstabelle). Abhilfe: auslagern in eigene Tabellen und 1:n-Beziehungen herstellen. Das Ergebnis sind voneinander unabhängige Relationen in 3NF. :contentReference[oaicite:8]{index=8}</p>
+| BestellNr | Datum      | Kunde (Name, KNr) | Bestellpositionen                                           |   |
+| --------- | ---------- | ----------------- | ----------------------------------------------------------- | - |
+| 1         | 12.12.2020 | Maier – KNr 71    | 1) 2 Tische Nr. 12; 2) 3 Schränke Nr. 88                    |   |
+| 2         | 14.12.2020 | Maier – KNr 71    | 1) 4 Stühle Nr. 67                                          |   |
+| 3         | 14.12.2020 | Schulz – KNr 33   | 1) 4 Tische Nr. 12; 2) 8 Stühle Nr. 67; 3) 1 Schrank Nr. 88 |   |
 
-<h2>
-  <span style="background-color:#ef4444; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Vorgehen: Schrittweise Normalisierung eines Bestellmodells
-</h2>
-<ul>
-  <li><strong>Ausgangslage:</strong> Nicht normalisierte Tabelle „Bestellung“ mit Sammelspalten (Kunde, Bestellpositionen). <em>Problem:</em> Redundanzen und Anomalierisiken. :contentReference[oaicite:9]{index=9}</li>
-  <li><strong>→ 1NF:</strong> Zerlegung der Sammelspalten; neue Tabelle mit Schlüssel <em>(BestellNr, Pos)</em>. :contentReference[oaicite:10]{index=10}</li>
-  <li><strong>→ 2NF:</strong> Trennung von Attributen, die nur von einem Teil des Schlüssels abhängen (z. B. artikelbezogene Eigenschaften). :contentReference[oaicite:11]{index=11}</li>
-  <li><strong>→ 3NF:</strong> Eliminieren transitiver Abhängigkeiten, z. B. <em>ANr → Bezeichnung</em>, durch Auslagerung in „Artikel“ und „Kunde“; Verknüpfung über PK/FK. Ergebnis: Tabellen „Bestellung“, „BestellPosition“, „Kunde“, „Artikel“ in 3NF. :contentReference[oaicite:12]{index=12}</li>
-</ul>
+Ziel ist die schrittweise Überführung in **3. NF**: atomare Werte (1. NF) → Entfernung **partieller Abhängigkeiten** (2. NF) → Entfernung **transitiver Abhängigkeiten** (3. NF).  
 
-<h2>
-  <span style="background-color:#a855f7; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Zusammenhang mit Integritätsregeln & Implementierung
-</h2>
-<p>Die normalisierte Struktur wird durch <strong>Primär-/Fremdschlüssel</strong> und geeignete Constraints in SQL verankert; so wird referenzielle Integrität gewährleistet und Inkonsistenz verhindert. Diese Kopplung von Modell (PK/FK) und Normalformen ist Teil des sauberen logischen Designs vor der physischen Umsetzung. :contentReference[oaicite:13]{index=13} :contentReference[oaicite:14]{index=14}</p>
+---
 
-<h2>
-  <span style="background-color:#64748b; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Praxis-Tipps & typische Stolpersteine
-</h2>
-<ul>
-  <li><strong>Anomalien vermeiden:</strong> 1NF beseitigt Wiederholgruppen; 2NF entfernt partielle Abhängigkeiten; 3NF eliminiert transitive Abhängigkeiten. :contentReference[oaicite:15]{index=15} :contentReference[oaicite:16]{index=16}</li>
-  <li><strong>Übernormalisierung abwägen:</strong> Zu viele kleine Tabellen können Performance und Komplexität negativ beeinflussen; Normalisierung ist gegen Praxisanforderungen (Abfragen, Joins) auszubalancieren. :contentReference[oaicite:17]{index=17}</li>
-  <li><strong>Schrittfolge beachten:</strong> ER-Modell → relationales Modell → Normalisierung → SQL-Schema mit PK/FK/Datentypen. :contentReference[oaicite:18]{index=18}</li>
-</ul>
+## 1️⃣ Erste Normalform (1. NF) <span style="background:#e0f0ff;">LF8</span>
 
-<h2>
-  <span style="background-color:#f97316; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Kurz-Checkliste für 1NF–3NF
-</h2>
-<ul>
-  <li><strong>1NF:</strong> Enthält eine Spalte Listen/Wiederholungen? → Aufspalten in atomare Attribute. :contentReference[oaicite:19]{index=19}</li>
-  <li><strong>2NF:</strong> Gibt es zusammengesetzte Schlüssel? Hängen alle Nicht-Schlüsselattribute vom <em>gesamten</em> Schlüssel ab? → Partielle Abhängigkeiten auslagern. :contentReference[oaicite:20]{index=20}</li>
-  <li><strong>3NF:</strong> Hängen Nicht-Schlüsselattribute <em>über</em> andere Nicht-Schlüsselattribute vom Schlüssel ab? → Transitivitäten trennen (eigene Tabellen, PK/FK). :contentReference[oaicite:21]{index=21}</li>
-</ul>
+**Definition:** Eine Tabelle liegt in der **1. NF**, wenn alle **Attribute atomar** (einfache, unteilbare Werte) sind – keine Listen/Feldwiederholungen. 
 
-<h2>Quelle</h2>
-<p>„<em>Daten systemübergreifend bereitstellen</em>“, <strong>Lernfeld 8</strong> — Normalisierung (1NF–3NF), Designphasen, PK/FK, Praxisbeispiel und Hinweise zu Übernormalisierung. :contentReference[oaicite:22]{index=22} :contentReference[oaicite:23]{index=23} :contentReference[oaicite:24]{index=24} :contentReference[oaicite:25]{index=25}</p>
-<p>„<em>Software zur Verwaltung von Daten anpassen</em>“, <strong>Lernfeld 5</strong> — Einbettung von Normalisierung/Integritätsbeziehungen im logischen Schema. :contentReference[oaicite:26]{index=26}</p>
+**Umsetzung im Beispiel:**
+
+* Spalte **Kunde** wird zu **KNr** und **Name** aufgeteilt.
+* Aus **Bestellpositionen** werden **Pos**, **ANr**, **Bezeichnung**, **Anzahl**.
+* **Primärschlüssel** wird **(BestellNr, Pos)**. 
+
+**Resultat (Ausschnitt, 1. NF):**
+
+| BestellNr | Pos | Datum      | KNr | Name   | ANr | Bezeichnung | Anzahl |   |
+| --------- | --: | ---------- | --: | ------ | --: | ----------- | -----: | - |
+| 1         |   1 | 12.12.2020 |  71 | Maier  |  12 | Tisch       |      2 |   |
+| 1         |   2 | 12.12.2020 |  71 | Maier  |  88 | Schrank     |      3 |   |
+| 2         |   1 | 14.12.2020 |  71 | Maier  |  67 | Stuhl       |      4 |   |
+| 3         |   1 | 14.12.2020 |  33 | Schulz |  12 | Tisch       |      4 |   |
+
+---
+
+## 2️⃣ Zweite Normalform (2. NF) <span style="background:#e0f0ff;">LF8</span>
+
+**Definition:** **2. NF** gilt, wenn die Tabelle **1. NF** erfüllt und **alle Nicht-Primärschlüsselattribute vom gesamten (zusammengesetzten) Primärschlüssel** abhängen. **Partielle Abhängigkeiten** (nur von einem Teil des Schlüssels) sind zu entfernen. 
+
+**Begründung im Beispiel:**
+
+* **Datum**, **KNr**, **Name** hängen **nur von BestellNr** (nicht von *BestellNr+Pos*) ab ⇒ **partielle Abhängigkeiten**.
+* Lösung: Aufspaltung in **Bestellung** (*BestellNr → Datum, KNr, Name*) und **BestellPosition** (*BestellNr, Pos → ANr, Bezeichnung, Anzahl*), verknüpft über **1:n** nach **BestellNr**. 
+
+**Resultat (2. NF):** Zwei Tabellen **Bestellung** und **BestellPosition** mit den gezeigten Spalten. 
+
+---
+
+## 3️⃣ Dritte Normalform (3. NF) <span style="background:#e0f0ff;">LF8</span>
+
+**Definition:** **3. NF** gilt, wenn **2. NF** erfüllt ist und **kein Nichtschlüsselattribut transitiv** von einem Schlüssel abhängt (d. h. Nichtschlüssel → Nichtschlüssel → …). 
+
+**Begründung im Beispiel:**
+
+* In **BestellPosition** sind **ANr → Bezeichnung** (Artikelnummer bestimmt Bezeichnung) **transitiv**; ebenso in **Bestellung** **KNr → Name**.
+* Lösung: Auslagerung transitiver Attribute in eigene Tabellen **Kunde(KNr, Name, …)** und **Artikel(ANr, Bezeichnung, …)**; **Bestellung** referenziert **Kunde**, **BestellPosition** referenziert **Artikel**. 
+
+**Resultat (3. NF – Schema aus dem PDF):**
+**Bestellung(BestellNr, Datum, KNr)** ⟷ **BestellPosition(BestellNr, Pos, ANr, Anzahl)**; sowie **Kunde(KNr, …Name…)** und **Artikel(ANr, Bezeichnung)**. Redundanzen sind beseitigt. 
+
+---
+
+## 💻 SQL-Beispiel (entsprechend der PDF-Tabellen) <span style="background:#e0f0ff;">LF8</span>
+
+Die folgende **SQL-DDL** bildet **genau** die im PDF gezeigten Tabellen der **3. NF** ab. Die Syntax orientiert sich am im Material gezeigten SQL-Grundgerüst.  
+
+```sql
+-- Kunden und Artikel (transitive Attribute ausgelagert)
+CREATE TABLE Kunde (
+  KNr        INTEGER PRIMARY KEY,
+  Name       VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Artikel (
+  ANr        INTEGER PRIMARY KEY,
+  Bezeichnung VARCHAR(100) NOT NULL
+);
+
+-- Bestellung (verweist auf Kunde)
+CREATE TABLE Bestellung (
+  BestellNr  INTEGER PRIMARY KEY,
+  Datum      DATE NOT NULL,
+  KNr        INTEGER NOT NULL,
+  FOREIGN KEY (KNr) REFERENCES Kunde(KNr)
+);
+
+-- Bestellposition (Zwischentabelle mit zusammengesetztem Schlüssel)
+CREATE TABLE BestellPosition (
+  BestellNr  INTEGER NOT NULL,
+  Pos        INTEGER NOT NULL,
+  ANr        INTEGER NOT NULL,
+  Anzahl     INTEGER NOT NULL,
+  PRIMARY KEY (BestellNr, Pos),
+  FOREIGN KEY (BestellNr) REFERENCES Bestellung(BestellNr),
+  FOREIGN KEY (ANr)       REFERENCES Artikel(ANr)
+);
+```
+
+**Beispielabfragen:**
+
+```sql
+-- Alle Positionen einer Bestellung inkl. Artikelname
+SELECT bp.BestellNr, bp.Pos, a.Bezeichnung, bp.Anzahl
+FROM BestellPosition bp
+JOIN Artikel a ON a.ANr = bp.ANr
+WHERE bp.BestellNr = 3;
+
+-- Summe je Bestellung
+SELECT b.BestellNr, SUM(bp.Anzahl) AS GesamtStueck
+FROM Bestellung b
+JOIN BestellPosition bp ON bp.BestellNr = b.BestellNr
+GROUP BY b.BestellNr;
+```
+
+ 
+
+---
+
+## ⚖️ Hinweise zu weiteren NF & Trade-offs <span style="background:#e0f0ff;">LF8</span>
+
+* **BCNF/4. NF/5. NF** existieren (z. B. „nur Abhängigkeiten vom Schlüssel“, „keine mehrwertigen Abhängigkeiten“), sind in der Praxis aber deutlich seltener relevant als 1.–3. NF. 
+* **Über-Normalisierung** kann zu **vielen kleinen Tabellen**, komplexeren **Joins** und Performance-Nachteilen führen; es ist ein **ausgewogener Kompromiss** anzustreben – nur **unkontrollierte Redundanz** entfernen.  
+
+---
+
+## 🧪 Mini-Fall: Bibliothek (Hinweis aus dem PDF) <span style="background:#e0f0ff;">LF8</span>
+
+Im Bibliotheksbeispiel werden für die 3. NF u. a. **Adressfelder atomar** gemacht (PLZ/Ort/Straße) und **transitive Abhängigkeiten** (z. B. *VNr → Verlagsname*, *ISBN → Titel/Auflage*) ausgelagert. Vorgehen analog wie oben. 
+
+---
+
+## 📚 Begriffstabelle
+
+| Begriff             | Definition                                                                                                                                 | Quelle |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| **Normalisierung**  | Verfahren zur Reduzierung von **Redundanz** und Erhöhung der **Konsistenz** in relationalen Modellen.                                      | LF8    |
+| **1. NF**           | Alle Attribute sind **atomar** (keine Listen/Wiederholungen).                                                                              | LF8    |
+| **2. NF**           | 1. NF **und** alle Nichtschlüsselattribute hängen vom **gesamten** (zusammengesetzten) Schlüssel ab (**keine partiellen Abhängigkeiten**). | LF8    |
+| **3. NF**           | 2. NF **und** **keine transitiven Abhängigkeiten** von Nichtschlüsselattributen.                                                           | LF8    |
+| **Primärschlüssel** | Minimale Attributkombination, die jeden Datensatz eindeutig identifiziert.                                                                 | LF5    |
+| **Fremdschlüssel**  | Attribut, das auf den Primärschlüssel einer anderen Tabelle verweist (Relationen verknüpfen).                                              | LF8    |
+
+---
+
+## 🛠️ Prozessschritte (praxisnah nach PDF) <span style="background:#e0f0ff;">LF8</span>
+
+1. **Konzeptionell modellieren** (z. B. **ER-Modell**). 
+2. **Logisches Modell** erstellen (Relationen, Schlüssel). 
+3. **Normalisieren**:
+   a) **1. NF** – Felder atomarisieren. 
+   b) **2. NF** – partielle Abhängigkeiten entfernen. 
+   c) **3. NF** – transitive Abhängigkeiten entfernen. 
+4. **Implementieren** (SQL-DDL erstellen) und testen.  
+
+---
+
+## ✅ Kurzfazit
+
+* 1.–3. NF sind das **Alltagswerkzeug** zur sauberen Relationengestaltung. **Beispiel „Bestellung“** zeigt den Weg von **ungeregelten Wiederholungen** zur **klaren 3. NF** mit **Bestellung**, **BestellPosition**, **Kunde**, **Artikel**. 
+* **Nicht** blind „bis zum Maximum“ normalisieren – **Balance** zwischen **Redundanzfreiheit** und **Performance** halten. 
+
+---
+
+## 🧩 Bonus: Prüfungsnahe Übungsideen (aus dem Material) <span style="background:#e0f0ff;">LF8</span>
+
+* Tabellen mit **Listenfeldern** (z. B. „Flüsse je Land“) bis **3. NF** normalisieren. 
+* Bereits vorhandene Schemata bewerten: **Erfüllen sie 3. NF?** Wenn nicht, **normalisieren**. 
+
+Wenn du möchtest, passe ich das SQL-Beispiel auf dein konkretes Szenario an (Tabellennamen/Felder von dir) – komplett in **3. NF**.
+
+
+---
+
+<div style="display:flex;justify-content:center">
+  <h2>  <a href="./3-Anomalien-und-Redundanzen.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>   |  <a href="./5-ER-Modell-und-Attribute.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
+</div>

@@ -1,125 +1,94 @@
-﻿# Aggregatfunktionen
+﻿# 🧮 Aggregat-Funktionen in SQL <span style="background:#e0f0ff;">LF5, LF11a, LF8</span>
 
-Aggregatfunktionen fassen mehrere Zeilen zu einer Ergebniszeile zusammen und liefern Kennzahlen wie Summen, Durchschnitte oder Anzahlen. Sie werden in SQL typischerweise mit `GROUP BY` kombiniert, um Werte pro Gruppe zu berechnen.
+**Aggregatfunktionen** fassen Werte mehrerer Zeilen zusammen (z. B. **COUNT**, **SUM**, **MIN**, **MAX**, **AVG**). Die Unterlagen nennen Bedeutung und Beispiele und betonen u. a., dass **`COUNT` nur Nicht-NULL-Werte zählt**. Wird ohne Gruppierung über die **ganze Tabelle** aggregiert, liefert die Abfrage **genau einen Datensatz**; mit **`GROUP BY`** werden **Gruppen** gebildet, auf die die Aggregate getrennt angewendet werden. **`HAVING`** filtert Gruppen nach der Aggregation. (LF5, LF11a)
 
-## Beispieltabellen
+---
 
-Die folgenden Beispiele beziehen sich auf eine Tabelle `bestellungsposten` mit den Spalten:
+## ⚙️ Funktionen, Bedeutung & Grundsyntax <span style="background:#e0f0ff;">LF5, LF11a</span>
 
-- `bestell_id` (INT)
-- `kunde_id` (INT)
-- `produkt` (VARCHAR)
-- `menge` (INT)
-- `preis` (DECIMAL)
+* **`COUNT(Spalte)`** – Anzahl der Datensätze mit **definiertem** Wert in der Spalte (NULL wird nicht gezählt). (LF5, LF11a)
+* **`SUM(Spalte)`** – Summe aller Werte der Spalte. (LF5, LF11a)
+* **`MIN(Spalte)`** – kleinster Wert der Spalte. (LF5, LF11a)
+* **`MAX(Spalte)`** – größter Wert der Spalte. (LF5, LF11a)
+* **`AVG(Spalte)`** – Durchschnittswert der Spalte. (LF5, LF11a)
 
-```sql
-bestell_id | kunde_id | produkt   | menge | preis
------------+----------+-----------+-------+-------
-1001       | 10       | Maus      |     2 | 19.90
-1001       | 10       | Tastatur  |     1 | 49.90
-1002       | 11       | Monitor   |     1 | 199.00
-1003       | 10       | Kabel     |     3 |  9.90
-1003       | 12       | Webcam    |     1 | 89.00
-```
+**Gruppieren & Filtern von Gruppen:**
+`SELECT … FROM … GROUP BY Spalte HAVING Bedingungen;` – *Spalte* legt das Gruppierungsmerkmal fest, *Bedingungen* filtern die Gruppen. (LF5) 
 
-## SUM
+---
 
-`SUM` bildet die Summe eines numerischen Ausdrucks. In Kombination mit einer Multiplikation lassen sich z. B. Umsaetze je Bestellung berechnen.
+## 💻 Beispielabfragen (aus den Unterlagen)
+
+### Einzelaggregate über die ganze Tabelle <span style="background:#e0f0ff;">LF5</span>
 
 ```sql
-SELECT bestell_id,
-       SUM(menge * preis) AS gesamtbetrag
-FROM bestellungsposten
-GROUP BY bestell_id;
+SELECT COUNT(P.PersonID) FROM Person P;
+SELECT SUM(P.Gewicht)     FROM Person P;
+SELECT MIN(P.Gewicht)     FROM Person P;
+SELECT MAX(P.Groesse)     FROM Person P;
+SELECT AVG(P.Groesse)     FROM Person P;
 ```
 
-Ergebnis:
+Diese Beispiele aggregieren **ohne Gruppierung** ⇒ **ein Ergebnisdatensatz**. (LF5) 
+
+### Gruppierte Aggregate (z. B. Durchschnittsgröße je Ort) <span style="background:#e0f0ff;">LF5</span>
 
 ```sql
-bestell_id | gesamtbetrag
------------+-------------
-1001       |  89.70
-1002       | 199.00
-1003       | 118.70
+SELECT AVG(P.Groesse)
+FROM Person P
+GROUP BY P.OrtID;
 ```
 
-## AVG
+`GROUP BY` bildet Gruppen je **OrtID**; das Aggregat wird **je Gruppe** berechnet. (LF5) 
 
-`AVG` liefert den Durchschnittswert.
+### Aggregat in Unterabfrage (Vergleich mit Durchschnitt) <span style="background:#e0f0ff;">LF8</span>
 
 ```sql
-SELECT kunde_id,
-       AVG(preis) AS durchschnittspreis
-FROM bestellungsposten
-GROUP BY kunde_id;
+SELECT O.Name, O.Einwohner
+FROM Ort O
+WHERE O.Einwohner > (SELECT AVG(O.Einwohner) FROM Ort O);
 ```
 
-Beispielergebnis:
+**Unterabfrage** liefert den **Durchschnitt** aller Orte; die Hauptabfrage filtert Orte **größer als** dieser Wert. (LF8) 
 
-```sql
-kunde_id | durchschnittspreis
----------+-------------------
-10       | 26.57
-11       | 199.00
-12       | 89.00
-```
+---
 
-## COUNT
+## 🧩 Hinweise & Regeln (aus den Unterlagen) <span style="background:#e0f0ff;">LF5, LF8</span>
 
-`COUNT` ermittelt die Anzahl an Zeilen oder Werten.
+* **Aggregat ohne `GROUP BY` ⇒** Ergebnis hat **einen Datensatz** (Gesamtaggregation). (LF5) 
+* **`GROUP BY` + `HAVING`**: `HAVING` formuliert **Bedingungen auf Gruppen** nach der Aggregation. (LF5) 
+* **Aggregatfunktionen in Subqueries** sind üblich; **Vergleich** mit dem Einzelwert der Unterabfrage (z. B. `> AVG(…)`). (LF8) 
 
-```sql
-SELECT produkt,
-       COUNT(*) AS verkaufte_positionen
-FROM bestellungsposten
-GROUP BY produkt;
-```
+---
 
-### COUNT(DISTINCT ...)
+## 📚 Begriffstabelle
 
-Mit `COUNT(DISTINCT spalte)` lassen sich unterschiedliche Werte zaehlen.
+| **Begriff**          | **Definition (laut Unterlagen)**                                                            | **Quelle** |
+| -------------------- | ------------------------------------------------------------------------------------------- | ---------- |
+| **Aggregatfunktion** | Funktionen zur Zusammenfassung mehrerer Zeilen (z. B. `COUNT`, `SUM`, `MIN`, `MAX`, `AVG`). | LF11a      |
+| **`COUNT`**          | Zählt **Nicht-NULL**-Werte einer Spalte.                                                    | LF5, LF11a |
+| **`SUM`**            | Bildet die Summe der Werte einer Spalte.                                                    | LF5, LF11a |
+| **`MIN`**            | Kleinster Wert einer Spalte.                                                                | LF5, LF11a |
+| **`MAX`**            | Größter Wert einer Spalte.                                                                  | LF5, LF11a |
+| **`AVG`**            | Durchschnittswert einer Spalte.                                                             | LF5, LF11a |
+| **`GROUP BY`**       | Gruppiert Datensätze nach einer Spalte; Aggregate wirken je Gruppe.                         | LF5        |
+| **`HAVING`**         | Filtert **Gruppen** anhand von Bedingungen nach der Aggregation.                            | LF5        |
 
-```sql
-SELECT COUNT(DISTINCT kunde_id) AS anzahl_kunden
-FROM bestellungsposten;
-```
+---
 
-## GROUP BY
+## 🧭 Prozessschritte (kurz & praxisnah) <span style="background:#e0f0ff;">LF5, LF8</span>
 
-`GROUP BY` definiert, wie Zeilen gruppiert werden. Jede Spalte im `SELECT`, die keine Aggregatfunktion ist, muss im `GROUP BY` stehen.
+1. **Aggregat wählen** (COUNT/SUM/MIN/MAX/AVG) passend zur Fragestellung. (LF11a) 
+2. **Ohne** oder **mit `GROUP BY`** entscheiden (Gesamtergebnis vs. gruppierte Ergebnisse). (LF5) 
+3. **Optional `HAVING`** einsetzen, um Gruppen nach dem Aggregat zu filtern. (LF5) 
+4. Bei **Vergleichen** mit globalen Kennzahlen **Aggregat in Unterabfrage** verwenden. (LF8) 
 
-```sql
-SELECT kunde_id,
-       produkt,
-       SUM(menge) AS gesamtmenge
-FROM bestellungsposten
-GROUP BY kunde_id, produkt
-ORDER BY kunde_id, produkt;
-```
 
-## HAVING
 
-`HAVING` filtert Gruppenergebnisse nach der Aggregation.
 
-```sql
-SELECT kunde_id,
-       SUM(menge * preis) AS umsatz
-FROM bestellungsposten
-GROUP BY kunde_id
-HAVING SUM(menge * preis) > 100
-ORDER BY umsatz DESC;
-```
 
-Nur Kundinnen und Kunden mit einem Umsatz ueber 100 werden ausgegeben.
+---
 
-## Weitere Aggregate
-
-- `MIN` / `MAX`: kleinster bzw. groesster Wert einer Spalte
-- `STRING_AGG` (DBMS-abhaengig): fasst Strings zu einer Liste zusammen
-- `STDDEV`, `VARIANCE`: statistische Kennzahlen (je nach Datenbank)
-
-## Tipps
-
-- Verwende Aliase (`AS ...`), damit Spaltennamen im Ergebnis sprechend sind.
-- Pruefe Datentypen: `AVG` einer Ganzzahl liefert in einigen Systemen ebenfalls eine Ganzzahl, ggf. vorher casten.
-- Bei grossen Datenmengen koennen Indizes auf den Gruppierungsspalten die Performance deutlich verbessern.
+<div style="display:flex;justify-content:center">
+  <h2>  <a href="./9-Ausdruecke-und-Bedingungen.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./11-OpenData-und-APIs.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
+</div>

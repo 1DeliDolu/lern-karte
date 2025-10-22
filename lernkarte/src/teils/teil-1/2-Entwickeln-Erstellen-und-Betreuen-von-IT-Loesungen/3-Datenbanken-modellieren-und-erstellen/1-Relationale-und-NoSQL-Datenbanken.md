@@ -1,96 +1,144 @@
-<h1>Relationale und nicht-relationale Datenbanken (NoSQL) — Überblick, Vergleich und Einsatzempfehlungen</h1>
+# 🗃️ Relationale & nicht-relationale Datenbanken (NoSQL)
 
-<h2>
-  <span style="background-color:#2563eb; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Grundbegriffe & Abgrenzung
-</h2>
-<p>Relationale Datenbanken (RDBMS) organisieren Daten in <em>Tabellen</em> mit festem Schema (Relationen). Beziehungen werden über Primär-/Fremdschlüssel modelliert; Datenmanipulation und -abfrage erfolgen mit SQL. Dieses Modell ist besonders geeignet, wenn <strong>starke Konsistenz, Transaktionen (ACID)</strong> und eine klar strukturierte Domäne im Vordergrund stehen. :contentReference[oaicite:0]{index=0}</p>
-<p>Nicht-relationale bzw. <em>NoSQL</em>-Datenbanken lösen sich vom starren Tabellenmodell. Sie bieten flexible Schemata und sind oft für horizontale Skalierung sowie große, heterogene Datenmengen konzipiert (z. B. Dokument-, Key-Value-, Spaltenfamilien- und Graphdatenbanken). Sie werden in modernen, cloudbasierten Architekturen und bei Big-Data-Szenarien eingesetzt. :contentReference[oaicite:1]{index=1}</p>
+**Relationale Datenbanken** speichern Daten in **Tabellen** (Relationen), die über **Beziehungen** verknüpft sind; das **relationale Datenmodell** wurde 1970 von **E. F. Codd** vorgestellt und ist zum Standard geworden. *(LF5)* 
+**NoSQL-Datenbanken** („Not only SQL“) sind **keine Ablösung**, sondern **Ergänzung** zu relationalen Systemen – insbesondere dort, wo große, teils unstrukturierte Datenmengen (z. B. **Big Data**) anfallen oder sich Schemata häufig ändern. *(LF8)* 
 
-<h2>
-  <span style="background-color:#16a34a; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Relationale Datenbanken (RDBMS)
-</h2>
-<h3>Modell & Prinzipien</h3>
-<p>Das relationale Modell basiert auf <strong>Normalisierung</strong> (Redundanzvermeidung), <strong>juristischer Datenintegrität</strong> (Constraints) und <strong>ACID-Transaktionen</strong>. Typische Operationen sind Selektionen, Projektionen und <strong>Joins</strong>; komplexe Zusammenhänge werden über Referenzen sauber nachvollziehbar. :contentReference[oaicite:2]{index=2}</p>
-<h3>Stärken</h3>
-<ul>
-  <li>Hohe Datenqualität und Eindeutigkeit durch Strukturen und Constraints.</li>
-  <li>Leistungsfähige Abfragen mit SQL (Ad-hoc-Analysen, komplexe Reports). :contentReference[oaicite:3]{index=3}</li>
-  <li>Starke Transaktionssicherheit (ACID) für Finanz-, Auftrags- oder Buchungssysteme.</li>
-</ul>
-<h3>Grenzen</h3>
-<ul>
-  <li>Schemaänderungen sind formal und können aufwendig sein.</li>
-  <li>Horizontale Skalierung (Sharding) ist möglich, aber komplexer als in vielen NoSQL-Systemen.</li>
-</ul>
+---
 
-<h2>
-  <span style="background-color:#9333ea; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Nicht-relationale Datenbanken (NoSQL)
-</h2>
-<h3>Motivation & Architekturmerkmale</h3>
-<p>NoSQL adressiert Anforderungen wie <strong>hohe Schreib-/Lesezuwächse, variable Datenstrukturen</strong> und <strong>Globale Verteilung</strong>. Viele Systeme priorisieren <em>Skalierbarkeit und Verfügbarkeit</em> und nutzen <em>Replikation, Partitionierung</em> und flexible Konsistenzmodelle (z. B. eventual consistency) — passend für Cloud- und Microservice-Umfelder. :contentReference[oaicite:4]{index=4}</p>
+## 🎯 Einordnung & typische Einsatzfelder
 
-<h3>
-  <span style="background-color:#f97316; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  NoSQL-Haupttypen & typische Anwendungsfälle
-</h3>
-<ul>
-  <li><strong>Key-Value-Stores</strong>: extrem schnelle Lookups per Schlüssel (Caching, Sitzungsdaten, Feature-Flags).</li>
-  <li><strong>Dokumentdatenbanken</strong>: JSON/ BSON-Dokumente für <em>aggregatorientiertes</em> Modellieren (Produktkataloge, Nutzerprofile, Content). :contentReference[oaicite:5]{index=5}</li>
-  <li><strong>Spaltenfamilien-Datenbanken</strong>: breite Tabellen mit spärlicher Belegung für Zeitreihen, Telemetrie, Log-Analytik.</li>
-  <li><strong>Graphdatenbanken</strong>: Knoten/Kanten für hochgradig vernetzte Domänen (Empfehlungen, Betrugserkennung, Netzwerk-/IAM-Analysen). :contentReference[oaicite:6]{index=6}</li>
-</ul>
+**Relationale Systeme** werden bevorzugt, wenn ein **stabiles, komplexes Schema**, **viele Entitäten/Beziehungen** und die **Einhaltung von ACID** gefordert sind (z. B. Bereiche „**Geld**“). *(LF8)* 
+**NoSQL-Systeme** adressieren Anforderungen klassischer RDBMS nur **bedingt** (v. a. bei **un/semistrukturierten Daten** und **skalierbarer** Verarbeitung) und ergänzen diese daher; sie **organisieren Daten ohne Tabellen**/Zeilen/Spalten und verwenden **flexible Modelle**. *(LF8)* 
+Die wachsenden **Big-Data**-Mengen sind mit klassischen relationalen Methoden nur begrenzt zugänglich – hier entstehen NoSQL-Anwendungsfälle. *(LF10c)* 
 
-<h2>
-  <span style="background-color:#0ea5e9; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Datenmodellierung: ERM vs. Aggregat-Orientierung
-</h2>
-<p>In RDBMS werden Entitäten/Beziehungen mittels <strong>ER-Modell</strong> und Normalformen präzise strukturiert. In NoSQL steht die <strong>zugriffspfadorientierte</strong> Modellierung im Fokus: Daten, die zusammen gelesen werden, werden gemeinsam gespeichert (<em>Denormalisierung</em>, „<em>schema-on-read</em>“/„<em>schema-flexible</em>“). Das reduziert Joins zur Laufzeit und optimiert Latenzen bei großen Datenmengen. :contentReference[oaicite:7]{index=7}</p>
+---
 
-<h2>
-  <span style="background-color:#ef4444; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Abfrage- & Konsistenzmodelle, Transaktionen
-</h2>
-<ul>
-  <li><strong>SQL</strong> (RDBMS) vs. <strong>Abfrage-APIs</strong> (Dokument-/Graph-Queries, Map-Reduce, Aggregation Pipelines) in NoSQL. :contentReference[oaicite:8]{index=8}</li>
-  <li><strong>ACID</strong> (strikte Transaktionen, RDBMS) vs. <strong>BASE</strong>/<em>eventual consistency</em> (viele NoSQL-Systeme) — heute bieten manche NoSQL-Engines jedoch auch transaktionale Garantien auf Dokument- oder Partitions-Ebene.</li>
-</ul>
+## 🧩 Datenmodelle im Vergleich
 
-<h2>
-  <span style="background-color:#64748b; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Skalierung, Betrieb & Integration
-</h2>
-<p>NoSQL-Systeme sind häufig für <strong>horizontale Skalierung</strong> (Sharding) konzipiert, RDBMS punkten mit ausgereiften <strong>Transaktionen</strong> und <strong>mächtigen Joins</strong>. In integrativen Umgebungen (REST/Cloud, Streaming, Data Lakes) gilt oft: <em>„Polyglot Persistence“</em> — für jeden Teil der Domäne das passende Datenmodell. :contentReference[oaicite:9]{index=9}</p>
+### Relational (SQL)
 
-<h2>
-  <span style="background-color:#22c55e; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Sicherheit & Datenqualität (Überblick)
-</h2>
-<p>Unabhängig vom Modell sind <strong>Informationssicherheit, Datenschutz, Datenqualität</strong> und Testbarkeit entscheidend: Rollen/Rechte, Verschlüsselung „at rest“/„in transit“, Validierungen sowie Test-/Monitoring-Konzepte sichern belastbare Anwendungen und verlässliche Analysen. :contentReference[oaicite:10]{index=10}</p>
+* **Modell:** Tabellen mit Zeilen/Spalten; Beziehungen werden über **Schlüssel** modelliert. *(LF5)* 
+* **Konsistenz:** **ACID** (Atomicity, Consistency, Isolation, Durability). *(LF8)* 
+* **Schema:** **Fest**; Schema-Änderungen betreffen oft die gesamte DB. *(LF8)* 
+* **Skalierung:** vorwiegend **vertikal** (leistungsstärkerer Einzelserver). *(LF8)* 
+* **Abfragen:** **SQL**. *(LF8)* 
+* **Beispiele (DBMS):** MySQL, PostgreSQL, Oracle, MS SQL Server. *(LF8)* 
 
-<h2>
-  <span style="background-color:#ea580c; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span>
-  Entscheidungsleitfaden: Wann RDBMS? Wann NoSQL?
-</h2>
-<ul>
-  <li><strong>RDBMS bevorzugen</strong>, wenn: stark normierte Geschäftsprozesse, komplexe Joins/Reports, strenge Konsistenz/ACID, klare, stabile Schemata. :contentReference[oaicite:11]{index=11}</li>
-  <li><strong>NoSQL bevorzugen</strong>, wenn: sehr große/heterogene Daten, flexible Strukturen, globale Verteilung, niedrige Latenzen bei hohem Durchsatz, vernetzte Domänen (Graph). :contentReference[oaicite:12]{index=12}</li>
-  <li><strong>Kombinieren</strong> (Polyglot): z. B. Transaktionskern in RDBMS, Produkt-/Event-Streams in Dokument/Spalte, Beziehungslogik in Graph.</li>
-</ul>
+### NoSQL (nicht-relational)
 
-<h2>
-  <span style="background-color:#3b82f6; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 8</span>
-  Praxisbeispiele (Auswahl)
-</h2>
-<ul>
-  <li><strong>Buchungssystem</strong> (Aufträge, Zahlungen): RDBMS wegen ACID & Integrität.</li>
-  <li><strong>Produktkatalog & CMS</strong>: Dokumentdatenbank für variable Attribute/Layouts. :contentReference[oaicite:13]{index=13}</li>
-  <li><strong>Telemetry/IoT-Zeitreihen</strong>: Spaltenfamilie für große, sequentielle Messdaten. :contentReference[oaicite:14]{index=14}</li>
-  <li><strong>Empfehlungen & Betrugserkennung</strong>: Graphdatenbank für Pfad-/Nachbarschafts-Queries. :contentReference[oaicite:15]{index=15}</li>
-</ul>
+* **Grundidee:** Verschiedene **Modelle** statt Tabellen (Dokument, Key-Value, Graph, Spalte). *(LF8)* 
+* **Konsistenz:** häufig **BASE**-Gedanke; **absolute Konsistenz** zugunsten höherer **Verfügbarkeit** teilweise aufgegeben → zeitweise **inkonsistente Zustände** möglich. *(LF8)* 
+* **Schema:** **flexibel** (strukturierte, semistrukturierte, unstrukturierte Daten zusammen speicherbar). *(LF8)* 
+* **Skalierung:** **horizontal** (Server hinzufügen). *(LF8)* 
+* **Abfragen:** modell-/API-spezifisch (z. B. über **APIs** bei Key-Value). *(LF8)* 
 
-<h2>Quelle</h2>
-<p>„<em>Software zur Verwaltung von Daten anpassen</em>“, <strong>Lernfeld 5</strong> (Daten, Datenbanken, SQL, Grundlagen). :contentReference[oaicite:16]{index=16}</p>
-<p>„<em>Daten systemübergreifend bereitstellen</em>“, <strong>Lernfeld 8</strong> (NoSQL-Ansätze, Graphdatenbanken, Cloud-/REST-Kontexte, Datenqualität). :contentReference[oaicite:17]{index=17}</p>
+---
+
+## 🗂️ NoSQL-Hauptkategorien (mit Beispielen)
+
+**1) Dokumentenorientiert** – Einheit ist das **Dokument** (z. B. **JSON**); Dokumente können sich in Struktur/Attributen unterscheiden; **geeignet für CMS/Blogs**. *(LF8)*  
+Beispiel-DBMS: MongoDB, Apache CouchDB (u. a.). *(LF8)* 
+
+**2) Key-Value** – **Schlüssel–Wert**-Paare; extrem **schneller Zugriff** und **Skalierbarkeit** (Lastverteilung), jedoch **eingeschränkte Abfragen**, oft **ohne Indizes**; für **komplexe Beziehungen ungeeignet** (dann anderes Modell wählen). Beispiele: **Amazon Dynamo**, **Google BigTable**. *(LF8, LF5)*  
+
+**3) Graph** – **Knoten** und **Kanten** mit Eigenschaften; ideal bei **stark vernetzten Strukturen** (z. B. Social Media/Follower-Netze). Beispiel: **Neo4j**. *(LF8, LF5)*  
+
+**4) Spaltenorientiert** – Speicherung **spaltenweise** statt zeilenweise; **sehr schnell** beim Lesen/Aktualisieren **vieler Werte einer Spalte**; bevorzugt in **Data-Warehouse/OLAP**-Szenarien. Beispiele: **Apache Cassandra**, **Sybase IQ**. *(LF8, LF5)*  
+
+---
+
+## ⚖️ Gegenüberstellung (kompakt)
+
+| Aspekt               | Relationale DB                          | NoSQL-DB                                                   |
+| -------------------- | --------------------------------------- | ---------------------------------------------------------- |
+| **Datenmodell**      | Tabellen, Beziehungen                   | Dokument, Key-Value, Graph, Spalte *(LF8)*                 |
+| **Schema**           | Fest/strikt                             | Flexibel (auch un/semistrukturiert) *(LF8)*                |
+| **Konsistenz**       | **ACID**                                | **BASE**-Prinzip, ggf. zeitweise inkonsistent *(LF8)*      |
+| **Skalierung**       | **Vertikal**                            | **Horizontal** *(LF8)*                                     |
+| **Abfragen**         | **SQL**                                 | modell-/API-spezifisch *(LF8)*                             |
+| **Typische Nutzung** | Stabile Schemata, **Geld/ACID-Pflicht** | Big-Data-Szenarien, flexible Strukturen *(LF8, LF10c)*     |
+| **Beispiele**        | MySQL, PostgreSQL, Oracle, MS SQL       | MongoDB, Dynamo, BigTable, Neo4j, Cassandra *(LF8, LF5)*   |
+
+---
+
+## 🧪 Beispielcode & Praxis
+
+### A) Relationale DB – **Transaktionen (ACID) in SQL** *(LF11a)* 
+
+```sql
+-- Beispiel 1: Erfolgreiche Transaktion (COMMIT)
+START TRANSACTION;
+INSERT INTO Artikel (Name, Preis) VALUES ("Ansichtskarte", 1.25);
+DELETE FROM Artikel WHERE Artikel.ID = 712;
+COMMIT;
+
+-- Beispiel 2: Test mit ROLLBACK (Änderungen rückgängig)
+BEGIN;
+UPDATE Artikel SET Preis = NULL;
+SELECT Artikel.* FROM Artikel;
+ROLLBACK;
+```
+
+> **Zweck:** Änderungen **atomar** zusammenfassen; bei Fehler **ROLLBACK**, sonst **COMMIT** (ACID). *(LF11a)* 
+
+### B) NoSQL – **MongoDB (Dokumenten-DB) mit Python/PyMongo** *(LF8)* 
+
+```python
+from pymongo import MongoClient  # Notwendige Module importieren
+
+database = MongoClient('mongodb://localhost:27017/')['artikelverwaltung_db']
+collection = database['artikel']
+
+schrank_daten = {
+    'artikel_nr': '002348',
+    'name': 'Holzschrank HS900',
+    'hersteller': 'Möbel GmbH',
+    'preis': '588.00 Euro'
+}
+collection.insert_one(schrank_daten)   # Einzelnes Dokument speichern
+
+tisch_daten = {
+    'artikel_nr': '1234',
+    'name': 'Holztisch HT73',
+    'hersteller': 'Möbel GmbH',
+    'preis': '213.45 Euro'
+}
+stuhl_daten = {
+    'artikel_nr': '5401',
+    'name': 'Holzstuhl HST08',
+    'hersteller': 'Möbel GmbH',
+    'preis': '43.71 Euro'
+}
+collection.insert_many([tisch_daten, stuhl_daten])  # Mehrere Dokumente speichern
+
+daten = collection.find_one({"artikel_nr": "1234"})  # Ein Dokument lesen
+print(daten)
+```
+
+> **Hinweis aus dem Material:** Dokumente sind **JSON-ähnlich**; **Collections** entsprechen grob einer Tabelle. *(LF8)* 
+
+---
+
+## 🛠️ Auswahlkriterien (Praxisleitfaden)
+
+* **Nimm relational (SQL)**, wenn **ACID** unverhandelbar ist, das **Schema stabil** bleibt und viele **Beziehungen** modelliert werden. *(LF8)* 
+* **Nimm NoSQL**, wenn **flexible Schemata**, **un/semistrukturierte Daten**, **horizontale Skalierung** oder spezielle Zugriffsmuster (Dokument/Graph/Spalte/Key-Value) gefragt sind. *(LF8, LF10c)*  
+* **Key-Value** für extrem **schnelle Reads/Writes** ohne komplexe Beziehungen; **Graph** bei **Netzwerken/Beziehungen**; **Dokument** bei **heterogenen Objekten** (z. B. CMS/Blogs); **Spalte** für **DW/OLAP**-Analysen. *(LF8, LF5)*    
+
+---
+
+## 📚 Begriffe kompakt
+
+| Begriff                      | Definition                                                                                  | Quelle           |
+| ---------------------------- | ------------------------------------------------------------------------------------------- | ---------------- |
+| **Relationales Datenmodell** | Speicherung in **Tabellen** mit **Beziehungen**; Standard seit **Codd (1970)**.             | *(LF5)*          |
+| **NoSQL**                    | **Nicht-relationale** DB-Familie zur Ergänzung klassischer RDBMS bei Big-Data/Flexibilität. | *(LF8)*          |
+| **ACID**                     | Garantiert **atomare**, **konsistente**, **isolierte**, **dauerhafte** Transaktionen.       | *(LF8, LF11a)*   |
+| **BASE**                     | Fokus auf **Verfügbarkeit**/**weichen Zustand** statt strikter Konsistenz.                  | *(LF8)*          |
+| **Horizontale Skalierung**   | Leistung durch **weitere Server** erhöhen (typisch NoSQL).                                  | *(LF8)*          |
+| **Spaltenorientierung**      | Speicherung **spaltenweise**; stark bei **Analytik/OLAP/DWH**.                              | *(LF8)*          |
+| **Dokumenten-DB**            | **JSON-artige Dokumente**, variable Struktur; gut für **CMS/Blogs**.                        | *(LF8)*          |
+
+---
+
+## [⬅️ Zurück ](../2-Algorithmen-formulieren-und-Programme-entwickeln/3-Entwurf-der-Bildschirmausgabemasken-Softwareergonomie-Barrierefreiheit.md) | [➡️ Weiter](./2-Datentypen.md)

@@ -1,67 +1,142 @@
-<h1>ER-Modell, Attribute, Beziehungen, Kardinalitäten, referenzielle Integrität, Aktualisierungs- &amp; Löschweitergabe, Primär-/Fremdschlüssel</h1>
+# 🗃️ ER-Modell, Attribute, Beziehungen, Kardinalitäten, Primär- & Fremdschlüssel — inkl. Integritätsbezug
 
-<h2>Begriffseinordnung &amp; Zielsetzung <span style="background-color:#6a0572; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p>Das Entity-Relationship-Modell (ER-Modell) strukturiert die Fachwelt in <em>Entitäten</em> (Gegenstände), ihre <em>Attribute</em> (Eigenschaften) und <em>Beziehungen</em> (Verknüpfungen). Es dient als konzeptionelles Datenmodell, das anschließend systematisch in ein relationales Schema überführt wird (Tabellen, Schlüssel, Constraints). Für die Überführung nennt das Material explizite <strong>Transformationsregeln</strong>, u. a.: „Ein Entitätstyp wird mit all seinen Attributen zu einer Tabelle; jede Tabelle erhält einen Primärschlüssel“ :contentReference[oaicite:0]{index=0}.</p>
+Ein **Entity-Relationship-Modell (ER-Modell)** beschreibt Entitätstypen (z. B. *Person, Firma, Artikel*), deren **Attribute** (z. B. *Kundennummer, Name, Geburtsdatum*) sowie **Beziehungen** zwischen Entitäten; Beziehungen werden im ER-Diagramm als Raute dargestellt und können bei *m:n* auch eigene Attribute besitzen. *(LF5)* 
+**Kardinalitäten** charakterisieren, in welchem Verhältnis Entitäten zueinander stehen (**1:1**, **1:n**, **m:n**) und werden mit Beispielen wie *Mitarbeiter–Personalakte (1:1)*, *Gebäude–Raum (1:n)* oder *Kunde–Artikel (m:n)* erläutert. *(LF5)* 
 
-<h2>Entitäten &amp; Attribute <span style="background-color:#0b7285; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p>Eine <strong>Entität</strong> repräsentiert einen eindeutig identifizierbaren Gegenstand (z. B. <em>Kunde</em>, <em>Artikel</em>). <strong>Attribute</strong> beschreiben Merkmale (z. B. <em>KundenNr</em>, <em>Name</em>). Bei der Überführung ins Relationenmodell werden Entitätstypen zu Tabellen; fehlende natürliche Schlüssel können durch <em>künstliche Primärschlüssel</em> ersetzt werden (z. B. <em>BestellNr</em>) :contentReference[oaicite:1]{index=1}.</p>
-<ul>
-  <li><em>Einfache Attribute</em>: nehmen atomare Werte an (z. B. <em>Titel</em> eines Buches).</li>
-  <li><em>Zusammengesetzte Schlüssel</em>: Kombination mehrerer Attribute zur eindeutigen Identifikation (z. B. <em>BestellNr+Pos</em> in <em>Bestellposition</em>) :contentReference[oaicite:2]{index=2}.</li>
-</ul>
+**Primärschlüssel (PK)** identifizieren Datensätze eindeutig; häufig werden künstliche Schlüssel (*ID/Nr*) verwendet, um Eindeutigkeit sicherzustellen und „sprechende Schlüssel“-Probleme zu vermeiden. *(LF5)* 
+Ein **Fremdschlüssel (FK)** ist ein Attribut, das auf den PK einer (ggf. derselben) Tabelle verweist; Datentyp von FK und referenziertem PK müssen übereinstimmen. *(LF5)* 
 
-<h2>Beziehungen &amp; Kardinalitäten (1:1, 1:n, n:m) <span style="background-color:#2f9e44; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p>Beziehungen verknüpfen Entitäten; ihre <strong>Kardinalität</strong> definiert, wie viele Entitäten einander zugeordnet werden dürfen/müssen:</p>
-<ul>
-  <li><strong>1:1</strong> – selten, sinnvoll bei Aufteilung aus Organisatorik/Datenschutzgründen (z. B. Auslagerung sensibler Gehaltsdaten) :contentReference[oaicite:3]{index=3}.</li>
-  <li><strong>1:n</strong> – sehr häufig (z. B. <em>Abteilung</em>–<em>Mitarbeiter</em>: eine Abteilung hat viele Mitarbeitende; jeder Mitarbeitende gehört genau einer Abteilung) :contentReference[oaicite:4]{index=4}.</li>
-  <li><strong>n:m</strong> – wird im Relationenmodell über eine <em>Kreuztabelle</em> (Zwischentabelle) aufgelöst; die beiden Fremdschlüssel bilden dort oft einen <em>zusammengesetzten Primärschlüssel</em> (z. B. <em>Mitarbeiter_Projekt</em>) :contentReference[oaicite:5]{index=5}.</li>
-</ul>
+Eine **m:n-Beziehung** wird im relationalen Modell **nicht direkt** abgebildet; üblich ist eine **Zwischen-/Kreuztabelle** mit zwei FKs, deren Kombination oft einen **zusammengesetzten PK** bildet (z. B. *Mitarbeiter_Projekt*). *(LF5)* 
+Sonderfall: Ist die Anzahl der an einer Beziehung beteiligten Entitäten **fest (genau zwei)**, kann ausnahmsweise auf eine Kreuztabelle verzichtet werden (Beispiel *Mannschaft–Spiel*). *(LF5)* 
 
-<h2>Primärschlüssel (PK) &amp; Fremdschlüssel (FK) <span style="background-color:#d9480f; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p>Der <strong>Primärschlüssel</strong> identifiziert jeden Datensatz eindeutig (natürlich oder künstlich). Der <strong>Fremdschlüssel</strong> verweist auf den Primärschlüssel einer referenzierten Tabelle und realisiert damit Beziehungen zwischen Tabellen (z. B. <em>Bestellung.KundenNr → Kunde.KundenNr</em>) :contentReference[oaicite:6]{index=6}.</p>
+> **Hinweis zur „referenziellen Integrität“, Aktualisierungs- & Löschweitergabe:**
+> In den vorliegenden Materialien werden **FOREIGN KEY/REFERENCES** zur Verknüpfung von Tabellen und **UPDATE/DELETE**-Befehle behandelt; spezifische Begriffe **„referenzielle Integrität“**, **„Aktualisierungsweitergabe“** und **„Löschweitergabe“** (z. B. *ON UPDATE/DELETE CASCADE*) werden **nicht explizit erläutert**. **Transaktionsbefehle (TCL)** werden als Mittel zur Sicherung der **Datenintegrität** genannt. *(LF11a, LF5)* 
 
-<h2>Referenzielle Integrität <span style="background-color:#5f3dc4; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p><strong>Referenzielle Integrität</strong> erzwingt, dass jeder FK-Wert einem existierenden PK-Wert entspricht; so werden Waisenverweise verhindert. Praxisregel: Ein Parent-Datensatz muss existieren, bevor ein Child-Datensatz mit passendem FK eingefügt wird; umgekehrt müssen Child-Datensätze entfernt werden, bevor der referenzierte Parent gelöscht werden darf :contentReference[oaicite:7]{index=7}.</p>
+---
 
-<h2>Aktualisierungsweitergabe &amp; Löschweitergabe (Cascade-Strategien) <span style="background-color:#c2255c; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<p>DBMS bieten Optionen, wie sich Änderungen am <em>Parent</em> auf abhängige <em>Child</em>-Datensätze auswirken. Diese Strategien konkretisieren die obige Integritätsregel in der technischen Umsetzung:</p>
-<ul>
-  <li><strong>Aktualisierungsweitergabe</strong> (<em>ON UPDATE CASCADE</em>): Wird der PK-Wert im Parent geändert, passt das DBMS die korrespondierenden FK-Werte in allen betroffenen Child-Zeilen automatisch an. So bleiben Verweise konsistent (Variante zur inhaltlich geforderten Integrität :contentReference[oaicite:8]{index=8}).</li>
-  <li><strong>Löschweitergabe</strong> (<em>ON DELETE CASCADE</em>): Löscht man einen Parent, werden alle referenzierenden Child-Zeilen automatisch mitgelöscht. Alternativen sind z. B. <em>SET NULL</em> (FK auf <code>NULL</code> setzen) oder <em>RESTRICT/NO ACTION</em> (Löschen nur zulässig, wenn keine Children existieren). Diese Mechanismen operationalisieren die im Material beschriebene Reihenfolge (erst Child, dann Parent) automatisiert :contentReference[oaicite:9]{index=9}.</li>
-</ul>
-<p><em>Hinweis (Modellierungspraxis):</em> Löschweitergabe ist fachlich sorgfältig abzuwägen (Audit-/Revisionsanforderungen, Historisierung). Häufig werden stattdessen <em>logische Löschungen</em> (Statusflag) genutzt.</p>
+## 🧩 Zentrale Begriffe & Beispiele (mit Quellen)
 
-<h2>Von ER zum relationalen Schema: Vorgehen &amp; Regeln <span style="background-color:#0c8599; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<ul>
-  <li>Entität ⇒ <strong>Tabelle</strong> mit allen Attributen.</li>
-  <li>Markierte Identifikatoren im ER-Modell ⇒ <strong>PK</strong>; falls nicht vorhanden ⇒ <strong>künstlicher PK</strong>.</li>
-  <li>Beziehungen:
-    <ul>
-      <li><strong>1:1</strong>: FK in eine der beiden Tabellen (ggf. mit <em>UNIQUE</em>), organisatorisch begründen (z. B. Rechte) :contentReference[oaicite:10]{index=10}.</li>
-      <li><strong>1:n</strong>: FK in der <em>n</em>-Tabelle (Child) :contentReference[oaicite:11]{index=11}.</li>
-      <li><strong>n:m</strong>: eigene Kreuztabelle mit zwei FKs (oft zusammengesetzter PK) :contentReference[oaicite:12]{index=12}.</li>
-    </ul>
-  </li>
-</ul>
-<p>Diese Regeln sind im Material explizit formuliert (Transformationsregeln) und werden an Bestellbeispielen illustriert .</p>
+* **Entitätstyp**: „Dinge der realen Welt“ wie *Person, Firma, Artikel*; im ER-Modell als Rechteck dargestellt. *(LF5)* 
+* **Attribut**: Eigenschaft einer Entität (z. B. *SchülerNr, Vorname, Nachname, Geburtsdatum*). Ein eindeutig identifizierendes Attribut (z. B. *Kundennummer*) wird im ER-Diagramm **unterstrichen**. *(LF5)* 
+* **Beziehungstyp**: semantische Verbindung zwischen Entitäten; bei *m:n* können der **Beziehung** Attribute zugeordnet werden. *(LF5)* 
+* **Kardinalitäten**: **1:1**, **1:n**, **m:n**; inkl. Anwendungsbeispielen. *(LF5)* 
+* **1:n-Beispiel**: *Abteilung–Mitarbeiter* (eine Abteilung → viele Mitarbeiter); FK in **Mitarbeiter** verweist auf **Abteilung**. *(LF5)* 
+* **m:n-Beispiel**: *Mitarbeiter–Projekt* via Kreuztabelle mit **zwei FKs** und **zusammengesetztem PK**. *(LF5)* 
+* **ER→Relational**: Transformationsregeln — *jeder Entitätstyp → Tabelle*, *PK aus markierten Attributen (oder künstlich)*. *(LF5)* 
+* **Phasenmodell DB-Entwicklung**: *Konzeptionell (ER)* → *Logisch (relational: PK/FK, Normalisierung)* → *Implementationsphase (SQL-Schema)*; Beispiel *Hersteller–Artikel–Produktion* (PK/FK-Kennzeichnung). *(LF8)* 
 
-<h2>Beispielhafte Anwendung (aus dem Material) <span style="background-color:#343a40; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<ul>
-  <li><strong>Kunde–Bestellung–Bestellposition–Artikel</strong>: Alle Beziehungen sind 1:n; <em>Bestellposition</em> nutzt <em>BestellNr+Pos</em> als zusammengesetzten PK; FKs verbinden zu <em>Bestellung</em> und <em>Artikel</em> :contentReference[oaicite:14]{index=14}.</li>
-  <li><strong>Mitarbeiter–Projekt</strong>: n:m über Kreuztabelle (<em>Mitarbeiter_Projekt</em>) mit zwei FKs; die Kombination bildet den PK :contentReference[oaicite:15]{index=15}.</li>
-</ul>
+---
 
-<h2>Integrität im Lebenszyklus: Beispiele für Weitergaben <span style="background-color:#7c2d12; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<ul>
-  <li><strong>Löschfall</strong> (<em>Parent: Kunde</em>): Ohne Weitergabe darf <em>Kunde</em> nur gelöscht werden, wenn alle <em>Bestellungen/Bestellpositionen</em> zuvor entfernt sind (Materialregel). Mit <em>ON DELETE CASCADE</em> übernimmt das DBMS die notwendige Reihenfolge automatisch :contentReference[oaicite:16]{index=16}.</li>
-  <li><strong>Aktualisierungsfall</strong> (<em>Parent-PK ändert sich</em>): Mit <em>ON UPDATE CASCADE</em> bleiben referenzierende FKs konsistent; andernfalls sind manuelle Anpassungen erforderlich (inhaltliche Konsequenz der referenziellen Integrität :contentReference[oaicite:17]{index=17}).</li>
-</ul>
+## 💾 Vom ER-Modell zum relationalen Schema (Prozessschritte)
 
-<h2>Qualitätssicherung &amp; typische Stolpersteine <span style="background-color:#1e6091; color:white; padding:4px 8px; border-radius:12px;">Lernfeld 5</span></h2>
-<ul>
-  <li><strong>Redundanzen vermeiden</strong> (sonst Anomalien: Einfüge-, Änderungs-, Löschanomalie) durch korrekte Zerlegung und Schlüsselwahl :contentReference[oaicite:18]{index=18}.</li>
-  <li><strong>FK-Constraints</strong> stets aktivieren</strong>, um fehlerhafte Referenzen schon beim Schreiben zu verhindern (Materialregel der Einfüge-/Löschreihenfolge) :contentReference[oaicite:19]{index=19}.</li>
-</ul>
+1. **Konzeptionelle Phase:** ER-Modell mit Entitäten, Attributen, Beziehungen, Kardinalitäten erstellen. *(LF8)* 
+2. **Logische Phase:** ER-Modell in **relationale Tabellen** überführen; PK/FK festlegen; **Normalisierung** zur Optimierung (s. Verweis im Material). *(LF8)* 
+3. **Implementationsphase:** SQL-Schema erzeugen (Datentypen, Wertebereiche, Relationen). *(LF8)* 
+4. **Transformationsregeln anwenden:** Entität→Tabelle; PK setzen (natürlich oder künstlich). *(LF5)* 
 
-<p><em>Quelle: Lernfeld 5 (Kapitel „ER-Modelle in relationale Datenmodelle überführen“, „Beziehungen &amp; Kardinalitäten“, „Referenzielle Integrität“, Beispiele Kunde/Bestellung) und Lernfeld 8 (Ergänzungen zu Datenmodell-Entscheidungen)</em> </p>
+---
+
+## 🛠️ Beispielcode & Illustrationen (aus den Materialien)
+
+### 1) ER→SQL (Implementationsphase; Beispielzeile aus dem Material)
+
+```sql
+CREATE TABLE Hersteller (HNr INTEGER, Name VARCHAR(50), PRIMARY KEY(HNr));
+```
+
+*(LF8)* 
+
+### 2) SQL-JOIN (Beispiel für verknüpfte Tabellen mittels PK/FK)
+
+Ohne `JOIN` (Kommata-Syntax):
+
+```sql
+SELECT P.Name, P.Vorname, O.Name
+FROM Person P, Wohnort O
+WHERE O.OrtID = P.OrtID AND O.Name = 'Hamburg';
+```
+
+Mit `INNER JOIN`:
+
+```sql
+SELECT P.Name, P.Vorname, O.Name
+FROM Person P
+INNER JOIN Wohnort O ON P.OrtID = O.OrtID
+WHERE O.Name = 'Hamburg';
+```
+
+*(LF5)* 
+
+### 3) PK/FK in DDL (Syntaxvorlage aus der „Übersicht SQL-Befehle“)
+
+```sql
+CREATE TABLE tabellenname (
+  spaltenname datentyp,
+  ...
+  PRIMARY KEY (spaltenname),
+  FOREIGN KEY (spaltenname) REFERENCES andere_tabelle(pk_spalte)
+);
+```
+
+*(LF11a)* 
+
+> **Anmerkung:** Die Übersicht zeigt `FOREIGN KEY … REFERENCES …` zur Definition von Verweisen. Optionen wie „ON UPDATE/DELETE …“ werden in den vorliegenden Materialien **nicht** ausgeführt. *(LF11a)* 
+
+---
+
+## 📚 Praxisbeispiele (aus den Materialien)
+
+* **Kunde–Bestellung–Bestellposition–Artikel**: Tabellen mit PKs; in *Bestellposition* wird ein **zusammengesetzter PK (BestellNr, Pos)** gebildet; Beziehungen sind **1:n** (z. B. Kunde→Bestellung). *(LF5)* 
+* **Abteilung–Mitarbeiter (1:n)**: FK `AbteilungsNr` in *Mitarbeiter* verweist auf PK der *Abteilung*. *(LF5)* 
+* **Mitarbeiter–Projekt (m:n)**: **Kreuztabelle** mit **zwei FKs**; Kombination bildet oft den **PK**. *(LF5)* 
+* **Sonderfall m:n ohne Kreuztabelle** (genau zwei Beteiligte pro *Spiel*): *Mannschaft–Spiel*. *(LF5)* 
+
+---
+
+## 🧠 Integritäts- und Konsistenzbezug im Material
+
+* **Datenkonsistenz** = Widerspruchsfreiheit der Daten; **Datenredundanz** begünstigt **Datenanomalien** und ist zu vermeiden. *(LF5)* 
+* **TCL-Befehle (z. B. COMMIT/ROLLBACK)** dienen der Sicherstellung der **Datenintegrität** auf Transaktionsebene. *(LF5)* 
+* **UPDATE/DELETE** als DML-Befehle sind enthalten; Details zu **Aktualisierungs-/Löschweitergabe** (Kaskaden) fehlen in den Materialien. *(LF11a)* 
+
+---
+
+## 🔤 Begriffstabelle
+
+| Begriff                        | Definition (Kurz)                                                                        | Quelle |
+| ------------------------------ | ---------------------------------------------------------------------------------------- | ------ |
+| **Entitätstyp**                | Gegenstand der Modellierung (z. B. Person, Firma, Artikel).                              | (LF5)  |
+| **Attribut**                   | Eigenschaft einer Entität; identifizierendes Attribut wird im ER-Diagramm unterstrichen. | (LF5)  |
+| **Beziehungstyp**              | Semantische Verbindung zwischen Entitäten; bei *m:n* ggf. eigene Attribute.              | (LF5)  |
+| **Kardinalität 1:1**           | Genau eine Zuordnung je Seite (z. B. Mitarbeiter–Personalakte).                          | (LF5)  |
+| **Kardinalität 1:n**           | Eine Entität → viele auf der anderen Seite (z. B. Abteilung–Mitarbeiter).                | (LF5)  |
+| **Kardinalität m:n**           | Viele ↔ viele; Abbildung via Kreuztabelle mit zwei FKs.                                  | (LF5)  |
+| **Primärschlüssel (PK)**       | Eindeutige Identifikation eines Datensatzes; oft künstliche IDs.                         | (LF5)  |
+| **Fremdschlüssel (FK)**        | Attribut verweist auf PK einer Tabelle; Datentypen müssen übereinstimmen.                | (LF5)  |
+| **Transformationsregeln**      | Entität→Tabelle; PK festlegen (natürlich/künstlich).                                     | (LF5)  |
+| **DB-Phasen**                  | Konzeptionell → logisch (PK/FK, Normalisierung) → Implementierung (SQL).                 | (LF8)  |
+| **Datenkonsistenz/-redundanz** | Widerspruchsfreiheit; Redundanz erzeugt Anomalien → vermeiden.                           | (LF5)  |
+| **DDL/DML/DCL/TCL**            | DDL: Struktur; DML: Daten; DCL: Rechte; TCL: Integrität per Transaktionen.               | (LF5)  |
+
+---
+
+## ⚙️ Methoden & Ziele
+
+* **Ziel ER-Modellierung:** fachlich korrekte Struktur (Entitäten, Attribute, Beziehungen, Kardinalitäten) als Grundlage für das relationale Design. *(LF8, LF5)* 
+* **Methode m:n-Auflösung:** **Kreuztabelle** mit zwei FKs; optional zusammengesetzter PK; benennen z. B. *Mitarbeiter_Projekt*. *(LF5)* 
+* **Verknüpfung in Abfragen:** `JOIN` zwischen PK/FK-Spalten zur inhaltlichen Verbindung von Tabellen. *(LF5)* 
+
+---
+
+## 📝 Wichtiger Quellenhinweis (zu den angefragten Stichworten)
+
+* **„Referenzielle Integrität“, „Aktualisierungsweitergabe“, „Löschweitergabe“** werden in den bereitgestellten PDFs **nicht separat definiert**. Die Materialien zeigen aber die **FK-Definition** (`FOREIGN KEY … REFERENCES …`) sowie **UPDATE/DELETE** als DML-Befehle und **TCL** zur Integritätssicherung auf Transaktionsebene. *(LF11a, LF5)* 
+
+Wenn du möchtest, erstelle ich dir im nächsten Schritt anhand der obigen Beispiele ein vollständiges relationales Schema (DDL) für ein kleines ER-Modell aus den Materialien (z. B. *Kunde–Bestellung–Bestellposition–Artikel*) — streng auf Basis der gezeigten Syntax.
+
+
+---
+
+<div style="display:flex;justify-content:center">
+  <h2>  <a href="./4-Normalformen-1-bis-3.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./6-Datenbankabfrage-und-Datenpflege.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
+</div>
