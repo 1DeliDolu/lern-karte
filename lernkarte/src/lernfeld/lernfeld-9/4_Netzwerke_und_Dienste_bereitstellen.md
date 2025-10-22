@@ -116,4 +116,3 @@ Im Anschluss sind Funktionsprüfungen und Messungen vorgesehen (Netz-/Dienste-Ve
 
 --- 
 
-[4.1 Netzwerkbereitstellung](./4.1_Netzwerkbereitstellung_nach_unterschiedlichen_Unternehmensanforderungen_unterscheiden/4.1_Netzwerkbereitstellung_nach_unterschiedlichen_Unternehmensanforderungen_unterscheiden.md)

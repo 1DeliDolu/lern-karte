@@ -177,6 +177,3 @@ Wenn du möchtest, passe ich das SQL-Beispiel auf dein konkretes Szenario an (Ta
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./3-Anomalien-und-Redundanzen.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>   |  <a href="./5-ER-Modell-und-Attribute.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

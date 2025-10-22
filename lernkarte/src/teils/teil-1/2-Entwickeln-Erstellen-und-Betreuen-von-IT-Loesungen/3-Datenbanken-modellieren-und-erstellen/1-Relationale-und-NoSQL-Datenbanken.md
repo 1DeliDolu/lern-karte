@@ -140,5 +140,3 @@ print(daten)
 | **Dokumenten-DB**            | **JSON-artige Dokumente**, variable Struktur; gut für **CMS/Blogs**.                        | *(LF8)*          |
 
 ---
-
-## [⬅️ Zurück ](../2-Algorithmen-formulieren-und-Programme-entwickeln/3-Entwurf-der-Bildschirmausgabemasken-Softwareergonomie-Barrierefreiheit.md) | [➡️ Weiter](./2-Datentypen.md)

@@ -242,6 +242,3 @@ DROP INDEX idx_person_name ON Person;
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./6-Datenbankabfrage-und-Datenpflege.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./8-Mehrtabellenabfragen.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

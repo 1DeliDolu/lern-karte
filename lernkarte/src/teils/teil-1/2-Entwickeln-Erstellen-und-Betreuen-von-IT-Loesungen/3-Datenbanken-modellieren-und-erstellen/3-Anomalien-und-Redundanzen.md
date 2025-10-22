@@ -130,4 +130,3 @@ FROM   Person;
 
 ---
 
-## [⬅️ Zurück ](./2-Datentypen.md) | [➡️ Weiter](./4-Normalformen-1-bis-3.md)

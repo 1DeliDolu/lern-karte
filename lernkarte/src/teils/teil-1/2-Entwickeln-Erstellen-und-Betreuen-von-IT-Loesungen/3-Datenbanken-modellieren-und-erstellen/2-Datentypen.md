@@ -122,4 +122,3 @@ Wenn du möchtest, passe ich das SQL-Beispiel auf dein konkretes Schema an (Spal
 
 ---
 
-## [⬅️ Zurück ](./1-Relationale-und-NoSQL-Datenbanken.md) | [➡️ Weiter](./3-Anomalien-und-Redundanzen.md)

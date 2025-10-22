@@ -89,6 +89,3 @@ WHERE O.Einwohner > (SELECT AVG(O.Einwohner) FROM Ort O);
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./9-Ausdruecke-und-Bedingungen.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./11-OpenData-und-APIs.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

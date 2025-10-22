@@ -190,5 +190,3 @@ DROP PROCEDURE ErmittleOrte;
 
 
 ---
-
-## [⬅️ Zurück](../2-Algorithmen-formulieren-und-Programme-entwickeln/) | [➡️ Weiter](./1-Relationale-und-NoSQL-Datenbanken.md)

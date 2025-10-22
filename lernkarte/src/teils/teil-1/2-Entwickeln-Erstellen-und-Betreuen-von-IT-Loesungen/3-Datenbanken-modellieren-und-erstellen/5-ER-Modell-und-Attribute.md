@@ -137,6 +137,3 @@ Wenn du möchtest, erstelle ich dir im nächsten Schritt anhand der obigen Beisp
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./4-Normalformen-1-bis-3.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./6-Datenbankabfrage-und-Datenpflege.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

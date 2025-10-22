@@ -200,6 +200,3 @@ SELECT ... FROM Land L FULL  JOIN Kontinent K ON L.KontinentID = K.KontinentID; 
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./7-SQL-Abfragen-und-Struktur.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="./9-Ausdruecke-und-Bedingungen.md" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>

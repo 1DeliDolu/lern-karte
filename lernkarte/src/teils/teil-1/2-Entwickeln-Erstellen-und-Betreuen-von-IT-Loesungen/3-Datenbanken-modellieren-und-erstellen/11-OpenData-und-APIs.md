@@ -127,6 +127,3 @@ print(json_object)
 
 ---
 
-<div style="display:flex;justify-content:center">
-  <h2>  <a href="./10-Aggregatfunktionen.md" style="text-decoration:none;color:#007acc;">⬅️ Zurück  </a>|<a href="../../3-Durchfuehren-und-Dokumentieren-von-Qualitaetssichernden-Massnahmen/" style="text-decoration:none;color:#007acc;"> Weiter ➡️</a></h2>
-</div>
