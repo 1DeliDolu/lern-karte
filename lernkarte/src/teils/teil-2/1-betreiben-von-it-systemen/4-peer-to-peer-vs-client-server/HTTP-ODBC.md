@@ -1,4 +1,0 @@
-# HTTP / ODBC
-
-- Protokollzwecke
-- Einsatzszenarien
